@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.wandrell.archetype</groupId>
+	<artifactId>library</artifactId>
+	<version>0.1.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>Library Maven Archetype</name>
+	<description>A Maven archetype to ease the creation of new libraries.</description>
+	<url />
+
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>http://www.opensource.org/licenses/mit-license.php</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<scm>
+		<connection>scm:git:https://github.com/Bernardo-MG/library-maven-archetype.git</connection>
+		<developerConnection>scm:git:https://github.com/Bernardo-MG/library-maven-archetype.git</developerConnection>
+		<tag>head</tag>
+		<url>http://github.com/Bernardo-MG/library-maven-archetype</url>
+	</scm>
+
+	<issueManagement>
+		<system>GitHub</system>
+		<url>https://github.com/Bernardo-MG/library-maven-archetype/issues</url>
+	</issueManagement>
+
+	<ciManagement>
+		<system>Travis CI</system>
+		<url>https://travis-ci.org/Bernardo-MG/library-maven-archetype</url>
+		<notifiers />
+	</ciManagement>
+
+	<distributionManagement>
+		<repository>
+			<uniqueVersion>false</uniqueVersion>
+			<id>releases</id>
+			<name>Releases Repository</name>
+			<url>https://api.bintray.com/maven/bernardo-mg/maven/library-maven-archetype</url>
+		</repository>
+		<snapshotRepository>
+			<uniqueVersion>true</uniqueVersion>
+			<id>snapshots</id>
+			<name>Snapshots Repository</name>
+			<url>ftp://maven.wandrell.com</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<profiles>
+		<profile>
+			<id>default</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<distributionManagement>
+				<site>
+					<id>site</id>
+					<name>Project Documentation Site</name>
+					<url>ftp://docs.wandrell.com/java-patterns</url>
+				</site>
+			</distributionManagement>
+		</profile>
+		<profile>
+			<id>development</id>
+			<distributionManagement>
+				<site>
+					<id>site-development</id>
+					<name>Project Development Documentation Site</name>
+					<url>ftp://docs.wandrell.com/java-patterns</url>
+				</site>
+			</distributionManagement>
+		</profile>
+	</profiles>
+
+	<organization>
+		<name>Bernardo Martínez Garrido</name>
+		<url />
+	</organization>
+
+	<developers>
+		<developer>
+			<id>bmg</id>
+			<name>Bernardo Martínez Garrido</name>
+			<email>programming@wandrell.com</email>
+			<url />
+			<organization />
+			<organizationUrl />
+			<roles>
+				<role>Developer</role>
+			</roles>
+			<timezone>+1</timezone>
+			<properties />
+		</developer>
+	</developers>
+
+	<properties>
+		<!-- Encoding -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
+		<!-- Java version -->
+		<java.version.source>1.7</java.version.source>
+		<java.version.target>${java.version.source}</java.version.target>
+		<!-- Manifest data -->
+		<manifest.name>com/wandrell/archetype/library</manifest.name>
+		<!-- Plugins versions -->
+		<plugin.archetype.version>2.3</plugin.archetype.version>
+		<plugin.changes.version>2.11</plugin.changes.version>
+		<plugin.compiler.version>3.2</plugin.compiler.version>
+		<plugin.deploy.version>2.8.2</plugin.deploy.version>
+		<plugin.jar.version>2.5</plugin.jar.version>
+		<plugin.reports.version>2.8</plugin.reports.version>
+		<plugin.resources.version>2.6</plugin.resources.version>
+		<plugin.site.version>3.4</plugin.site.version>
+		<plugin.site.reflow.version>1.1.1</plugin.site.reflow.version>
+		<plugin.site.velocity.version>1.7</plugin.site.velocity.version>
+		<plugin.source.version>2.4</plugin.source.version>
+		<!-- Extensions versions -->
+		<extension.wagon.version>2.8</extension.wagon.version>
+		<!-- Maven Site -->
+		<site.skin.version>1.1.1</site.skin.version>
+		<site.download>https://bintray.com/bernardo-mg/maven/archetype-library/view</site.download>
+		<javaVersion>JDK 7, JDK 8 and OpenJDK 7</javaVersion>
+		<scmName>GitHub</scmName>
+		<scmURL>${project.scm.url}</scmURL>
+		<ciName>${project.ciManagement.system}</ciName>
+		<ciURL>${project.ciManagement.url}</ciURL>
+		<license>MIT</license>
+	</properties>
+
+	<build>
+		<defaultGoal>clean install archetype:update-local-catalog</defaultGoal>
+		<extensions>
+			<extension>
+				<!-- Wagon -->
+				<!-- Enables the use of FTP -->
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-ftp</artifactId>
+				<version>${extension.wagon.version}</version>
+			</extension>
+		</extensions>
+		<plugins>
+			<plugin>
+				<!-- Resources -->
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>${plugin.resources.version}</version>
+			</plugin>
+			<plugin>
+				<!-- Archetype -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-archetype-plugin</artifactId>
+				<version>${plugin.archetype.version}</version>
+			</plugin>
+			<plugin>
+				<!-- Compiler -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${plugin.compiler.version}</version>
+				<configuration>
+					<encoding>${project.build.sourceEncoding}</encoding>
+					<source>${java.version.source}</source>
+					<target>${java.version.target}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<!-- Jar -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>${plugin.jar.version}</version>
+				<configuration>
+					<archive>
+						<index>true</index>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<addExtensions>false</addExtensions>
+							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+							<addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+							<packageName>${project.groupId}</packageName>
+						</manifest>
+						<manifestEntries>
+							<name>${manifest.name}</name>
+							<url>${project.url}</url>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+			<plugin>
+				<!-- Site -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>${plugin.site.version}</version>
+				<dependencies>
+					<dependency>
+						<!-- Reflow Skin -->
+						<groupId>lt.velykis.maven.skins</groupId>
+						<artifactId>reflow-velocity-tools</artifactId>
+						<version>${plugin.site.reflow.version}</version>
+					</dependency>
+					<dependency>
+						<!-- Velocity -->
+						<!-- Reflow skin requires Velocity >= 1.7 -->
+						<groupId>org.apache.velocity</groupId>
+						<artifactId>velocity</artifactId>
+						<version>${plugin.site.velocity.version}</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+			<plugin>
+				<!-- Source -->
+				<artifactId>maven-source-plugin</artifactId>
+				<version>${plugin.source.version}</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<!-- Deploy -->
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>${plugin.deploy.version}</version>
+				<executions>
+					<execution>
+						<id>deploy</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
+						<configuration>
+							<packaging>jar</packaging>
+							<generatePom>true</generatePom>
+							<url>${project.distributionManagement.snapshotRepository.url}</url>
+							<artifactId>${project.artifactId}</artifactId>
+							<groupId>${project.groupId}</groupId>
+							<version>${project.version}</version>
+							<file>${project.build.directory}/${project.build.finalName}.jar</file>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<reporting>
+		<plugins>
+			<plugin>
+				<!-- Reports -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>${plugin.reports.version}</version>
+				<reportSets>
+					<reportSet>
+						<reports>
+							<report>summary</report>
+							<report>license</report>
+							<report>modules</report>
+							<report>project-team</report>
+							<report>dependency-info</report>
+							<report>distribution-management</report>
+							<report>dependencies</report>
+							<report>dependency-management</report>
+							<report>plugins</report>
+							<report>plugin-management</report>
+							<report>help</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+			</plugin>
+			<plugin>
+				<!-- Site -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>${plugin.site.version}</version>
+			</plugin>
+			<plugin>
+				<!-- Changes -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-changes-plugin</artifactId>
+				<version>${plugin.changes.version}</version>
+				<reportSets>
+					<reportSet>
+						<reports>
+							<report>changes-report</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+			</plugin>
+		</plugins>
+	</reporting>
+
+</project>
