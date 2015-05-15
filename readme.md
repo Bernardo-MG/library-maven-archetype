@@ -12,12 +12,10 @@ It has not been created to fit any specific set of requirements beyond my person
 Documentation is always generated for the latest release:
 
 - The [latest release documentation page][site-release].
-- The [the latest release Javadoc site][javadoc-release].
 
 Documentation is also generated from the latest snapshot, taken from the 'develop' branch:
 
 - The [the latest snapshot documentation page][site-develop].
-- The [the latest snapshot Javadoc site][javadoc-develop].
 
 The site sources come along the source code, so it is always possible to generate them using the Maven site command.
 
@@ -52,8 +50,6 @@ Feel free to fork it, and share the changes.
 The project is released under the [MIT License][license].
 
 [issues]: https://github.com/Bernardo-MG/library-maven-archetype/issues
-[javadoc-develop]: http://docs.wandrell.com/development/maven/library-maven-archetype/apidocs
-[javadoc-release]: http://docs.wandrell.com/maven/library-maven-archetype/apidocs
 [license]: http://www.opensource.org/licenses/mit-license.php
 [scm]: http://github.com/Bernardo-MG/library-maven-archetype
 [site-develop]: http://docs.wandrell.com/development/maven/library-maven-archetype
