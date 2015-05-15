@@ -47,7 +47,7 @@
 			<url>https://api.bintray.com/maven/bernardo-mg/maven/library-maven-archetype</url>
 		</repository>
 		<snapshotRepository>
-			<uniqueVersion>true</uniqueVersion>
+			<uniqueVersion>false</uniqueVersion>
 			<id>snapshots</id>
 			<name>Snapshots Repository</name>
 			<url>ftp://maven.wandrell.com</url>
