@@ -1,0 +1,14 @@
+language: java
+jdk:
+  - oraclejdk7
+
+before_install:
+  - chmod +x ./.scripts/create-maven-settings.sh
+  - chmod +x ./.scripts/deploy.sh
+  - chmod +x ./.scripts/deploy-site.sh
+  - ./.scripts/create-maven-settings.sh
+script:
+  - mvn clean install
+after_success:
+  - ./.scripts/deploy-site.sh
+  - ./.scripts/deploy.sh

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor
+	xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
+	xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="library">
+	<requiredProperties>
+		<requiredProperty key="sourceControlUrl">
+			<defaultValue>https://github.com/user-name/repo-name</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="sourceControlConnection">
+			<defaultValue>scm:git:https://github.com/user-name/repo-name.git</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="issuesUrl">
+			<defaultValue>https://github.com/user-name/repo-name/issues</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="issuesSystem">
+			<defaultValue>GitHub</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="ciUrl">
+			<defaultValue>https://travis-ci.org/user-name/repo-name</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="ciSystem">
+			<defaultValue>Travis CI</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="repoRelease">
+			<defaultValue>https://api.bintray.com/maven/bernardo-mg/maven</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="repoSnapshot">
+			<defaultValue>ftp://maven.wandrell.com</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="repoSnapshotDownload">
+			<defaultValue>http://dl.bintray.com/bernardo-mg/maven</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="repoSnapshotDownload">
+			<defaultValue>ftp://maven.wandrell.com</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="siteRelease">
+			<defaultValue>ftp://docs.wandrell.com/project-name</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="siteReleasePublic">
+			<defaultValue>http://docs.wandrell.com/maven/project-name</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="siteDevelop">
+			<defaultValue>ftp://docs.wandrell.com/project-name</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="siteDevelopPublic">
+			<defaultValue>http://docs.wandrell.com/development/maven/project-name</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="javadocRelease">
+			<defaultValue>http://docs.wandrell.com/maven/project-name/apidocs</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="javadocDevelop">
+			<defaultValue>http://docs.wandrell.com/development/maven/project-name/apidocs</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="organizationName">
+			<defaultValue>Bernardo Martínez Garrido</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="organizationUrl">
+			<defaultValue>http://</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="jarManifestName">
+			<defaultValue>com/wandrell/project-name</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="siteDownloadUrl">
+			<defaultValue>https://bintray.com/bernardo-mg/maven/project-name/view</defaultValue>
+		</requiredProperty>
+	</requiredProperties>
+	<fileSets>
+		<fileSet filtered="true" packaged="true" encoding="UTF-8">
+		<!-- Sources -->
+			<directory>src/main/java</directory>
+			<includes>
+				<include>**/*.java</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true" encoding="UTF-8">
+		<!-- Test sources -->
+			<directory>src/test/java</directory>
+			<includes>
+				<include>**/*.java</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" encoding="UTF-8">
+		<!-- Test resources -->
+			<directory>src/test/resources</directory>
+			<includes>
+				<include>**/*.xml</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" encoding="UTF-8">
+		<!-- Filtered root files -->
+			<directory></directory>
+			<includes>
+				<include>pom.xml</include>
+				<include>readme.md</include>
+			</includes>
+		</fileSet>
+		<fileSet encoding="UTF-8">
+		<!-- Root files -->
+			<directory></directory>
+			<includes>
+				<include>LICENSE</include>
+				<include>.gitignore</include>
+				<include>.travis.yml</include>
+				<include>.scripts/*.sh</include>
+			</includes>
+		</fileSet>
+		<fileSet encoding="UTF-8">
+		<!-- Report config files -->
+			<directory>src</directory>
+			<includes>
+				<include>changes/*.xml</include>
+				<include>checkstyle/*.xml</include>
+				<include>pmd/*.xml</include>
+			</includes>
+		</fileSet>
+		<fileSet encoding="UTF-8">
+		<!-- Site files -->
+			<directory>src/site</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+	</fileSets>
+</archetype-descriptor>

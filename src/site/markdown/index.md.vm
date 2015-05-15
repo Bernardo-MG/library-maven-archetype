@@ -1,0 +1,38 @@
+# Maven Archetype
+
+A Maven archetype gives a fast way to create a new Maven project, with little additional configuration.
+
+All sort of configurations can be done to the archetype, from setting an initial POM with all the required dependencies, to adding a basic set of required files. Or it may just be used to create a sample template, to guide the actual development of the project.
+
+# Why this library?
+
+I set up all my java projects in a similar way, and I always use Maven for them. Still, this didn't make it easier creating a new project, on the contrary, it meant hunting down the reusable files. And I never got them all on the first attempt.
+
+Something had to be done, and that something was clear after a quick research: using a maven archetype meant having a small reusable template with which I could build new projects.
+
+But not any kind of project. This doesn't aim to be a general use archetype, but a base for what I am accustomed to creating.
+
+---
+
+# An overview
+
+Several features are offered by the archetype, the most important being:
+
+- Unit and integration tests ready to be run with TestNG [>>](./tests.html)
+- Making use of Travis to publish code and documentation artifacts [>>](./travis.html)
+- Maven site, using the Reflow skin, for the documentation and reports [>>](./site.html)
+- A basic readme template.
+- A basic gitignore file.
+
+For configuration, the archetype makes use of a series of properties which can be set during the creation of a new project [>>](./usage.html)
+
+---
+
+# About the code
+
+The code is open source and freely accessible. If you want to do any kind of modification just fork it from the repository.
+
+- Java version: ${javaVersion}
+- License: [${license}](./license.html)
+- SCM: [${scmName}](${scmURL})
+- CI: [${ciName}](${ciURL})

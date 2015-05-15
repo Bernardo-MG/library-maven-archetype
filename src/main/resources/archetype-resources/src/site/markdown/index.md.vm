@@ -1,0 +1,28 @@
+# Small description
+
+A small description of the project goes here.
+
+# Why this library?
+
+Tell the world what moved you to create this library.
+
+---
+
+# An overview
+
+Several features are offered by the library, some the most important being:
+
+- A feature.
+- Another feature.
+- Yet another feature
+
+---
+
+# About the code
+
+The code is open source and freely accessible. If you want to do any kind of modification just fork it from the repository.
+
+- Java version: ${javaVersion}
+- License: [${license}](./license.html)
+- SCM: [${scmName}](${scmURL})
+- CI: [${ciName}](${ciURL})
