@@ -9,8 +9,11 @@ before_install:
   - chmod +x ./.scripts/deploy.sh
   - chmod +x ./.scripts/deploy-site.sh
   - ./.scripts/create-maven-settings.sh
+install:
+  - mvn clean install
 script:
-  - mvn clean install archetype:integration-test
+  - cd target
+  - mvn archetype:integration-test
 after_success:
   - ./.scripts/deploy-site.sh
   - ./.scripts/deploy.sh
