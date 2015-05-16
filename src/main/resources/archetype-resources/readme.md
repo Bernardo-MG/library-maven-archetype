@@ -52,9 +52,9 @@ Feel free to fork it, and share the changes.
 The project is released under the [MIT License][license].
 
 [issues]: https://github.com/${repoUserId}/${repoProjectId}/issues
-[javadoc-develop]: ${javadocRelease}
-[javadoc-release]: ${javadocDevelop}
+[javadoc-develop]: ${siteReleasePublic}/${repoProjectId}/apidocs
+[javadoc-release]: ${siteDevelopPublic}/${repoProjectId}/apidocs
 [license]: http://www.opensource.org/licenses/mit-license.php
 [scm]: https://github.com/${repoUserId}/${repoProjectId}
-[site-develop]: ${siteDevelopPublic}
-[site-release]: ${siteReleasePublic}
+[site-develop]: ${siteDevelopPublic}/${repoProjectId}
+[site-release]: ${siteReleasePublic}/${repoProjectId}

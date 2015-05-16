@@ -64,7 +64,7 @@
 				<site>
 					<id>site</id>
 					<name>Project Documentation Site</name>
-					<url>${siteRelease}</url>
+					<url>${siteRelease}/${repoProjectId}</url>
 				</site>
 			</distributionManagement>
 		</profile>
@@ -74,7 +74,7 @@
 				<site>
 					<id>site-development</id>
 					<name>Project Development Documentation Site</name>
-					<url>${siteDevelop}</url>
+					<url>${siteDevelop}/${repoProjectId}</url>
 				</site>
 			</distributionManagement>
 		</profile>
@@ -150,7 +150,7 @@
 		<repository>
 			<id>releases</id>
 			<name>Releases repository</name>
-			<url>${repoSnapshotDownload}</url>
+			<url>${repoReleaseDownload}</url>
 		</repository>
 		<repository>
 			<id>snapshots</id>

@@ -37,13 +37,6 @@ These IDs should be on lowercase, for compatibility with Travis.
 |siteReleasePublic|Link for consulting the releases documents|
 |siteDevelopPublic|Link for consulting the development documents|
 
-### Javadocs
-
-|Variable|Use|
-|---|---|
-|javadocRelease|Link for the releases Javadocs|
-|javadocDevelop|Link for the development Javadocs|
-
 ### Organization
 
 |Variable|Use|

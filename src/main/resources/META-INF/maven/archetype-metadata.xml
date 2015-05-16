@@ -16,29 +16,23 @@
 		<requiredProperty key="repoSnapshot">
 			<defaultValue>ftp://maven.wandrell.com</defaultValue>
 		</requiredProperty>
-		<requiredProperty key="repoSnapshotDownload">
+		<requiredProperty key="repoReleaseDownload">
 			<defaultValue>http://dl.bintray.com/bernardo-mg/maven</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="repoSnapshotDownload">
 			<defaultValue>ftp://maven.wandrell.com</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="siteRelease">
-			<defaultValue>ftp://docs.wandrell.com/project-name</defaultValue>
+			<defaultValue>ftp://docs.wandrell.com</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="siteReleasePublic">
-			<defaultValue>http://docs.wandrell.com/maven/project-name</defaultValue>
+			<defaultValue>http://docs.wandrell.com/maven</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="siteDevelop">
-			<defaultValue>ftp://docs.wandrell.com/project-name</defaultValue>
+			<defaultValue>ftp://docs.wandrell.com</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="siteDevelopPublic">
-			<defaultValue>http://docs.wandrell.com/development/maven/project-name</defaultValue>
-		</requiredProperty>
-		<requiredProperty key="javadocRelease">
-			<defaultValue>http://docs.wandrell.com/maven/project-name/apidocs</defaultValue>
-		</requiredProperty>
-		<requiredProperty key="javadocDevelop">
-			<defaultValue>http://docs.wandrell.com/development/maven/project-name/apidocs</defaultValue>
+			<defaultValue>http://docs.wandrell.com/development/maven</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="organizationName">
 			<defaultValue>Bernardo Martínez Garrido</defaultValue>
