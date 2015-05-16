@@ -41,9 +41,3 @@ These IDs should be on lowercase, for compatibility with Travis.
 |---|---|
 |organizationName|Name of the organization|
 |organizationUrl|Link to the organization's webpage|
-
-### JAR
-
-|Variable|Use|
-|---|---|
-|jarManifestName|Name for the project on the JAR manifest|

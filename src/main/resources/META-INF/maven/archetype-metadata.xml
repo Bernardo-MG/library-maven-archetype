@@ -10,9 +10,6 @@
 		<requiredProperty key="repoUserId">
 			<defaultValue>bernardo-mg</defaultValue>
 		</requiredProperty>
-		<requiredProperty key="jarManifestName">
-			<defaultValue>com/wandrell/project-name</defaultValue>
-		</requiredProperty>
 		<requiredProperty key="repoRelease">
 			<defaultValue>https://api.bintray.com/maven/bernardo-mg/maven</defaultValue>
 		</requiredProperty>
