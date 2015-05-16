@@ -145,13 +145,6 @@
 				<artifactId>wagon-ftp</artifactId>
 				<version>${extension.wagon.version}</version>
 			</extension>
-			<extension>
-				<!-- Archetype packaging -->
-				<!-- Adds the archetype life cycle -->
-				<groupId>org.apache.maven.archetype</groupId>
-				<artifactId>archetype-packaging</artifactId>
-				<version>${plugin.archetype.version}</version>
-			</extension>
 		</extensions>
 		<pluginManagement>
 			<plugins>
@@ -173,13 +166,6 @@
 				<!-- Archetype -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-archetype-plugin</artifactId>
-				<executions>
-					<execution>
-						<goals>
-							<goal>integration-test</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
 			<plugin>
 				<!-- Compiler -->
