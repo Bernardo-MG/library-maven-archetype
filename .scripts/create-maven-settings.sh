@@ -6,18 +6,6 @@
    echo "<settings>";
    # Servers settings
    echo "<servers>";
-   # Releases FTP
-   echo "<server>";
-      echo "<id>releases</id>";
-      echo "<username>\${env.REPO_RELEASES_USER}</username>";
-      echo "<password>\${env.REPO_RELEASES_PASSWORD}</password>";
-   echo "</server>";
-   # DEVELOP FTP
-   echo "<server>";
-      echo "<id>snapshots</id>";
-      echo "<username>\${env.REPO_DEVELOP_USER}</username>";
-      echo "<password>\${env.REPO_DEVELOP_PASSWORD}</password>";
-   echo "</server>";
    # Site FTP
    echo "<server>";
       echo "<id>site</id>";
