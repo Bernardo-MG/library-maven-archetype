@@ -100,7 +100,7 @@
 			<directory></directory>
 			<includes>
 				<include>LICENSE</include>
-				<include>.gitignore</include>
+				<include>*.gitignore</include>
 				<include>.travis.yml</include>
 				<include>.scripts/*.sh</include>
 			</includes>
