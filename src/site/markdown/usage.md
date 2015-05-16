@@ -10,26 +10,14 @@ mvn clean install archetype:update-local-catalog
 
 Several variables are defined for the archetype and can be modified when creating a new project with it. All of them have a default value assigned.
 
-### Source repository
+### Repositories
 
 |Variable|Use|
 |---|---|
-|sourceControlUrl|Link to the code repository|
-|sourceControlConnection|Connection for the code repository|
+|repoUserId|ID of the user on GitHub|
+|repoProjectId|Name of the project on GitHub|
 
-### Issues tracker
-
-|Variable|Use|
-|---|---|
-|issuesUrl|Link to the issues tracker|
-|issuesSystem|Issues tracker being used|
-
-### Continuous integration
-
-|Variable|Use|
-|---|---|
-|ciUrl|Link to the continuous integration service|
-|ciSystem|Continuous integration service being used|
+These IDs should be on lowercase, for compatibility with Travis.
 
 ### Artifacts repositories
 

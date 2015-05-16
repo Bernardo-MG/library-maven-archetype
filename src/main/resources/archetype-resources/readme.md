@@ -51,10 +51,10 @@ Feel free to fork it, and share the changes.
 ## License
 The project is released under the [MIT License][license].
 
-[issues]: ${issuesUrl}
+[issues]: https://github.com/${repoUserId}/${repoProjectId}/issues
 [javadoc-develop]: ${javadocRelease}
 [javadoc-release]: ${javadocDevelop}
 [license]: http://www.opensource.org/licenses/mit-license.php
-[scm]: ${sourceControlUrl}
+[scm]: https://github.com/${repoUserId}/${repoProjectId}
 [site-develop]: ${siteDevelopPublic}
 [site-release]: ${siteReleasePublic}
