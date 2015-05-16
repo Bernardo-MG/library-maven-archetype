@@ -1,16 +1,16 @@
 # Maven Archetype
 
-A Maven archetype gives a fast way to create a new Maven project, with little additional configuration.
+Maven archetypes act as templates for new projects, defining a series of dependencies and configurations, along an initial structure of folders and files.
 
-All sort of configurations can be done to the archetype, from setting an initial POM with all the required dependencies, to adding a basic set of required files. Or it may just be used to create a sample template, to guide the actual development of the project.
+This way it is possible to quickly create a blank project ready for any kind of job. As long as Maven is part of your needs.
 
 # Why this library?
 
 I set up all my java projects in a similar way, and I always use Maven for them. Still, this didn't make it easier creating a new project, on the contrary, it meant hunting down the reusable files. And I never got them all on the first attempt.
 
-Something had to be done, and that something was clear after a quick research: using a maven archetype meant having a small reusable template with which I could build new projects.
+But I didn't need just a bunch of files, I needed a project ready to work with the development cycle I usually apply to Java projects, which requires connecting various repositories, all of them connected through a continuous integration service.
 
-But not any kind of project. This doesn't aim to be a general use archetype, but a base for what I am accustomed to creating.
+So I researched a bit, and found the best solution to my problems: building my own archetype. Which is not exactly a general use archetype. As I've commented, it is prepared for my own tastes, so some decisions may be a bit too personal, but still I've tried to make is as generic and reusable as possible.
 
 ---
 
@@ -25,6 +25,8 @@ Several features are offered by the archetype, the most important being:
 - A basic gitignore file.
 
 For configuration, the archetype makes use of a series of properties which can be set during the creation of a new project [>>](./usage.html)
+
+Also, pay attention to the project life cycle I meant this archetype for, which will make it easier to understand [>>](./lifecycle.html)
 
 ---
 

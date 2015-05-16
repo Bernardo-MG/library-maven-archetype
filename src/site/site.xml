@@ -68,19 +68,15 @@
 						<columns>2</columns>
 					</sections>
 				</usage>
-				<infofiles>
+				<lifecycle>
 					<sections>
 						<body />
 					</sections>
-				</infofiles>
-				<tests>
-					<sections>
-						<body />
-					</sections>
-				</tests>
+				</lifecycle>
 				<repos>
 					<sections>
 						<body />
+						<columns>2</columns>
 					</sections>
 				</repos>
 				<travis>
@@ -93,6 +89,11 @@
 						<body />
 					</sections>
 				</site>
+				<tests>
+					<sections>
+						<body />
+					</sections>
+				</tests>
 				<contribute>
 					<breadcrumbs>false</breadcrumbs>
 				</contribute>
@@ -139,11 +140,11 @@
 		</menu>
 		<menu name="Documentation" inherit="bottom">
 			<item name="Usage" href="./usage.html" />
-			<item name="Information files" href="./infofiles.html" />
-			<item name="Tests" href="./tests.html" />
-			<item name="Repositories" href="./repos.html" />
+			<item name="Project life cycle" href="./lifecycle.html" />
+			<item name="Repositories and services" href="./repos.html" />
 			<item name="Travis integration" href="./travis.html" />
 			<item name="Site" href="./site.html" />
+			<item name="Tests" href="./tests.html" />
 		</menu>
 		<menu name="Reports" ref="reports" inherit="bottom" />
 		<menu name="Contribute" inherit="bottom">

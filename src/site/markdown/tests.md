@@ -26,13 +26,16 @@ Unit and integration tests are meant to be stored separately. The archetype alre
 
 Additionally, to better differentiate them, unit tests are expected to start with the 'Test' keyword, and the integration ones with the 'IT' keyword.
 
-Note that the classpath offered for the tests has 'testing.test' as part of it. The reason is that if additional classes are required for the tests a 'testing.framework', or similar, package can be added.
+Note that the classpath offered for the tests has 'testing.test' as part of it. The reason is that if additional classes are required for the tests a 'testing.framework', or similar, package can be added, separating the actual tests from the support classes.
 
 ## Test suites
 
-On the test/resources folder there are two files defining the tests suites.
+On the test/resources folder there are two files defining the tests suites:
 
-The one named 'tests\_maven\_unit\_suite.xml' is for the unit tests, while the one named  'tests\_maven\_integration\_suite.xml' is for the integration ones.
+|File|Suite|
+|---|---|
+|tests\_maven\_unit\_suite.xml|Unit tests suite|
+|tests\_maven\_integration\_suite.xml|Integration tests suite|
 
 Both should be edited to indicate the path to the actual test folders, but will point by default to the initial location of the placeholder test classes.
 
@@ -40,9 +43,9 @@ Both should be edited to indicate the path to the actual test folders, but will 
 
 Reports are generated on the Maven file for both unit and integration tests.
 
-For this the Surefire report, for unit tests, and the Failsafe report, for integration tests, plugins are used.
+For this the Surefire report plugin, for unit tests, and the Failsafe report plugin, for integration tests, are used.
 
-There is also a coverage report, generated with JaCoCo.
+A coverage report is generated using JaCoCo.
 
 ## Logging
 
