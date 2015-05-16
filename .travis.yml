@@ -10,7 +10,7 @@ before_install:
   - chmod +x ./.scripts/deploy-site.sh
   - ./.scripts/create-maven-settings.sh
 script:
-  - mvn clean verify archetype:integration-test
+  - mvn clean verify archetype:integration-test archetype:crawl
 after_success:
   - ./.scripts/deploy-site.sh
   - ./.scripts/deploy.sh
