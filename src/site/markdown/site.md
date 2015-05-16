@@ -23,11 +23,3 @@ By default, the following reports are added to the site:
 ### Configuration changes to reports
 
 The archetype contains configuration files for PMD and checkstyle, meant to reduce the noise of those reports.
-
-## Variables for the site
-
-The following archetype variables affect the site:
-
-|Variable|Use|
-|---|---|
-|siteDownloadUrl|Download link for the site|

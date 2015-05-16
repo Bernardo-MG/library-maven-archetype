@@ -4,11 +4,14 @@
 	xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="library">
 	<requiredProperties>
+		<requiredProperty key="repoProjectId">
+			<defaultValue>repo-name</defaultValue>
+		</requiredProperty>
 		<requiredProperty key="repoUserId">
 			<defaultValue>bernardo-mg</defaultValue>
 		</requiredProperty>
-		<requiredProperty key="repoProjectId">
-			<defaultValue>repo-name</defaultValue>
+		<requiredProperty key="jarManifestName">
+			<defaultValue>com/wandrell/project-name</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="repoRelease">
 			<defaultValue>https://api.bintray.com/maven/bernardo-mg/maven</defaultValue>
@@ -25,26 +28,14 @@
 		<requiredProperty key="siteRelease">
 			<defaultValue>ftp://docs.wandrell.com</defaultValue>
 		</requiredProperty>
-		<requiredProperty key="siteReleasePublic">
-			<defaultValue>http://docs.wandrell.com/maven</defaultValue>
-		</requiredProperty>
 		<requiredProperty key="siteDevelop">
 			<defaultValue>ftp://docs.wandrell.com</defaultValue>
-		</requiredProperty>
-		<requiredProperty key="siteDevelopPublic">
-			<defaultValue>http://docs.wandrell.com/development/maven</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="organizationName">
 			<defaultValue>Bernardo Martínez Garrido</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="organizationUrl">
 			<defaultValue>http://</defaultValue>
-		</requiredProperty>
-		<requiredProperty key="jarManifestName">
-			<defaultValue>com/wandrell/project-name</defaultValue>
-		</requiredProperty>
-		<requiredProperty key="siteDownloadUrl">
-			<defaultValue>https://bintray.com/bernardo-mg/maven/project-name/view</defaultValue>
 		</requiredProperty>
 	</requiredProperties>
 	<fileSets>

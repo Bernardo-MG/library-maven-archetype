@@ -34,8 +34,6 @@ These IDs should be on lowercase, for compatibility with Travis.
 |---|---|
 |siteRelease|URL for publishing into the releases documents repository|
 |siteDevelop|URL for publishing into the development documents repository|
-|siteReleasePublic|Link for consulting the releases documents|
-|siteDevelopPublic|Link for consulting the development documents|
 
 ### Organization
 
@@ -49,9 +47,3 @@ These IDs should be on lowercase, for compatibility with Travis.
 |Variable|Use|
 |---|---|
 |jarManifestName|Name for the project on the JAR manifest|
-
-### Site
-
-|Variable|Use|
-|---|---|
-|siteDownloadUrl|Download link for the site|
