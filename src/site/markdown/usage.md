@@ -1,5 +1,7 @@
 # Using the archetype
 
+Right now there is no public archetypes catalog containing this archetype. It must be downloaded from the code repository and installed manually.
+
 To install the project into the local archetypes repository use the following command:
 
 ```
