@@ -12,8 +12,7 @@ before_install:
 install:
   - mvn clean install
 script:
-  - cd target
-  - mvn archetype:integration-test
+  - mvn verify archetype:integration-test
 after_success:
   - ./.scripts/deploy-site.sh
   - ./.scripts/deploy.sh
