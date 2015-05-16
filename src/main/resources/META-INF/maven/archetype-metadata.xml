@@ -4,23 +4,11 @@
 	xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="library">
 	<requiredProperties>
-		<requiredProperty key="sourceControlUrl">
-			<defaultValue>https://github.com/user-name/repo-name</defaultValue>
+		<requiredProperty key="repoUserId">
+			<defaultValue>bernardo-mg</defaultValue>
 		</requiredProperty>
-		<requiredProperty key="sourceControlConnection">
-			<defaultValue>scm:git:https://github.com/user-name/repo-name.git</defaultValue>
-		</requiredProperty>
-		<requiredProperty key="issuesUrl">
-			<defaultValue>https://github.com/user-name/repo-name/issues</defaultValue>
-		</requiredProperty>
-		<requiredProperty key="issuesSystem">
-			<defaultValue>GitHub</defaultValue>
-		</requiredProperty>
-		<requiredProperty key="ciUrl">
-			<defaultValue>https://travis-ci.org/user-name/repo-name</defaultValue>
-		</requiredProperty>
-		<requiredProperty key="ciSystem">
-			<defaultValue>Travis CI</defaultValue>
+		<requiredProperty key="repoProjectId">
+			<defaultValue>repo-name</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="repoRelease">
 			<defaultValue>https://api.bintray.com/maven/bernardo-mg/maven</defaultValue>

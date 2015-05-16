@@ -10,7 +10,7 @@
 	<packaging>jar</packaging>
 
 	<name>Basic Maven Project</name>
-	<description>A Maven project created from the basic archetype.</description>
+	<description>A Maven project created from the library archetype.</description>
 	<url />
 
 	<licenses>
@@ -22,20 +22,20 @@
 	</licenses>
 
 	<scm>
-		<connection>${sourceControlConnection}</connection>
-		<developerConnection>${sourceControlConnection}</developerConnection>
+		<connection>scm:git:https://github.com/${repoUserId}/${repoProjectId}.git</connection>
+		<developerConnection>scm:git:https://github.com/${repoUserId}/${repoProjectId}.git</developerConnection>
 		<tag>head</tag>
-		<url>${sourceControlUrl}</url>
+		<url>https://github.com/${repoUserId}/${repoProjectId}</url>
 	</scm>
 
 	<issueManagement>
-		<system>${issuesSystem}</system>
-		<url>${issuesUrl}</url>
+		<system>GitHub</system>
+		<url>https://github.com/${repoUserId}/${repoProjectId}/issues</url>
 	</issueManagement>
 
 	<ciManagement>
-		<system>${ciSystem}</system>
-		<url>${ciUrl}</url>
+		<system>Travis CI</system>
+		<url>https://travis-ci.org/${repoUserId}/${repoProjectId}</url>
 		<notifiers />
 	</ciManagement>
 
