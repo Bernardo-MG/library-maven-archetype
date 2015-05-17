@@ -109,7 +109,7 @@
 		<java.version.source>1.7</java.version.source>
 		<java.version.target>${java.version.source}</java.version.target>
 		<!-- Manifest data -->
-		<manifest.name>${packageInPathFormat}/${artifactId}</manifest.name>
+		<manifest.name>${packageInPathFormat}</manifest.name>
 		<!-- Dependencies versions -->
 		<log4j.version>1.2.17</log4j.version>
 		<testng.version>6.8.8</testng.version>
