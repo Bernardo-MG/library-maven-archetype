@@ -20,7 +20,7 @@
 			<defaultValue>http://dl.bintray.com/bernardo-mg/maven</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="repoSnapshotDownload">
-			<defaultValue>ftp://maven.wandrell.com</defaultValue>
+			<defaultValue>http://maven.wandrell.com</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="siteRelease">
 			<defaultValue>ftp://docs.wandrell.com</defaultValue>
