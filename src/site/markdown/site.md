@@ -4,7 +4,7 @@ The archetype is configured to create a Maven site, similar to this one, contain
 
 This site will be the one deployed as the documentation by the CI, and so it will be a part of the project's life cycle.
 
-Note that it will be for the most part a normal Maven site, meaning that information about how to customize it can be found at the official Maven site. The only difference is that it will use the [Reflow](http://github.com/andriusvelykis/reflow-maven-skin) skin.
+Note that it will be for the most part a normal Maven site, meaning that information about how to customize it can be found at the official Maven site, with the main difference being that it will use the [Reflow](http://github.com/andriusvelykis/reflow-maven-skin) skin.
 
 ## Reports
 

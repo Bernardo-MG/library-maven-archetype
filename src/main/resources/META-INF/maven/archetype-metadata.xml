@@ -4,11 +4,11 @@
 	xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="library">
 	<requiredProperties>
-		<requiredProperty key="repoProjectId">
-			<defaultValue>repo-name</defaultValue>
-		</requiredProperty>
 		<requiredProperty key="repoUserId">
 			<defaultValue>bernardo-mg</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="repoProjectId">
+			<defaultValue>repo-name</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="repoRelease">
 			<defaultValue>https://api.bintray.com/maven/bernardo-mg/maven</defaultValue>

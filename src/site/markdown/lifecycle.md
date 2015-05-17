@@ -11,19 +11,17 @@ Which is a very simple life cycle, consisting on three steps:
 This lifecycle begins each time a change is pushed to the code repository. But it has an additional layer, as there are three targets, which will modify how these steps work:
 
 - Release target and snapshot target, which deploy artifacts to the releases and snapshots repositories respectively
-- Feature target, which doesn't publish anything, but still build and tests
+- Feature target, which doesn't publish anything, but still builds and tests the project
 
 ![Project life cycle](./images/project_life_cycle.png)
 
-To handle all this, the different repositories are integrated using the CI service, which will react each time new code is pushed to the code repository.
+This process is handled by the CI service, which will react when new code is pushed into the code repository, and decide which target should be applied.
 
-At that point the target is picked, based on which branch the code has been pushed to, being the 'master' branch the one which sets the release target, while the 'develop' branch sets the snapshots target, and any other just sets the feature target.
+The decision is based on the branch where the code has been pushed to, being the 'master' branch the one which sets the release target, while the 'develop' branch sets the snapshots target, and any other just sets the feature target.
 
 ![Target selection process](./images/target_selection.png)
 
-The way this is actually handled can be found on the [CI](./travis.html) section.
-
-Also take a look at the [repositories](./repos.html) required.
+To get more information about this process check the [CI](./travis.html) section, and the [repositories](./repos.html) one.
 
 ## The targets
 
@@ -49,6 +47,4 @@ Any push to any other branch is considered a feature. Nothing will be published 
 
 ## Additional comments
 
-Publishing artifacts should always be taken with care, but the current configuration offers little control over it. It falls on the repositories side taking care of any additional procedures.
-
-For example, it is not a good idea publishing automatically the releases without any additional control, but Bintray, for which the archetype is prepared by default, will ask the repository manager before publishing any new release.
+Publishing artifacts should always be taken with care, but any additional control should be handled by the repositories. The archetype will just handle deployment in a single direction, taking data from the source repository, and sending it to the artifact repositories.
