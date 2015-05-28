@@ -30,6 +30,14 @@ The project has been tested on the following Java versions:
 
 All other dependencies are handled through Maven, and noted in the included POM file.
 
+### Installing
+
+Thanks to Maven, the project is easy to install, by just using the following command:
+
+```mvn install archetype:update-local-catalog```
+
+Sadly, the project is, currently, not being stored in any repository, so the only way to acquire it is by installation.
+
 ## Collaborate
 
 The project is still under ongoing development, and any help will be well received.
@@ -42,7 +50,7 @@ Issues are managed at the GitHub [project issues page][issues].
 Everybody is allowed to report bugs or ask for features.
 
 ### Getting the code
-The code can be found at the [GitHub project page][scm].
+The latest version of the code can be found at the [GitHub project page][scm].
 
 Feel free to fork it, and share the changes.
 
