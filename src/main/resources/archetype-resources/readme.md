@@ -61,9 +61,9 @@ ${symbol_pound}${symbol_pound} License
 The project is released under the [MIT License][license].
 
 [issues]: https://github.com/${repoUserId}/${repoProjectId}/issues
-[javadoc-develop]: ${siteRelease}/maven/${repoProjectId}/apidocs
-[javadoc-release]: ${siteDevelop}/maven/${repoProjectId}/apidocs
+[javadoc-develop]: http://${siteRelease}/development/maven/${repoProjectId}/apidocs
+[javadoc-release]: http://${siteDevelop}/maven/${repoProjectId}/apidocs
 [license]: http://www.opensource.org/licenses/mit-license.php
 [scm]: https://github.com/${repoUserId}/${repoProjectId}
-[site-develop]: http://${siteDevelop}/maven/${repoProjectId}
+[site-develop]: http://${siteDevelop}/development/maven/${repoProjectId}
 [site-release]: http://${siteRelease}/maven/${repoProjectId}
