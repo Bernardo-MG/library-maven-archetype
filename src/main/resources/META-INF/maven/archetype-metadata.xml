@@ -11,7 +11,7 @@
 			<defaultValue>repo-name</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="repoRelease">
-			<defaultValue>https://api.bintray.com/maven/bernardo-mg/maven</defaultValue>
+			<defaultValue>https://api.bintray.com/maven/bernardo-mg/maven/repo-name</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="repoSnapshot">
 			<defaultValue>ftp://maven.wandrell.com</defaultValue>
