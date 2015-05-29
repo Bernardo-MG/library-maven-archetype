@@ -64,7 +64,7 @@
 				<site>
 					<id>site</id>
 					<name>Project Documentation Site</name>
-					<url>${siteRelease}/${repoProjectId}</url>
+					<url>ftp://${siteRelease}/${repoProjectId}</url>
 				</site>
 			</distributionManagement>
 		</profile>
@@ -74,7 +74,7 @@
 				<site>
 					<id>site-development</id>
 					<name>Project Development Documentation Site</name>
-					<url>${siteDevelop}/${repoProjectId}</url>
+					<url>ftp://${siteDevelop}/${repoProjectId}</url>
 				</site>
 			</distributionManagement>
 		</profile>

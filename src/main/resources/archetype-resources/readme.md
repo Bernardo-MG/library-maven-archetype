@@ -65,5 +65,5 @@ The project is released under the [MIT License][license].
 [javadoc-release]: ${siteDevelop}/maven/${repoProjectId}/apidocs
 [license]: http://www.opensource.org/licenses/mit-license.php
 [scm]: https://github.com/${repoUserId}/${repoProjectId}
-[site-develop]: ${siteDevelop}/maven/${repoProjectId}
-[site-release]: ${siteRelease}/maven/${repoProjectId}
+[site-develop]: http://${siteDevelop}/maven/${repoProjectId}
+[site-release]: http://${siteRelease}/maven/${repoProjectId}

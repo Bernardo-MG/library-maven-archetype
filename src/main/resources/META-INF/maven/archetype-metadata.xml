@@ -23,10 +23,10 @@
 			<defaultValue>http://maven.wandrell.com</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="siteRelease">
-			<defaultValue>ftp://docs.wandrell.com</defaultValue>
+			<defaultValue>docs.wandrell.com</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="siteDevelop">
-			<defaultValue>ftp://docs.wandrell.com</defaultValue>
+			<defaultValue>docs.wandrell.com</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="organizationName">
 			<defaultValue>Bernardo Martínez Garrido</defaultValue>
