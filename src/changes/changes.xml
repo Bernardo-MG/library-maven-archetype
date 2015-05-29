@@ -11,7 +11,7 @@
 				First release of the archetype.
 			</action>
 		</release>
-		<release version="0.1.1" date="2015-xx-xx" description="Corrections">
+		<release version="0.1.1" date="2015-05-29" description="Corrections">
 			<action dev="bmg" type="update">
 				Corrected various errors on the archetype files.
 			</action>
