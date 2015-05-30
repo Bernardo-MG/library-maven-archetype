@@ -22,9 +22,11 @@ All the artifacts repositories, which does not include the code repository, are 
 |site|Releases documentation site repository|
 |site-development|Development documentation site repository|
 
+## Required repositories
+
 ---
 
-## Code repository
+### Code repository
 
 This is expected to be a repository on GitHub.
 
@@ -34,18 +36,26 @@ Instead, the developers will push changes to it, and the CI service will react t
 
 For more information about this check the [Travis](./travis.html) section, which is the CI service expected by default to be used.
 
-## Documentation repository
+### Documentation repository
 
 The documentation repository store a Maven site for the project, similar to this one, which will also include the Javadocs. It will store the documentation for both the current release and the latest snapshot.
 
 This is a publicly accessible FTP, and any host offering this kind if access can be used.
 
-## Releases repository
+### Releases repository
 
 This repository is expected by default to be the generic Maven repository on Bintray. Both the download URL for dependencies, and the download link on the site, are configured for this.
 
-## Snapshots repository
+### Snapshots repository
 
 The snapshots repository is just a publicly accessible FTP site prepared to work with Maven, and will be used both for uploading and for downloading the latest snapshots.
 
 There is no additional requirement for this, so it can be set on any FTP host. Preferably one under control of the developer.
+
+---
+
+## Bintray and linked repositories
+
+By default, the archetype is meant to be used with Bintray. This means that it is also possible to ask for the releases repo to be linked with JCenter and oss.jfrog.org.
+
+The second, oss.jfrog.org, gives an snapshots repository for open source projects, but as it is needed to ask for it, this repository is not included in the configuration.
