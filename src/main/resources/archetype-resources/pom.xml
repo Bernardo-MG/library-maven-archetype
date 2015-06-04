@@ -81,18 +81,18 @@
 	</profiles>
 
 	<organization>
-		<name>${organizationName}</name>
-		<url>${organizationUrl}</url>
+		<name>${developerName}</name>
+		<url>${developerUrl}</url>
 	</organization>
 
 	<developers>
 		<developer>
-			<id>bmg</id>
-			<name>Bernardo Martínez Garrido</name>
-			<email>programming@wandrell.com</email>
-			<url />
-			<organization />
-			<organizationUrl />
+			<id>${developerId}</id>
+			<name>${developerName}</name>
+			<email>${developerMail}</email>
+			<url>${developerUrl}</url>
+			<organization>${developerName}</organization>
+			<organizationUrl>${developerUrl}</organizationUrl>
 			<roles>
 				<role>Developer</role>
 			</roles>

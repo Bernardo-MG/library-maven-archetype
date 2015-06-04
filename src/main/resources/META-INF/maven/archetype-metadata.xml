@@ -4,6 +4,18 @@
 	xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="library">
 	<requiredProperties>
+		<requiredProperty key="developerId">
+			<defaultValue>bmg</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="developerName">
+			<defaultValue>Bernardo Martínez Garrido</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="developerMail">
+			<defaultValue>programming@wandrell.com</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="developerURL">
+			<defaultValue>https://github.com/Bernardo-MG</defaultValue>
+		</requiredProperty>
 		<requiredProperty key="repoUserId">
 			<defaultValue>bernardo-mg</defaultValue>
 		</requiredProperty>
@@ -27,12 +39,6 @@
 		</requiredProperty>
 		<requiredProperty key="siteDevelop">
 			<defaultValue>docs.wandrell.com</defaultValue>
-		</requiredProperty>
-		<requiredProperty key="organizationName">
-			<defaultValue>Bernardo Martínez Garrido</defaultValue>
-		</requiredProperty>
-		<requiredProperty key="organizationUrl">
-			<defaultValue>http://</defaultValue>
 		</requiredProperty>
 	</requiredProperties>
 	<fileSets>

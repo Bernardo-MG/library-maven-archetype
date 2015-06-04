@@ -20,6 +20,9 @@
 			<action dev="bmg" type="update">
 				Changes to the site.
 			</action>
+			<action dev="bmg" type="update">
+				Improved the developer initial data.
+			</action>
 		</release>
 	</body>
 </document>
