@@ -11,7 +11,7 @@
 
 	<name>Library Maven Archetype</name>
 	<description>A Maven archetype to ease the creation of new libraries.</description>
-	<url />
+	<url>http://github.com/bernardo-mg/library-maven-archetype</url>
 
 	<licenses>
 		<license>
@@ -25,17 +25,17 @@
 		<connection>scm:git:https://github.com/Bernardo-MG/library-maven-archetype.git</connection>
 		<developerConnection>scm:git:https://github.com/Bernardo-MG/library-maven-archetype.git</developerConnection>
 		<tag>head</tag>
-		<url>http://github.com/Bernardo-MG/library-maven-archetype</url>
+		<url>http://github.com/bernardo-mg/library-maven-archetype</url>
 	</scm>
 
 	<issueManagement>
 		<system>GitHub</system>
-		<url>https://github.com/Bernardo-MG/library-maven-archetype/issues</url>
+		<url>https://github.com/bernardo-mg/library-maven-archetype/issues</url>
 	</issueManagement>
 
 	<ciManagement>
 		<system>Travis CI</system>
-		<url>https://travis-ci.org/Bernardo-MG/library-maven-archetype</url>
+		<url>https://travis-ci.org/bernardo-mg/library-maven-archetype</url>
 		<notifiers />
 	</ciManagement>
 

@@ -23,6 +23,9 @@
 			<action dev="bmg" type="update">
 				Improved the developer initial data.
 			</action>
+			<action dev="bmg" type="update">
+				Added initial projects page.
+			</action>
 		</release>
 	</body>
 </document>

@@ -11,7 +11,7 @@
 
 	<name>Basic Maven Project</name>
 	<description>A Maven project created from the library archetype.</description>
-	<url />
+	<url>https://github.com/${repoUserId}/${repoProjectId}</url>
 
 	<licenses>
 		<license>
