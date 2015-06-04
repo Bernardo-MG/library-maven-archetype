@@ -16,7 +16,7 @@
 				Corrected various errors on the archetype files.
 			</action>
 		</release>
-		<release version="0.1.2" date="2015-xx-xx" description="Corrections">
+		<release version="0.1.2" date="2015-xx-xx" description="More configuration">
 			<action dev="bmg" type="update">
 				Changes to the site.
 			</action>
