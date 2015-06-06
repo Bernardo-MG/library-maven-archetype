@@ -32,6 +32,9 @@
 			<action dev="bmg" type="update">
 				Added initial projects page.
 			</action>
+			<action dev="bmg" type="update">
+				Several changes to the archetype variables.
+			</action>
 		</release>
 	</body>
 </document>

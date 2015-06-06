@@ -4,6 +4,12 @@
 	xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="library">
 	<requiredProperties>
+		<requiredProperty key="artifactName">
+			<defaultValue>Basic Maven Project</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="artifactDescription">
+			<defaultValue>A Maven project created from the library archetype.</defaultValue>
+		</requiredProperty>
 		<requiredProperty key="developerId">
 			<defaultValue>bmg</defaultValue>
 		</requiredProperty>

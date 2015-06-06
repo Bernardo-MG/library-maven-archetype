@@ -9,8 +9,8 @@
 	<version>0.1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>Basic Maven Project</name>
-	<description>A Maven project created from the library archetype.</description>
+	<name>${artifactName}</name>
+	<description>${artifactDescription}</description>
 	<url>https://github.com/${repoUserId}/${artifactId}</url>
 
 	<licenses>

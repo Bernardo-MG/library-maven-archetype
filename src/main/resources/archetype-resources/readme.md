@@ -5,6 +5,7 @@ A basic Maven project created from the Basic Maven Archetype.
 This should be set up correctly before use. Remember to verify, and change if needed, at least the following data:
 
 - Links on the readme, POM and Maven site (repositories, issues, etc)
+- Project info on the POM.
 - License, if not using the MIT one (POM, readme and LICENSE file)
 - This readme description
 - This documentation on the Maven site
