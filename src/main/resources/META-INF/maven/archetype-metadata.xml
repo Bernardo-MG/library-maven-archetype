@@ -19,9 +19,6 @@
 		<requiredProperty key="repoUserId">
 			<defaultValue>bernardo-mg</defaultValue>
 		</requiredProperty>
-		<requiredProperty key="repoProjectId">
-			<defaultValue>repo-name</defaultValue>
-		</requiredProperty>
 		<requiredProperty key="siteRelease">
 			<defaultValue>docs.wandrell.com</defaultValue>
 		</requiredProperty>
