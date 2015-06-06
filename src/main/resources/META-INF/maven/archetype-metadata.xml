@@ -19,7 +19,7 @@
 		<requiredProperty key="developerMail">
 			<defaultValue>programming@wandrell.com</defaultValue>
 		</requiredProperty>
-		<requiredProperty key="developerURL">
+		<requiredProperty key="developerUrl">
 			<defaultValue>https://github.com/Bernardo-MG</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="repoUserId">
