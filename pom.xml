@@ -25,7 +25,7 @@
 		<connection>scm:git:https://github.com/Bernardo-MG/library-maven-archetype.git</connection>
 		<developerConnection>scm:git:https://github.com/Bernardo-MG/library-maven-archetype.git</developerConnection>
 		<tag>head</tag>
-		<url>http://github.com/bernardo-mg/library-maven-archetype</url>
+		<url>https://github.com/bernardo-mg/library-maven-archetype</url>
 	</scm>
 
 	<issueManagement>

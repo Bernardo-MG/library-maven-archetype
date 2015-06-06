@@ -16,9 +16,12 @@
 				Corrected various errors on the archetype files.
 			</action>
 		</release>
-		<release version="0.1.2" date="2015-xx-xx" description="More configuration">
-			<action dev="bmg" type="update">
-				Changes to the site.
+		<release version="0.1.2" date="2015-xx-xx" description="More configuration corrections">
+			<action dev="bmg" type="fix">
+				Changes to the Maven site.
+			</action>
+			<action dev="bmg" type="fix">
+				Corrected links on the Maven site.
 			</action>
 			<action dev="bmg" type="update">
 				Improved the developer initial data.
