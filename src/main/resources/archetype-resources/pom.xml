@@ -144,7 +144,7 @@
 		<ciName>${project.ciManagement.system}</ciName>
 		<ciURL>${project.ciManagement.url}</ciURL>
 		<license>MIT</license>
-		<bigDescription>The project's description.</bigDescription>
+		<bigDescription>${artifactDescription}</bigDescription>
 	</properties>
 
 	<dependencies>
