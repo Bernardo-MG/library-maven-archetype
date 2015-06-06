@@ -17,6 +17,9 @@
 			</action>
 		</release>
 		<release version="0.1.2" date="2015-xx-xx" description="More configuration corrections">
+			<action dev="bmg" type="update">
+				The archetype is now correctly set up to work with Bintray and Sonatype.
+			</action>
 			<action dev="bmg" type="fix">
 				Changes to the Maven site.
 			</action>

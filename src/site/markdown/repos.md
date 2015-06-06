@@ -1,19 +1,25 @@
 # Repositories and services
 
-As part of the project life cycle a series of repositories must be set up to store different artifacts, as follows:
+The archetype is prepared to work applying a simple CI cycle, which will make use of various free repository services. Being the only exception the documentation, which requires a FTP server to store the Maven site.
+
+The required repositories are:
 
 - GitHub repository, for storing the code
 - Bintray repository, for the code releases
-- Maven snapshots repository, for the snapshots
+- Sonatype OSS repository, for the snapshots
 - Documentation repository, to store the Maven sites for both the release and latest snapshot
 
-The way to set them all up goes beyond the scope of this manual, but usually it's a simple job, and in many cases just little more than registering on a web page.
+All these repositories should have been set up before creating a new project, or otherwise the CI process won't work correctly. The way to set them all up goes beyond the scope of this manual, but usually it's a simple job, which requires little more than registering on a web page.
 
-Note that the GitHub repository is expected to be integrated with Travis CI. To find out more about how is this used check the [Travis](./travis.html) section. Also check the [project life cycle](./lifecycle.html) section.
+## Integrating the repositories
+
+The repositories will be integrated with the use of Travis, a free CI service. To find out more about how is this used check the [Travis](./travis.html) section. Also check the [project life cycle](./lifecycle.html) section.
+
+But in shot, Travis will take care of building the code submitted to Github, and then sending the compiled artifacts to Bintray or Sonatype, and the documentation ot the docs repository.
 
 ## Repository IDs
 
-All the artifacts repositories, which does not include the code repository, are handled by Maven, being defined on the POM with the following IDs:
+Inside the POM, a unique id has been given to each repository, except for the code repo, which does not require one:
 
 |ID|Repository|
 |---|---|
@@ -22,13 +28,13 @@ All the artifacts repositories, which does not include the code repository, are 
 |site|Releases documentation site repository|
 |site-development|Development documentation site repository|
 
-## Required repositories
+## Repositories in detail
 
 ---
 
 ### Code repository
 
-This is expected to be a repository on GitHub.
+By default, a GitHub repository.
 
 Maven does not handle the code repository. It is defined in the POM, and it is a vital part of the project life cycle, but is not directly handled by Maven.
 
@@ -38,24 +44,28 @@ For more information about this check the [Travis](./travis.html) section, which
 
 ### Documentation repository
 
+Should be a FTP server.
+
 The documentation repository store a Maven site for the project, similar to this one, which will also include the Javadocs. It will store the documentation for both the current release and the latest snapshot.
 
 This is a publicly accessible FTP, and any host offering this kind if access can be used.
 
 ### Releases repository
 
-This repository is expected by default to be the generic Maven repository on Bintray. Both the download URL for dependencies, and the download link on the site, are configured for this.
+By default, a Bintray repo.
+
+Both the download URL for dependencies, and the download link on the site, are configured for this.
 
 ### Snapshots repository
 
-The snapshots repository is just a publicly accessible FTP site prepared to work with Maven, and will be used both for uploading and for downloading the latest snapshots.
+By default, OSS Sonatype.
 
-There is no additional requirement for this, so it can be set on any FTP host. Preferably one under control of the developer.
+Alternatively, it is possible to use a FTP server, if one does not wish to go through the process of getting into Sonatype.
 
 ---
 
-## Bintray and linked repositories
+## Bintray and other linked repositories
 
 By default, the archetype is meant to be used with Bintray. This means that it is also possible to ask for the releases repo to be linked with JCenter and oss.jfrog.org.
 
-The second, oss.jfrog.org, gives an snapshots repository for open source projects, but as it is needed to ask for it, this repository is not included in the configuration.
+More importantly, Bintray also allows publishing releases into Sonatype, allowing to use Maven's default repository.
