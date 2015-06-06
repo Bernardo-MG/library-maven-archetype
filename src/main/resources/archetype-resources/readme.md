@@ -2,12 +2,12 @@
 ${symbol_pound} Basic Maven Project
 A basic Maven project created from the Basic Maven Archetype.
 
-This should be set up correctly before use. Remember to change at least the following data:
+This should be set up correctly before use. Remember to verify, and change if needed, at least the following data:
 
-- Links on the readme
-- Links on the POM (repositories, issues, etc)
+- Links on the readme, POM and Maven site (repositories, issues, etc)
 - License, if not using the MIT one (POM, readme and LICENSE file)
 - This readme description
+- This documentation on the Maven site
 
 ${symbol_pound}${symbol_pound} Documentation
 Documentation is always generated for the latest release:
@@ -60,10 +60,10 @@ Feel free to fork it, and share the changes.
 ${symbol_pound}${symbol_pound} License
 The project is released under the [MIT License][license].
 
-[issues]: https://github.com/${repoUserId}/${repoProjectId}/issues
-[javadoc-develop]: http://${siteRelease}/development/maven/${repoProjectId}/apidocs
-[javadoc-release]: http://${siteDevelop}/maven/${repoProjectId}/apidocs
+[issues]: https://github.com/${repoUserId}/${artifactId}/issues
+[javadoc-develop]: http://${siteRelease}/development/maven/${artifactId}/apidocs
+[javadoc-release]: http://${siteDevelop}/maven/${artifactId}/apidocs
 [license]: http://www.opensource.org/licenses/mit-license.php
-[scm]: https://github.com/${repoUserId}/${repoProjectId}
-[site-develop]: http://${siteDevelop}/development/maven/${repoProjectId}
-[site-release]: http://${siteRelease}/maven/${repoProjectId}
+[scm]: https://github.com/${repoUserId}/${artifactId}
+[site-develop]: http://${siteDevelop}/development/maven/${artifactId}
+[site-release]: http://${siteRelease}/maven/${artifactId}
