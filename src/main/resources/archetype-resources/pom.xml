@@ -111,8 +111,8 @@
 		<!-- Manifest data -->
 		<manifest.name>${packageInPathFormat}</manifest.name>
 		<!-- Dependencies versions -->
-		<log4j.version>2.3</log4j.version>
 		<mockito.version>1.10.19</mockito.version>
+		<slf4j.version>1.7.12</slf4j.version>
 		<testng.version>6.9.4</testng.version>
 		<!-- Plugins versions -->
 		<plugin.checkstyle.version>2.15</plugin.checkstyle.version>
@@ -150,17 +150,17 @@
 
 	<dependencies>
 		<dependency>
-			<!-- Log4J -->
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-core</artifactId>
-			<version>${log4j.version}</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
 			<!-- Mockito -->
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-all</artifactId>
 			<version>${mockito.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<!-- SLF4J LOG4J-12 Binding -->
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${slf4j.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
