@@ -46,3 +46,15 @@ The deployment scripts will check three things:
 - The current build has been cloned from a deployable branch
 
 If any of those requirements fails, the script won't make the deployment
+
+### Maven configuration file script
+
+The script will mostly take the access-related environmental values and put them into a configuration files.
+
+Additionally, it sets the development profile, if the current branch is the 'develop' one.
+
+### Site deployment script
+
+As it is not possible to set more than one site deployment target, two profiles are used to distinguish between the releases and deployment sites repositories.
+
+The correct profile will be loaded from the Maven configuration file.

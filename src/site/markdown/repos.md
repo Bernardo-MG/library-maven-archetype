@@ -4,18 +4,28 @@ The archetype is prepared to work applying a simple CI cycle, which will make us
 
 The required repositories are:
 
-- GitHub repository, for storing the code
-- Bintray repository, for the code releases
-- Sonatype OSS repository, for the snapshots
+- [GitHub](https://github.com/) repository, for storing the code
+- [Bintray](https://bintray.com/) repository, for the code releases
+- [Sonatype OSS](https://oss.sonatype.org/) repository, for the snapshots
 - Documentation repository, to store the Maven sites for both the release and latest snapshot
 
 All these repositories should have been set up before creating a new project, or otherwise the CI process won't work correctly. The way to set them all up goes beyond the scope of this manual, but usually it's a simple job, which requires little more than registering on a web page.
 
 ## Integrating the repositories
 
-The repositories will be integrated with the use of Travis, a free CI service. To find out more about how is this used check the [Travis](./travis.html) section. Also check the [project life cycle](./lifecycle.html) section.
+The repositories will be integrated with the use of [Travis](https://travis-ci.org), a free CI service. To find out more about how is this used check the [Travis section](./travis.html). Also check the [project life cycle](./lifecycle.html) section.
 
-But in shot, Travis will take care of building the code submitted to Github, and then sending the compiled artifacts to Bintray or Sonatype, and the documentation ot the docs repository.
+But in short, Travis will take care of building the code submitted to Github, and then sending the compiled artifacts to Bintray or Sonatype, and the documentation ot the docs repository.
+
+Just remember to connect them, which just required a free account, and following [this guide](http://docs.travis-ci.com/user/getting-started/#To-get-started-with-Travis-CI%3A).
+
+## JCenter, OSS Sonatype and Maven Central
+
+Using Bintray, it is possible to link the releases depo to JCenter, OSS Sonatype and Maven central. Meaning that it won't be necessary to add repositories info to the POM along the dependencies.
+
+Connecting to JCenter is easy, just follow [this guide](https://bintray.com/docs/usermanual/uploads/uploads_includingyourpackagesinjcenter.html).
+
+To connect Bintray to OSS Sonatype follow [this guide](http://blog.bintray.com/2014/02/11/bintray-as-pain-free-gateway-to-maven-central/). Linking to Sonatype also means that the repository will be mirrored on Maven Central.
 
 ## Repository IDs
 
@@ -28,44 +38,42 @@ Inside the POM, a unique id has been given to each repository, except for the co
 |site|Releases documentation site repository|
 |site-development|Development documentation site repository|
 
+These ids will be used mostly on the servers configuration file. This file may be created to manually deploy the project, but actually it is recommended to just make use of the Travis configuration files.
+
+You may check how this is done on the [Travis](./travis.html) section. But mainly the '.scripts/create-mave-settings.sh' script will generate this file from the Travis environment variables.
+
 ## Repositories in detail
 
 ---
 
 ### Code repository
 
-By default, a GitHub repository.
+A GitHub repository.
 
 Maven does not handle the code repository. It is defined in the POM, and it is a vital part of the project life cycle, but is not directly handled by Maven.
 
 Instead, the developers will push changes to it, and the CI service will react to such changes by reading the configuration files including in the project.
 
-For more information about this check the [Travis](./travis.html) section, which is the CI service expected by default to be used.
+For more information about this check the Travis section, which is the CI service expected by default to be used.
 
 ### Documentation repository
 
 Should be a FTP server.
 
-The documentation repository store a Maven site for the project, similar to this one, which will also include the Javadocs. It will store the documentation for both the current release and the latest snapshot.
+The documentation repository stores a Maven site for the project, similar to this one, which will also include the Javadocs. While two repositores can be configured, one for the current release and another for the latest snapshot, it is actually recommended to use one. Just set up two different accounts, to deploy both sites at different locations.
 
-This is a publicly accessible FTP, and any host offering this kind if access can be used.
+This should be a publicly accessible FTP, with the only additional requirement being some way to access the uploaded docs.
 
 ### Releases repository
 
-By default, a Bintray repo.
+A Bintray repo.
 
 Both the download URL for dependencies, and the download link on the site, are configured for this.
 
+Note that it is possible to link this repository to JCenter, OSS Sonatype and Maven Central. If this is done, most Maven versions will find the project releases automatically.
+
 ### Snapshots repository
 
-By default, OSS Sonatype.
+OSS Sonatype.
 
-Alternatively, it is possible to use a FTP server, if one does not wish to go through the process of getting into Sonatype.
-
----
-
-## Bintray and other linked repositories
-
-By default, the archetype is meant to be used with Bintray. This means that it is also possible to ask for the releases repo to be linked with JCenter and oss.jfrog.org.
-
-More importantly, Bintray also allows publishing releases into Sonatype, allowing to use Maven's default repository.
+Alternatively, it is possible to use a FTP server, if one does not wish to go through the process of getting into Sonatype. Just pushing into it will prepare the FTP to be used as a simple Maven repository.

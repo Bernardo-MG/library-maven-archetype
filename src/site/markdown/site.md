@@ -23,3 +23,17 @@ By default, the following reports are added to the site:
 ### Configuration changes to reports
 
 The archetype contains configuration files for PMD and Checkstyle, meant to reduce the noise of those reports.
+
+### Changes plugin configuration
+
+The changes file is stored on the 'src/changes' folder. It is the 'changes.xml' file, and should be updated with all the changes made during version changes.
+
+More information about this file can be found at the [changes.xml specification](https://maven.apache.org/plugins/maven-changes-plugin/changes.html).
+
+## Creating the site
+
+To correctly generate all the reports, the site requires the testing results. For this reason, the recommended way to generate the site is using the following command:
+
+```
+mvn verify site
+```
