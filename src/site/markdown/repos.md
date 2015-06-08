@@ -27,6 +27,14 @@ Connecting to JCenter is easy, just follow [this guide](https://bintray.com/docs
 
 To connect Bintray to OSS Sonatype follow [this guide](http://blog.bintray.com/2014/02/11/bintray-as-pain-free-gateway-to-maven-central/). Linking to Sonatype also means that the repository will be mirrored on Maven Central.
 
+### OSS Sonatype snapshots
+
+The OSS Sonatype releases repository grants access to the snapshots repository. This can be found at the following URL:
+
+```
+https://oss.sonatype.org/content/groups/staging
+```
+
 ## Repository IDs
 
 Inside the POM, a unique id has been given to each repository, except for the code repo, which does not require one:
