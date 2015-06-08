@@ -10,5 +10,9 @@ before_install:
   - ./.scripts/create-maven-settings.sh
 script:
   - mvn clean verify archetype:integration-test
+  - install archetype:update-local-catalog
+  - mvn archetype:generate -DgroupId=com.wadnrell -DartifactId=artifact -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+  - cd artifact
+  - mvn clean verify site
 after_success:
   - ./.scripts/deploy-site.sh

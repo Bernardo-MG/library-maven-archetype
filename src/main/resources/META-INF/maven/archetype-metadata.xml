@@ -34,28 +34,28 @@
 	</requiredProperties>
 	<fileSets>
 		<fileSet filtered="true" packaged="true" encoding="UTF-8">
-		<!-- Sources -->
+			<!-- Sources -->
 			<directory>src/main/java</directory>
 			<includes>
 				<include>**/*.java</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true" encoding="UTF-8">
-		<!-- Test sources -->
+			<!-- Test sources -->
 			<directory>src/test/java</directory>
 			<includes>
 				<include>**/*.java</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" encoding="UTF-8">
-		<!-- Test resources -->
+			<!-- Test resources -->
 			<directory>src/test/resources</directory>
 			<includes>
 				<include>**/*.xml</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" encoding="UTF-8">
-		<!-- Filtered root files -->
+			<!-- Filtered root files -->
 			<directory></directory>
 			<includes>
 				<include>pom.xml</include>
@@ -63,17 +63,17 @@
 			</includes>
 		</fileSet>
 		<fileSet encoding="UTF-8">
-		<!-- Root files -->
+			<!-- Root files -->
 			<directory></directory>
 			<includes>
 				<include>LICENSE</include>
-				<include>*.gitignore</include>
+				<include>.gitignore</include>
 				<include>.travis.yml</include>
 				<include>.scripts/*.sh</include>
 			</includes>
 		</fileSet>
 		<fileSet encoding="UTF-8">
-		<!-- Report config files -->
+			<!-- Report config files -->
 			<directory>src</directory>
 			<includes>
 				<include>changes/*.xml</include>
@@ -82,7 +82,7 @@
 			</includes>
 		</fileSet>
 		<fileSet encoding="UTF-8">
-		<!-- Site files -->
+			<!-- Site files -->
 			<directory>src/site</directory>
 			<includes>
 				<include>**/*.*</include>
