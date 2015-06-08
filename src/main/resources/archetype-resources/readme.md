@@ -40,7 +40,7 @@ Thanks to Maven, the project is easy to install, by just using the following com
 
 ```mvn install```
 
-But the recommended way to install the project is by using the code repositories, where the releases and snapshots are stored. The way to set this is detailed on the documentation page.
+But the recommended way to install the project is by using the code repositories. As the project is stored in Bintray, and mirrored on JCenter and OSS Sonatype, it can be acquired just by adding the dependency info to the dependency manager being used. For more information about this, check the documentation.
 
 ${symbol_pound}${symbol_pound} Collaborate
 

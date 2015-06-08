@@ -2,15 +2,37 @@
 
 The project files are hosted on [Bintray][bintray], and have been replicated on JCenter and OSS Sonatype, which also replicates it into the Maven Central Repository.
 
-This means that it should not be necessary to set up the repository data, and the depedency should be accessible by default.
+This means that it should not be necessary to set up the repository data, and the dependency should be accessible by default.
 
-Still, in the case that there is any problem, the Bintray repo should be treated as the main repository, and it can be accessed by adding the following lines to the configuration files:
+Still, if any problem were to arise, the Bintray repo should be treated as the main repository.
+
+Both the repository data and the dependency can be added with the following lines:
 
 ---
 
 ## Maven
 
-To add the Bintray repository to Maven just add the following to the POM:
+### Dependency
+
+To add the dependency:
+
+```
+<dependencies>
+	...
+	<dependency>
+		<groupId>${groupId}</groupId>
+		<artifactId>${artifactId}</artifactId>
+		<version>${${groupId}.${artifactId}.version}</version>
+	</dependency>
+	...
+</dependencies>
+```
+
+It is recommended to set the version through a property, as shown in the example.
+
+### Repo info
+
+To add the Bintray repository to Maven (should not be required) just add the following to the POM:
 
 ```
 <repositories>
@@ -27,36 +49,12 @@ To add the Bintray repository to Maven just add the following to the POM:
 </repositories>
 ```
 
-Then just add the dependency:
-	
-```
-<dependencies>
-	...
-	<dependency>
-		<groupId>${groupId}</groupId>
-		<artifactId>${artifactId}</artifactId>
-		<version>${${groupId}.${artifactId}.version}</version>
-	</dependency>
-	...
-</dependencies>
-```
-
-It is recommended to set the version through a property, as shown in the example.
-	
 ## Gradle
 
-To add the Bintray repository to Gradle just add the following to the config file:
-	
-```
-repositories {
-    maven {
-        url  "http://dl.bintray.com/${repoUserId}/maven" 
-    }
-}
-```
+### Dependency
 
-Then just add the dependency:
-	
+To add the dependency:
+
 ```
 dependencies {
 	compile(group: '${groupId}', name: '${artifactId}', version: 'x.y.z')
@@ -64,6 +62,18 @@ dependencies {
 ```
 
 Of course, the 'x.y.z' version should be set to the current one for the project.
+
+### Repository
+
+To add the Bintray repository to Gradle (should not be required) just add the following to the config file:
+
+```
+repositories {
+    maven {
+        url  "http://dl.bintray.com/${repoUserId}/maven" 
+    }
+}
+```
 
 ---
 
