@@ -6,7 +6,7 @@
 
 	<groupId>com.wandrell.archetype</groupId>
 	<artifactId>library</artifactId>
-	<version>0.1.1-SNAPSHOT</version>
+	<version>0.2.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>Library Maven Archetype</name>
@@ -38,6 +38,21 @@
 		<url>https://travis-ci.org/bernardo-mg/library-maven-archetype</url>
 		<notifiers />
 	</ciManagement>
+
+	<distributionManagement>
+		<repository>
+			<uniqueVersion>false</uniqueVersion>
+			<id>releases</id>
+			<name>Releases Repository</name>
+			<url>https://api.bintray.com/maven/bernardo-mg/maven/library-maven-archetype</url>
+		</repository>
+		<snapshotRepository>
+			<uniqueVersion>false</uniqueVersion>
+			<id>snapshots</id>
+			<name>Snapshots Repository</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 	<profiles>
 		<profile>
@@ -147,6 +162,14 @@
 			</plugins>
 		</pluginManagement>
 		<plugins>
+			<plugin>
+				<!-- Resources -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<configuration>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+			</plugin>
 			<plugin>
 				<!-- Archetype -->
 				<groupId>org.apache.maven.plugins</groupId>
