@@ -138,6 +138,7 @@
 		<extension.wagon.version>2.8</extension.wagon.version>
 		<!-- Maven Site -->
 		<site.skin.version>1.1.1</site.skin.version>
+		<site.description>${artifactDescription}</site.description>
 		<site.download>https://bintray.com/${repoUserId}/maven/${artifactId}/view</site.download>
 		<javaVersion>JDK 7, JDK 8 and OpenJDK 7</javaVersion>
 		<scmName>GitHub</scmName>
@@ -145,7 +146,6 @@
 		<ciName>${project.ciManagement.system}</ciName>
 		<ciURL>${project.ciManagement.url}</ciURL>
 		<license>MIT</license>
-		<bigDescription>${artifactDescription}</bigDescription>
 	</properties>
 
 	<dependencies>
