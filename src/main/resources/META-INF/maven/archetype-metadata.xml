@@ -85,7 +85,15 @@
 			<!-- Site files -->
 			<directory>src/site</directory>
 			<includes>
-				<include>**/*.*</include>
+				<include>markdown/index.md.vm</include>
+				<include>resources/**/*.*</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" encoding="UTF-8">
+			<!-- Site usage info -->
+			<directory>src/site/markdown</directory>
+			<includes>
+				<include>usage.md</include>
 			</includes>
 		</fileSet>
 	</fileSets>
