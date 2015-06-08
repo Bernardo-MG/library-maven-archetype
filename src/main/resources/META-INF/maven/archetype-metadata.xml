@@ -91,7 +91,9 @@
 			<!-- Site files -->
 			<directory>src/site</directory>
 			<includes>
-				<include>**/*.*</include>
+				<include>site.xml</include>
+				<include>resources/**/*.*</include>
+				<include>markdown/index.md.vm</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" encoding="UTF-8">
