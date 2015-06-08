@@ -72,11 +72,17 @@
 				<include>.scripts/*.sh</include>
 			</includes>
 		</fileSet>
-		<fileSet encoding="UTF-8">
+		<fileSet filtered="true" encoding="UTF-8">
 			<!-- Report config files -->
 			<directory>src</directory>
 			<includes>
 				<include>changes/*.xml</include>
+			</includes>
+		</fileSet>
+		<fileSet encoding="UTF-8">
+			<!-- Report config files -->
+			<directory>src</directory>
+			<includes>
 				<include>checkstyle/*.xml</include>
 				<include>pmd/*.xml</include>
 			</includes>
