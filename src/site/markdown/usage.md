@@ -8,6 +8,8 @@ To install the project into the local archetypes repository use the following co
 mvn clean install archetype:update-local-catalog
 ```
 
+After that, it can be used through Eclipse, by creating a new Maven project.
+
 ## Variables
 
 Several variables are defined for the archetype and can be modified when creating a new project with it. All of them have a default value assigned.

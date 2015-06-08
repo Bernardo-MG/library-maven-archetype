@@ -45,7 +45,11 @@ The deployment scripts will check three things:
 - The current build is not part of a pull
 - The current build has been cloned from a deployable branch
 
-If any of those requirements fails, the script won't make the deployment
+If any of those requirements fails, the script won't make the deployment.
+
+### Travis configuration file
+
+This is a very simple file. It will just verify the project, and then deploy the site and artifacts by using the scripts.
 
 ### Maven configuration file script
 
