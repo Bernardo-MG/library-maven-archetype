@@ -1,5 +1,10 @@
 #set( $symbol_pound = '#' )
 ${symbol_pound} Basic Maven Project
+
+[![Maven Central](https://img.shields.io/maven-central/v/${groupId}/${artifactId}.svg)][maven-repo]
+[![Release docs](https://img.shields.io/badge/docs-release-blue.svg)][site-release]
+[![Development docs](https://img.shields.io/badge/docs-develop-blue.svg)][site-develop]
+
 A basic Maven project created from the Basic Maven Archetype.
 
 This should be set up correctly before use. Remember to verify, and change if needed, at least the following data:
@@ -40,7 +45,7 @@ Thanks to Maven, the project is easy to install, by just using the following com
 
 ```mvn install```
 
-But the recommended way to install the project is by using the code repositories. As the project is stored in Bintray, and mirrored on JCenter and OSS Sonatype, it can be acquired just by adding the dependency info to the dependency manager being used. For more information about this, check the documentation.
+But the recommended way to install the project is by setting up the dependencies manager being used. For this check the [Maven repository page][maven-repo].
 
 ${symbol_pound}${symbol_pound} Collaborate
 
@@ -61,6 +66,7 @@ Feel free to fork it, and share the changes.
 ${symbol_pound}${symbol_pound} License
 The project is released under the [MIT License][license].
 
+[maven-repo]: http://mvnrepository.com/artifact/${groupId}/${artifactId}
 [issues]: https://github.com/${repoUserId}/${artifactId}/issues
 [javadoc-develop]: http://${siteRelease}/development/maven/${artifactId}/apidocs
 [javadoc-release]: http://${siteDevelop}/maven/${artifactId}/apidocs
