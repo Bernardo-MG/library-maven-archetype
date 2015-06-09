@@ -1,6 +1,8 @@
 #!/bin/bash
 # This script creates the Maven settings file
 # This includes the connection settings, which are loaded from the server's environment
+#
+# The data generated during this script is sensible information. Don't print it on the console.
 
 {
    echo "<settings>";
