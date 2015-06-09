@@ -1,11 +1,25 @@
 #!/bin/bash
 # This script creates the Maven settings file
 # This includes the connection settings, which are loaded from the server's environment
+#
+# The data generated during this script is sensible information. Don't print it on the console.
 
 {
    echo "<settings>";
    # Servers settings
    echo "<servers>";
+   # Releases FTP
+   echo "<server>";
+      echo "<id>releases</id>";
+      echo "<username>\${env.REPO_RELEASES_USER}</username>";
+      echo "<password>\${env.REPO_RELEASES_PASSWORD}</password>";
+   echo "</server>";
+   # DEVELOP FTP
+   echo "<server>";
+      echo "<id>snapshots</id>";
+      echo "<username>\${env.REPO_DEVELOP_USER}</username>";
+      echo "<password>\${env.REPO_DEVELOP_PASSWORD}</password>";
+   echo "</server>";
    # Site FTP
    echo "<server>";
       echo "<id>site</id>";

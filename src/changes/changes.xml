@@ -11,9 +11,32 @@
 				First release of the archetype.
 			</action>
 		</release>
-		<release version="0.1.1" date="2015-xx-xx" description="Corrections">
+		<release version="0.1.1" date="2015-05-29" description="Corrections">
 			<action dev="bmg" type="update">
 				Corrected various errors on the archetype files.
+			</action>
+		</release>
+		<release version="0.2.0" date="2015-06-08" description="More configuration corrections">
+			<action dev="bmg" type="update">
+				The archetype is now correctly set up to work with Bintray and Sonatype.
+			</action>
+			<action dev="bmg" type="fix">
+				Changes to the Maven site.
+			</action>
+			<action dev="bmg" type="fix">
+				Corrected links on the Maven site.
+			</action>
+			<action dev="bmg" type="update">
+				Improved the site documentation.
+			</action>
+			<action dev="bmg" type="update">
+				Improved the developer initial data.
+			</action>
+			<action dev="bmg" type="update">
+				Added initial projects page.
+			</action>
+			<action dev="bmg" type="update">
+				Several changes to the archetype variables.
 			</action>
 		</release>
 	</body>

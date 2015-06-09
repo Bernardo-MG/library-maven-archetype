@@ -9,9 +9,9 @@
 	<version>0.1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>Basic Maven Project</name>
-	<description>A Maven project created from the library archetype.</description>
-	<url />
+	<name>${artifactName}</name>
+	<description>${artifactDescription}</description>
+	<url>https://github.com/${repoUserId}/${artifactId}</url>
 
 	<licenses>
 		<license>
@@ -22,20 +22,20 @@
 	</licenses>
 
 	<scm>
-		<connection>scm:git:https://github.com/${repoUserId}/${repoProjectId}.git</connection>
-		<developerConnection>scm:git:https://github.com/${repoUserId}/${repoProjectId}.git</developerConnection>
+		<connection>scm:git:https://github.com/${repoUserId}/${artifactId}.git</connection>
+		<developerConnection>scm:git:https://github.com/${repoUserId}/${artifactId}.git</developerConnection>
 		<tag>head</tag>
-		<url>https://github.com/${repoUserId}/${repoProjectId}</url>
+		<url>https://github.com/${repoUserId}/${artifactId}</url>
 	</scm>
 
 	<issueManagement>
 		<system>GitHub</system>
-		<url>https://github.com/${repoUserId}/${repoProjectId}/issues</url>
+		<url>https://github.com/${repoUserId}/${artifactId}/issues</url>
 	</issueManagement>
 
 	<ciManagement>
 		<system>Travis CI</system>
-		<url>https://travis-ci.org/${repoUserId}/${repoProjectId}</url>
+		<url>https://travis-ci.org/${repoUserId}/${artifactId}</url>
 		<notifiers />
 	</ciManagement>
 
@@ -44,13 +44,13 @@
 			<uniqueVersion>false</uniqueVersion>
 			<id>releases</id>
 			<name>Releases Repository</name>
-			<url>${repoRelease}</url>
+			<url>https://api.bintray.com/maven/${repoUserId}/maven/${artifactId}</url>
 		</repository>
 		<snapshotRepository>
 			<uniqueVersion>false</uniqueVersion>
 			<id>snapshots</id>
 			<name>Snapshots Repository</name>
-			<url>${repoSnapshot}</url>
+			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
 
@@ -64,7 +64,7 @@
 				<site>
 					<id>site</id>
 					<name>Project Documentation Site</name>
-					<url>ftp://${siteRelease}/${repoProjectId}</url>
+					<url>ftp://${siteRelease}/${artifactId}</url>
 				</site>
 			</distributionManagement>
 		</profile>
@@ -74,25 +74,25 @@
 				<site>
 					<id>site-development</id>
 					<name>Project Development Documentation Site</name>
-					<url>ftp://${siteDevelop}/${repoProjectId}</url>
+					<url>ftp://${siteDevelop}/${artifactId}</url>
 				</site>
 			</distributionManagement>
 		</profile>
 	</profiles>
 
 	<organization>
-		<name>${organizationName}</name>
-		<url>${organizationUrl}</url>
+		<name>${developerName}</name>
+		<url>${developerUrl}</url>
 	</organization>
 
 	<developers>
 		<developer>
-			<id>bmg</id>
-			<name>Bernardo Martínez Garrido</name>
-			<email>programming@wandrell.com</email>
-			<url />
-			<organization />
-			<organizationUrl />
+			<id>${developerId}</id>
+			<name>${developerName}</name>
+			<email>${developerMail}</email>
+			<url>${developerUrl}</url>
+			<organization>${developerName}</organization>
+			<organizationUrl>${developerUrl}</organizationUrl>
 			<roles>
 				<role>Developer</role>
 			</roles>
@@ -111,33 +111,35 @@
 		<!-- Manifest data -->
 		<manifest.name>${packageInPathFormat}</manifest.name>
 		<!-- Dependencies versions -->
-		<log4j.version>1.2.17</log4j.version>
-		<testng.version>6.8.8</testng.version>
+		<mockito.version>1.10.19</mockito.version>
+		<slf4j.version>1.7.12</slf4j.version>
+		<testng.version>6.9.4</testng.version>
 		<!-- Plugins versions -->
-		<plugin.checkstyle.version>2.13</plugin.checkstyle.version>
-		<plugin.compiler.version>3.2</plugin.compiler.version>
+		<plugin.checkstyle.version>2.15</plugin.checkstyle.version>
 		<plugin.changes.version>2.11</plugin.changes.version>
+		<plugin.compiler.version>3.3</plugin.compiler.version>
 		<plugin.deploy.version>2.8.2</plugin.deploy.version>
-		<plugin.failsafe.version>2.18</plugin.failsafe.version>
-		<plugin.findbugs.version>3.0.0</plugin.findbugs.version>
-		<plugin.jacoco.version>0.7.2.201409121644</plugin.jacoco.version>
-		<plugin.jar.version>2.5</plugin.jar.version>
-		<plugin.javadoc.version>2.10.1</plugin.javadoc.version>
+		<plugin.failsafe.version>2.18.1</plugin.failsafe.version>
+		<plugin.findbugs.version>3.0.1</plugin.findbugs.version>
+		<plugin.jacoco.version>0.7.5.201505241946</plugin.jacoco.version>
+		<plugin.jar.version>2.6</plugin.jar.version>
+		<plugin.javadoc.version>2.10.3</plugin.javadoc.version>
 		<plugin.jdepend.version>2.0</plugin.jdepend.version>
 		<plugin.jxr.version>2.5</plugin.jxr.version>
-		<plugin.pmd.version>3.3</plugin.pmd.version>
+		<plugin.pmd.version>3.4</plugin.pmd.version>
 		<plugin.reports.version>2.8</plugin.reports.version>
 		<plugin.site.version>3.4</plugin.site.version>
 		<plugin.site.reflow.version>1.1.1</plugin.site.reflow.version>
 		<plugin.site.velocity.version>1.7</plugin.site.velocity.version>
 		<plugin.source.version>2.4</plugin.source.version>
-		<plugin.surefire.version>2.18</plugin.surefire.version>
+		<plugin.surefire.version>2.18.1</plugin.surefire.version>
 		<plugin.taglist.version>2.4</plugin.taglist.version>
 		<!-- Extensions versions -->
 		<extension.wagon.version>2.8</extension.wagon.version>
 		<!-- Maven Site -->
 		<site.skin.version>1.1.1</site.skin.version>
-		<site.download>https://bintray.com/bernardo-mg/maven/${repoProjectId}/view</site.download>
+		<site.description>${artifactDescription}</site.description>
+		<site.download>https://bintray.com/${repoUserId}/maven/${artifactId}/view</site.download>
 		<javaVersion>JDK 7, JDK 8 and OpenJDK 7</javaVersion>
 		<scmName>GitHub</scmName>
 		<scmURL>${project.scm.url}</scmURL>
@@ -146,25 +148,19 @@
 		<license>MIT</license>
 	</properties>
 
-	<repositories>
-		<repository>
-			<id>releases</id>
-			<name>Releases repository</name>
-			<url>${repoReleaseDownload}</url>
-		</repository>
-		<repository>
-			<id>snapshots</id>
-			<name>Snapshots repository</name>
-			<url>${repoSnapshotDownload}</url>
-		</repository>
-	</repositories>
-
 	<dependencies>
 		<dependency>
-			<!-- Log4J -->
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>${log4j.version}</version>
+			<!-- Mockito -->
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>${mockito.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<!-- SLF4J LOG4J-12 Binding -->
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${slf4j.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -380,6 +376,31 @@
 							<groupId>${project.groupId}</groupId>
 							<version>${project.version}</version>
 							<file>${project.build.directory}/${project.build.finalName}.jar</file>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<!-- Changes -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-changes-plugin</artifactId>
+				<version>${plugin.changes.version}</version>
+				<executions>
+					<execution>
+						<id>check-changes</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>changes-check</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>validate-changes</id>
+						<phase>pre-site</phase>
+						<goals>
+							<goal>changes-validate</goal>
+						</goals>
+						<configuration>
+							<failOnError>true</failOnError>
 						</configuration>
 					</execution>
 				</executions>

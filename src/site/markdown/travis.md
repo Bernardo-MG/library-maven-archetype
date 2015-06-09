@@ -10,10 +10,6 @@ For the CI to work correctly, a series of environmental variables must be set on
 
 |Variable|Contents|
 |---|---|
-|JDK\_DEPLOY|Travis ID for the java version from which to make the publications|
-
-|Variable|Contents|
-|---|---|
 |REPO\_RELEASES\_USER|User for the releases repository|
 |REPO\_RELEASES\_PASSWORD|Password for the releases documentation repository|
 |REPO\_SITE\_USER|User for the releases documentation repository|
@@ -45,4 +41,20 @@ The deployment scripts will check three things:
 - The current build is not part of a pull
 - The current build has been cloned from a deployable branch
 
-If any of those requirements fails, the script won't make the deployment
+If any of those requirements fails, the script won't make the deployment.
+
+### Travis configuration file
+
+This is a very simple file. It will just verify the project, and then deploy the site and artifacts by using the scripts.
+
+### Maven configuration file script
+
+The script will mostly take the access-related environmental values and put them into a configuration files.
+
+Additionally, it sets the development profile, if the current branch is the 'develop' one.
+
+### Site deployment script
+
+As it is not possible to set more than one site deployment target, two profiles are used to distinguish between the releases and deployment sites repositories.
+
+The correct profile will be loaded from the Maven configuration file.

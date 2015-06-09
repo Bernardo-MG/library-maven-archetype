@@ -4,23 +4,26 @@
 	xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="library">
 	<requiredProperties>
+		<requiredProperty key="artifactName">
+			<defaultValue>Basic Maven Project</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="artifactDescription">
+			<defaultValue>A Maven project created from the library archetype.</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="developerId">
+			<defaultValue>bmg</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="developerName">
+			<defaultValue>Bernardo Martínez Garrido</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="developerMail">
+			<defaultValue>programming@wandrell.com</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="developerUrl">
+			<defaultValue>https://github.com/Bernardo-MG</defaultValue>
+		</requiredProperty>
 		<requiredProperty key="repoUserId">
 			<defaultValue>bernardo-mg</defaultValue>
-		</requiredProperty>
-		<requiredProperty key="repoProjectId">
-			<defaultValue>repo-name</defaultValue>
-		</requiredProperty>
-		<requiredProperty key="repoRelease">
-			<defaultValue>https://api.bintray.com/maven/bernardo-mg/maven</defaultValue>
-		</requiredProperty>
-		<requiredProperty key="repoSnapshot">
-			<defaultValue>ftp://maven.wandrell.com</defaultValue>
-		</requiredProperty>
-		<requiredProperty key="repoReleaseDownload">
-			<defaultValue>http://dl.bintray.com/bernardo-mg/maven</defaultValue>
-		</requiredProperty>
-		<requiredProperty key="repoSnapshotDownload">
-			<defaultValue>http://maven.wandrell.com</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="siteRelease">
 			<defaultValue>docs.wandrell.com</defaultValue>
@@ -28,37 +31,31 @@
 		<requiredProperty key="siteDevelop">
 			<defaultValue>docs.wandrell.com</defaultValue>
 		</requiredProperty>
-		<requiredProperty key="organizationName">
-			<defaultValue>Bernardo Martínez Garrido</defaultValue>
-		</requiredProperty>
-		<requiredProperty key="organizationUrl">
-			<defaultValue>http://</defaultValue>
-		</requiredProperty>
 	</requiredProperties>
 	<fileSets>
 		<fileSet filtered="true" packaged="true" encoding="UTF-8">
-		<!-- Sources -->
+			<!-- Sources -->
 			<directory>src/main/java</directory>
 			<includes>
 				<include>**/*.java</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true" encoding="UTF-8">
-		<!-- Test sources -->
+			<!-- Test sources -->
 			<directory>src/test/java</directory>
 			<includes>
 				<include>**/*.java</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" encoding="UTF-8">
-		<!-- Test resources -->
+			<!-- Test resources -->
 			<directory>src/test/resources</directory>
 			<includes>
 				<include>**/*.xml</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" encoding="UTF-8">
-		<!-- Filtered root files -->
+			<!-- Filtered root files -->
 			<directory></directory>
 			<includes>
 				<include>pom.xml</include>
@@ -66,29 +63,50 @@
 			</includes>
 		</fileSet>
 		<fileSet encoding="UTF-8">
-		<!-- Root files -->
+			<!-- Root files -->
 			<directory></directory>
 			<includes>
-				<include>LICENSE</include>
-				<include>*.gitignore</include>
+				<include>.gitignore</include>
 				<include>.travis.yml</include>
 				<include>.scripts/*.sh</include>
 			</includes>
 		</fileSet>
-		<fileSet encoding="UTF-8">
-		<!-- Report config files -->
+		<fileSet filtered="true" encoding="UTF-8">
+			<!-- Root files -->
+			<directory></directory>
+			<includes>
+				<include>LICENSE</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" encoding="UTF-8">
+			<!-- Report config files -->
 			<directory>src</directory>
 			<includes>
 				<include>changes/*.xml</include>
+			</includes>
+		</fileSet>
+		<fileSet encoding="UTF-8">
+			<!-- Report config files -->
+			<directory>src</directory>
+			<includes>
 				<include>checkstyle/*.xml</include>
 				<include>pmd/*.xml</include>
 			</includes>
 		</fileSet>
 		<fileSet encoding="UTF-8">
-		<!-- Site files -->
+			<!-- Site files -->
 			<directory>src/site</directory>
 			<includes>
-				<include>**/*.*</include>
+				<include>site.xml</include>
+				<include>resources/**/*.*</include>
+				<include>markdown/index.md.vm</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" encoding="UTF-8">
+			<!-- Site usage info -->
+			<directory>src/site/markdown</directory>
+			<includes>
+				<include>usage.md</include>
 			</includes>
 		</fileSet>
 	</fileSets>

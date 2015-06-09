@@ -8,6 +8,8 @@ To install the project into the local archetypes repository use the following co
 mvn clean install archetype:update-local-catalog
 ```
 
+After that, it can be used through Eclipse, by creating a new Maven project.
+
 ## Variables
 
 Several variables are defined for the archetype and can be modified when creating a new project with it. All of them have a default value assigned.
@@ -17,18 +19,8 @@ Several variables are defined for the archetype and can be modified when creatin
 |Variable|Use|
 |---|---|
 |repoUserId|ID of the user on GitHub|
-|repoProjectId|Name of the project on GitHub|
 
 These IDs should be on lowercase, for compatibility with Travis.
-
-### Artifacts repositories
-
-|Variable|Use|
-|---|---|
-|repoRelease|URL for publishing into the releases code repository|
-|repoSnapshot|URL for publishing into the snapshots code repository|
-|repoReleaseDownload|URL for acquiring code from the releases code repository|
-|repoSnapshotDownload|URL for acquiring code from the snapshots code repository|
 
 ### Sites repositories
 
