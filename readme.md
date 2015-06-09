@@ -5,10 +5,12 @@
 
 A basic Maven archetype to ease the creation of new Maven library projects.
 
-It has not been created to fit any specific set of requirements beyond my personal tastes. Still, it is meant to be reusable, and offers several useful features:
+While it mostly follows my personal tastes, it offers a series of good practices which include documentation, testing (both unit and integration), and the use of various free services, such as Github, Travis and Bintray.
 
-- Unit and integration tests suits ready to be run with TestNG.
-- Travis is used to publish code and documentation artifacts.
+## Features
+
+- Prepared to work with Github, Travis and Bintray.
+- Unit and integration tests suites ready to be run with TestNG.
 - A Maven site, using the reflow skin, can be created to show documentation and reports.
 - Includes a basic readme template and a gitignore file.
 
