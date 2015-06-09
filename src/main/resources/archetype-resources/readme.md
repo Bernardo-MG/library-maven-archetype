@@ -2,8 +2,12 @@
 ${symbol_pound} Basic Maven Project
 
 [![Maven Central](https://img.shields.io/maven-central/v/${groupId}/${artifactId}.svg)][maven-repo]
+
 [![Release docs](https://img.shields.io/badge/docs-release-blue.svg)][site-release]
 [![Development docs](https://img.shields.io/badge/docs-develop-blue.svg)][site-develop]
+
+[![Release javadocs](https://img.shields.io/badge/javadocs-release-blue.svg)][javadoc-release]
+[![Development javadocs](https://img.shields.io/badge/javadocs-develop-blue.svg)][javadoc-develop]
 
 A basic Maven project created from the Basic Maven Archetype.
 
@@ -43,7 +47,9 @@ ${symbol_pound}${symbol_pound}${symbol_pound} Installing
 
 Thanks to Maven, the project is easy to install, by just using the following command:
 
-```mvn install```
+```
+$ mvn install
+```
 
 But the recommended way to install the project is by setting up the dependencies manager being used. For this check the [Maven repository page][maven-repo].
 

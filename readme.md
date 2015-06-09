@@ -1,4 +1,8 @@
 # Library Maven Archetype
+
+[![Release docs](https://img.shields.io/badge/docs-release-blue.svg)][site-release]
+[![Development docs](https://img.shields.io/badge/docs-develop-blue.svg)][site-develop]
+
 A basic Maven archetype to ease the creation of new Maven library projects.
 
 It has not been created to fit any specific set of requirements beyond my personal tastes. Still, it is meant to be reusable, and offers several useful features:
@@ -34,7 +38,9 @@ All other dependencies are handled through Maven, and noted in the included POM 
 
 Thanks to Maven, the project is easy to install, by just using the following command:
 
-```mvn install archetype:update-local-catalog```
+```
+$ mvn install archetype:update-local-catalog
+```
 
 Sadly, the project is, currently, not being stored in any repository, so the only way to acquire it is by installation.
 
