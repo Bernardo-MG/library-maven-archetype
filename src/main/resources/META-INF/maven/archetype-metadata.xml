@@ -66,10 +66,16 @@
 			<!-- Root files -->
 			<directory></directory>
 			<includes>
-				<include>LICENSE</include>
 				<include>.gitignore</include>
 				<include>.travis.yml</include>
 				<include>.scripts/*.sh</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" encoding="UTF-8">
+			<!-- Root files -->
+			<directory></directory>
+			<includes>
+				<include>LICENSE</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" encoding="UTF-8">
