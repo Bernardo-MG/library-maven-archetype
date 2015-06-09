@@ -10,10 +10,6 @@ For the CI to work correctly, a series of environmental variables must be set on
 
 |Variable|Contents|
 |---|---|
-|JDK\_DEPLOY|Travis ID for the java version from which to make the publications|
-
-|Variable|Contents|
-|---|---|
 |REPO\_RELEASES\_USER|User for the releases repository|
 |REPO\_RELEASES\_PASSWORD|Password for the releases documentation repository|
 |REPO\_SITE\_USER|User for the releases documentation repository|
