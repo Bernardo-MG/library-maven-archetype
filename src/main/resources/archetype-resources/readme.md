@@ -30,7 +30,11 @@ Documentation is also generated from the latest snapshot, taken from the 'develo
 - The [the latest snapshot documentation page][site-develop].
 - The [the latest snapshot Javadoc site][javadoc-develop].
 
-The site sources come along the source code, so it is always possible to generate them using the Maven site command.
+The site sources come along the source code, so it is always possible to generate them using the Maven site command:
+
+```
+$ mvn site
+```
 
 ${symbol_pound}${symbol_pound} Building the code
 The application is coded in Java, using Maven to handle the project's configuration and tests.
