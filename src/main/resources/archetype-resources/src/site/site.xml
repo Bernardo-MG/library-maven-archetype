@@ -41,11 +41,7 @@
 				<column>Documentation</column>
 				<column>reports</column>
 			</bottomNav>
-			<bottomDescription>
-	        <![CDATA[
-	          ${site.description}
-	        ]]>
-			</bottomDescription>
+			<bottomDescription>${site.description}</bottomDescription>
 			<pages>
 				<index project="${project.artifactId}">
 					<!-- Override the title -->

@@ -4,7 +4,7 @@
 #
 # Also, it will only deploy if the DEPLOY environment variable is set to 'true'
 
-if [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$DEPLOY" == "true" ] && [[ "$TRAVIS_BRANCH" == "master" || "$TRAVIS_BRANCH" == "develop" ]]; then
+if [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$DEPLOY_DOCS" == "true" ] && [[ "$TRAVIS_BRANCH" == "master" || "$TRAVIS_BRANCH" == "develop" ]]; then
 
    echo "Deploying Maven site"
 
