@@ -145,6 +145,8 @@
 		<scmURL>${project.scm.url}</scmURL>
 		<ciName>${project.ciManagement.system}</ciName>
 		<ciURL>${project.ciManagement.url}</ciURL>
+		<bintrayURL>https://bintray.com/${repoUserId}/maven/${artifactId}/view</bintrayURL>
+		<mavenURL>http://mvnrepository.com/artifact/${groupId}/${artifactId}</mavenURL>
 		<license>MIT</license>
 	</properties>
 
