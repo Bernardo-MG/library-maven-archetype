@@ -1,13 +1,13 @@
 #set( $symbol_pound = '#' )
 ${symbol_pound} Setting up the dependencies
 
-The project files are hosted on Bintray, and have been replicated on JCenter and OSS Sonatype, which also replicates it into the Maven Central Repository. This means that it should not be necessary to set up the repository data, and the dependency should be accessible by default.
+The project files are hosted on Bintray, and have been replicated on JCenter and OSS Sonatype, which also replicates into the Maven Central Repository. This means that it should not be necessary to set up the repository data, and the dependency should be accessible by default.
 
 Still, if any problem were to arise, visit the [Bintray repo][bintray-repo], or the [Maven repo][maven-repo] to find out how to set up the dependencies. Take into notice that the Bintray repository should be considered to be the main repository.
 
-${symbol_pound}${symbol_pound} Artifacts
+${symbol_pound}${symbol_pound} Snapshots
 
-Artifacts are stored on OSS Sonatype. They can be accessed by adding the following lines to the configuration files:
+Snapshot artifacts are stored on OSS Sonatype. They can be accessed by adding the following lines to the configuration files:
 
 ${symbol_pound}${symbol_pound}${symbol_pound} Maven
 
