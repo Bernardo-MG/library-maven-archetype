@@ -13,12 +13,14 @@
 		</release>
 		<release version="0.1.1" date="2015-05-29" description="Corrections">
 			<action dev="bmg" type="update">
-				Corrected various errors on the archetype files.
+				Corrected various errors on the
+				archetype files.
 			</action>
 		</release>
 		<release version="0.2.0" date="2015-06-08" description="More configuration corrections">
 			<action dev="bmg" type="update">
-				The archetype is now correctly set up to work with Bintray and Sonatype.
+				The archetype is now correctly set up
+				to work with Bintray and Sonatype.
 			</action>
 			<action dev="bmg" type="fix">
 				Changes to the Maven site.
@@ -36,7 +38,18 @@
 				Added initial projects page.
 			</action>
 			<action dev="bmg" type="update">
-				Several changes to the archetype variables.
+				Several changes to the archetype
+				variables.
+			</action>
+		</release>
+		<release version="0.2.1" date="2015-06-17" description="Installation info">
+			<action dev="bmg" type="add">
+				Added IntelliJ Idea files to the
+				gitignore.
+			</action>
+			<action dev="bmg" type="add">
+				Updated default installation info and
+				usage page.
 			</action>
 		</release>
 	</body>

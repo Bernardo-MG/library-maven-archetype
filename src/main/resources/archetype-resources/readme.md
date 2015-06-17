@@ -30,7 +30,11 @@ Documentation is also generated from the latest snapshot, taken from the 'develo
 - The [the latest snapshot documentation page][site-develop].
 - The [the latest snapshot Javadoc site][javadoc-develop].
 
-The site sources come along the source code, so it is always possible to generate them using the Maven site command.
+The site sources come along the source code, so it is always possible to generate them using the Maven site command:
+
+```
+$ mvn site
+```
 
 ${symbol_pound}${symbol_pound} Building the code
 The application is coded in Java, using Maven to handle the project's configuration and tests.
@@ -45,13 +49,11 @@ All other dependencies are handled through Maven, and noted in the included POM 
 
 ${symbol_pound}${symbol_pound}${symbol_pound} Installing
 
-Thanks to Maven, the project is easy to install, by just using the following command:
+The recommended way to install the project is by setting up the dependencies manager. To get the configuration information for this check the [Bintray repository][bintray-repo], or the [Maven Central Repository][maven-repo].
 
-```
-$ mvn install
-```
+If for some reason manual installation is necesary, just use the following Maven command:
 
-But the recommended way to install the project is by setting up the dependencies manager being used. For this check the [Maven repository page][maven-repo].
+```mvn install```
 
 ${symbol_pound}${symbol_pound} Collaborate
 
@@ -72,6 +74,7 @@ Feel free to fork it, and share the changes.
 ${symbol_pound}${symbol_pound} License
 The project is released under the [MIT License][license].
 
+[bintray-repo]: https://bintray.com/${repoUserId}/maven
 [maven-repo]: http://mvnrepository.com/artifact/${groupId}/${artifactId}
 [issues]: https://github.com/${repoUserId}/${artifactId}/issues
 [javadoc-develop]: http://${siteRelease}/development/maven/${artifactId}/apidocs
