@@ -1,5 +1,5 @@
 #set( $symbol_pound = '#' )
-${symbol_pound} Basic Maven Project
+${symbol_pound} ${artifactName}
 
 [![Maven Central](https://img.shields.io/maven-central/v/${groupId}/${artifactId}.svg)][maven-repo]
 

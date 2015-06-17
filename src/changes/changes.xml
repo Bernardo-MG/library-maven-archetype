@@ -52,5 +52,10 @@
 				usage page.
 			</action>
 		</release>
+		<release version="0.2.2" date="2015-06-17" description="Installation info">
+			<action dev="bmg" type="add">
+				The readme title is now correctly set.
+			</action>
+		</release>
 	</body>
 </document>
