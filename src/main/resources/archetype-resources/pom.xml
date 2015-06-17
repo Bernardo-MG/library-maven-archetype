@@ -25,7 +25,7 @@
 		<connection>scm:git:https://github.com/${repoUserId}/${artifactId}.git</connection>
 		<developerConnection>scm:git:https://github.com/${repoUserId}/${artifactId}.git</developerConnection>
 		<tag>head</tag>
-		<url>https://github.com/${repoUserId}/${artifactId}</url>
+		<url>https://www.github.com/${repoUserId}/${artifactId}</url>
 	</scm>
 
 	<issueManagement>
