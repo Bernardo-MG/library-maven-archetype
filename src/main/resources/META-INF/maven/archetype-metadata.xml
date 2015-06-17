@@ -97,16 +97,7 @@
 			<!-- Site files -->
 			<directory>src/site</directory>
 			<includes>
-				<include>site.xml</include>
-				<include>resources/**/*.*</include>
-				<include>markdown/index.md.vm</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true" encoding="UTF-8">
-			<!-- Site usage info -->
-			<directory>src/site/markdown</directory>
-			<includes>
-				<include>usage.md</include>
+				<include>**/*.*</include>
 			</includes>
 		</fileSet>
 	</fileSets>
