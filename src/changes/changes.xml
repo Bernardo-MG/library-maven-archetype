@@ -44,17 +44,20 @@
 		</release>
 		<release version="0.2.1" date="2015-06-17" description="Installation info">
 			<action dev="bmg" type="add">
-				Added IntelliJ Idea files to the
-				gitignore.
-			</action>
-			<action dev="bmg" type="add">
 				Updated default installation info and
 				usage page.
 			</action>
+			<action dev="bmg" type="add">
+				Added IntelliJ Idea files to the
+				gitignore.
+			</action>
 		</release>
-		<release version="0.2.2" date="2015-06-17" description="Installation info">
+		<release version="0.2.2" date="2015-06-17" description="Information corrections">
 			<action dev="bmg" type="add">
 				The readme title is now correctly set.
+			</action>
+			<action dev="bmg" type="add">
+				Changed the default site description.
 			</action>
 		</release>
 	</body>
