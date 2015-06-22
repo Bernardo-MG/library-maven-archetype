@@ -119,6 +119,7 @@
 		<plugin.changes.version>2.11</plugin.changes.version>
 		<plugin.compiler.version>3.3</plugin.compiler.version>
 		<plugin.deploy.version>2.8.2</plugin.deploy.version>
+		<plugin.enforcer.version>1.4</plugin.enforcer.version>
 		<plugin.failsafe.version>2.18.1</plugin.failsafe.version>
 		<plugin.findbugs.version>3.0.1</plugin.findbugs.version>
 		<plugin.jacoco.version>0.7.5.201505241946</plugin.jacoco.version>
@@ -229,6 +230,25 @@
 					<source>${java.version.source}</source>
 					<target>${java.version.target}</target>
 				</configuration>
+			</plugin>
+			<plugin>
+				<!-- Enforcer -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-enforcer-plugin</artifactId>
+				<version>${plugin.enforcer.version}</version>
+				<executions>
+					<execution>
+						<id>enforce</id>
+						<configuration>
+							<rules>
+								<dependencyConvergence />
+							</rules>
+						</configuration>
+						<goals>
+							<goal>enforce</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<!-- Failsafe -->
@@ -434,7 +454,7 @@
 	<reporting>
 		<plugins>
 			<plugin>
-				<!-- Reports -->
+				<!-- Project Info -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-project-info-reports-plugin</artifactId>
 				<version>${plugin.reports.version}</version>
