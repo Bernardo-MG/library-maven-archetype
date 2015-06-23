@@ -1,15 +1,6 @@
 #set( $symbol_pound = '#' )
 ${symbol_pound} ${artifactName}
 
-[![Maven Central](https://img.shields.io/maven-central/v/${groupId}/${artifactId}.svg)][maven-repo]
-[![Bintray](https://api.bintray.com/packages/${repoUserId}/maven/${artifactId}/images/download.svg)][bintray-repo]
-
-[![Release docs](https://img.shields.io/badge/docs-release-blue.svg)][site-release]
-[![Development docs](https://img.shields.io/badge/docs-develop-blue.svg)][site-develop]
-
-[![Release javadocs](https://img.shields.io/badge/javadocs-release-blue.svg)][javadoc-release]
-[![Development javadocs](https://img.shields.io/badge/javadocs-develop-blue.svg)][javadoc-develop]
-
 A basic Maven project created from the Basic Maven Archetype.
 
 This should be set up correctly before use. Remember to verify, and change if needed, at least the following data:
@@ -19,6 +10,15 @@ This should be set up correctly before use. Remember to verify, and change if ne
 - License, if not using the MIT one (POM, readme and LICENSE file)
 - This readme description
 - This documentation on the Maven site
+
+[![Maven Central](https://img.shields.io/maven-central/v/${groupId}/${artifactId}.svg)][maven-repo]
+[![Bintray](https://api.bintray.com/packages/${repoUserId}/maven/${artifactId}/images/download.svg)][bintray-repo]
+
+[![Release docs](https://img.shields.io/badge/docs-release-blue.svg)][site-release]
+[![Development docs](https://img.shields.io/badge/docs-develop-blue.svg)][site-develop]
+
+[![Release javadocs](https://img.shields.io/badge/javadocs-release-blue.svg)][javadoc-release]
+[![Development javadocs](https://img.shields.io/badge/javadocs-develop-blue.svg)][javadoc-develop]
 
 ${symbol_pound}${symbol_pound} Documentation
 Documentation is always generated for the latest release:
