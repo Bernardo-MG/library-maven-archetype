@@ -4,6 +4,8 @@ A basic Maven archetype to ease the creation of new Maven library projects.
 
 While it mostly follows my personal tastes, it offers a series of good practices which include documentation, testing (both unit and integration), and the use of various free services, such as Github, Travis and Bintray.
 
+[![Bintray](https://api.bintray.com/packages/bernardo-mg/maven/java-patterns/images/download.svg)][bintray-repo]
+
 [![Release docs](https://img.shields.io/badge/docs-release-blue.svg)][site-release]
 [![Development docs](https://img.shields.io/badge/docs-develop-blue.svg)][site-develop]
 
@@ -69,6 +71,7 @@ Feel free to fork it, and share the changes.
 ## License
 The project is released under the [MIT License][license].
 
+[bintray-repo]: https://bintray.com/bernardo-mg/maven/library-maven-archetype/view
 [issues]: https://github.com/Bernardo-MG/library-maven-archetype/issues
 [license]: http://www.opensource.org/licenses/mit-license.php
 [scm]: http://github.com/Bernardo-MG/library-maven-archetype
