@@ -57,6 +57,9 @@
 				The readme title is now correctly set.
 			</action>
 			<action dev="bmg" type="add">
+				Added Bintray badge to the readme.
+			</action>
+			<action dev="bmg" type="add">
 				Changed the default site description.
 			</action>
 		</release>
