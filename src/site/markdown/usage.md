@@ -5,10 +5,10 @@ Right now there is no public archetypes catalog containing this archetype. It mu
 To install the project into the local archetypes repository use the following command:
 
 ```
-mvn clean install archetype:update-local-catalog
+mvn clean install
 ```
 
-After that, it can be used through Eclipse, by creating a new Maven project.
+After that, it can be used through Eclipse, by creating a new Maven project and selection the local repo.
 
 ## Variables
 
