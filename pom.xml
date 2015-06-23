@@ -330,7 +330,6 @@
 							<report>license</report>
 							<report>modules</report>
 							<report>project-team</report>
-							<report>dependency-info</report>
 							<report>distribution-management</report>
 							<report>dependencies</report>
 							<report>dependency-management</report>
