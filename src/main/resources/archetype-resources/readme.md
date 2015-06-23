@@ -2,6 +2,7 @@
 ${symbol_pound} ${artifactName}
 
 [![Maven Central](https://img.shields.io/maven-central/v/${groupId}/${artifactId}.svg)][maven-repo]
+[![Bintray](https://api.bintray.com/packages/${repoUserId}/maven/${artifactId}/images/download.svg)][bintray-repo]
 
 [![Release docs](https://img.shields.io/badge/docs-release-blue.svg)][site-release]
 [![Development docs](https://img.shields.io/badge/docs-develop-blue.svg)][site-develop]
@@ -74,7 +75,7 @@ Feel free to fork it, and share the changes.
 ${symbol_pound}${symbol_pound} License
 The project is released under the [MIT License][license].
 
-[bintray-repo]: https://bintray.com/${repoUserId}/maven
+[bintray-repo]: https://bintray.com/${repoUserId}/maven/${artifactId}/view
 [maven-repo]: http://mvnrepository.com/artifact/${groupId}/${artifactId}
 [issues]: https://github.com/${repoUserId}/${artifactId}/issues
 [javadoc-develop]: http://${siteRelease}/development/maven/${artifactId}/apidocs
