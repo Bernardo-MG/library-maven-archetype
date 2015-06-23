@@ -30,7 +30,7 @@
 
 	<issueManagement>
 		<system>GitHub</system>
-		<url>https://github.com/${repoUserId}/${artifactId}/issues</url>
+		<url>https://www.github.com/${repoUserId}/${artifactId}/issues</url>
 	</issueManagement>
 
 	<ciManagement>

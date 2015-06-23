@@ -30,7 +30,7 @@
 
 	<issueManagement>
 		<system>GitHub</system>
-		<url>https://github.com/bernardo-mg/library-maven-archetype/issues</url>
+		<url>https://www.github.com/bernardo-mg/library-maven-archetype/issues</url>
 	</issueManagement>
 
 	<ciManagement>
