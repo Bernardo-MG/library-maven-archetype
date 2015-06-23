@@ -1,8 +1,8 @@
 # Library Maven Archetype
 
-A basic Maven archetype to ease the creation of new Maven library projects.
+A basic Maven archetype to ease the creation of new Maven-based Java libraries.
 
-While it mostly follows my personal tastes, it offers a series of good practices which include documentation, testing (both unit and integration), and the use of various free services, such as Github, Travis and Bintray.
+While adapted to my personal tastes, it offers a series of good practices which include documentation, testing (both unit and integration), and making use of various integrated free services, such as Github, Travis and Bintray.
 
 [![Bintray](https://api.bintray.com/packages/bernardo-mg/maven/java-patterns/images/download.svg)][bintray-repo]
 
