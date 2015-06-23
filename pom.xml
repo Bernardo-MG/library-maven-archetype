@@ -50,7 +50,7 @@
 			<uniqueVersion>false</uniqueVersion>
 			<id>snapshots</id>
 			<name>Snapshots Repository</name>
-			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+			<url>ftp://maven.wandrell.com</url>
 		</snapshotRepository>
 	</distributionManagement>
 
