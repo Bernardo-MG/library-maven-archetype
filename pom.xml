@@ -7,7 +7,7 @@
 	<groupId>com.wandrell.archetype</groupId>
 	<artifactId>library</artifactId>
 	<version>0.2.2-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>maven-archetype</packaging>
 
 	<name>Library Maven Archetype</name>
 	<description>A Maven archetype to ease the creation of new libraries.</description>
@@ -125,6 +125,7 @@
 		<plugin.source.version>2.4</plugin.source.version>
 		<!-- Extensions versions -->
 		<extension.wagon.version>2.8</extension.wagon.version>
+		<extension.archetype.packaging.version>2.3</extension.archetype.packaging.version>
 		<!-- Maven Site -->
 		<site.skin.version>1.1.1</site.skin.version>
 		<site.description>Maven archetype to quickly start building a new
@@ -139,7 +140,7 @@
 	</properties>
 
 	<build>
-		<defaultGoal>clean install archetype:update-local-catalog</defaultGoal>
+		<defaultGoal>clean package install</defaultGoal>
 		<extensions>
 			<extension>
 				<!-- Wagon -->
@@ -147,6 +148,12 @@
 				<groupId>org.apache.maven.wagon</groupId>
 				<artifactId>wagon-ftp</artifactId>
 				<version>${extension.wagon.version}</version>
+			</extension>
+			<extension>
+				<!-- Archetype Packaging -->
+				<groupId>org.apache.maven.archetype</groupId>
+				<artifactId>archetype-packaging</artifactId>
+				<version>${extension.archetype.packaging.version}</version>
 			</extension>
 		</extensions>
 		<pluginManagement>

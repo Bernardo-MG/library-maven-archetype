@@ -50,7 +50,7 @@ All other dependencies are handled through Maven, and noted in the included POM 
 Thanks to Maven, the project is easy to install, by just using the following command:
 
 ```
-$ mvn install archetype:update-local-catalog
+$ mvn install
 ```
 
 Sadly, the project is, currently, not being stored in any repository, so the only way to acquire it is by installation.
