@@ -35,7 +35,7 @@
 
 	<ciManagement>
 		<system>Travis CI</system>
-		<url>https://travis-ci.org/bernardo-mg/library-maven-archetype</url>
+		<url>https://travis-ci.org/Bernardo-MG/library-maven-archetype</url>
 		<notifiers />
 	</ciManagement>
 
