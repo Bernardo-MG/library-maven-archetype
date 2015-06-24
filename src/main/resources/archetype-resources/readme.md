@@ -65,9 +65,11 @@ ${symbol_pound}${symbol_pound}${symbol_pound} Installing
 
 The recommended way to install the project is by setting up your preferred dependencies manager. To get the configuration information for this check the [Bintray repository][bintray-repo], or the [Maven Central Repository][maven-repo].
 
-If for some reason manual installation is necesary, just use the following Maven command:
+If for some reason manual installation is necessary, just use the following Maven command:
 
-```mvn install```
+```
+mvn install
+```
 
 ${symbol_pound}${symbol_pound} Collaborate
 

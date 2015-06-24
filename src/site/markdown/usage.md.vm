@@ -1,0 +1,56 @@
+#set( $symbol_pound = '#' )
+${symbol_pound} Setting up the dependencies
+
+The project files are hosted on [Bintray repo][bintray-repo], and have been replicated on JCenter and OSS Sonatype, which also replicates into the [Maven Central Repository][maven-repo]. This means that it should be possible to download the archetype from any of those repositories.
+
+To download the project from the repository use the following data:
+
+```
+Group ID: com.wandrell.archetype
+Artifact ID: library
+Version: ${projectVersion}
+URL: https://dl.bintray.com/bernardo-mg/maven/
+```
+
+For example, to download it and generate a new project through Maven use the following command:
+
+```
+$ mvn archetype:generate -DarchetypeGroupId=com.wandrell.archetype -DarchetypeArtifactId=library -DarchetypeVersion=${projectVersion} -DarchetypeRepository=https://dl.bintray.com/bernardo-mg/maven/
+```
+
+Of course, it may also be added to the local repository through your preferred IDE, just by using that same information.
+
+As an alternative, it is also possible to download the project from Github, and then install the project into the local archetypes repository using the following command:
+
+```
+mvn install
+```
+
+${symbol_pound}${symbol_pound} Variables
+
+Several variables are defined for the archetype and can be modified when creating a new project with it. All of them have a default value assigned.
+
+${symbol_pound}${symbol_pound}${symbol_pound} Repositories
+
+|Variable|Use|
+|---|---|
+|repoUserId|ID of the user on GitHub|
+
+These IDs should be on lowercase, for compatibility with Travis.
+
+${symbol_pound}${symbol_pound}${symbol_pound} Sites repositories
+
+|Variable|Use|
+|---|---|
+|siteRelease|URL for publishing into the releases documents repository|
+|siteDevelop|URL for publishing into the development documents repository|
+
+${symbol_pound}${symbol_pound}${symbol_pound} Organization
+
+|Variable|Use|
+|---|---|
+|organizationName|Name of the organization|
+|organizationUrl|Link to the organization's webpage|
+
+[bintray-repo]: ${bintrayURL}
+[maven-repo]: ${mavenURL}

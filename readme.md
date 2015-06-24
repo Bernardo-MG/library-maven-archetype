@@ -4,7 +4,8 @@ A basic Maven archetype to ease the creation of new Maven-based Java libraries.
 
 While adapted to my personal tastes, it offers a series of good practices which include documentation, testing (both unit and integration), and making use of various integrated free services, such as Github, Travis and Bintray.
 
-[![Bintray](https://api.bintray.com/packages/bernardo-mg/maven/java-patterns/images/download.svg)][bintray-repo]
+[![Maven Central](https://img.shields.io/maven-central/v/com.wandrell.archetype/library.svg)][maven-repo]
+[![Bintray](https://api.bintray.com/packages/bernardo-mg/maven/library-maven-archetype/images/download.svg)][bintray-repo]
 
 [![Release docs](https://img.shields.io/badge/docs-release-blue.svg)][site-release]
 [![Development docs](https://img.shields.io/badge/docs-develop-blue.svg)][site-develop]
@@ -47,13 +48,28 @@ All other dependencies are handled through Maven, and noted in the included POM 
 
 ### Installing
 
-Thanks to Maven, the project is easy to install, by just using the following command:
+The recommended way to install the archetype is by downloading it from the [Bintray repository][bintray-repo] (recommended), or the [Maven Central Repository][maven-repo]. For this use your preferred method and the following data:
+
+```
+Group ID: com.wandrell.archetype
+Artifact ID: library
+Version: (Check POM or badges)
+URL: https://dl.bintray.com/bernardo-mg/maven/
+```
+
+For example, to use it through command line type the following:
+
+```
+$ mvn archetype:generate -DarchetypeGroupId=com.wandrell.archetype -DarchetypeArtifactId=library -DarchetypeVersion=0.2.2 -DarchetypeRepository=https://dl.bintray.com/bernardo-mg/maven/
+```
+
+Of course, it may also be added to the local repository through your preferred IDE, just by using that same information.
+
+As an alternative, it is also possible to download the project from Github, and then install the project into the local archetypes repository using the following command:
 
 ```
 $ mvn install
 ```
-
-Sadly, the project is, currently, not being stored in any repository, so the only way to acquire it is by installation.
 
 ## Collaborate
 
@@ -74,6 +90,7 @@ If you wish to fork or modify the code, visit the [GitHub project page][scm], wh
 The project is released under the [MIT License][license].
 
 [bintray-repo]: https://bintray.com/bernardo-mg/maven/library-maven-archetype/view
+[maven-repo]: http://mvnrepository.com/artifact/com.wandrell.archetype/library
 [issues]: https://github.com/Bernardo-MG/library-maven-archetype/issues
 [license]: http://www.opensource.org/licenses/mit-license.php
 [scm]: http://github.com/Bernardo-MG/library-maven-archetype

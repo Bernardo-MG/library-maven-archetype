@@ -132,10 +132,13 @@
 			library.</site.description>
 		<site.download>${project.scm.url}</site.download>
 		<javaVersion>JDK 7, JDK 8 and OpenJDK 7</javaVersion>
+		<projectVersion>${project.version}</projectVersion>
 		<scmName>GitHub</scmName>
 		<scmURL>${project.scm.url}</scmURL>
 		<ciName>${project.ciManagement.system}</ciName>
 		<ciURL>${project.ciManagement.url}</ciURL>
+		<bintrayURL>https://bintray.com/bernardo-mg/maven/ library-maven-archetype/view</bintrayURL>
+		<mavenURL>http://mvnrepository.com/artifact/com.wandrell.archetype/library</mavenURL>
 		<license>MIT</license>
 	</properties>
 
