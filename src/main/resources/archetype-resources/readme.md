@@ -48,7 +48,7 @@ The documentation site sources come along the source code (as it is a Maven site
 $ mvn site
 ```
 
-${symbol_pound}${symbol_pound} Building the code
+${symbol_pound}${symbol_pound} Usage
 
 The application is coded in Java, using Maven to manage the project.
 
