@@ -22,7 +22,7 @@ Note that the Maven site will require the most work, as it is meant to be used f
 [![Release javadocs](https://img.shields.io/badge/javadocs-release-blue.svg)][javadoc-release]
 [![Development javadocs](https://img.shields.io/badge/javadocs-develop-blue.svg)][javadoc-develop]
 
-${symbol_pound}${symbol_pound} Documentation
+${symbol_pound}${symbol_pound} Features
 
 Add a list of the project features here.
 
