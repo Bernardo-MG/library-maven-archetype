@@ -21,44 +21,8 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package ${package}.testing.test.integration;
-
-import org.testng.Assert;
-import org.testng.annotations.Test;
-
-import com.wandrell.util.FileUtils;
-
-import ${package}.Greeter;
-
 /**
- * Integration tests for {@link Greeter}.
- * <p>
- * Checks the following cases:
- * <ol>
- * <li>The {@code Greeter} returns a greeting.</li>
- * </ol>
- * <p>
- * This is actually a placeholder test. Also it is not an integration test, 
- * but a unit one, still it serves just as a placeholder.
- * 
- * @author ${developerName}
- *
+ * Provides placeholder integration tests.
  */
-public final class ITUnit {
+package com.wandrell.util;
 
-    /**
-     * Constructs the tests.
-     */
-    public ITUnit() {
-        super();
-    }
-
-    /**
-     * Tests that the {@code Greeter} returns a greeting.
-     */
-    @Test
-    public final void sayHello() {
-        Assert.assertEquals("Hello World!", new Greeter().sayHello());
-    }
-
-}
