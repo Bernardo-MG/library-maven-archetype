@@ -22,7 +22,12 @@ For the CI to work correctly, a series of environmental variables must be set on
 |REPO\_SITE\_DEVELOP\_USER|User for the snapshots documentation repository|
 |REPO\_SITE\_DEVELOP\_PASSWORD|Password for the snapshots documentation repository|
 
-All of these, except for JDK\_DEPLOY, are used to create the Maven settings file. The JDK\_DEPLOY is used instead to pick the JDK from which the deployment will be made.
+|Variable|Contents|
+|---|---|
+|DEPLOY|Artifact deployment flag|
+|DEPLOY\_DOCS|Site deployment flag|
+
+For more information about the deployment flags check the Travis file section.
 
 ## Scripts and configuration files
 
@@ -32,12 +37,12 @@ Travis is handled through the configuration file and a series of scripts as foll
 |---|---|
 |.travis|Travis configuration file|
 |.scripts/create-maven-settings.sh|Builds the Maven settings file from the environmental variables|
+|.scripts/deploy.sh|Handles the artifact deployment job|
 |.scripts/deploy-site.sh|Handles the site deployment job|
-|.scripts/deploy.sh|Handles the code deployment job|
 
 The deployment scripts will check three things:
 
-- The current JDK must be the one set on the JDK\_DEPLOY variable.
+- The correct deployment flag is set.
 - The current build is not part of a pull
 - The current build has been cloned from a deployable branch
 
@@ -45,13 +50,19 @@ If any of those requirements fails, the script won't make the deployment.
 
 ### Travis configuration file
 
-This is a very simple file. It will just verify the project, and then deploy the site and artifacts by using the scripts.
+This a simple file, which will run the scripts and little more.
+
+But that little more includes a very important point, as this file is where the runtime used for deployments will be selected. The 'DEPLOY' and 'DEPLOY\_DOCS' environmental variables indicate this. If you want to change the default runtimes, just modify the exclusion/inclusion matrix.
 
 ### Maven configuration file script
 
 The script will mostly take the access-related environmental values and put them into a configuration files.
 
 Additionally, it sets the development profile, if the current branch is the 'develop' one.
+
+### Artifact deployment script
+
+This script will deploy the project using the generated configuration file, and the repository info on the POM file.
 
 ### Site deployment script
 
