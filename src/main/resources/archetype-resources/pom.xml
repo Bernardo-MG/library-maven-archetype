@@ -111,6 +111,7 @@
 		<!-- Manifest data -->
 		<manifest.name>${packageInPathFormat}</manifest.name>
 		<!-- Dependencies versions -->
+		<guava.version>18.0</guava.version>
 		<mockito.version>1.10.19</mockito.version>
 		<slf4j.version>1.7.12</slf4j.version>
 		<testng.version>6.9.4</testng.version>
@@ -152,6 +153,12 @@
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<!-- Guava -->
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>${guava.version}</version>
+		</dependency>
 		<dependency>
 			<!-- Mockito -->
 			<groupId>org.mockito</groupId>

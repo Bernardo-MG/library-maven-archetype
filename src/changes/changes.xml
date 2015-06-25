@@ -52,19 +52,22 @@
 				gitignore.
 			</action>
 		</release>
-		<release version="0.2.2" date="2015-06-17" description="Information corrections">
+		<release version="0.2.2" date="2015-06-17" description="Added Guava, and various corrections">
 			<action dev="bmg" type="add">
-				The readme title is now correctly set.
+				Added Guava to the initial dependencies.
 			</action>
 			<action dev="bmg" type="add">
 				Added Bintray badge to the readme.
 			</action>
 			<action dev="bmg" type="add">
-				Changed the default site description.
-			</action>
-			<action dev="bmg" type="add">
 				Added information for getting the
 				archetype from Bintray.
+			</action>
+			<action dev="bmg" type="fix">
+				Changed the default site description.
+			</action>
+			<action dev="bmg" type="fix">
+				The readme title is now correctly set.
 			</action>
 			<action dev="bmg" type="fix">
 				Corrections to the documentation.
