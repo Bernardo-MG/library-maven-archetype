@@ -55,10 +55,6 @@
 						<sidebar />
 					</sections>
 				</index>
-				<!-- Documentation pages -->
-				<contribute>
-					<breadcrumbs>false</breadcrumbs>
-				</contribute>
 				<!-- Disable source highlighting for Maven reports -->
 				<source-repository>
 					<highlightJs>false</highlightJs>
