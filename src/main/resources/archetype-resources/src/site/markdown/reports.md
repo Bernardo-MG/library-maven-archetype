@@ -4,8 +4,8 @@
 
 |Report|Description|
 |---|---|
-|[Failsafe](./failsafe-report.html)|Integration tests report.|
 |[Surefire](./surefire-report.html)|Unit tests report.|
+|[Failsafe](./failsafe-report.html)|Integration tests report.|
 |[JaCoCo](./jacoco/index.html)|Tests coverage report.|
 
 ## Code Quality
