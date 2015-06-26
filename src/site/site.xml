@@ -20,7 +20,7 @@
 	<custom>
 		<reflowSkin>
 			<smoothScroll>true</smoothScroll>
-			<theme>default</theme>
+			<theme>bootswatch-spruce</theme>
 			<highlightJs>true</highlightJs>
 			<highlightJsTheme>github</highlightJsTheme>
 			<brand>
