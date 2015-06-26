@@ -22,7 +22,7 @@ Several features are offered by the library, some the most important being:
 
 ---
 
-# About the code
+# The code
 
 The code is open source and freely accessible. If you want to do any kind of modification just fork it from the repository.
 
@@ -30,3 +30,5 @@ The code is open source and freely accessible. If you want to do any kind of mod
 - License: [${license}](./license.html)
 - SCM: [${scmName}](${scmURL})
 - CI: [${ciName}](${ciURL})
+- [Bintray repo](${bintrayURL})
+- [Maven Central Repository](${mavenURL})
