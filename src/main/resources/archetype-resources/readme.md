@@ -88,7 +88,7 @@ If you wish to fork or modify the code, visit the [GitHub project page][scm], wh
 
 ${symbol_pound}${symbol_pound} License
 
-The project is released under the [MIT License][license].
+The project has been released under the [MIT License][license].
 
 [bintray-repo]: https://bintray.com/${repoUserId}/maven/${artifactId}/view
 [maven-repo]: http://mvnrepository.com/artifact/${groupId}/${artifactId}

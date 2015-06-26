@@ -87,7 +87,7 @@ Issues are managed at the GitHub [project issues tracker][issues], where any Git
 If you wish to fork or modify the code, visit the [GitHub project page][scm], where the latest versions are always kept. Check the 'master' branch for the latest release, and the 'develop' for the current, and stable, development version.
 
 ## License
-The project is released under the [MIT License][license].
+The project has been released under the [MIT License][license].
 
 [bintray-repo]: https://bintray.com/bernardo-mg/maven/library-maven-archetype/view
 [maven-repo]: http://mvnrepository.com/artifact/com.wandrell.archetype/library
