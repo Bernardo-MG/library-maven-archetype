@@ -33,13 +33,13 @@
 			<!-- Use Table of Contents at the top of the page (max 6 elements) -->
 			<toc>top</toc>
 			<tocTopMax>6</tocTopMax>
-			<topNav>Documentation|reports|Contribute</topNav>
+			<topNav>Documentation|Info and reports</topNav>
 			<!-- Split menus in the bottom navigation -->
 			<bottomNav>
 				<column>Main</column>
 				<column>Acquire|Contribute</column>
 				<column>Documentation</column>
-				<column>reports</column>
+				<column>Info and reports</column>
 			</bottomNav>
 			<pages>
 				<index project="${project.artifactId}">
@@ -51,7 +51,7 @@
 					<toc>false</toc>
 					<markPageHeader>false</markPageHeader>
 					<sections>
-						<body/>
+						<body />
 						<sidebar />
 					</sections>
 				</index>
@@ -140,7 +140,10 @@
 			<item name="Site" href="./site.html" />
 			<item name="Tests" href="./tests.html" />
 		</menu>
-		<menu name="Reports" ref="reports" inherit="bottom" />
+		<menu name="Info and reports" inherit="bottom">
+			<item name="Info" href="./info.html" />
+			<item name="Reports" href="./reports.html" />
+		</menu>
 		<menu name="Contribute" inherit="bottom">
 			<item name="Issues" href="${issueManagement.url}" />
 			<item name="Fork on GitHub" href="${scm.url}" />

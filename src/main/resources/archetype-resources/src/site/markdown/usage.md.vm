@@ -3,6 +3,8 @@ ${symbol_pound} Setting up the dependencies
 
 The project files are hosted on Bintray, and have been replicated on JCenter and OSS Sonatype, which also replicates into the Maven Central Repository. This means that it should not be necessary to set up the repository data, and the dependency should be accessible by default.
 
+All the info required to set up the dependency can be found at the [dependency information](./dependency-info.html) section.
+
 Still, if any problem were to arise, visit the [Bintray repo][bintray-repo], or the [Maven repo][maven-repo] to find out how to set up the dependencies. Take into notice that the Bintray repository should be considered to be the main repository.
 
 ${symbol_pound}${symbol_pound} Snapshots
