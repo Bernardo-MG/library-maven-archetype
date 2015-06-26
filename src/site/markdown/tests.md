@@ -42,22 +42,22 @@ The configuration file, named 'log4j.xml', can be found on the tests resources f
 
 ### Unit tests
 
-Units test are run by the 'tests\_maven\_unit\_suite.xml' test suite, and should start with the 'Test' prefix.
+Units test are run by the **tests\_maven\_unit\_suite.xml** test suite, and should start with the 'Test' prefix.
 
 They can be run using the command:
 
-```
+```none
 mvn test
 ```
 
 ### Integration tests
 
-Units test are run by the 'tests\_maven\_integration\_suite.xml' test suite, and should start with the 'IT' prefix.
+Units test are run by the **tests\_maven\_integration\_suite.xml** test suite, and should start with the 'IT' prefix.
 
 They can be run using the command:
 
-```
+```none
 mvn verify
 ```
 
-This command won't just run the integration tests. First it will run the unit ones, then the integration tests.
+This command won't just run the integration tests, *it will run first the unit tests, and then the integration tests*.

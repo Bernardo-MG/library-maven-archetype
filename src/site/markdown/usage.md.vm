@@ -5,16 +5,13 @@ The project files are hosted on [Bintray repo][bintray-repo], and have been repl
 
 To download the project from the repository use the following data:
 
-```
-Group ID: com.wandrell.archetype
-Artifact ID: library
-Version: ${projectVersion}
-URL: https://dl.bintray.com/bernardo-mg/maven/
-```
+|Group ID|Artifact ID|Version|URL|
+|---|---|---|---|
+|com.wandrell.archetype|library|${projectVersion}|https://dl.bintray.com/bernardo-mg/maven/ |
 
 For example, to download it and generate a new project through Maven use the following command:
 
-```
+```none
 $ mvn archetype:generate -DarchetypeGroupId=com.wandrell.archetype -DarchetypeArtifactId=library -DarchetypeVersion=${projectVersion} -DarchetypeRepository=https://dl.bintray.com/bernardo-mg/maven/
 ```
 
@@ -22,8 +19,8 @@ Of course, it may also be added to the local repository through your preferred I
 
 As an alternative, it is also possible to download the project from Github, and then install the project into the local archetypes repository using the following command:
 
-```
-mvn install
+```none
+$ mvn install
 ```
 
 ${symbol_pound}${symbol_pound} Variables
