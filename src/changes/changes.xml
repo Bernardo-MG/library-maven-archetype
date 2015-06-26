@@ -52,7 +52,7 @@
 				gitignore.
 			</action>
 		</release>
-		<release version="0.2.2" date="2015-06-17" description="Added Guava, and various corrections">
+		<release version="0.3.0" date="2015-06-17" description="Added Guava, and various corrections">
 			<action dev="bmg" type="update">
 				Changed the Maven site visual theme.
 			</action>
