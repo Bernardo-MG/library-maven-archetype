@@ -41,7 +41,6 @@
 				<column>Documentation</column>
 				<column>reports</column>
 			</bottomNav>
-			<bottomDescription>${site.description}</bottomDescription>
 			<pages>
 				<index project="${project.artifactId}">
 					<!-- Override the title -->
@@ -52,8 +51,7 @@
 					<toc>false</toc>
 					<markPageHeader>false</markPageHeader>
 					<sections>
-						<columns>2</columns>
-						<body />
+						<body/>
 						<sidebar />
 					</sections>
 				</index>

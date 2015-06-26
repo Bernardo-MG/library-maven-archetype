@@ -12,8 +12,6 @@ But I didn't need just a bunch of files, I needed a project ready to work with t
 
 So I researched a bit, and found the best solution to my problems: building my own archetype. Which is not exactly a general use archetype. As I've commented, it is prepared for my own tastes, so some decisions may be a bit too personal, but still I've tried to make is as generic and reusable as possible.
 
----
-
 # An overview
 
 Several features are offered by the archetype, the most important being:
