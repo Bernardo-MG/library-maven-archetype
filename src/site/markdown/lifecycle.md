@@ -13,13 +13,13 @@ This lifecycle begins each time a change is pushed to the code repository. But i
 - Release target and snapshot target, which deploy artifacts to the releases and snapshots repositories respectively
 - Feature target, which doesn't publish anything, but still builds and tests the project
 
-![Project life cycle](./images/project_life_cycle.png)
+[![Project life cycle][project-lifecycle]][project-lifecycle]
 
 This process is handled by the CI service, which will react when new code is pushed into the code repository, and decide which target should be applied.
 
 The decision is based on the branch where the code has been pushed to, being the 'master' branch the one which sets the release target, while the 'develop' branch sets the snapshots target, and any other just sets the feature target.
 
-![Target selection process](./images/target_selection.png)
+[![Target selection process][selection-process]][selection-process]
 
 To get more information about this process check the [CI](./travis.html) section, and the [repositories](./repos.html) one.
 
@@ -48,3 +48,6 @@ Any push to any other branch is considered a feature. Nothing will be published 
 ## Additional comments
 
 Publishing artifacts should always be taken with care, but any additional control should be handled by the repositories. The archetype will just handle deployment in a single direction, taking data from the source repository, and sending it to the artifact repositories.
+
+[project-lifecycle]: ./images/project_life_cycle.png
+[selection-process]: ./images/target_selection.png
