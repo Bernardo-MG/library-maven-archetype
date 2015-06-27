@@ -585,6 +585,7 @@
 				<version>${plugin.pmd.version}</version>
 				<configuration>
 					<linkXref>true</linkXref>
+					<skipEmptyReport>false</skipEmptyReport>
 					<sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
 					<minimumTokens>100</minimumTokens>
 					<targetJdk>${java.version.source}</targetJdk>

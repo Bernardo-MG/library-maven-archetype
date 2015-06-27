@@ -15,6 +15,7 @@
 |[Checkstyle](./checkstyle.html)|Report on coding style conventions.|
 |[FindBugs](./findbugs.html)|Generates a source code report with the FindBugs Library.|
 |[PMD](./pmd.html)|Verification of coding rules.|
+|[CPD](./cpd.html)|Duplicate code detection.|
 |[JDepend](./jdepend-report.html)|Quality metrics for the project.|
 |[Tag list](./taglist.html)|List of warning tags found on the code.|
 
