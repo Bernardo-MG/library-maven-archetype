@@ -52,12 +52,14 @@
 				gitignore.
 			</action>
 		</release>
-		<release version="0.3.0" date="2015-06-17" description="Added Guava, and various corrections">
+		<release version="0.3.0" date="2015-06-17"
+			description="Added Guava, changed the site's design, and various other corrections">
 			<action dev="bmg" type="update">
 				Changed the Maven site visual theme.
 			</action>
 			<action dev="bmg" type="add">
-				Added Guava to the initial dependencies.
+				Added Guava to the initial
+				dependencies.
 			</action>
 			<action dev="bmg" type="add">
 				Added Bintray badge to the readme.
