@@ -1,26 +1,31 @@
 # Maven Archetype
 
-Maven archetypes act as templates for new projects, defining a series of dependencies and configurations, along an initial structure of folders and files.
+Archetypes act as templates for new Maven projects, defining the initial configuration, along a collection of starting folders and files.
 
-This way it is possible to quickly create a blank project ready for any kind of job. As long as Maven is part of your needs.
+This way it is possible to quickly create a basic project, ready to be extended and adapted into your concrete need. As long as Maven is part of those needs, of course.
 
 # Why this library?
 
-I set up all my java projects in a similar way, and I always use Maven for them. Still, this didn't make it easier creating a new project, on the contrary, it meant hunting down the reusable files. And I never got them all on the first attempt.
+I kept making all my Java projects with a very similar Maven-based structure. This meant scavenging previous projects in search of the pieces I needed, an error-prone job which is never fun nor clean.
 
-But I didn't need just a bunch of files, I needed a project ready to work with the development cycle I usually apply to Java projects, which requires connecting various repositories, all of them connected through a continuous integration service.
+Luckily, there are template engines, just like Archetype, which allow building the bases of a new project at the first attempt. A project which comes along all my little fetishes: CI, testing, a Maven site, reports...
 
-So I researched a bit, and found the best solution to my problems: building my own archetype. Which is not exactly a general use archetype. As I've commented, it is prepared for my own tastes, so some decisions may be a bit too personal, but still I've tried to make is as generic and reusable as possible.
+Lots of things I like, and mostly consider useful, put together into a generic template, which allows creating new libraries or, with a bit of tweaking, any kind of Java project.
 
 # An overview
 
 Several features are offered by the archetype, the most important being:
 
-- Unit and integration tests ready to be run with TestNG [>>](./tests.html)
-- Making use of Travis to publish code and documentation artifacts [>>](./travis.html)
-- Maven site, using the Reflow skin, for the documentation and reports [>>](./site.html)
+- Unit and integration tests ready to be run, separately, with TestNG [>>](./tests.html)
+- Maven site, using the Reflow skin, with documentation and reports [>>](./site.html)
+- Several useful reports added to the Maven site [>>](./site.html)
+- Ready to make use of Travis CI for testing and deployment [>>](./travis.html)
+- Segregated development and release deployments [>>](./travis.html)
+- Artifacts and documentation deployment [>>](./travis.html)
 - A basic readme template.
 - A basic gitignore file.
+- Configured for the MIT License
+- Sets up the general information about the project and the developer
 
 For configuration, the archetype makes use of a series of properties which can be set during the creation of a new project [>>](./usage.html)
 

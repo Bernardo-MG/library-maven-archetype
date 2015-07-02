@@ -136,6 +136,7 @@
 			<item name="Usage" href="./usage.html" />
 			<item name="Project life cycle" href="./lifecycle.html" />
 			<item name="Repositories and services" href="./repos.html" />
+			<item name="Deployment" href="deployment.html" />
 			<item name="Travis integration" href="./travis.html" />
 			<item name="Site" href="./site.html" />
 			<item name="Tests" href="./tests.html" />

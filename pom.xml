@@ -11,7 +11,7 @@
 
 	<name>Library Maven Archetype</name>
 	<description>A Maven archetype to ease the creation of new libraries.</description>
-	<url>https://github.com/bernardo-mg/library-maven-archetype</url>
+	<url>https://www.github.com/bernardo-mg/library-maven-archetype</url>
 
 	<licenses>
 		<license>

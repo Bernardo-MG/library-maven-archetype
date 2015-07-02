@@ -1,71 +1,17 @@
-# Travis integration
+# Travis Integration
 
-The archetype comes ready to integrate with Travis, which will receive each push made to the repository and handle all the CI jobs.
+The archetype comes ready to integrate with Travis CI, which will take care of both the testing and the deployment tasks.
 
-Of course, for this to work the code must be kept in a GitHub repository, one which must have been connected to Travis. Additionally, a series of environmental variable must be correctly set on Travis.
+Of course, for this to work first you must have set up Travis and connected it to a code repository. For this check the [Travis guide][travis-guide].
 
-## Environment variables
+## Environmental variables
 
-For the CI to work correctly, a series of environmental variables must be set on Travis:
+The repository access data variables, defined in the [Deployment](./deployment.html) section, should be correctly configured for making the Travis integration work.
 
-|Variable|Contents|
-|---|---|
-|REPO\_RELEASES\_USER|User for the releases repository|
-|REPO\_RELEASES\_PASSWORD|Password for the releases documentation repository|
-|REPO\_SITE\_USER|User for the releases documentation repository|
-|REPO\_SITE\_PASSWORD|Password for the releases documentation repository|
+## Travis configuration file
 
-|Variable|Contents|
-|---|---|
-|REPO\_DEVELOP\_USER|User for the snapshots repository|
-|REPO\_DEVELOP\_PASSWORD|Password for the snapshots repository|
-|REPO\_SITE\_DEVELOP\_USER|User for the snapshots documentation repository|
-|REPO\_SITE\_DEVELOP\_PASSWORD|Password for the snapshots documentation repository|
+The .travis.yml file is prepared to run the tests and the deployment scripts.
 
-|Variable|Contents|
-|---|---|
-|DEPLOY|Artifact deployment flag|
-|DEPLOY\_DOCS|Site deployment flag|
+Additionally it will handle the [deployment flags](./deployment.html#Deployment_flags), which by default will deploy the artifact using Java 7 and the docs using Java 8. To change this just modify the configuration matrix.
 
-For more information about the deployment flags check the Travis file section.
-
-## Scripts and configuration files
-
-Travis is handled through the configuration file and a series of scripts as follows:
-
-|File|Use|
-|---|---|
-|.travis|Travis configuration file|
-|.scripts/create-maven-settings.sh|Builds the Maven settings file from the environmental variables|
-|.scripts/deploy.sh|Handles the artifact deployment job|
-|.scripts/deploy-site.sh|Handles the site deployment job|
-
-The deployment scripts will check three things:
-
-- The correct deployment flag is set.
-- The current build is not part of a pull
-- The current build has been cloned from a deployable branch
-
-If any of those requirements fails, the script won't make the deployment.
-
-### Travis configuration file
-
-This a simple file, which will run the scripts and little more.
-
-But that little more includes a very important point, as this file is where the runtime used for deployments will be selected. The 'DEPLOY' and 'DEPLOY\_DOCS' environmental variables indicate this. If you want to change the default runtimes, just modify the exclusion/inclusion matrix.
-
-### Maven configuration file script
-
-The script will mostly take the access-related environmental values and put them into a configuration files.
-
-Additionally, it sets the development profile, if the current branch is the 'develop' one.
-
-### Artifact deployment script
-
-This script will deploy the project using the generated configuration file, and the repository info on the POM file.
-
-### Site deployment script
-
-As it is not possible to set more than one site deployment target, two profiles are used to distinguish between the releases and deployment sites repositories.
-
-The correct profile will be loaded from the Maven configuration file.
+[travis-guide]: http://docs.travis-ci.com/user/for-beginners/

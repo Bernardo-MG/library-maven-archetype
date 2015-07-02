@@ -1,6 +1,6 @@
 # Repositories and services
 
-The archetype is prepared to work applying a simple CI cycle, which will make use of various free repository services. Being the only exception the documentation, which requires a FTP server to store the Maven site.
+The archetype is prepared to work applying a simple CI cycle, which will make use of various free repository services. Being the only exception the documentation, which requires a FTP server to store the Maven site, as I have not found a free service for this.
 
 The required repositories are:
 

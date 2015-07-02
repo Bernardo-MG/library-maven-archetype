@@ -1,8 +1,8 @@
 # Library Maven Archetype
 
-A basic Maven archetype to ease the creation of new Maven-based Java libraries.
+A basic Maven Archetype to ease the creation of new Maven-based Java libraries.
 
-While adapted to my personal tastes, it offers a series of good practices which include documentation, testing (both unit and integration), and making use of various integrated free services, such as Github, Travis and Bintray.
+It offers a quick way to create the bare bones for a project which includes documentation, testing (both unit and integration), development and releases segregated deployment, and making use of various integrated free services, such as Github, Travis and Bintray.
 
 [![Maven Central](https://img.shields.io/maven-central/v/com.wandrell.archetype/library.svg)][maven-repo]
 [![Bintray](https://api.bintray.com/packages/bernardo-mg/maven/library-maven-archetype/images/download.svg)][bintray-repo]
@@ -12,9 +12,9 @@ While adapted to my personal tastes, it offers a series of good practices which 
 
 ## Features
 
-- Prepared to work with Github, Travis and Bintray.
-- Unit and integration tests suites ready to be run with TestNG.
-- A Maven site, using the reflow skin, can be created to show documentation and reports.
+- Prepared to make use of Travis CI, segregating development and release deployments for both artifacts and documentation.
+- Unit and integration tests suites ready to be run with [TestNG][testng].
+- A Maven site, using the [Reflow skin][reflow], ready to show documentation and various reports.
 - Includes a basic readme template and a gitignore file.
 
 ## Documentation
@@ -91,6 +91,8 @@ The project has been released under the [MIT License][license].
 
 [bintray-repo]: https://bintray.com/bernardo-mg/maven/library-maven-archetype/view
 [maven-repo]: http://mvnrepository.com/artifact/com.wandrell.archetype/library
+[reflow]: http://andriusvelykis.github.io/reflow-maven-skin/
+[testng]: http://testng.org
 [issues]: https://github.com/Bernardo-MG/library-maven-archetype/issues
 [license]: http://www.opensource.org/licenses/mit-license.php
 [scm]: http://github.com/Bernardo-MG/library-maven-archetype

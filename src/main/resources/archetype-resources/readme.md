@@ -1,5 +1,5 @@
 #set( $symbol_pound = '#' )
-${symbol_pound} ${artifactName}
+${symbol_pound} ${projectName}
 
 A basic Maven-based Java library created from the Library Maven Archetype.
 

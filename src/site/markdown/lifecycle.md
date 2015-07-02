@@ -10,8 +10,8 @@ Which is a very simple life cycle, consisting on three steps:
 
 This lifecycle begins each time a change is pushed to the code repository. But it has an additional layer, as there are three targets, which will modify how these steps work:
 
-- Release target and snapshot target, which deploy artifacts to the releases and snapshots repositories respectively
-- Feature target, which doesn't publish anything, but still builds and tests the project
+- Release target and snapshot target, which deploy artifacts to the releases and snapshots repositories respectively.
+- Feature target, which doesn't publish anything, but still builds and tests the project.
 
 [![Project life cycle][project-lifecycle]][project-lifecycle]
 
