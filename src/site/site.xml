@@ -134,7 +134,6 @@
 		</menu>
 		<menu name="Documentation" inherit="bottom">
 			<item name="Usage" href="./usage.html" />
-			<item name="Project life cycle" href="./lifecycle.html" />
 			<item name="Repositories and services" href="./repos.html" />
 			<item name="Deployment" href="deployment.html" />
 			<item name="Travis integration" href="./travis.html" />
