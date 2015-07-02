@@ -2,7 +2,7 @@
 
 A basic Maven Archetype to ease the creation of new Maven-based Java libraries.
 
-It offers a quick way to create the bare bones for a project which includes documentation, testing (both unit and integration), development and releases segregated deployment, and making use of various integrated free services, such as Github, Travis and Bintray.
+It offers a quick way to create the bare bones for a project which includes documentation, testing (both unit and integration), segregating the deployment of development and releases based on the SCM branch, and making use of various integrated free services, such as Github, Travis and Bintray.
 
 [![Maven Central](https://img.shields.io/maven-central/v/com.wandrell.archetype/library.svg)][maven-repo]
 [![Bintray](https://api.bintray.com/packages/bernardo-mg/maven/library-maven-archetype/images/download.svg)][bintray-repo]

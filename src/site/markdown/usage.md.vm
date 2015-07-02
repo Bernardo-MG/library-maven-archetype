@@ -3,19 +3,19 @@ ${symbol_pound} Setting up the dependencies
 
 The project files are hosted on a [Bintray repo][bintray-repo], and have been replicated on JCenter and OSS Sonatype, which also replicates into the [Maven Central Repository][maven-repo]. While this means that it should be possible to download the archetype from any of those repositories, the recommended one is Bintray.
 
-To install the Archetype use the following data:
+To acquire the Archetype use the following data:
 
 |Group ID|Artifact ID|Version|URL|
 |---|---|---|---|
 |com.wandrell.archetype|library|${projectVersion}|https://dl.bintray.com/bernardo-mg/maven/ |
 
-It can be used through your preferred IDE, or directly through Maven by using the following command:
+For this you may install it with your preferred IDE, or directly use it with Maven by using the following command:
 
 ```sh
 $ mvn archetype:generate -DarchetypeGroupId=com.wandrell.archetype -DarchetypeArtifactId=library -DarchetypeVersion=${projectVersion} -DarchetypeRepository=https://dl.bintray.com/bernardo-mg/maven/
 ```
 
-As an alternative, it is also possible to download the project from [${scmName}](${scmURL}), and then install it into the local archetypes repository with the following command, as the POM file is already prepared to additionally update the local repository:
+As an alternative, it is also possible to download the project from [${scmName}](${scmURL}), and then install it into the local archetypes repository by using the following command which, due to the POM file configuration, will also update the local repository:
 
 ```sh
 $ mvn install

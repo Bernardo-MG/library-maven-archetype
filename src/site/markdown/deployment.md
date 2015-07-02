@@ -15,11 +15,11 @@ The deployment is handled by the scripts on the .scripts folder:
 |deploy.sh|Handles the artifact deployment job|
 |deploy-site.sh|Handles the site deployment job|
 
-### Maven configuration file script
+### Maven settings file script
 
-The script will mostly take the access-related environmental values and put them into a configuration files.
+The script will mostly take the access-related environmental values and create a Maven settings file from them. Not that this requires the [repository IDs](./repos.html#Repository_IDs) set on the POM, so if these change the file won't work.
 
-Additionally, it sets the development profile, if the current branch is the 'develop' one.
+Additionally, it sets the development profile as active if the current branch is the 'develop' one.
 
 ### Artifact deployment script
 
