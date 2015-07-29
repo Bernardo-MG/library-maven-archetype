@@ -1,17 +1,17 @@
 #set( $symbol_pound = '#' )
 ${symbol_pound} ${projectName}
 
-A basic Maven-based Java library created from the Library Maven Archetype.
+This is a basic Maven-based Java project created with the [Library Maven Archetype](https://github.com/Bernardo-MG/library-maven-archetype) which, as the name implies, it is meant to serve as the basis for creating a Java library, prepared for following several good practices, such as the use of CI or testing, and ready to use Maven to it's full extent, which includes using Maven Site as a way to have an included, and easy to update, documentation.
 
-While the archetype is meant to ease and simplify as much as possible creating a new Java library, it is still a good idea checking the results. Remember to verify, and change if needed, at least the following data:
+While the archetype is meant to help start building the project quickly, there are a few things which may be a good idea to check and, if needed, adapt:
 
-- Links on the readme, POM and Maven site (repositories, issues, etc)
+- This readme's description
 - Project info on the POM
+- The documentation on the project's Maven site
 - License, if not using the MIT one (POM, readme and LICENSE files)
-- This readme description
-- The documentation on the Maven site
+- Links on the readme, POM and Maven site (repositories, issues, etc)
 
-Note that the Maven site will require the most work, as it is meant to be used for creating the library's documentation, and such it will require a few new pages describing it.
+Note that the Maven site documentation (found at /src/site) will require the most work, as there is where the library's documentation, or at least a basic version of it, meant to go. Check the [Maven Site](https://maven.apache.org/plugins/maven-site-plugin/) home, and the [Docs Maven Skin](https://github.com/Bernardo-MG/docs-maven-skin), which is the Maven skin being used, for information about how to edit it.
 
 [![Maven Central](https://img.shields.io/maven-central/v/${groupId}/${artifactId}.svg)][maven-repo]
 [![Bintray](https://api.bintray.com/packages/${repoUserId}/maven/${artifactId}/images/download.svg)][bintray-repo]
@@ -24,11 +24,13 @@ Note that the Maven site will require the most work, as it is meant to be used f
 
 ${symbol_pound}${symbol_pound} Features
 
-Add a list of the project features here.
+The project by default comes with a useful series of features:
 
-- A feature
-- Another feature
-- Yet another feature
+- Preconfigured to begin developing the library fast.
+- Prepared for continuous integration, which differentiates between development and release artifacts and documentation.
+- Unit and integration tests suites ready to be run with [TestNG](http://testng.org/).
+- A Maven site, using the [Docs Maven Skin](https://github.com/Bernardo-MG/docs-maven-skin), ready to show documentation and several reports.
+- Various useful files, such as readme, gitignore and gitattributes.
 
 ${symbol_pound}${symbol_pound} Documentation
 
@@ -45,8 +47,10 @@ Documentation is also generated from the latest snapshot, taken from the 'develo
 The documentation site sources come along the source code (as it is a Maven site), so it is always possible to generate them using the following Maven command:
 
 ```
-$ mvn site
+$ mvn verify site
 ```
+
+The verify phase is required, as otherwise some of the reports won't be created.
 
 ${symbol_pound}${symbol_pound} Usage
 

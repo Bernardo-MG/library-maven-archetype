@@ -4,6 +4,8 @@ A basic Maven Archetype to ease the creation of new Maven-based Java libraries.
 
 It offers a quick way to create the bare bones for a project which includes documentation, testing (both unit and integration), segregating the deployment of development and releases based on the SCM branch, and making use of various integrated free services, such as Github, Travis and Bintray.
 
+Remember to check the included default Maven site to learn how to start customizing this project.
+
 [![Maven Central](https://img.shields.io/maven-central/v/com.wandrell.archetype/library.svg)][maven-repo]
 [![Bintray](https://api.bintray.com/packages/bernardo-mg/maven/library-maven-archetype/images/download.svg)][bintray-repo]
 
@@ -12,10 +14,11 @@ It offers a quick way to create the bare bones for a project which includes docu
 
 ## Features
 
-- Prepared to make use of Travis CI, segregating development and release deployments for both artifacts and documentation.
+- Creates a preconfigured project, allowing to begin developing the new library fast.
+- Prepared for continuous integration, which differentiates between development and release artifacts and documentation.
 - Unit and integration tests suites ready to be run with [TestNG][testng].
-- A Maven site, using the [Reflow skin][reflow], ready to show documentation and various reports.
-- Includes a basic readme template and a gitignore file.
+- A Maven site, using the [Docs Maven Skin][docs-skin], ready to show documentation and several reports.
+- Includes a basic readme template, along gitignore and gitattributes files.
 
 ## Documentation
 
@@ -30,8 +33,10 @@ Documentation is also generated from the latest snapshot, taken from the 'develo
 The documentation site sources come along the source code (as it is a Maven site), so it is always possible to generate them using the following Maven command:
 
 ```
-$ mvn site
+$ mvn verify site
 ```
+
+The verify phase is required, as otherwise some of the reports won't be created.
 
 ## Usage
 
@@ -90,8 +95,8 @@ If you wish to fork or modify the code, visit the [GitHub project page][scm], wh
 The project has been released under the [MIT License][license].
 
 [bintray-repo]: https://bintray.com/bernardo-mg/maven/library-maven-archetype/view
+[docs-skin]: https://github.com/Bernardo-MG/docs-maven-skin
 [maven-repo]: http://mvnrepository.com/artifact/com.wandrell.archetype/library
-[reflow]: http://andriusvelykis.github.io/reflow-maven-skin/
 [testng]: http://testng.org
 [issues]: https://github.com/Bernardo-MG/library-maven-archetype/issues
 [license]: http://www.opensource.org/licenses/mit-license.php
