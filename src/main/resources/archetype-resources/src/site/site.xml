@@ -12,8 +12,8 @@
 	<version position="bottom" />
 
 	<skin>
-		<groupId>lt.velykis.maven.skins</groupId>
-		<artifactId>reflow-maven-skin</artifactId>
+		<groupId>com.wandrell</groupId>
+		<artifactId>docs-maven-skin</artifactId>
 		<version>${site.skin.version}</version>
 	</skin>
 

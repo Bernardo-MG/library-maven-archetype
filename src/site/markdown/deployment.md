@@ -62,7 +62,7 @@ These affect the deployment workflow.
 
 ## Deployment workflow
 
-[![Deployment workflow][deployment-workflow]][deployment-workflow]
+![Deployment workflow][deployment-workflow]
 
 For the deployment to work first a Maven settings file is required, and this is built with the use of the settings script.
 
@@ -70,7 +70,7 @@ Afterward both the artifact and the documents deployment scripts can be run, no 
 
 But just running them won't make it work, first they will check if the deployment is allowed, which means passing a series of checks:
 
-[![Deployment workflow check][deployment-workflow-check]][deployment-workflow-check]
+![Deployment workflow check][deployment-workflow-check]
 
 - The code should not come from a pull request
 - The correct deployment flag should be set

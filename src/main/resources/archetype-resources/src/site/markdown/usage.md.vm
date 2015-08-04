@@ -13,7 +13,7 @@ Snapshot artifacts are stored on OSS Sonatype. They can be accessed by adding th
 
 ${symbol_pound}${symbol_pound}${symbol_pound} Maven
 
-```
+```xml
 <repositories>
 	...
 	<repository>

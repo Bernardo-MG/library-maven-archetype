@@ -12,6 +12,7 @@
 	<name>Library Maven Archetype</name>
 	<description>A Maven archetype to ease the creation of new libraries.</description>
 	<url>https://www.github.com/bernardo-mg/library-maven-archetype</url>
+	<inceptionYear>2015</inceptionYear>
 
 	<licenses>
 		<license>
@@ -25,7 +26,7 @@
 		<connection>scm:git:https://github.com/bernardo-mg/library-maven-archetype.git</connection>
 		<developerConnection>scm:git:https://github.com/bernardo-mg/library-maven-archetype.git</developerConnection>
 		<tag>head</tag>
-		<url>https://www.github.com/bernardo-mg/library-maven-archetype</url>
+		<url>https://github.com/bernardo-mg/library-maven-archetype</url>
 	</scm>
 
 	<issueManagement>
@@ -120,24 +121,18 @@
 		<plugin.reports.version>2.8</plugin.reports.version>
 		<plugin.resources.version>2.6</plugin.resources.version>
 		<plugin.site.version>3.4</plugin.site.version>
-		<plugin.site.reflow.version>1.1.1</plugin.site.reflow.version>
+		<plugin.site.velocityTools.version>0.1.0-SNAPSHOT</plugin.site.velocityTools.version>
 		<plugin.site.velocity.version>1.7</plugin.site.velocity.version>
 		<plugin.source.version>2.4</plugin.source.version>
 		<!-- Extensions versions -->
 		<extension.wagon.version>2.8</extension.wagon.version>
 		<extension.archetype.packaging.version>2.3</extension.archetype.packaging.version>
 		<!-- Maven Site -->
-		<site.skin.version>1.1.1</site.skin.version>
+		<site.skin.version>0.1.0-SNAPSHOT</site.skin.version>
 		<site.download>${project.scm.url}</site.download>
-		<javaVersion>JDK 7, JDK 8 and OpenJDK 7</javaVersion>
-		<projectVersion>${project.version}</projectVersion>
-		<scmName>GitHub</scmName>
-		<scmURL>${project.scm.url}</scmURL>
-		<ciName>${project.ciManagement.system}</ciName>
-		<ciURL>${project.ciManagement.url}</ciURL>
+		<repoDownloadURL>https://dl.bintray.com/bernardo-mg/maven/</repoDownloadURL>
 		<bintrayURL>https://bintray.com/bernardo-mg/maven/library-maven-archetype/view</bintrayURL>
 		<mavenURL>http://mvnrepository.com/artifact/com.wandrell.archetype/library</mavenURL>
-		<license>MIT</license>
 	</properties>
 
 	<build>
@@ -245,19 +240,21 @@
 				<version>${plugin.site.version}</version>
 				<dependencies>
 					<dependency>
-						<!-- Reflow Skin -->
-						<groupId>lt.velykis.maven.skins</groupId>
-						<artifactId>reflow-velocity-tools</artifactId>
-						<version>${plugin.site.reflow.version}</version>
+						<!-- Wandrell's Velocity Tools -->
+						<groupId>com.wandrell.velocity</groupId>
+						<artifactId>velocity-tools</artifactId>
+						<version>${plugin.site.velocityTools.version}</version>
 					</dependency>
 					<dependency>
 						<!-- Velocity -->
-						<!-- Reflow skin requires Velocity >= 1.7 -->
 						<groupId>org.apache.velocity</groupId>
 						<artifactId>velocity</artifactId>
 						<version>${plugin.site.velocity.version}</version>
 					</dependency>
 				</dependencies>
+				<configuration>
+					<relativizeDecorationLinks>false</relativizeDecorationLinks>
+				</configuration>
 			</plugin>
 			<plugin>
 				<!-- Source -->

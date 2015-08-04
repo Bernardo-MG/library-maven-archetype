@@ -356,6 +356,9 @@
 						<version>${plugin.site.velocity.version}</version>
 					</dependency>
 				</dependencies>
+				<configuration>
+					<relativizeDecorationLinks>false</relativizeDecorationLinks>
+				</configuration>
 			</plugin>
 			<plugin>
 				<!-- Source -->

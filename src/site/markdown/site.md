@@ -40,6 +40,6 @@ More information about this file can be found at the [changes.xml specification]
 
 To correctly generate all the reports, the site requires the testing results. For this reason, the recommended way to generate the site is using the following command:
 
-```
-mvn verify site
+```sh
+$ mvn verify site
 ```
