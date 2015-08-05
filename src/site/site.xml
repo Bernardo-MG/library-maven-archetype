@@ -1,18 +1,19 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<project xmlns="http://maven.apache.org/DECORATION/1.0.0"
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/DECORATION/1.4.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0 http://maven.apache.org/xsd/decoration-1.0.0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/DECORATION/1.4.0 http://maven.apache.org/xsd/decoration-1.4.0.xsd">
 
 	<skin>
-		<groupId>com.wandrell</groupId>
+		<groupId>com.wandrell.maven</groupId>
 		<artifactId>docs-maven-skin</artifactId>
 		<version>${site.skin.version}</version>
 	</skin>
 
 	<custom>
 		<skinConfig>
-			<keywords></keywords>
-			<descriptionUrl>Check the documentation</descriptionUrl>
+			<keywords>Maven, archetype, library</keywords>
+			<descriptionUrl>Check the documentation for the Library Maven
+				Archetype</descriptionUrl>
 			<twitterSite>@wandrell</twitterSite>
 			<interpreters>
 				<interpreter>JDK 7</interpreter>
@@ -43,39 +44,18 @@
 						<columns>2</columns>
 					</sections>
 				</index>
-				<!-- Documentation pages -->
 				<usage>
 					<sections>
 						<body />
 						<columns>2</columns>
 					</sections>
 				</usage>
-				<lifecycle>
-					<sections>
-						<body />
-					</sections>
-				</lifecycle>
 				<repos>
 					<sections>
 						<body />
 						<columns>2</columns>
 					</sections>
 				</repos>
-				<travis>
-					<sections>
-						<body />
-					</sections>
-				</travis>
-				<site>
-					<sections>
-						<body />
-					</sections>
-				</site>
-				<tests>
-					<sections>
-						<body />
-					</sections>
-				</tests>
 			</pages>
 		</skinConfig>
 	</custom>
@@ -87,6 +67,7 @@
 			<item name="Changes Log" href="./changes-report.html" />
 		</menu>
 		<menu name="Documentation" inherit="bottom">
+			<item name="Acquire" href="./acquire.html" />
 			<item name="Usage" href="./usage.html" />
 			<item name="Repositories and services" href="./repos.html" />
 			<item name="Deployment" href="./deployment.html" />

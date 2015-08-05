@@ -132,6 +132,7 @@
 		<plugin.reports.version>2.8</plugin.reports.version>
 		<plugin.site.version>3.4</plugin.site.version>
 		<plugin.site.reflow.version>1.1.1</plugin.site.reflow.version>
+		<plugin.site.siteFix.version>0.1.0-SNAPSHOT</plugin.site.siteFix.version>
 		<plugin.site.velocity.version>1.7</plugin.site.velocity.version>
 		<plugin.source.version>2.4</plugin.source.version>
 		<plugin.surefire.version>2.18.1</plugin.surefire.version>
@@ -343,14 +344,13 @@
 				<version>${plugin.site.version}</version>
 				<dependencies>
 					<dependency>
-						<!-- Reflow Skin -->
-						<groupId>lt.velykis.maven.skins</groupId>
-						<artifactId>reflow-velocity-tools</artifactId>
-						<version>${plugin.site.reflow.version}</version>
+						<!-- Maven Site Fixer -->
+						<groupId>com.wandrell.velocity</groupId>
+						<artifactId>maven-site-fixer</artifactId>
+						<version>${plugin.site.siteFix.version}</version>
 					</dependency>
 					<dependency>
 						<!-- Velocity -->
-						<!-- Reflow skin requires Velocity >= 1.7 -->
 						<groupId>org.apache.velocity</groupId>
 						<artifactId>velocity</artifactId>
 						<version>${plugin.site.velocity.version}</version>
