@@ -22,17 +22,4 @@ To correctly use this template, some additional things have to be set up. These 
 - Test artifacts repository, Sonatype OSS by default.
 - Documentation repository, a FTP by default.
 
----
-
-# The code
-
-The code is open source and freely accessible. If you want to do any kind of modification just fork it from the repository.
-
-- Java version: ${javaVersion}
-- License: [${license}](./license.html)
-- SCM: [${scmName}](${scmURL})
-- CI: [${ciName}](${ciURL})
-- [Bintray repo](${bintrayURL})
-- [Maven Central Repository](${mavenURL})
-
 [library-archetype]: https://github.com/Bernardo-MG/library-maven-archetype
