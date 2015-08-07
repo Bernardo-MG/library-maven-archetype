@@ -11,10 +11,9 @@
 
 	<custom>
 		<skinConfig>
-			<keywords>Maven, archetype, library</keywords>
-			<descriptionUrl>Check the documentation for the Library Maven
-				Archetype</descriptionUrl>
-			<twitterSite></twitterSite>
+			<keywords>Maven, Java, library</keywords>
+			<descriptionUrl>Check the documentation for ${projectName}</descriptionUrl>
+			<twitterSite>@${developerId}</twitterSite>
 			<interpreters>
 				<interpreter>JDK 7</interpreter>
 				<interpreter>JDK 8</interpreter>
@@ -44,18 +43,6 @@
 						<columns>2</columns>
 					</sections>
 				</index>
-				<usage>
-					<sections>
-						<body />
-						<columns>2</columns>
-					</sections>
-				</usage>
-				<repos>
-					<sections>
-						<body />
-						<columns>2</columns>
-					</sections>
-				</repos>
 			</pages>
 		</skinConfig>
 	</custom>
