@@ -24,5 +24,5 @@
 /**
  * Provides placeholder classes.
  */
-package com.wandrell.util;
+package $package;
 
