@@ -26,8 +26,6 @@ package ${package}.testing.test.integration;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.wandrell.util.FileUtils;
-
 import ${package}.Greeter;
 
 /**

@@ -24,5 +24,5 @@
 /**
  * Provides placeholder integration tests.
  */
-package $package;
+package ${package}.testing.test.integration;
 

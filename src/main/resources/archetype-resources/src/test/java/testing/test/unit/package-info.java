@@ -24,5 +24,5 @@
 /**
  * Provides placeholder unit tests.
  */
-package $package;
+package ${package}.testing.test.unit;
 
