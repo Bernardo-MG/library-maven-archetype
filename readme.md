@@ -17,7 +17,7 @@ Remember to check the included default Maven site to learn how to start customiz
 - Creates a preconfigured project, allowing to begin developing the new library fast.
 - Prepared for continuous integration, which differentiates between development and release artifacts and documentation.
 - Unit and integration tests suites ready to be run with [TestNG][testng].
-- A Maven site, using the [Docs Maven Skin][docs-skin], ready to show documentation and several reports.
+- A Maven site, using the [Docs Maven Skin][docs-skin], ready to show the project's documentation and several reports.
 - Includes a basic readme template, along gitignore and gitattributes files.
 
 ## Documentation

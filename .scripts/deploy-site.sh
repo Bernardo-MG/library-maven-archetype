@@ -2,9 +2,14 @@
 # This script deploys the Maven site using the POM configuration
 # It is triggered only commits to the master branch. Pulls are ignored
 #
-# Also, it will only deploy if the DEPLOY environment variable is set to 'true'
+# Also, it will only deploy if the DEPLOY_DOCS environment variable is set to 'true'
+#
+# The following environmental variables are used:
+# - PULL_REQUEST: boolean, indicates if this is a pull request, should be false for deployment
+# - DEPLOY_DOCS: boolean, control flag for deployment, should be true to deploy
+# - SCM_BRANCH: string, the CMS branch from which the code has been taken
 
-if [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$DEPLOY_DOCS" == "true" ] && [[ "$TRAVIS_BRANCH" == "master" || "$TRAVIS_BRANCH" == "develop" ]]; then
+if [ "$PULL_REQUEST" == "false" ] && [ "$DEPLOY_DOCS" == "true" ] && [[ "$SCM_BRANCH" == "master" || "$SCM_BRANCH" == "develop" ]]; then
 
    echo "Deploying Maven site"
 

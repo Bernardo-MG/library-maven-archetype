@@ -4,7 +4,7 @@ jdk:
   - oraclejdk7
   - openjdk7
 env:
-  - DEPLOY=false DEPLOY_DOCS=false
+  - DEPLOY=false DEPLOY_DOCS=false PULL_REQUEST=$TRAVIS_PULL_REQUEST SCM_BRANCH=$TRAVIS_BRANCH
 # Setting the JDK which will do the deployment
 matrix:
   exclude:
