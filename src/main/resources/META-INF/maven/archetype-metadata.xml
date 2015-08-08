@@ -100,11 +100,18 @@
 				<include>pmd/*.xml</include>
 			</includes>
 		</fileSet>
+		<fileSet filtered="true" encoding="UTF-8">
+			<!-- Site config file -->
+			<directory>src/site</directory>
+			<includes>
+				<include>site.xml</include>
+			</includes>
+		</fileSet>
 		<fileSet encoding="UTF-8">
 			<!-- Site files -->
 			<directory>src/site</directory>
 			<includes>
-				<include>**/*.*</include>
+				<include>**/markdown/*.*</include>
 			</includes>
 		</fileSet>
 	</fileSets>

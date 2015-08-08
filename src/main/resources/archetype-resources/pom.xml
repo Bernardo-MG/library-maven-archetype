@@ -116,22 +116,28 @@
 		<slf4j.version>1.7.12</slf4j.version>
 		<testng.version>6.9.4</testng.version>
 		<!-- Plugins versions -->
-		<plugin.checkstyle.version>2.15</plugin.checkstyle.version>
+		<plugin.ant.version>1.8</plugin.ant.version>
+		<plugin.assembly.version>2.5.5</plugin.assembly.version>
+		<plugin.checkstyle.version>2.16</plugin.checkstyle.version>
 		<plugin.changes.version>2.11</plugin.changes.version>
+		<plugin.clean.version>2.6.1</plugin.clean.version>
 		<plugin.compiler.version>3.3</plugin.compiler.version>
+		<plugin.dependency.version>2.10</plugin.dependency.version>
 		<plugin.deploy.version>2.8.2</plugin.deploy.version>
 		<plugin.enforcer.version>1.4</plugin.enforcer.version>
 		<plugin.failsafe.version>2.18.1</plugin.failsafe.version>
 		<plugin.findbugs.version>3.0.1</plugin.findbugs.version>
+		<plugin.install.version>2.5.2</plugin.install.version>
 		<plugin.jacoco.version>0.7.5.201505241946</plugin.jacoco.version>
 		<plugin.jar.version>2.6</plugin.jar.version>
 		<plugin.javadoc.version>2.10.3</plugin.javadoc.version>
 		<plugin.jdepend.version>2.0</plugin.jdepend.version>
 		<plugin.jxr.version>2.5</plugin.jxr.version>
-		<plugin.pmd.version>3.4</plugin.pmd.version>
+		<plugin.pmd.version>3.5</plugin.pmd.version>
+		<plugin.release.version>2.5.2</plugin.release.version>
 		<plugin.reports.version>2.8</plugin.reports.version>
+		<plugin.resources.version>2.6</plugin.resources.version>
 		<plugin.site.version>3.4</plugin.site.version>
-		<plugin.site.reflow.version>1.1.1</plugin.site.reflow.version>
 		<plugin.site.velocity.version>1.7</plugin.site.velocity.version>
 		<plugin.source.version>2.4</plugin.source.version>
 		<plugin.surefire.version>2.18.1</plugin.surefire.version>
@@ -139,16 +145,9 @@
 		<!-- Extensions versions -->
 		<extension.wagon.version>2.8</extension.wagon.version>
 		<!-- Maven Site -->
-		<site.skin.version>1.1.1</site.skin.version>
-		<site.download>https://bintray.com/${repoUserId}/maven/${artifactId}/view</site.download>
-		<javaVersion>JDK 7, JDK 8 and OpenJDK 7</javaVersion>
-		<scmName>GitHub</scmName>
-		<scmURL>${project.scm.url}</scmURL>
-		<ciName>${project.ciManagement.system}</ciName>
-		<ciURL>${project.ciManagement.url}</ciURL>
+		<site.skin.version>0.1.0</site.skin.version>
 		<bintrayURL>https://bintray.com/${repoUserId}/maven/${artifactId}/view</bintrayURL>
 		<mavenURL>http://mvnrepository.com/artifact/${groupId}/${artifactId}</mavenURL>
-		<license>MIT</license>
 	</properties>
 
 	<dependencies>
@@ -223,9 +222,48 @@
 						</lifecycleMappingMetadata>
 					</configuration>
 				</plugin>
+				<plugin>
+					<!-- Dependency -->
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-dependency-plugin</artifactId>
+					<version>${plugin.dependency.version}</version>
+				</plugin>
+				<plugin>
+					<!-- Assembly -->
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-assembly-plugin</artifactId>
+					<version>${plugin.assembly.version}</version>
+				</plugin>
+				<plugin>
+					<!-- Release -->
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>${plugin.release.version}</version>
+				</plugin>
+				<plugin>
+					<!-- Ant Run -->
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-antrun-plugin</artifactId>
+					<version>${plugin.ant.version}</version>
+				</plugin>
 			</plugins>
 		</pluginManagement>
 		<plugins>
+			<plugin>
+				<!-- Clean -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>${plugin.clean.version}</version>
+			</plugin>
+			<plugin>
+				<!-- Resources -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>${plugin.resources.version}</version>
+				<configuration>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
+			</plugin>
 			<plugin>
 				<!-- Compiler -->
 				<groupId>org.apache.maven.plugins</groupId>
@@ -236,6 +274,12 @@
 					<source>${java.version.source}</source>
 					<target>${java.version.target}</target>
 				</configuration>
+			</plugin>
+			<plugin>
+				<!-- Install -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-install-plugin</artifactId>
+				<version>${plugin.install.version}</version>
 			</plugin>
 			<plugin>
 				<!-- Enforcer -->
@@ -343,19 +387,21 @@
 				<version>${plugin.site.version}</version>
 				<dependencies>
 					<dependency>
-						<!-- Reflow Skin -->
-						<groupId>lt.velykis.maven.skins</groupId>
-						<artifactId>reflow-velocity-tools</artifactId>
-						<version>${plugin.site.reflow.version}</version>
+						<!-- Docs Maven Skin -->
+						<groupId>com.wandrell.maven.skins</groupId>
+						<artifactId>docs-maven-skin</artifactId>
+						<version>${site.skin.version}</version>
 					</dependency>
 					<dependency>
 						<!-- Velocity -->
-						<!-- Reflow skin requires Velocity >= 1.7 -->
 						<groupId>org.apache.velocity</groupId>
 						<artifactId>velocity</artifactId>
 						<version>${plugin.site.velocity.version}</version>
 					</dependency>
 				</dependencies>
+				<configuration>
+					<relativizeDecorationLinks>false</relativizeDecorationLinks>
+				</configuration>
 			</plugin>
 			<plugin>
 				<!-- Source -->

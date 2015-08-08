@@ -1,33 +1,27 @@
 #set( $symbol_pound = '#' )
-${symbol_pound} Setting up the dependencies
+${symbol_pound} Usage
 
-The project files are hosted on a [Bintray repo][bintray-repo], and have been replicated on JCenter and OSS Sonatype, which also replicates into the [Maven Central Repository][maven-repo]. While this means that it should be possible to download the archetype from any of those repositories, the recommended one is Bintray.
+New projects can be generated with by the Archetype with the use of Maven. This can be achieved through the command line or with the help of an IDE.
 
-To acquire the Archetype use the following data:
-
-|Group ID|Artifact ID|Version|URL|
-|---|---|---|---|
-|com.wandrell.archetype|library|${projectVersion}|https://dl.bintray.com/bernardo-mg/maven/ |
-
-For this you may install it with your preferred IDE, or directly use it with Maven by using the following command:
+In the case of wanting to just use Maven and the command line the following command should be used:
 
 ```sh
-$ mvn archetype:generate -DarchetypeGroupId=com.wandrell.archetype -DarchetypeArtifactId=library -DarchetypeVersion=${projectVersion} -DarchetypeRepository=https://dl.bintray.com/bernardo-mg/maven/
+$ mvn archetype:generate -DarchetypeGroupId=$project.groupId -DarchetypeArtifactId=$project.artifactId -DarchetypeVersion=$project.version -DarchetypeRepository=$repoDownloadURL
 ```
 
-As an alternative, it is also possible to download the project from [${scmName}](${scmURL}), and then install it into the local archetypes repository by using the following command which, due to the POM file configuration, will also update the local repository:
+The last argument, indicating the archetype repository, is needed only if the archetype has not been installed locally.
 
-```sh
-$ mvn install
-```
+For information about how to install the archetype through an IDE, check that IDE's manual.
 
 ${symbol_pound}${symbol_pound} Variables
 
-This list contains all the Velocity variables used in the Archetype, and which Maven will ask for. As these are templating variables, their values will be set into several of the files.
+The Archetype makes use of several templating variables to allow configuring the project. These are references found in several of the files. 
 
-${symbol_pound}${symbol_pound}${symbol_pound} Required variables
+When creating a new project from the Archetype the user will be asked to give values for each of them.
 
-These are the minimum variables which Maven demand, as they set the required data on the project.
+${symbol_pound}${symbol_pound}${symbol_pound} POM variables
+
+These are the Maven coordinates, and required by default.
 
 |Variable|Use|
 |---|---|
@@ -36,7 +30,7 @@ These are the minimum variables which Maven demand, as they set the required dat
 
 ${symbol_pound}${symbol_pound}${symbol_pound} General information
 
-The developer data will be also be used as the organization info, with developerName as the name, and developerUrl as the URL.
+The developer data will be also be used as the organization info, with developerName as the name and developerUrl as the URL of the organization.
 
 |Variable|Use|
 |---|---|
@@ -61,6 +55,3 @@ ${symbol_pound}${symbol_pound}${symbol_pound} Sites repositories
 |---|---|
 |siteRelease|URL for deploying the release version documents|
 |siteDevelop|URL for deploying the development documents|
-
-[bintray-repo]: ${bintrayURL}
-[maven-repo]: ${mavenURL}

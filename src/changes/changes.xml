@@ -53,9 +53,9 @@
 			</action>
 		</release>
 		<release version="0.3.0" date="2015-06-17"
-			description="Added Guava, changed the site's design, and various other corrections">
+			description="Changed the Maven Site skin, added Guava, various other corrections">
 			<action dev="bmg" type="update">
-				Changed the Maven site visual theme.
+				Changed the Maven Skin for the Docs Maven Skin.
 			</action>
 			<action dev="bmg" type="add">
 				Added Guava to the initial
@@ -75,7 +75,7 @@
 				The readme title is now correctly set.
 			</action>
 			<action dev="bmg" type="fix">
-				Corrections to the documentation.
+				Corrections to the documentation and site files.
 			</action>
 		</release>
 	</body>

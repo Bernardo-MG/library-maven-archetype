@@ -4,6 +4,8 @@ Archetypes act as templates for new Maven projects, defining the initial configu
 
 This way it is possible to quickly create a basic project, ready to be extended and adapted into your concrete need. As long as Maven is part of those needs, of course.
 
+---
+
 # Why this library?
 
 I kept making all my Java projects with a very similar Maven-based structure. This meant scavenging previous projects in search of the pieces I needed, an error-prone job which is never fun nor clean.
@@ -23,23 +25,10 @@ Several features are offered by the archetype, the most important being:
 - Segregated development and release deployments [>>](./travis.html)
 - Artifacts and documentation deployment [>>](./travis.html)
 - A basic readme template.
-- A basic gitignore file.
+- Gitignore and gitattributes files with a general use configuration.
 - Configured for the MIT License
 - Sets up the general information about the project and the developer
 
 For configuration, the archetype makes use of a series of properties which can be set during the creation of a new project [>>](./usage.html)
 
 Also, pay attention to the project life cycle I meant this archetype for, which will make it easier to understand [>>](./lifecycle.html)
-
----
-
-# The code
-
-The code is open source and freely accessible. If you want to do any kind of modification just fork it from the repository.
-
-- Java version: ${javaVersion}
-- License: [${license}](./license.html)
-- SCM: [${scmName}](${scmURL})
-- CI: [${ciName}](${ciURL})
-- [Bintray repo](${bintrayURL})
-- [Maven Central Repository](${mavenURL})

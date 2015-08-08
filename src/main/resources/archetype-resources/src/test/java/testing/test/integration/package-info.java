@@ -24,5 +24,5 @@
 /**
  * Provides placeholder integration tests.
  */
-package com.wandrell.util;
+package ${package}.testing.test.integration;
 

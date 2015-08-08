@@ -24,5 +24,5 @@
 /**
  * Provides placeholder unit tests.
  */
-package com.wandrell.util;
+package ${package}.testing.test.unit;
 

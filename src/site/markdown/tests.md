@@ -36,8 +36,8 @@ Units test are run by the **tests\_maven\_unit\_suite.xml** test suite, and shou
 
 They can be run using the command:
 
-```none
-mvn test
+```sh
+$ mvn test
 ```
 
 ### Integration tests
@@ -46,8 +46,8 @@ Units test are run by the **tests\_maven\_integration\_suite.xml** test suite, a
 
 They can be run using the command:
 
-```none
-mvn verify
+```sh
+$ mvn verify
 ```
 
 This command won't just run the integration tests, *it will run first the unit tests, and then the integration tests*.

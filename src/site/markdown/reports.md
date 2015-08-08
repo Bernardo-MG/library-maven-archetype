@@ -5,7 +5,7 @@
 |Report|Description|
 |---|---|
 |[Plugins](./plugins.html)|Maven plugins used by the project.|
-|[Plugins Management](./plugins.html)|Maven plugins that are defined through pluginManagement.|
+|[Plugins Management](./plugin-management.html)|Maven plugins that are defined through pluginManagement.|
 
 ## Other
 

@@ -1,141 +1,76 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<project name="${project.name}" xmlns="http://maven.apache.org/DECORATION/1.0.0"
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/DECORATION/1.6.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0 http://maven.apache.org/xsd/decoration-1.0.0.xsd">
-
-	<bannerLeft>
-		<name>${project.name}</name>
-		<href>./</href>
-	</bannerLeft>
-
-	<publishDate position="bottom" format="yyyy-MM-dd" />
-	<version position="bottom" />
+	xsi:schemaLocation="http://maven.apache.org/DECORATION/1.6.0 http://maven.apache.org/xsd/decoration-1.6.0.xsd">
 
 	<skin>
-		<groupId>lt.velykis.maven.skins</groupId>
-		<artifactId>reflow-maven-skin</artifactId>
+		<groupId>com.wandrell.maven.skins</groupId>
+		<artifactId>docs-maven-skin</artifactId>
 		<version>${site.skin.version}</version>
 	</skin>
 
 	<custom>
-		<reflowSkin>
-			<smoothScroll>true</smoothScroll>
-			<theme>bootswatch-spruce</theme>
-			<highlightJs>true</highlightJs>
-			<highlightJsTheme>github</highlightJsTheme>
-			<brand>
-				<!-- Brand text in top-left part of the site -->
-				<name>${project.name}</name>
-				<href>./</href>
-			</brand>
-			<slogan>${project.description}</slogan>
-			<titleTemplate>%2$s | %1$s</titleTemplate>
-			<!-- Use Table of Contents at the top of the page (max 6 elements) -->
-			<toc>top</toc>
-			<tocTopMax>6</tocTopMax>
-			<topNav>Documentation|Info and reports</topNav>
-			<!-- Split menus in the bottom navigation -->
+		<skinConfig>
+			<keywords>Maven, archetype, library</keywords>
+			<descriptionUrl>Check the documentation for the Library Maven
+				Archetype</descriptionUrl>
+			<twitterSite>@wandrell</twitterSite>
+			<interpreters>
+				<interpreter>JDK 7</interpreter>
+				<interpreter>JDK 8</interpreter>
+				<interpreter>OpenJDK 7</interpreter>
+			</interpreters>
+			<releaseRepositories>
+				<releaseRepository>
+					<name>Bintray</name>
+					<url>${bintrayURL}</url>
+				</releaseRepository>
+				<releaseRepository>
+					<name>Maven Central</name>
+					<url>${mavenURL}</url>
+				</releaseRepository>
+			</releaseRepositories>
+			<topNav>
+				<menu>Documentation</menu>
+				<menu>Info and reports</menu>
+			</topNav>
 			<bottomNav>
-				<column>Main</column>
-				<column>Acquire|Contribute</column>
-				<column>Documentation</column>
-				<column>Info and reports</column>
+				<menu>General Info</menu>
 			</bottomNav>
 			<pages>
-				<index project="${project.artifactId}">
-					<!-- Override the title -->
-					<titleTemplate>${project.name}</titleTemplate>
-					<!-- no breadcrumbs on the main index page -->
-					<breadcrumbs>false</breadcrumbs>
-					<!-- no ToC on the main index page -->
-					<toc>false</toc>
-					<markPageHeader>false</markPageHeader>
+				<index>
 					<sections>
 						<body />
-						<sidebar />
+						<columns>2</columns>
 					</sections>
 				</index>
-				<!-- Documentation pages -->
 				<usage>
 					<sections>
 						<body />
 						<columns>2</columns>
 					</sections>
 				</usage>
-				<lifecycle>
-					<sections>
-						<body />
-					</sections>
-				</lifecycle>
 				<repos>
 					<sections>
 						<body />
 						<columns>2</columns>
 					</sections>
 				</repos>
-				<travis>
-					<sections>
-						<body />
-					</sections>
-				</travis>
-				<site>
-					<sections>
-						<body />
-					</sections>
-				</site>
-				<tests>
-					<sections>
-						<body />
-					</sections>
-				</tests>
-				<contribute>
-					<breadcrumbs>false</breadcrumbs>
-				</contribute>
-				<!-- Disable source highlighting for Maven reports -->
-				<source-repository>
-					<highlightJs>false</highlightJs>
-				</source-repository>
-				<issue-tracking>
-					<highlightJs>false</highlightJs>
-					<toc>false</toc>
-				</issue-tracking>
-				<license>
-					<highlightJs>false</highlightJs>
-					<toc>false</toc>
-				</license>
-				<!-- Disable ToC for some Maven reports -->
-				<project-info>
-					<toc>false</toc>
-				</project-info>
-				<github-report>
-					<toc>false</toc>
-				</github-report>
-				<dependencies>
-					<tocTopMax>4</tocTopMax>
-				</dependencies>
 			</pages>
-		</reflowSkin>
+		</skinConfig>
 	</custom>
 
 	<body>
-		<links>
-			<item name="GitHub project" href="${scm.url}" />
-		</links>
-
-		<menu name="Main" inherit="top">
-			<item name="Home" href="./" />
-			<item name="GitHub project" href="${scm.url}" />
+		<menu name="General Info" inherit="top">
+			<item name="Acquire" href="./acquire.html" />
+			<item name="Usage" href="./usage.html" />
 			<item name="Changes Log" href="./changes-report.html" />
 		</menu>
-		<menu name="Acquire" inherit="top">
-			<item name="Download" href="${site.download}" />
-			<item name="GitHub" href="${scm.url}" />
-			<item name="License" href="./license.html" />
-		</menu>
 		<menu name="Documentation" inherit="bottom">
+			<item name="Acquire" href="./acquire.html" />
 			<item name="Usage" href="./usage.html" />
 			<item name="Repositories and services" href="./repos.html" />
-			<item name="Deployment" href="deployment.html" />
+			<item name="Deployment" href="./deployment.html" />
 			<item name="Travis integration" href="./travis.html" />
 			<item name="Site" href="./site.html" />
 			<item name="Tests" href="./tests.html" />
@@ -143,10 +78,6 @@
 		<menu name="Info and reports" inherit="bottom">
 			<item name="Info" href="./info.html" />
 			<item name="Reports" href="./reports.html" />
-		</menu>
-		<menu name="Contribute" inherit="bottom">
-			<item name="Issues" href="${issueManagement.url}" />
-			<item name="Fork on GitHub" href="${scm.url}" />
 		</menu>
 	</body>
 
