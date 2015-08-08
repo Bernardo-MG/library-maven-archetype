@@ -135,7 +135,7 @@
 		<extension.wagon.version>2.8</extension.wagon.version>
 		<extension.archetype.packaging.version>2.3</extension.archetype.packaging.version>
 		<!-- Maven Site -->
-		<site.skin.version>0.1.0-SNAPSHOT</site.skin.version>
+		<site.skin.version>0.1.0</site.skin.version>
 		<repoDownloadURL>https://dl.bintray.com/bernardo-mg/maven/</repoDownloadURL>
 		<bintrayURL>https://bintray.com/bernardo-mg/maven/library-maven-archetype/view</bintrayURL>
 		<mavenURL>http://mvnrepository.com/artifact/com.wandrell.archetype/library</mavenURL>
