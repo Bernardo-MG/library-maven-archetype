@@ -1,9 +1,11 @@
 #set( $symbol_pound = '#' )
 ${symbol_pound} ${projectName}
 
-This is a basic Maven-based Java project created with the [Library Maven Archetype](https://github.com/Bernardo-MG/library-maven-archetype) which, as the name implies, it is meant to serve as the basis for creating a Java library, prepared for following several good practices, such as the use of CI or testing, and ready to use Maven to it's full extent, which includes using Maven Site as a way to have an included, and easy to update, documentation.
+This is a basic Maven-based Java project created with the [Library Maven Archetype](https://github.com/Bernardo-MG/library-maven-archetype).
 
-While the archetype is meant to help start building the project quickly, there are a few things which may be a good idea to check and, if needed, adapt:
+It comes ready to follow several good practices, such as the use of continuous integration, unit/integration testing or the creation of documentation with the use of Maven Site.
+
+While the archetype is meant to help start building the project quickly, there are a few things which may be a good idea to check and, if needed, change:
 
 - This readme's description
 - Project info on the POM
@@ -26,7 +28,7 @@ ${symbol_pound}${symbol_pound} Features
 
 The project by default comes with a useful series of features:
 
-- Preconfigured to begin developing the library fast.
+- Preconfigured to begin developing a new library fast.
 - Prepared for continuous integration, which differentiates between development and release artifacts and documentation.
 - Unit and integration tests suites ready to be run with [TestNG](http://testng.org/).
 - A Maven site, using the [Docs Maven Skin](https://github.com/Bernardo-MG/docs-maven-skin), ready to show documentation and several reports.
