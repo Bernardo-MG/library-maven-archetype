@@ -1,8 +1,9 @@
 #!/bin/bash
-# This script creates the Maven settings file
-# This includes the connection settings, which are loaded from the server's environment
+# This script creates the Maven settings file for deployment.
 #
-# The data generated during this script is sensible information. Don't print it on the console.
+# This includes the connection settings, which are loaded from the server's environment variables.
+#
+# The data generated during this script should not be shared. Don't print it on the console.
 #
 # The following environmental variables are used:
 # - DEPLOY_USER: string, user for the releases repo
