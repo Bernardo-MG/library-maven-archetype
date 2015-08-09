@@ -18,7 +18,12 @@ Among all the features offered by the project the most important are:
 - .gitignore and .gitattributes files prepared for common uses.
 - MIT License.
 
+## Example project
+
+There is an [example project][example-project] showing what a new project created with the help of this Archetype looks like.
+
 [docs-skin]: https://github.com/Bernardo-MG/docs-maven-skin
+[example-project]: https://github.com/Bernardo-MG/library-maven-archetype-example
 
 [deployment]: ./deployment.html
 [site]: ./site.html

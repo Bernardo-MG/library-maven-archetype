@@ -86,5 +86,10 @@
 				com.wandrell.archetypes to com.wandrell.maven.archetypes
 			</action>
 		</release>
+		<release version="0.3.2" date="2015-08-19" description="Example project">
+			<action dev="bmg" type="add">
+				Added link to an example of what the Archetype can create.
+			</action>
+		</release>
 	</body>
 </document>

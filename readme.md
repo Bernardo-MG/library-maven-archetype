@@ -20,6 +20,10 @@ Remember to check the included default Maven site to learn how to start customiz
 - A Maven site, using the [Docs Maven Skin][docs-skin], ready to show the project's documentation and several reports.
 - Includes a basic readme template, along gitignore and gitattributes files.
 
+## Example project
+
+There is an [example project][example-project] showing what a new project created with the help of this Archetype looks like.
+
 ## Documentation
 
 Documentation is always generated for the latest release, kept in the 'master' branch:
@@ -96,6 +100,7 @@ The project has been released under the [MIT License][license].
 
 [bintray-repo]: https://bintray.com/bernardo-mg/maven/library-maven-archetype/view
 [docs-skin]: https://github.com/Bernardo-MG/docs-maven-skin
+[example-project]: https://github.com/Bernardo-MG/library-maven-archetype-example
 [maven-repo]: http://mvnrepository.com/artifact/com.wandrell.archetype/library
 [testng]: http://testng.org
 [issues]: https://github.com/Bernardo-MG/library-maven-archetype/issues

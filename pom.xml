@@ -6,7 +6,7 @@
 
 	<groupId>com.wandrell.maven.archetypes</groupId>
 	<artifactId>library</artifactId>
-	<version>0.3.1-SNAPSHOT</version>
+	<version>0.3.2-SNAPSHOT</version>
 	<packaging>maven-archetype</packaging>
 
 	<name>Library Maven Archetype</name>
