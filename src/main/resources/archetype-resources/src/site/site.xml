@@ -60,6 +60,7 @@
 		<menu name="Info and reports" inherit="bottom">
 			<item name="Info" href="./info.html" />
 			<item name="Reports" href="./reports.html" />
+			<item name="JavaDocs" href="./apidocs/" />
 		</menu>
 	</body>
 
