@@ -54,17 +54,17 @@ These define the access data to be used for the repositories defined on the POM 
 
 |Variable|Contents|
 |---|---|
-|REPO\_RELEASES\_USER|User for the releases repository|
-|REPO\_RELEASES\_PASSWORD|Password for the releases documentation repository|
-|REPO\_SITE\_USER|User for the releases documentation repository|
-|REPO\_SITE\_PASSWORD|Password for the releases documentation repository|
+|DEPLOY\_USER|User for the releases repository|
+|DEPLOY\_PASSWORD|Password for the releases documentation repository|
+|DEPLOY\_DOCS\_USER|User for the releases documentation repository|
+|DEPLOY\_DOCS\_PASSWORD|Password for the releases documentation repository|
 
 |Variable|Contents|
 |---|---|
-|REPO\_DEVELOP\_USER|User for the snapshots repository|
-|REPO\_DEVELOP\_PASSWORD|Password for the snapshots repository|
-|REPO\_SITE\_DEVELOP\_USER|User for the snapshots documentation repository|
-|REPO\_SITE\_DEVELOP\_PASSWORD|Password for the snapshots documentation repository|
+|DEPLOY\_DEVELOP\_USER|User for the snapshots repository|
+|DEPLOY\_DEVELOP\_PASSWORD|Password for the snapshots repository|
+|DEPLOY\_DOCS\_DEVELOP\_USER|User for the snapshots documentation repository|
+|DEPLOY\_DOCS\_DEVELOP\_PASSWORD|Password for the snapshots documentation repository|
 
 ### Deployment flags
 
@@ -91,7 +91,5 @@ But just running them won't make it work, first they will check if the deploymen
 
 If any of these checks fails, the deployment won't even begin.
 
-[deployment-workflow]: ./images/deployment_workflow.png
 [deployment-workflow-check]: ./images/deployment_check_workflow.png
 [repositories]: ./repos.html
-[travis]: ./travis.html
