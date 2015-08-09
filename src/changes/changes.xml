@@ -55,7 +55,8 @@
 		<release version="0.3.0" date="2015-08-19"
 			description="Changed the Maven Site skin, added Guava, various other corrections">
 			<action dev="bmg" type="update">
-				Changed the Maven Skin for the Docs Maven Skin.
+				Changed the Maven Skin for the Docs
+				Maven Skin.
 			</action>
 			<action dev="bmg" type="add">
 				Added Guava to the initial
@@ -75,7 +76,14 @@
 				The readme title is now correctly set.
 			</action>
 			<action dev="bmg" type="fix">
-				Corrections to the documentation and site files.
+				Corrections to the documentation and
+				site files.
+			</action>
+		</release>
+		<release version="0.3.1" date="2015-08-19" description="Changed group id">
+			<action dev="bmg" type="update">
+				Changed group id from
+				com.wandrell.archetypes to com.wandrell.maven.archetypes
 			</action>
 		</release>
 	</body>

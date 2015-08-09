@@ -4,9 +4,9 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.wandrell.archetypes</groupId>
+	<groupId>com.wandrell.maven.archetypes</groupId>
 	<artifactId>library</artifactId>
-	<version>0.3.0</version>
+	<version>0.3.1</version>
 	<packaging>maven-archetype</packaging>
 
 	<name>Library Maven Archetype</name>
@@ -53,9 +53,6 @@
 			<name>Snapshots Repository</name>
 			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
 		</snapshotRepository>
-		<relocation>
-			<groupId>com.wandrell.maven.archetypes</groupId>
-		</relocation>
 	</distributionManagement>
 
 	<profiles>
