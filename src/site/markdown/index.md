@@ -1,34 +1,26 @@
-# Maven Archetype
+# An Archetype for Libraries
 
-Archetypes act as templates for new Maven projects, defining the initial configuration, along a collection of starting folders and files.
+Archetypes act as templates for new Maven projects, defining the initial configuration, along a collection of starting folders and files tailored for a specific need.
 
-This way it is possible to quickly create a basic project, ready to be extended and adapted into your concrete need. As long as Maven is part of those needs, of course.
+In this case it is a generic setup, meant to ease the creation of Maven-based Java libraries and encourage good practices, such as unit/integration testing and continuous integration.
 
----
+# Features
 
-# Why this library?
+Among all the features offered by the project the most important are:
 
-I kept making all my Java projects with a very similar Maven-based structure. This meant scavenging previous projects in search of the pieces I needed, an error-prone job which is never fun nor clean.
-
-Luckily, there are template engines, just like Archetype, which allow building the bases of a new project at the first attempt. A project which comes along all my little fetishes: CI, testing, a Maven site, reports...
-
-Lots of things I like, and mostly consider useful, put together into a generic template, which allows creating new libraries or, with a bit of tweaking, any kind of Java project.
-
-# An overview
-
-Several features are offered by the archetype, the most important being:
-
-- Unit and integration tests ready to be run, separately, with TestNG [>>](./tests.html)
-- Maven site, using the Reflow skin, with documentation and reports [>>](./site.html)
-- Several useful reports added to the Maven site [>>](./site.html)
-- Ready to make use of Travis CI for testing and deployment [>>](./travis.html)
-- Segregated development and release deployments [>>](./travis.html)
-- Artifacts and documentation deployment [>>](./travis.html)
+- [Unit and integration tests][tests] ready to be run, independently from each other, with TestNG.
+- [Maven site for the project][site], using the [Docs Maven Skin][docs-skin], to be used as a documentation site.
+- [Several useful reports][site] added to the Maven site.
+- [Ready to make use of Travis CI][travis] for testing and deployment.
+- [Deployment scripts][deployment] making a distinction between release and development versions.
+- [Deployment includes artifacts and documentation][deployment] site.
 - A basic readme template.
-- Gitignore and gitattributes files with a general use configuration.
-- Configured for the MIT License
-- Sets up the general information about the project and the developer
+- .gitignore and .gitattributes files prepared for common uses.
+- MIT License.
 
-For configuration, the archetype makes use of a series of properties which can be set during the creation of a new project [>>](./usage.html)
+[docs-skin]: https://github.com/Bernardo-MG/docs-maven-skin
 
-Also, pay attention to the project life cycle I meant this archetype for, which will make it easier to understand [>>](./lifecycle.html)
+[deployment]: ./deployment.html
+[site]: ./site.html
+[tests]: ./tests.html
+[travis]: ./travis.html

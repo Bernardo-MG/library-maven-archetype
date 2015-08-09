@@ -3,6 +3,10 @@ ${symbol_pound} Usage
 
 New projects can be generated with by the Archetype with the use of Maven. This can be achieved through the command line or with the help of an IDE.
 
+For information about how to install the archetype through an IDE, check that IDE's manual.
+
+${symbol_pound}${symbol_pound} Maven command
+
 In the case of wanting to just use Maven and the command line the following command should be used:
 
 ```sh
@@ -10,8 +14,6 @@ $ mvn archetype:generate -DarchetypeGroupId=$project.groupId -DarchetypeArtifact
 ```
 
 The last argument, indicating the archetype repository, is needed only if the archetype has not been installed locally.
-
-For information about how to install the archetype through an IDE, check that IDE's manual.
 
 ${symbol_pound}${symbol_pound} Variables
 
@@ -21,7 +23,7 @@ When creating a new project from the Archetype the user will be asked to give va
 
 ${symbol_pound}${symbol_pound}${symbol_pound} POM variables
 
-These are the Maven coordinates, and required by default.
+These are the Maven coordinates, which all Maven projects require by default.
 
 |Variable|Use|
 |---|---|

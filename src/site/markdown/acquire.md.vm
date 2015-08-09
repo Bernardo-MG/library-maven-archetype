@@ -3,11 +3,11 @@ ${symbol_pound} Acquiring the project
 
 The project files are hosted on a [Bintray repository][bintray-repo], and have been replicated on JCenter and OSS Sonatype, which also replicates into the [Maven Central Repository][maven-repo]. While this means that it should be possible to download the Archetype from any of those repositories, the recommended one is Bintray.
 
-Unlike other types of project a Maven archetype does not require dependency control, and instead is directly used when creating new projects.
+Unlike other types of project a Maven archetype does not require dependency control. Instead the dependency data is required during it's [usage][usage].
 
 ${symbol_pound}${symbol_pound} Archetype data
 
-While the way to make use of the Archetype varies the following data is always required to identify it:
+The following data is always required to identify the Archetype, no matter through which method it is used:
 
 ${symbol_pound}${symbol_pound}${symbol_pound} Version identification
 
@@ -23,11 +23,14 @@ ${symbol_pound}${symbol_pound}${symbol_pound} Downloads link
 
 ${symbol_pound}${symbol_pound} Installing the Archetype
 
-Usually the Archetype is downloaded when first used, but as an alternative it is also possible to get the code from the [code repository]($project.scm.url) and then install it by using the following command which, due to the POM file configuration, will also update the local repository:
+Usually the Archetype is downloaded when first used, but as an alternative it is also possible to get the code from the [code repository][code-repo] and then install it by using the following command which, due to the POM file configuration, will also update the local repository:
 
 ```sh
 $ mvn install
 ```
 
+[code-repo]: $project.scm.url
 [bintray-repo]: ${bintrayURL}
 [maven-repo]: ${mavenURL}
+
+[usage]: ./usage.html
