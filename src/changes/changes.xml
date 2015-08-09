@@ -52,7 +52,7 @@
 				gitignore.
 			</action>
 		</release>
-		<release version="0.3.0" date="2015-06-17"
+		<release version="0.3.0" date="2015-08-19"
 			description="Changed the Maven Site skin, added Guava, various other corrections">
 			<action dev="bmg" type="update">
 				Changed the Maven Skin for the Docs Maven Skin.
