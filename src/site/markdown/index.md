@@ -4,7 +4,7 @@ Archetypes act as templates for new Maven projects, defining the initial configu
 
 In this case it is a generic setup, meant to ease the creation of Maven-based Java libraries and encourage good practices, such as unit/integration testing and continuous integration.
 
-# Features
+## Features
 
 Among all the features offered by the project the most important are:
 
