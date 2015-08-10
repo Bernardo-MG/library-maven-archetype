@@ -100,5 +100,11 @@
 				the created project.
 			</action>
 		</release>
+		<release version="0.3.3" date="2015-08-19" description="Corrections">
+			<action dev="bmg" type="fix">
+				Corrected headings on the created
+				project site index.
+			</action>
+		</release>
 	</body>
 </document>
