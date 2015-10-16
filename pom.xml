@@ -130,7 +130,7 @@
 		<plugin.source.version>2.4</plugin.source.version>
 		<!-- Extensions versions -->
 		<extension.wagon.version>2.9</extension.wagon.version>
-		<extension.archetype.packaging.version>2.3</extension.archetype.packaging.version>
+		<extension.archetype.packaging.version>2.4</extension.archetype.packaging.version>
 		<!-- Maven Site -->
 		<site.skin.version>0.2.0</site.skin.version>
 		<repoDownloadURL>https://dl.bintray.com/bernardo-mg/maven/</repoDownloadURL>
