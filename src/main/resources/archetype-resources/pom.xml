@@ -65,7 +65,7 @@
 				<site>
 					<id>site</id>
 					<name>Project Documentation Site</name>
-					<url>ftp://${siteRelease}/${artifactId}</url>
+					<url>${urlSiteDeployRelease}/${artifactId}</url>
 				</site>
 			</distributionManagement>
 		</profile>
@@ -75,7 +75,7 @@
 				<site>
 					<id>site-development</id>
 					<name>Project Development Documentation Site</name>
-					<url>ftp://${siteDevelop}/${artifactId}</url>
+					<url>${urlSiteDeployDevelop}/${artifactId}</url>
 				</site>
 			</distributionManagement>
 		</profile>

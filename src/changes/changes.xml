@@ -126,6 +126,10 @@
 			</action>
 		</release>
 		<release version="0.4.0" date="2015-10-16" description="fixes">
+			<action dev="bmg" type="update">
+				Changed the documentation URLs
+				variables. They are now divided into release and visit URLs.
+			</action>
 			<action dev="bmg" type="fix">
 				Raised version numbering, as the
 				previous update was bigger than the version change indicated.
