@@ -6,7 +6,7 @@ It offers a quick way to create the bare bones for a project which includes docu
 
 Remember to check the included default Maven site to learn how to start customizing this project.
 
-[![Maven Central](https://img.shields.io/maven-central/v/com.wandrell.archetype/library.svg)][maven-repo]
+[![Maven Central](https://img.shields.io/maven-central/v/com.wandrell.maven.archetypes/library.svg)][maven-repo]
 [![Bintray](https://api.bintray.com/packages/bernardo-mg/maven/library-maven-archetype/images/download.svg)][bintray-repo]
 
 [![Release docs](https://img.shields.io/badge/docs-release-blue.svg)][site-release]
@@ -98,7 +98,7 @@ If you wish to fork or modify the code, visit the [GitHub project page][scm], wh
 ## License
 The project has been released under the [MIT License][license].
 
-[bintray-repo]: https://bintray.com/bernardo-mg/maven/library-maven-archetype/view
+[bintray-repo]: https://bintray.com/bernardo-mg/maven/com.wandrell.maven.archetypes/view
 [docs-skin]: https://github.com/Bernardo-MG/docs-maven-skin
 [example-project]: https://github.com/Bernardo-MG/library-maven-archetype-example
 [maven-repo]: http://mvnrepository.com/artifact/com.wandrell.archetype/library

@@ -6,13 +6,13 @@ Note that while it is meant to be working from the beginning, and with working i
 
 ---
 
-# Where should I start customizing the project?
+## Where should I start customizing the project?
 
 First of all, check the [Library Maven Archetype][library-archetype] documentation, and then edit the readme file and the Maven site, so they talk about this project.
 
 After that, of course, the classes and tests included should be replaced with the actual code which the library will offer.
 
-# Some external requirements
+## Some external requirements
 
 To correctly use this template, some additional things have to be set up. These are a few services which are expected to be used by the project, which comes prepared for them:
 

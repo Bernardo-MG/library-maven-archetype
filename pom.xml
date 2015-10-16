@@ -6,7 +6,7 @@
 
 	<groupId>com.wandrell.maven.archetypes</groupId>
 	<artifactId>library</artifactId>
-	<version>0.3.2</version>
+	<version>0.3.3</version>
 	<packaging>maven-archetype</packaging>
 
 	<name>Library Maven Archetype</name>
@@ -45,7 +45,7 @@
 			<uniqueVersion>false</uniqueVersion>
 			<id>releases</id>
 			<name>Releases Repository</name>
-			<url>https://api.bintray.com/maven/bernardo-mg/maven/library-maven-archetype</url>
+			<url>https://api.bintray.com/maven/bernardo-mg/maven/archetype/library-archetype</url>
 		</repository>
 		<snapshotRepository>
 			<uniqueVersion>false</uniqueVersion>
@@ -53,6 +53,9 @@
 			<name>Snapshots Repository</name>
 			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
 		</snapshotRepository>
+		<relocation>
+			<artifactId>library-archetype</artifactId>
+		</relocation>
 	</distributionManagement>
 
 	<profiles>
@@ -129,10 +132,10 @@
 		<plugin.site.velocity.version>1.7</plugin.site.velocity.version>
 		<plugin.source.version>2.4</plugin.source.version>
 		<!-- Extensions versions -->
-		<extension.wagon.version>2.8</extension.wagon.version>
+		<extension.wagon.version>2.9</extension.wagon.version>
 		<extension.archetype.packaging.version>2.3</extension.archetype.packaging.version>
 		<!-- Maven Site -->
-		<site.skin.version>0.1.0</site.skin.version>
+		<site.skin.version>0.2.0</site.skin.version>
 		<repoDownloadURL>https://dl.bintray.com/bernardo-mg/maven/</repoDownloadURL>
 		<bintrayURL>https://bintray.com/bernardo-mg/maven/library-maven-archetype/view</bintrayURL>
 		<mavenURL>http://mvnrepository.com/artifact/com.wandrell.archetype/library</mavenURL>
