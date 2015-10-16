@@ -73,6 +73,7 @@
 			<!-- Root files -->
 			<directory></directory>
 			<includes>
+				<include>.gitattributes</include>
 				<include>.gitignore</include>
 				<include>.travis.yml</include>
 				<include>.scripts/*.sh</include>
