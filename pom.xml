@@ -135,7 +135,7 @@
 		<site.skin.version>0.2.0</site.skin.version>
 		<repoDownloadURL>https://dl.bintray.com/bernardo-mg/maven/</repoDownloadURL>
 		<bintrayURL>https://bintray.com/bernardo-mg/maven/library-maven-archetype/view</bintrayURL>
-		<mavenURL>http://mvnrepository.com/artifact/com.wandrell.archetype/library</mavenURL>
+		<mavenURL>http://mvnrepository.com/artifact/com.wandrell.archetypes/library-archetype</mavenURL>
 	</properties>
 
 	<build>
