@@ -19,7 +19,7 @@
 		</layout>
 	</appender>
 
-	<category name="com.wandrell" additivity="false">
+	<category name="${groupId}" additivity="false">
 		<priority value="DEBUG" />
 		<appender-ref ref="file" />
 	</category>
