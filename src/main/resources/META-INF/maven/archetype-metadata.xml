@@ -2,7 +2,7 @@
 <archetype-descriptor
 	xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
 	xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="library">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="library-archetype">
 	<requiredProperties>
 		<requiredProperty key="projectName">
 			<defaultValue>Basic Maven Project</defaultValue>
@@ -25,11 +25,17 @@
 		<requiredProperty key="repoUserId">
 			<defaultValue>bernardo-mg</defaultValue>
 		</requiredProperty>
-		<requiredProperty key="siteRelease">
-			<defaultValue>docs.wandrell.com</defaultValue>
+		<requiredProperty key="urlSiteDeployRelease">
+			<defaultValue>ftp://docs.wandrell.com</defaultValue>
 		</requiredProperty>
-		<requiredProperty key="siteDevelop">
-			<defaultValue>docs.wandrell.com</defaultValue>
+		<requiredProperty key="urlSiteDeployDevelop">
+			<defaultValue>ftp://docs.wandrell.com</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="urlSiteRelease">
+			<defaultValue>http://docs.wandrell.com/maven</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="urlSiteDevelop">
+			<defaultValue>http://docs.wandrell.com/development/maven</defaultValue>
 		</requiredProperty>
 	</requiredProperties>
 	<fileSets>
@@ -73,6 +79,7 @@
 			<!-- Root files -->
 			<directory></directory>
 			<includes>
+				<include>.gitattributes</include>
 				<include>.gitignore</include>
 				<include>.travis.yml</include>
 				<include>.scripts/*.sh</include>

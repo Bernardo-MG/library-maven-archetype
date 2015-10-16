@@ -55,5 +55,7 @@ ${symbol_pound}${symbol_pound}${symbol_pound} Sites repositories
 
 |Variable|Use|
 |---|---|
-|siteRelease|URL for deploying the release version documents|
-|siteDevelop|URL for deploying the development documents|
+|urlSiteDeployRelease|URL for deploying the release version documents|
+|urlSiteDeployDevelop|URL for deploying the development documents|
+|urlSiteRelease|URL where the release version documents can be found|
+|urlSiteDevelop|URL where the development documents can be found|

@@ -6,7 +6,7 @@ It offers a quick way to create the bare bones for a project which includes docu
 
 Remember to check the included default Maven site to learn how to start customizing this project.
 
-[![Maven Central](https://img.shields.io/maven-central/v/com.wandrell.maven.archetypes/library.svg)][maven-repo]
+[![Maven Central](https://img.shields.io/maven-central/v/com.wandrell.maven.archetypes/library-archetype.svg)][maven-repo]
 [![Bintray](https://api.bintray.com/packages/bernardo-mg/maven/library-maven-archetype/images/download.svg)][bintray-repo]
 
 [![Release docs](https://img.shields.io/badge/docs-release-blue.svg)][site-release]
@@ -20,9 +20,9 @@ Remember to check the included default Maven site to learn how to start customiz
 - A Maven site, using the [Docs Maven Skin][docs-skin], ready to show the project's documentation and several reports.
 - Includes a basic readme template, along gitignore and gitattributes files.
 
-## Example project
+## Sample project
 
-There is an [example project][example-project] showing what a new project created with the help of this Archetype looks like.
+There is a [sample project][sample-project] showing what a new project created with the help of this Archetype looks like.
 
 ## Documentation
 
@@ -60,8 +60,8 @@ All other dependencies are handled through Maven, and noted in the included POM 
 The recommended way to install the archetype is by downloading it from the [Bintray repository][bintray-repo] (recommended), or the [Maven Central Repository][maven-repo]. For this use your preferred method and the following data:
 
 ```
-Group ID: com.wandrell.archetype
-Artifact ID: library
+Group ID: com.wandrell.maven.archetypes
+Artifact ID: library-archetype
 Version: (Check POM or badges)
 URL: https://dl.bintray.com/bernardo-mg/maven/
 ```
@@ -69,7 +69,7 @@ URL: https://dl.bintray.com/bernardo-mg/maven/
 For example, to use it through command line type the following:
 
 ```
-$ mvn archetype:generate -DarchetypeGroupId=com.wandrell.archetype -DarchetypeArtifactId=library -DarchetypeVersion=0.2.2 -DarchetypeRepository=https://dl.bintray.com/bernardo-mg/maven/
+$ mvn archetype:generate -DarchetypeGroupId=com.wandrell.maven.archetypes -DarchetypeArtifactId=library-archetype -DarchetypeVersion=0.2.2 -DarchetypeRepository=https://dl.bintray.com/bernardo-mg/maven/
 ```
 
 Of course, it may also be added to the local repository through your preferred IDE, just by using that same information.
@@ -98,10 +98,10 @@ If you wish to fork or modify the code, visit the [GitHub project page][scm], wh
 ## License
 The project has been released under the [MIT License][license].
 
-[bintray-repo]: https://bintray.com/bernardo-mg/maven/com.wandrell.maven.archetypes/view
+[bintray-repo]: https://bintray.com/bernardo-mg/maven/library-maven-archetype/view
 [docs-skin]: https://github.com/Bernardo-MG/docs-maven-skin
-[example-project]: https://github.com/Bernardo-MG/library-maven-archetype-example
-[maven-repo]: http://mvnrepository.com/artifact/com.wandrell.archetype/library
+[sample-project]: https://github.com/Bernardo-MG/library-maven-archetype-example
+[maven-repo]: http://mvnrepository.com/artifact/com.wandrell.archetypes/library-archetype
 [testng]: http://testng.org
 [issues]: https://github.com/Bernardo-MG/library-maven-archetype/issues
 [license]: http://www.opensource.org/licenses/mit-license.php

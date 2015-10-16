@@ -65,7 +65,7 @@
 				<site>
 					<id>site</id>
 					<name>Project Documentation Site</name>
-					<url>ftp://${siteRelease}/${artifactId}</url>
+					<url>${urlSiteDeployRelease}/${artifactId}</url>
 				</site>
 			</distributionManagement>
 		</profile>
@@ -75,7 +75,7 @@
 				<site>
 					<id>site-development</id>
 					<name>Project Development Documentation Site</name>
-					<url>ftp://${siteDevelop}/${artifactId}</url>
+					<url>${urlSiteDeployDevelop}/${artifactId}</url>
 				</site>
 			</distributionManagement>
 		</profile>
@@ -115,19 +115,19 @@
 		<guava.version>18.0</guava.version>
 		<mockito.version>1.10.19</mockito.version>
 		<slf4j.version>1.7.12</slf4j.version>
-		<testng.version>6.9.4</testng.version>
+		<testng.version>6.9.8</testng.version>
 		<!-- Plugins versions -->
 		<plugin.ant.version>1.8</plugin.ant.version>
-		<plugin.assembly.version>2.5.5</plugin.assembly.version>
+		<plugin.assembly.version>2.6</plugin.assembly.version>
 		<plugin.checkstyle.version>2.16</plugin.checkstyle.version>
 		<plugin.changes.version>2.11</plugin.changes.version>
 		<plugin.clean.version>2.6.1</plugin.clean.version>
 		<plugin.compiler.version>3.3</plugin.compiler.version>
 		<plugin.dependency.version>2.10</plugin.dependency.version>
 		<plugin.deploy.version>2.8.2</plugin.deploy.version>
-		<plugin.enforcer.version>1.4</plugin.enforcer.version>
+		<plugin.enforcer.version>1.4.1</plugin.enforcer.version>
 		<plugin.failsafe.version>2.18.1</plugin.failsafe.version>
-		<plugin.findbugs.version>3.0.1</plugin.findbugs.version>
+		<plugin.findbugs.version>3.0.2</plugin.findbugs.version>
 		<plugin.install.version>2.5.2</plugin.install.version>
 		<plugin.jacoco.version>0.7.5.201505241946</plugin.jacoco.version>
 		<plugin.jar.version>2.6</plugin.jar.version>
@@ -136,8 +136,8 @@
 		<plugin.jxr.version>2.5</plugin.jxr.version>
 		<plugin.pmd.version>3.5</plugin.pmd.version>
 		<plugin.release.version>2.5.2</plugin.release.version>
-		<plugin.reports.version>2.8</plugin.reports.version>
-		<plugin.resources.version>2.6</plugin.resources.version>
+		<plugin.reports.version>2.8.1</plugin.reports.version>
+		<plugin.resources.version>2.7</plugin.resources.version>
 		<plugin.site.version>3.4</plugin.site.version>
 		<plugin.site.velocity.version>1.7</plugin.site.velocity.version>
 		<plugin.source.version>2.4</plugin.source.version>
