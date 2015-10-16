@@ -60,8 +60,8 @@ All other dependencies are handled through Maven, and noted in the included POM 
 The recommended way to install the archetype is by downloading it from the [Bintray repository][bintray-repo] (recommended), or the [Maven Central Repository][maven-repo]. For this use your preferred method and the following data:
 
 ```
-Group ID: com.wandrell.archetype
-Artifact ID: library
+Group ID: com.wandrell.maven.archetypes
+Artifact ID: library-archetype
 Version: (Check POM or badges)
 URL: https://dl.bintray.com/bernardo-mg/maven/
 ```
@@ -69,7 +69,7 @@ URL: https://dl.bintray.com/bernardo-mg/maven/
 For example, to use it through command line type the following:
 
 ```
-$ mvn archetype:generate -DarchetypeGroupId=com.wandrell.archetype -DarchetypeArtifactId=library -DarchetypeVersion=0.2.2 -DarchetypeRepository=https://dl.bintray.com/bernardo-mg/maven/
+$ mvn archetype:generate -DarchetypeGroupId=com.wandrell.maven.archetypes -DarchetypeArtifactId=library-archetype -DarchetypeVersion=0.2.2 -DarchetypeRepository=https://dl.bintray.com/bernardo-mg/maven/
 ```
 
 Of course, it may also be added to the local repository through your preferred IDE, just by using that same information.
