@@ -53,6 +53,9 @@
 			<name>Snapshots Repository</name>
 			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
 		</snapshotRepository>
+		<relocation>
+			<artifactId>library-archetype</artifactId>
+		</relocation>
 	</distributionManagement>
 
 	<profiles>

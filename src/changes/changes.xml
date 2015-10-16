@@ -100,7 +100,12 @@
 				the created project.
 			</action>
 		</release>
-		<release version="0.3.3" date="2015-08-19" description="Corrections">
+		<release version="0.3.3" date="2015-10-16"
+			description="Corrections and prepared relocation">
+			<action dev="bmg" type="update">
+				Indicated relaction of artifact id from
+				library to library-archetype
+			</action>
 			<action dev="bmg" type="update">
 				Updated Maven Site Skin.
 			</action>
@@ -109,8 +114,8 @@
 				project site index.
 			</action>
 			<action dev="bmg" type="fix">
-				Corrected Travis test script for the generated
-				project.
+				Corrected Travis test script for the
+				generated project.
 			</action>
 		</release>
 	</body>
