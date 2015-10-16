@@ -145,7 +145,7 @@
 		<!-- Extensions versions -->
 		<extension.wagon.version>2.9</extension.wagon.version>
 		<!-- Maven Site -->
-		<site.skin.version>0.1.0</site.skin.version>
+		<site.skin.version>0.2.0</site.skin.version>
 		<bintrayURL>https://bintray.com/${repoUserId}/maven/${artifactId}/view</bintrayURL>
 		<mavenURL>http://mvnrepository.com/artifact/${groupId}/${artifactId}</mavenURL>
 	</properties>

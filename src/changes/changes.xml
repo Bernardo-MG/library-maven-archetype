@@ -101,12 +101,15 @@
 			</action>
 		</release>
 		<release version="0.3.3" date="2015-08-19" description="Corrections">
+			<action dev="bmg" type="update">
+				Updated Maven Site Skin.
+			</action>
 			<action dev="bmg" type="fix">
 				Corrected headings on the generated
 				project site index.
 			</action>
 			<action dev="bmg" type="fix">
-				Travis test script for the generated
+				Corrected Travis test script for the generated
 				project.
 			</action>
 		</release>
