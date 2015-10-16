@@ -103,8 +103,8 @@
 		<release version="0.3.3" date="2015-10-16"
 			description="Corrections and prepared relocation">
 			<action dev="bmg" type="update">
-				Indicated relaction of artifact id from
-				library to library-archetype
+				Indicated relocation of artifact id
+				from library to library-archetype
 			</action>
 			<action dev="bmg" type="update">
 				Updated Maven Site Skin.
@@ -116,6 +116,13 @@
 			<action dev="bmg" type="fix">
 				Corrected Travis test script for the
 				generated project.
+			</action>
+		</release>
+		<release version="0.3.4" date="2015-10-16" description="Relocation">
+			<action dev="bmg" type="update">
+				Relocated artifact id from
+				library to
+				library-archetype
 			</action>
 		</release>
 	</body>
