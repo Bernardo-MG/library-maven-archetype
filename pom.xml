@@ -166,13 +166,14 @@
 		<extensions>
 			<extension>
 				<!-- Wagon -->
-				<!-- Enables the use of FTP -->
+				<!-- Enables the use of FTP. -->
 				<groupId>org.apache.maven.wagon</groupId>
 				<artifactId>wagon-ftp</artifactId>
 				<version>${extension.wagon.version}</version>
 			</extension>
 			<extension>
 				<!-- Archetype Packaging -->
+				<!-- Allows creating the archetype from the project. -->
 				<groupId>org.apache.maven.archetype</groupId>
 				<artifactId>archetype-packaging</artifactId>
 				<version>${plugin.archetype.version}</version>

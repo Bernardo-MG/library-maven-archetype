@@ -125,7 +125,7 @@
 				library-archetype
 			</action>
 		</release>
-		<release version="0.4.0" date="2015-10-16" description="fixes">
+		<release version="0.4.0" date="2015-10-16" description="Fixes">
 			<action dev="bmg" type="update">
 				Changed the documentation URLs
 				variables. They are now divided into release and visit URLs.
@@ -137,6 +137,16 @@
 			<action dev="bmg" type="fix">
 				Fixed the .gitignore and .gitattributes
 				files not being copied.
+			</action>
+		</release>
+		<release version="0.4.1" date="2015-10-28" description="Corrections to POM">
+			<action dev="bmg" type="update">
+				Added comments to clearly mark and
+				divide the POM sections.
+			</action>
+			<action dev="bmg" type="update">
+				Added comments to better document the
+				POM.
 			</action>
 		</release>
 	</body>

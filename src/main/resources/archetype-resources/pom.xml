@@ -154,6 +154,7 @@
 		<plugin.javadoc.version>2.10.3</plugin.javadoc.version>
 		<plugin.jdepend.version>2.0</plugin.jdepend.version>
 		<plugin.jxr.version>2.5</plugin.jxr.version>
+		<plugin.lifecycle.version>1.0.0</plugin.lifecycle.version>
 		<plugin.pmd.version>3.5</plugin.pmd.version>
 		<plugin.release.version>2.5.2</plugin.release.version>
 		<plugin.reports.version>2.8.1</plugin.reports.version>
@@ -182,6 +183,9 @@
 			<artifactId>guava</artifactId>
 			<version>${guava.version}</version>
 		</dependency>
+		<!-- ============================================== -->
+		<!-- ======= TEST ENVIRONMENT DEPENDENCIES ======== -->
+		<!-- ============================================== -->
 		<dependency>
 			<!-- Mockito -->
 			<groupId>org.mockito</groupId>
@@ -214,7 +218,7 @@
 		<extensions>
 			<extension>
 				<!-- Wagon -->
-				<!-- Enables the use of FTP -->
+				<!-- Enables the use of FTP. -->
 				<groupId>org.apache.maven.wagon</groupId>
 				<artifactId>wagon-ftp</artifactId>
 				<version>${extension.wagon.version}</version>
@@ -222,28 +226,33 @@
 		</extensions>
 		<pluginManagement>
 			<plugins>
-				<!--This plugin's configuration is used to store Eclipse m2e settings 
-					only. It has no influence on the Maven build itself. -->
 				<plugin>
+					<!-- m2e lifecycle mapping -->
+					<!-- This is used to configure the Maven plugin for Eclipse. -->
+					<!-- Among other things, it allows registering goals, which Eclipse 
+						would otherwise reject. -->
+					<!-- It has no real effect on Maven. -->
 					<groupId>org.eclipse.m2e</groupId>
 					<artifactId>lifecycle-mapping</artifactId>
-					<version>1.0.0</version>
+					<version>${plugin.lifecycle.version}</version>
 					<configuration>
 						<lifecycleMappingMetadata>
 							<pluginExecutions>
 								<pluginExecution>
+									<!-- jacoco plugin configuration -->
+									<!-- Fixes the errors with Eclipse not recognizing the plugin configuration -->
 									<pluginExecutionFilter>
 										<groupId>org.jacoco</groupId>
 										<artifactId>jacoco-maven-plugin</artifactId>
-										<versionRange>[0.5,)
-										</versionRange>
+										<versionRange>[0.5,)</versionRange>
 										<goals>
+											<!-- The 'prepare-agent' goal is registered to m2e. -->
 											<goal>prepare-agent</goal>
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<!-- m2e doesn't know what to do with jacoco, let's ignore it or 
-											annoying error markers appear see http://wiki.eclipse.org/M2E_plugin_execution_not_covered -->
+										<!-- As m2e doesn't know what to do with jacoco, it is ignored 
+											to avoid error warnings. -->
 										<ignore />
 									</action>
 								</pluginExecution>
@@ -251,26 +260,33 @@
 						</lifecycleMappingMetadata>
 					</configuration>
 				</plugin>
+				<!-- The following plugins always appear on the plugins list, even when 
+					they have not been added to the project. -->
+				<!-- This configuration block allows keeping them always updated. -->
 				<plugin>
 					<!-- Dependency -->
+					<!-- Takes care of dependencies, both copying and showing their info. -->
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-dependency-plugin</artifactId>
 					<version>${plugin.dependency.version}</version>
 				</plugin>
 				<plugin>
 					<!-- Assembly -->
+					<!-- Builds a distributable file from all the project components. -->
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-assembly-plugin</artifactId>
 					<version>${plugin.assembly.version}</version>
 				</plugin>
 				<plugin>
 					<!-- Release -->
+					<!-- Generates releases and updates the project. -->
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-release-plugin</artifactId>
 					<version>${plugin.release.version}</version>
 				</plugin>
 				<plugin>
 					<!-- Ant Run -->
+					<!-- Capable of handling Ant scripts. -->
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-antrun-plugin</artifactId>
 					<version>${plugin.ant.version}</version>
@@ -280,12 +296,14 @@
 		<plugins>
 			<plugin>
 				<!-- Clean -->
+				<!-- Cleans the output folder. -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-clean-plugin</artifactId>
 				<version>${plugin.clean.version}</version>
 			</plugin>
 			<plugin>
 				<!-- Resources -->
+				<!-- Handles the project resources. -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
 				<version>${plugin.resources.version}</version>
@@ -295,6 +313,7 @@
 			</plugin>
 			<plugin>
 				<!-- Compiler -->
+				<!-- Handles the source code. -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>${plugin.compiler.version}</version>
@@ -306,12 +325,18 @@
 			</plugin>
 			<plugin>
 				<!-- Install -->
+				<!-- Installs the project into the local Maven repository. -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-install-plugin</artifactId>
 				<version>${plugin.install.version}</version>
 			</plugin>
 			<plugin>
 				<!-- Enforcer -->
+				<!-- Stops the project from being built if it does not comply with a 
+					set of rules. -->
+				<!-- It is set for dependency convergence, meaning that the same dependency 
+					can't appear with different versions. This fixes transitive dependencies 
+					which may add unexpected versions. -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-enforcer-plugin</artifactId>
 				<version>${plugin.enforcer.version}</version>
