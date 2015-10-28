@@ -4,6 +4,10 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
+	<!-- ********************************************** -->
+	<!-- **************** PROJECT INFO **************** -->
+	<!-- ********************************************** -->
+
 	<groupId>com.wandrell.maven.archetypes</groupId>
 	<artifactId>library-archetype</artifactId>
 	<version>0.4.0-SNAPSHOT</version>
@@ -21,6 +25,10 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
+
+	<!-- ********************************************** -->
+	<!-- ********* INFRASTRUCTURE AND SERVICES ******** -->
+	<!-- ********************************************** -->
 
 	<scm>
 		<connection>scm:git:https://github.com/bernardo-mg/library-maven-archetype.git</connection>
@@ -55,6 +63,10 @@
 		</snapshotRepository>
 	</distributionManagement>
 
+	<!-- ********************************************** -->
+	<!-- ****************** PROFILES ****************** -->
+	<!-- ********************************************** -->
+
 	<profiles>
 		<profile>
 			<id>default</id>
@@ -81,6 +93,10 @@
 		</profile>
 	</profiles>
 
+	<!-- ********************************************** -->
+	<!-- *********** ORGANIZATION AND MEMBERS ********* -->
+	<!-- ********************************************** -->
+
 	<organization>
 		<name>Bernardo Martínez Garrido</name>
 		<url>https://github.com/Bernardo-MG</url>
@@ -101,6 +117,10 @@
 			<properties />
 		</developer>
 	</developers>
+
+	<!-- ********************************************** -->
+	<!-- **************** PROPERTIES ****************** -->
+	<!-- ********************************************** -->
 
 	<properties>
 		<!-- Encoding -->
@@ -136,6 +156,10 @@
 		<bintrayURL>https://bintray.com/bernardo-mg/maven/library-maven-archetype/view</bintrayURL>
 		<mavenURL>http://mvnrepository.com/artifact/com.wandrell.archetypes/library-archetype</mavenURL>
 	</properties>
+
+	<!-- ********************************************** -->
+	<!-- ******************* BUILD ******************** -->
+	<!-- ********************************************** -->
 
 	<build>
 		<defaultGoal>clean package install</defaultGoal>
@@ -352,6 +376,10 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<!-- ********************************************** -->
+	<!-- ****************** REPORTS ******************* -->
+	<!-- ********************************************** -->
 
 	<reporting>
 		<plugins>

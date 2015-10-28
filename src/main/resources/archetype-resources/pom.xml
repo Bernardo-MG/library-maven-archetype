@@ -4,6 +4,10 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
+	<!-- ********************************************** -->
+	<!-- **************** PROJECT INFO **************** -->
+	<!-- ********************************************** -->
+
 	<groupId>${groupId}</groupId>
 	<artifactId>${artifactId}</artifactId>
 	<version>0.1.0-SNAPSHOT</version>
@@ -21,6 +25,10 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
+
+	<!-- ********************************************** -->
+	<!-- ********* INFRASTRUCTURE AND SERVICES ******** -->
+	<!-- ********************************************** -->
 
 	<scm>
 		<connection>scm:git:https://github.com/${repoUserId}/${artifactId}.git</connection>
@@ -55,6 +63,10 @@
 		</snapshotRepository>
 	</distributionManagement>
 
+	<!-- ********************************************** -->
+	<!-- ****************** PROFILES ****************** -->
+	<!-- ********************************************** -->
+
 	<profiles>
 		<profile>
 			<id>default</id>
@@ -81,6 +93,10 @@
 		</profile>
 	</profiles>
 
+	<!-- ********************************************** -->
+	<!-- *********** ORGANIZATION AND MEMBERS ********* -->
+	<!-- ********************************************** -->
+
 	<organization>
 		<name>${developerName}</name>
 		<url>${developerUrl}</url>
@@ -101,6 +117,10 @@
 			<properties />
 		</developer>
 	</developers>
+
+	<!-- ********************************************** -->
+	<!-- **************** PROPERTIES ****************** -->
+	<!-- ********************************************** -->
 
 	<properties>
 		<!-- Encoding -->
@@ -151,6 +171,10 @@
 		<mavenURL>http://mvnrepository.com/artifact/${groupId}/${artifactId}</mavenURL>
 	</properties>
 
+	<!-- ********************************************** -->
+	<!-- *************** DEPENDENCIES ***************** -->
+	<!-- ********************************************** -->
+
 	<dependencies>
 		<dependency>
 			<!-- Guava -->
@@ -180,6 +204,10 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
+	<!-- ********************************************** -->
+	<!-- ******************* BUILD ******************** -->
+	<!-- ********************************************** -->
 
 	<build>
 		<defaultGoal>clean package install</defaultGoal>
@@ -503,6 +531,10 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<!-- ********************************************** -->
+	<!-- ****************** REPORTS ******************* -->
+	<!-- ********************************************** -->
 
 	<reporting>
 		<plugins>
