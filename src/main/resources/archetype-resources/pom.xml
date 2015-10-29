@@ -307,9 +307,6 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
 				<version>${plugin.resources.version}</version>
-				<configuration>
-					<encoding>${project.build.sourceEncoding}</encoding>
-				</configuration>
 			</plugin>
 			<plugin>
 				<!-- Compiler -->
@@ -318,7 +315,6 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>${plugin.compiler.version}</version>
 				<configuration>
-					<encoding>${project.build.sourceEncoding}</encoding>
 					<source>${java.version.source}</source>
 					<target>${java.version.target}</target>
 				</configuration>
@@ -334,9 +330,6 @@
 				<!-- Enforcer -->
 				<!-- Stops the project from being built if it does not comply with a 
 					set of rules. -->
-				<!-- It is set for dependency convergence, meaning that the same dependency 
-					can't appear with different versions. This fixes transitive dependencies 
-					which may add unexpected versions. -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-enforcer-plugin</artifactId>
 				<version>${plugin.enforcer.version}</version>
@@ -345,7 +338,55 @@
 						<id>enforce</id>
 						<configuration>
 							<rules>
+								<!-- Dependencies convergence. -->
 								<dependencyConvergence />
+								<!-- Not obsolete JDK. -->
+								<requireJavaVersion>
+									<version>[1.7,)</version>
+								</requireJavaVersion>
+								<!-- No plugin without version. -->
+								<requirePluginVersions>
+									<message>Best Practice is to always define plugin versions!</message>
+									<banLatest>true</banLatest>
+									<banRelease>true</banRelease>
+									<banSnapshots>true</banSnapshots>
+									<phases>clean,deploy,site,test,verify</phases>
+								</requirePluginVersions>
+								<!-- Source encoding should be set. -->
+								<requireProperty>
+									<property>project.build.sourceEncoding</property>
+									<message>Indicate the source encoding for the project.</message>
+									<regex>.*</regex>
+									<regexMessage>It should be a valid text encoding format.</regexMessage>
+								</requireProperty>
+								<!-- Report output encoding should be set. -->
+								<requireProperty>
+									<property>project.reporting.outputEncoding</property>
+									<message>Indicate the encoding for the reporting output.</message>
+									<regex>.*</regex>
+									<regexMessage>It should be a valid text encoding format.</regexMessage>
+								</requireProperty>
+								<!-- Source JDK should be set. -->
+								<requireProperty>
+									<property>java.version.source</property>
+									<message>Indicate the source JDK.</message>
+									<regex>\d+\.\d+[\.\d+]?.*</regex>
+									<regexMessage>It should be a valid JDK version.</regexMessage>
+								</requireProperty>
+								<!-- Target JDK should be set. -->
+								<requireProperty>
+									<property>java.version.target</property>
+									<message>Indicate the target JDK.</message>
+									<regex>\d+\.\d+[\.\d+]?.*</regex>
+									<regexMessage>It should be a valid JDK version.</regexMessage>
+								</requireProperty>
+								<!-- Manifest name should be given. -->
+								<requireProperty>
+									<property>manifest.name</property>
+									<message>Give a name for the manifest.</message>
+									<regex>.*</regex>
+									<regexMessage>It should be a valid name.</regexMessage>
+								</requireProperty>
 							</rules>
 						</configuration>
 						<goals>
@@ -356,6 +397,7 @@
 			</plugin>
 			<plugin>
 				<!-- Failsafe -->
+				<!-- Runs integration tests -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-failsafe-plugin</artifactId>
 				<version>${plugin.failsafe.version}</version>
@@ -371,6 +413,7 @@
 						</property>
 					</properties>
 					<suiteXmlFiles>
+						<!-- Path to the integration tests suite file -->
 						<suiteXmlFile>${project.build.testOutputDirectory}/tests_maven_integration_suite.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
@@ -393,6 +436,7 @@
 			</plugin>
 			<plugin>
 				<!-- JaCoCo -->
+				<!-- Generates coverage reports from Surefire and Failsafe -->
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>${plugin.jacoco.version}</version>
@@ -414,6 +458,7 @@
 			</plugin>
 			<plugin>
 				<!-- Jar -->
+				<!-- Generates the jar file -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
 				<version>${plugin.jar.version}</version>
@@ -436,6 +481,7 @@
 			</plugin>
 			<plugin>
 				<!-- Site -->
+				<!-- Generates the Maven Site -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>
 				<version>${plugin.site.version}</version>
@@ -454,15 +500,18 @@
 					</dependency>
 				</dependencies>
 				<configuration>
+					<!-- Relativizing the links has a tendency to end breaking them -->
 					<relativizeDecorationLinks>false</relativizeDecorationLinks>
 				</configuration>
 			</plugin>
 			<plugin>
 				<!-- Source -->
+				<!-- Bundles the source into a jar -->
 				<artifactId>maven-source-plugin</artifactId>
 				<version>${plugin.source.version}</version>
 				<executions>
 					<execution>
+					<!-- Generates the jar for the deployment -->
 						<id>attach-sources</id>
 						<phase>deploy</phase>
 						<goals>
@@ -473,6 +522,7 @@
 			</plugin>
 			<plugin>
 				<!-- Javadoc -->
+				<!-- Generates javadocs -->
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<version>${plugin.javadoc.version}</version>
 				<executions>
@@ -487,6 +537,8 @@
 			</plugin>
 			<plugin>
 				<!-- Deploy -->
+				<!-- Takes care of the deployment phase -->
+				<!-- It is set to generate and deploy a POM file along the artifact -->
 				<artifactId>maven-deploy-plugin</artifactId>
 				<version>${plugin.deploy.version}</version>
 				<executions>
@@ -497,12 +549,8 @@
 							<goal>deploy</goal>
 						</goals>
 						<configuration>
-							<packaging>jar</packaging>
 							<generatePom>true</generatePom>
-							<url>${project.distributionManagement.snapshotRepository.url}</url>
-							<artifactId>${project.artifactId}</artifactId>
-							<groupId>${project.groupId}</groupId>
-							<version>${project.version}</version>
+							<url>${project.distributionManagement.repository.url}</url>
 							<file>${project.build.directory}/${project.build.finalName}.jar</file>
 						</configuration>
 					</execution>
@@ -510,6 +558,8 @@
 			</plugin>
 			<plugin>
 				<!-- Changes -->
+				<!-- Takes care of the changes log -->
+				<!-- It is set to also validate the changes log file -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-changes-plugin</artifactId>
 				<version>${plugin.changes.version}</version>
@@ -535,12 +585,14 @@
 			</plugin>
 			<plugin>
 				<!-- Surefire -->
+				<!-- Runs unit tests -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>${plugin.surefire.version}</version>
 				<configuration>
 					<properties>
 						<property>
+							<!-- Default listeners disabled to avoid conflicts with TestNG -->
 							<name>usedefaultlisteners</name>
 							<key>false</key>
 						</property>
@@ -550,6 +602,7 @@
 						</property>
 					</properties>
 					<suiteXmlFiles>
+						<!-- Path to the unit tests suite file -->
 						<suiteXmlFile>${project.build.testOutputDirectory}/tests_maven_unit_suite.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
@@ -565,6 +618,7 @@
 		<plugins>
 			<plugin>
 				<!-- Project Info -->
+				<!-- Generates general information reports -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-project-info-reports-plugin</artifactId>
 				<version>${plugin.reports.version}</version>
@@ -586,18 +640,21 @@
 			</plugin>
 			<plugin>
 				<!-- JXR -->
+				<!-- Generates references to the source files, used by other reports -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jxr-plugin</artifactId>
 				<version>${plugin.jxr.version}</version>
 			</plugin>
 			<plugin>
 				<!-- Site -->
+				<!-- Generates the Maven Site -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>
 				<version>${plugin.site.version}</version>
 			</plugin>
 			<plugin>
 				<!-- Javadoc -->
+				<!-- Generates the javadocs -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<version>${plugin.javadoc.version}</version>
@@ -611,6 +668,7 @@
 			</plugin>
 			<plugin>
 				<!-- Changes -->
+				<!-- Generates the changes report from the changes log -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-changes-plugin</artifactId>
 				<version>${plugin.changes.version}</version>
@@ -624,6 +682,7 @@
 			</plugin>
 			<plugin>
 				<!-- Taglist -->
+				<!-- Generates a report of all the temporal tags still on the code -->
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>taglist-maven-plugin</artifactId>
 				<version>${plugin.taglist.version}</version>
@@ -658,6 +717,8 @@
 			</plugin>
 			<plugin>
 				<!-- Checkstyle -->
+				<!-- Checks that the source files comply with style standards -->
+				<!-- It is using a customized rules file -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
 				<version>${plugin.checkstyle.version}</version>
@@ -669,11 +730,13 @@
 					</reportSet>
 				</reportSets>
 				<configuration>
+				<!-- The customized rules file -->
 					<configLocation>src/checkstyle/checkstyle.xml</configLocation>
 				</configuration>
 			</plugin>
 			<plugin>
 				<!-- FindBugs -->
+				<!-- Checks for patterns which are prone to errors -->
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>findbugs-maven-plugin</artifactId>
 				<version>${plugin.findbugs.version}</version>
@@ -684,14 +747,14 @@
 			</plugin>
 			<plugin>
 				<!-- PMD -->
+				<!-- Checks that the code complies with a series of code quality rules -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-pmd-plugin</artifactId>
 				<version>${plugin.pmd.version}</version>
 				<configuration>
 					<linkXref>true</linkXref>
+					<!-- This will generate always the report, even if empty -->
 					<skipEmptyReport>false</skipEmptyReport>
-					<sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
-					<minimumTokens>100</minimumTokens>
 					<targetJdk>${java.version.source}</targetJdk>
 					<excludes>
 						<exclude>**/*Bean.java</exclude>
@@ -707,18 +770,21 @@
 			</plugin>
 			<plugin>
 				<!-- Surefire -->
+				<!-- Generates the unit tests report -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-report-plugin</artifactId>
 				<version>${plugin.surefire.version}</version>
 			</plugin>
 			<plugin>
 				<!-- JaCoCo -->
+				<!-- Generates the coverage report -->
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>${plugin.jacoco.version}</version>
 			</plugin>
 			<plugin>
 				<!-- JDepend -->
+				<!-- Generates the dependencies report -->
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>jdepend-maven-plugin</artifactId>
 				<version>${plugin.jdepend.version}</version>
