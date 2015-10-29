@@ -132,6 +132,7 @@
 		<!-- Manifest data -->
 		<manifest.name>com/wandrell/archetype/library</manifest.name>
 		<!-- Plugins versions -->
+		<plugin.ant.version>1.8</plugin.ant.version>
 		<plugin.assembly.version>2.6</plugin.assembly.version>
 		<plugin.archetype.version>2.4</plugin.archetype.version>
 		<plugin.changes.version>2.11</plugin.changes.version>
