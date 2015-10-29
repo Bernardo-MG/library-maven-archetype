@@ -511,7 +511,7 @@
 				<version>${plugin.source.version}</version>
 				<executions>
 					<execution>
-					<!-- Generates the jar for the deployment -->
+						<!-- Generates the jar for the deployment -->
 						<id>attach-sources</id>
 						<phase>deploy</phase>
 						<goals>
@@ -730,7 +730,7 @@
 					</reportSet>
 				</reportSets>
 				<configuration>
-				<!-- The customized rules file -->
+					<!-- The customized rules file -->
 					<configLocation>src/checkstyle/checkstyle.xml</configLocation>
 				</configuration>
 			</plugin>
