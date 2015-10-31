@@ -159,6 +159,9 @@
 			<action dev="bmg" type="update">
 				Added rules to the checkstyle configuration.
 			</action>
+			<action dev="bmg" type="update">
+				Moved the plugin configuration files to their own folder.
+			</action>
 			<action dev="bmg" type="fix">
 				Main resources are no longer being
 				packaged.
