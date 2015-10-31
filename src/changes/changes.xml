@@ -151,6 +151,11 @@
 			<action dev="bmg" type="update">
 				Updated the plugins configuration.
 			</action>
+			<action dev="bmg" type="update">
+				Swapped the the java.version.source and
+				java.version.target variables with the actual default variables
+				maven.compiler.source and maven.compiler.target.
+			</action>
 			<action dev="bmg" type="fix">
 				Main resources are no longer being
 				packaged.
