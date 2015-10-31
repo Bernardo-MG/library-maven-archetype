@@ -156,6 +156,9 @@
 				java.version.target variables with the actual default variables
 				maven.compiler.source and maven.compiler.target.
 			</action>
+			<action dev="bmg" type="update">
+				Added rules to the checkstyle configuration.
+			</action>
 			<action dev="bmg" type="fix">
 				Main resources are no longer being
 				packaged.
