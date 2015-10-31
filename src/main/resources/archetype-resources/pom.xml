@@ -731,7 +731,7 @@
 				</reportSets>
 				<configuration>
 					<!-- The customized rules file -->
-					<configLocation>src/checkstyle/checkstyle.xml</configLocation>
+					<configLocation>${project.basedir}/src/checkstyle/checkstyle.xml</configLocation>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -764,7 +764,7 @@
 						<excludeRoot>target/generated-sources/stubs</excludeRoot>
 					</excludeRoots>
 					<rulesets>
-						<ruleset>src/pmd/default-pmd.xml</ruleset>
+						<ruleset>${project.basedir}/src/pmd/default-pmd.xml</ruleset>
 					</rulesets>
 				</configuration>
 			</plugin>
