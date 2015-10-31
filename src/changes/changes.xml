@@ -151,6 +151,10 @@
 			<action dev="bmg" type="update">
 				Updated the plugins configuration.
 			</action>
+			<action dev="bmg" type="fix">
+				Main resources are no longer being
+				packaged.
+			</action>
 		</release>
 	</body>
 </document>
