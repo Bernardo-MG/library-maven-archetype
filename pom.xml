@@ -406,7 +406,6 @@
 						</goals>
 						<configuration>
 							<generatePom>true</generatePom>
-							<url>${project.distributionManagement.repository.url}</url>
 							<file>${project.build.directory}/${project.build.finalName}.jar</file>
 						</configuration>
 					</execution>
