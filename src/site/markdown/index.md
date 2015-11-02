@@ -13,7 +13,7 @@ Among all the features offered by the project the most important are:
 - [Several useful reports][site] added to the Maven site.
 - [Ready to make use of Travis CI][travis] for testing and deployment.
 - [Deployment scripts][deployment] making a distinction between release and development versions.
-- [Deployment includes artifacts and documentation][deployment] site.
+- [Deployment covers both artifacts and documentation][deployment] site.
 - A basic readme template.
 - .gitignore and .gitattributes files prepared for common uses.
 - MIT License.

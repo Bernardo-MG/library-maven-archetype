@@ -1,10 +1,9 @@
 # Library Maven Archetype
 
-A basic Maven Archetype to ease the creation of new Maven-based Java libraries.
+A basic Maven Archetype for easing the creation of new Maven-based Java libraries.
 
-It offers a quick way to create the bare bones for a project which includes documentation, testing (both unit and integration), segregating the deployment of development and releases based on the SCM branch, and making use of various integrated free services, such as Github, Travis and Bintray.
-
-Remember to check the included default Maven site to learn how to start customizing this project.
+It offers a quick way to create the bare bones for a project which includes documentation, testing (both unit and integration),
+deployment of development and release version, continuous integration and some other useful features.
 
 [![Maven Central](https://img.shields.io/maven-central/v/com.wandrell.maven.archetypes/library-archetype.svg)][maven-repo]
 [![Bintray](https://api.bintray.com/packages/bernardo-mg/maven/library-maven-archetype/images/download.svg)][bintray-repo]
@@ -14,15 +13,15 @@ Remember to check the included default Maven site to learn how to start customiz
 
 ## Features
 
-- Creates a preconfigured project, allowing to begin developing the new library fast.
-- Prepared for continuous integration, which differentiates between development and release artifacts and documentation.
-- Unit and integration tests suites ready to be run with [TestNG][testng].
+- Creates a Maven project ready to quickly being developing a new Java library.
+- Sets up continuous integration with [Github][github], [Travis][travis] and [Bintray][bintray]. Making a distinction between releases and development versions.
+- Prepared for unit and integration tests suites. Created with [TestNG][testng] and ready to be run with [Surefire][surefire] and [Failsafe][failsafe].
 - A Maven site, using the [Docs Maven Skin][docs-skin], ready to show the project's documentation and several reports.
-- Includes a basic readme template, along gitignore and gitattributes files.
+- Includes basic files such as readme, gitignore and gitattributes files.
 
 ## Sample project
 
-There is a [sample project][sample-project] showing what a new project created with the help of this Archetype looks like.
+There is a [sample project][sample-project] showing what this Archetype can create.
 
 ## Documentation
 
@@ -108,3 +107,10 @@ The project has been released under the [MIT License][license].
 [scm]: http://github.com/Bernardo-MG/library-maven-archetype
 [site-develop]: http://docs.wandrell.com/development/maven/library-maven-archetype
 [site-release]: http://docs.wandrell.com/maven/library-maven-archetype
+
+[github]: https://github.com/
+[bintray]: https://bintray.com/
+[travis]: https://travis-ci.org
+
+[surefire]: https://maven.apache.org/surefire/maven-surefire-plugin/
+[failsafe]: https://maven.apache.org/surefire/maven-failsafe-plugin/
