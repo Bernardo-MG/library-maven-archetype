@@ -1,16 +1,18 @@
 # Deployment
 
-The Archetype includes some shell scripts to ease the deployment procedure. These are meant to be executed through a CI service after changes to code, and will ask to know the branch from which the code has been pulled. If it is one marked for deployment, then this will begin.
+New projects come with a few shell scripts meant to ease the deployment procedure, both for artifacts and for documentation.
 
-During deployment the artifacts and documentation site will be created and uploaded on the correct [repositories][repositories], making a distinction between releases and development versions.
+The idea is running them with the help of a CI service, which will also set up all the variables they require. Files for doing this with [Travis CI][travis] are included in the new project.
 
-But this process won't work out of the box, for them to work correctly these scripts require a series of environmental variables set.
+Among the required environmental variables are some flags which will be used to know if the deployment scripts should be actually run or not. If any of them is set to false then the script won't run.
+
+These scripts also make a distinction between releases and development versions, which will each be deployed to their own [repositories][repositories].
 
 ## Releases and development versions
 
-Maven is capable of knowing if the current version is a release or a development version, and does this with a very simple method: if the version field on the POM ends with "-SNAPSHOT" then it is a snapshot, a development version, otherwise it is a release.
+Maven is capable of knowing if the current version is a release or a development version with a very simple method: if the version field on the POM ends with "-SNAPSHOT" then it is a snapshot, a development version. Otherwise it is a release.
 
-As the scripts make use of this feature, the "-SNAPSHOT" prefix should be always used for the versions kept in all the branches of the code repository, except for the ones keeping the releases.
+For this reason the "-SNAPSHOT" prefix should be always used for the versions kept in all the development branches of the code repository.
 
 ## Scripts
 
@@ -24,33 +26,33 @@ The deployment is handled by the scripts kept on the .scripts folder:
 
 Artifact and documentation deployment use two different shell scripts so they can be run independently.
 
-### Maven settings file creation script
+### create-maven-settings.sh
 
-Deploying into any repository requires a Maven settings file, which states the credentials for said server.
+Deploying into any repository requires a Maven settings file (settings.xml), which states the credentials for said server.
 
-This script takes care of creating such file, taking the access info from environmental variables. If the [repository IDs](./repos.html#Repository_IDs) have been changed the script should be updated accordingly.
+This script takes care of creating such file, taking the access info from the environmental variables. If the [repository IDs][repository-ids] have been changed then the script should be updated accordingly.
 
-An additional thing this script does is setting, through the settings file, the 'development' profile as active, if the code comes from the 'develop' branch.
+An additional thing this script does is setting, through the settings file, the correct deployment profile as active. This is required for deploying the Maven site, to set the release or development repository as needed.
 
-### Artifact deployment script
+### deploy.sh
 
-This script will deploy the project using the generated configuration file, and the repository info on the POM file.
+This script will deploy the project using the previously generated configuration file, and the repository info from the POM file.
 
-As this implies, the script itself won't make a distinction between release and development releases, but Maven will do.
+The script itself won't make a distinction between release and development releases, but Maven will do.
 
-### Site deployment script
+### deploy-site.sh
 
-As it is not possible to set more than one site deployment target, two profiles are used to distinguish between the releases and deployment sites repositories.
+As it is not possible to set more than one site deployment target, two profiles are used to distinguish between the releases and deployment sites repositories. The correct profile should be set into the Maven settings file by using the first script.
 
-The correct profile will be set into the Maven settings file, and this script, as the artifact deployment one, will just make use of said settings file.
+Just like the artifact deployment script, this makes no distinction between release and development releases, just grabbing the deployment URL set on the settings file.
 
 ## Environmental variables
 
-To make sure the scripts work correctly, a series of environmental variables are required. These should be set to valid values on the machine running the scripts.
+To make sure the scripts work correctly, a series of environmental variables should be set prior to running them.
 
 ### Repositories access data
 
-These define the access data to be used for the repositories defined on the POM file. Check the [Repositories and services](./repos.html) to find out more.
+These define the access data to be used for the repositories contained in the POM file. Check the [Repositories and services](./repos.html) to find out more.
 
 |Variable|Contents|
 |---|---|
@@ -93,3 +95,6 @@ If any of these checks fails, the deployment won't even begin.
 
 [deployment-workflow-check]: ./images/deployment_check_workflow.png
 [repositories]: ./repos.html
+[travis]: ./travis.html
+
+[repository-ids]: ./repos.html#Repository_IDs

@@ -1,40 +1,40 @@
 #set( $symbol_pound = '#' )
 ${symbol_pound} Usage
 
-New projects can be generated with by the Archetype with the use of Maven. This can be achieved through the command line or with the help of an IDE.
+After [acquiring the Archetype][acquire], it can be used to generate new Maven project. This can be done directly with Maven commands, or with the help of an IDE with the correct plugins (check your IDE's documentation for that).
 
-For information about how to install the archetype through an IDE, check that IDE's manual.
+${symbol_pound}${symbol_pound} Using the Archetype through a Maven command
 
-${symbol_pound}${symbol_pound} Maven command
-
-In the case of wanting to just use Maven and the command line the following command should be used:
+The Archetype can be installed and used by Maven by just using the following command:
 
 ```sh
 $ mvn archetype:generate -DarchetypeGroupId=$project.groupId -DarchetypeArtifactId=$project.artifactId -DarchetypeVersion=$project.version -DarchetypeRepository=$repoDownloadURL
 ```
 
-The last argument, indicating the archetype repository, is needed only if the archetype has not been installed locally.
+The last argument indicates the repository from where the Archetype will be downloaded. As this is then installed on the local Maven repository, it is not necessary on successive uses.
 
-${symbol_pound}${symbol_pound} Variables
+${symbol_pound}${symbol_pound} Archetype variables
 
-The Archetype makes use of several templating variables to allow configuring the project. These are references found in several of the files. 
+Maven Archetypes make use of templating variables to set up the project. Maven will ask for their values, and offer default values for most of them, when creating a new project with the Archetype, which is a very straightforward task.
 
-When creating a new project from the Archetype the user will be asked to give values for each of them.
+All the variables used by the Archetype are explained below:
 
 ${symbol_pound}${symbol_pound}${symbol_pound} POM variables
 
-These are the Maven coordinates, which all Maven projects require by default.
+These are used to create the POM, as the Maven coordinates should be given to any new project created from an Archetype.
 
-|Variable|Use|
+|Variable|Usage|
 |---|---|
 |artifactId|Will be used as Maven's ID for the project, part of the Maven coordinates|
 |groupId|The group holding this project, part of the Maven coordinates|
 
 ${symbol_pound}${symbol_pound}${symbol_pound} General information
 
-The developer data will be also be used as the organization info, with developerName as the name and developerUrl as the URL of the organization.
+Some general information about the project, used to identify who created the project.
 
-|Variable|Use|
+The Archetype is not prepared to set up an organization, so it will use the developer's information for the organization information on the POM.
+
+|Variable|Usage|
 |---|---|
 |projectName|Name given to the project|
 |projectDescription|Short description for the project|
@@ -47,15 +47,19 @@ ${symbol_pound}${symbol_pound}${symbol_pound} Repositories
 
 The repoUserId will be used, along the artifactId, to build the Github link for the project, and will also be reused for building the Travis one.
 
-|Variable|Use|
+|Variable|Usage|
 |---|---|
 |repoUserId|ID of the user on Github|
 
 ${symbol_pound}${symbol_pound}${symbol_pound} Sites repositories
 
-|Variable|Use|
+URLs for the Maven site. The deployment URLs are used by the plugins to push the documents, while the other URLs are the ones used to read those documents.
+
+|Variable|Usage|
 |---|---|
 |urlSiteDeployRelease|URL for deploying the release version documents|
 |urlSiteDeployDevelop|URL for deploying the development documents|
 |urlSiteRelease|URL where the release version documents can be found|
 |urlSiteDevelop|URL where the development documents can be found|
+
+[acquire]: ./acquire.html

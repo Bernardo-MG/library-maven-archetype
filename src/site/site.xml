@@ -66,8 +66,9 @@
 			<item name="Repositories and services" href="./repos.html" />
 			<item name="Deployment" href="./deployment.html" />
 			<item name="Travis integration" href="./travis.html" />
-			<item name="Site" href="./site.html" />
 			<item name="Tests" href="./tests.html" />
+			<item name="Maven site and reports" href="./site.html" />
+			<item name="The changes log" href="./changes.html" />
 		</menu>
 		<menu name="Info and reports" inherit="bottom">
 			<item name="Info" href="./info.html" />

@@ -168,6 +168,10 @@
 				Made the included profiles easier to
 				extend.
 			</action>
+			<action dev="bmg" type="update">
+				Improved documentation and adapted it
+				to the changes.
+			</action>
 			<action dev="bmg" type="fix">
 				Main resources are no longer being
 				packaged.
