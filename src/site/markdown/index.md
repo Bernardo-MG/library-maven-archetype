@@ -22,6 +22,28 @@ Among all the features offered by the project the most important are:
 
 There is an [example project][example-project] showing what a new project created with the help of this Archetype looks like.
 
+## Running the new project
+
+The usual Maven commands will work with any project created with this Archetype, but this is a list of the recommended set of goals for each task.
+
+For running only unit tests:
+
+```
+$ mvn clean unit
+```
+
+For running unit and integration tests:
+
+```
+$ mvn clean verify
+```
+
+For generating the Maven site and all the reports:
+
+```
+$ mvn clean verify site
+```
+
 [docs-skin]: https://github.com/Bernardo-MG/docs-maven-skin
 [example-project]: https://github.com/Bernardo-MG/library-maven-archetype-example
 
