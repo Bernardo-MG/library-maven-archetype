@@ -1,20 +1,45 @@
 # Travis Integration
 
-New projects come ready for making use of [Travis CI][travis], which will take care of both the testing and the deployment tasks each time any change is pushed to the code repository.
+New projects come ready for making use of [Travis CI][travis], which will take care of both the testing and the deployment tasks for the project.
 
-Of course deployment is taken with care, and segregated into releases and snapshots. This is detailed below, but basically changes to the 'main' branch will trigger the release deployment, while changes to the 'develop' branch will trigger the snapshot deployment. Any other branch won't trigger any kind of deployment.
+Of course, deployment is taken with care and both release and develop versions are handled independently from each other. This is detailed below, but basically changes to the 'main' branch will trigger the deployment of release artifacts, while changes to the 'develop' branch will trigger the deployment of snapshots. Any other branch won't trigger any kind of deployment.
+
+## Connecting Travis and Github
+
+As said on the [repositories section][repositories], the Archetype will set up the project to work with Github. This SCM is very easy to connect to Travis by just following the [beginners guide][travis-guide].
+
+## Configuration file
+
+Travis requires a .travis.yml file, found in the project's root folder, which will be used to configure the CI process. Again, more information about this can be found in the [beginners guide][travis-guide], but a few things should be commented.
+
+### JDK versions
+
+The file will come ready to test the project using JDK 7, JDK 8 and openJDK 7. If any of these are not supported they should be removed, and the file adapted to it.
+
+Also JDK 7 will be used to deploy the code artifacts, while JDK 8 will be used for the Maven site. This way the code is compatible with JDK 7 and 8, and the Javadoc generated along the Maven site takes advantage of the latest Javadoc doclet.
+
+### Scripts
+
+The Travis configuration file will call a script for the deployment tasks, and these are detailed in the [deployment section][deployment].
 
 ## Environmental variables
 
-The repository access data variables, defined in the [Deployment](./deployment.html) section, should be set up correctly for making the Travis integration tasks work.
+### Deployment variables
+
+Various environmental variables, defined in the [deployment section][deployment], should be set up correctly for making the Travis integration tasks work.
+
+Of these the following variables are taken care by the Travis configuration file:
+
+- DEPLOY
+- DEPLOY\_DOCS
+
+All the others should be correctly defined, or else the deployment won't work
 
 ### Adapting Travis variables
 
-The required variables are not the same as the Travis environmental variables, but the second set includes all the required info for the first.
+Travis has some environmental variables containing the data which the scripts require, and these are copied by the Travis configuration file into the required variables.
 
-This is solved by mapping them, which is done in the '.travis.yml' file.
-
-The mapping is as follows:
+The Travis environmental variables and the variables into which they are copied are detailed below:
 
 |Travis variable|Deployment variable|
 |---|---|
@@ -23,7 +48,7 @@ The mapping is as follows:
 
 ### Deployment flags
 
-The '.travis.yml' file will set up the deployment flags when required. By default these will be set for deploying the artifact using Java 7 and the docs using Java 8.
+As commented before the Travis configuration file takes care of deciding which JDK version takes care of the artifacts or documentation deployment. This is done through the [deployment flags][deployment-variables]. By default these will be set for deploying the artifact using Java 7 and the Maven site using Java 8.
 
 If this has to be changed just modify the Travis configuration matrix.
 
@@ -40,4 +65,9 @@ matrix:
       env: DEPLOY=false DEPLOY_DOCS=true PULL_REQUEST=$TRAVIS_PULL_REQUEST SCM_BRANCH=$TRAVIS_BRANCH
 ```
 
-[travis]: http://docs.travis-ci.com
+[travis]: https://travis-ci.org
+[travis-guide]: http://docs.travis-ci.com/user/for-beginners/
+
+[repositories]: ./repositories.html
+[deployment]: ./deployment.html
+[deployment-variables]: ./deployment.html#deploymentflags

@@ -63,10 +63,10 @@
 		<menu name="Documentation" inherit="bottom">
 			<item name="Acquire" href="./acquire.html" />
 			<item name="Usage" href="./usage.html" />
-			<item name="Repositories and services" href="./repos.html" />
-			<item name="Deployment" href="./deployment.html" />
+			<item name="Repositories" href="./repositories.html" />
 			<item name="Travis integration" href="./travis.html" />
 			<item name="Tests" href="./tests.html" />
+			<item name="Deployment" href="./deployment.html" />
 			<item name="Maven site and reports" href="./site.html" />
 			<item name="The changes log" href="./changes.html" />
 		</menu>

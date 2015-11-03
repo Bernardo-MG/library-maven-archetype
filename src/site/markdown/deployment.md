@@ -52,7 +52,7 @@ To make sure the scripts work correctly, a series of environmental variables sho
 
 ### Repositories access data
 
-These define the access data to be used for the repositories contained in the POM file. Check the [Repositories and services](./repos.html) to find out more.
+These define the access data to be used for the repositories contained in the POM file. Check the [Repositories and services][repositories] to find out more.
 
 |Variable|Contents|
 |---|---|
@@ -94,7 +94,8 @@ But just running them won't make it work, first they will check if the deploymen
 If any of these checks fails, the deployment won't even begin.
 
 [deployment-workflow-check]: ./images/deployment_check_workflow.png
-[repositories]: ./repos.html
+[repositories]: ./repositories.html
 [travis]: ./travis.html
 
-[repository-ids]: ./repos.html#Repository_IDs
+[repositories]: ./repositories.html
+[repository-ids]: ./repositories.html#Repository_IDs

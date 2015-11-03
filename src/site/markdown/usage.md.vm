@@ -19,6 +19,8 @@ Maven Archetypes make use of templating variables to set up the project. Maven w
 
 All the variables used by the Archetype are explained below:
 
+---
+
 ${symbol_pound}${symbol_pound}${symbol_pound} POM variables
 
 These are used to create the POM, as the Maven coordinates should be given to any new project created from an Archetype.
@@ -45,7 +47,7 @@ The Archetype is not prepared to set up an organization, so it will use the deve
 
 ${symbol_pound}${symbol_pound}${symbol_pound} Repositories
 
-The repoUserId will be used, along the artifactId, to build the Github link for the project, and will also be reused for building the Travis one.
+The repoUserId is used, along the artifactId, to build the Github link for the project, and will also be reused for building the Travis and Bintray ones.
 
 |Variable|Usage|
 |---|---|
