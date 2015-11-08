@@ -169,6 +169,9 @@
 				extend.
 			</action>
 			<action dev="bmg" type="update">
+				Updated the Maven Site Skin.
+			</action>
+			<action dev="bmg" type="update">
 				Improved documentation and adapted it
 				to the changes.
 			</action>
