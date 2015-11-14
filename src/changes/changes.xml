@@ -175,6 +175,9 @@
 				Improved documentation and adapted it
 				to the changes.
 			</action>
+			<action dev="bmg" type="update">
+				Updated logger to Log4j2.
+			</action>
 			<action dev="bmg" type="fix">
 				Main resources are no longer being
 				packaged.

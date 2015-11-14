@@ -184,8 +184,8 @@
 		<manifest.name>${packageInPathFormat}</manifest.name>
 		<!-- Dependencies versions -->
 		<guava.version>18.0</guava.version>
+		<log4j.version>2.4.1</log4j.version>
 		<mockito.version>1.10.19</mockito.version>
-		<slf4j.version>1.7.12</slf4j.version>
 		<testng.version>6.9.8</testng.version>
 		<!-- Plugins versions -->
 		<plugin.ant.version>1.8</plugin.ant.version>
@@ -238,17 +238,24 @@
 		<!-- ======= TEST ENVIRONMENT DEPENDENCIES ======== -->
 		<!-- ============================================== -->
 		<dependency>
+			<!-- Log4j core -->
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>${log4j.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<!-- Log4j SLF4J Bridge -->
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-slf4j-impl</artifactId>
+			<version>${log4j.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
 			<!-- Mockito -->
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-all</artifactId>
 			<version>${mockito.version}</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<!-- SLF4J LOG4J-12 Binding -->
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
-			<version>${slf4j.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>

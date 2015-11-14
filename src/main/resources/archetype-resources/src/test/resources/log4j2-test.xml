@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configuration status="WARN">
+
+	<Properties>
+		<Property name="filename">${artifactId}_test.log</Property>
+	</Properties>
+
+	<Appenders>
+		<Console name="console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+
+		<File name="file" fileName="${filename}">
+			<PatternLayout>
+				<Pattern>%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n
+				</Pattern>
+			</PatternLayout>
+		</File>
+	</Appenders>
+
+	<Loggers>
+		<Logger name="${groupId}" level="debug" additivity="false">
+			<AppenderRef ref="file" />
+		</Logger>
+
+		<Root level="error">
+			<AppenderRef ref="console" />
+		</Root>
+	</Loggers>
+
+</Configuration>
