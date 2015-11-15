@@ -139,7 +139,8 @@
 				files not being copied.
 			</action>
 		</release>
-		<release version="0.4.1" date="2015-10-29" description="Corrections to POM">
+		<release version="0.4.1" date="2015-11-15"
+			description="Various updates and corrections">
 			<action dev="bmg" type="update">
 				Added comments to clearly mark and
 				divide the POM sections.
@@ -177,6 +178,10 @@
 			</action>
 			<action dev="bmg" type="update">
 				Updated logger to Log4j2.
+			</action>
+			<action dev="bmg" type="update">
+				Changed the rule used for dependency
+				convergence.
 			</action>
 			<action dev="bmg" type="fix">
 				Main resources are no longer being

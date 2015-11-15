@@ -271,7 +271,9 @@
 						<configuration>
 							<rules>
 								<!-- Dependencies convergence. -->
-								<dependencyConvergence />
+								<!-- This variant of the rule requires less configuration, making 
+									use of Maven's dependency resolver. -->
+								<requireUpperBoundDeps />
 								<!-- Not obsolete JDK. -->
 								<requireJavaVersion>
 									<version>[1.7,)</version>
