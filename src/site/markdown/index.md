@@ -1,53 +1,46 @@
 # An Archetype for Libraries
 
-Archetypes act as templates for new Maven projects, defining the initial configuration, along a collection of starting folders and files tailored for a specific need.
+Archetypes act as templates for new Maven projects, taking care of the most tedious and repetitive tasks so the user can begin coding without worrying much about the initial configuration.
 
-In this case it is a generic setup, meant to ease the creation of Maven-based Java libraries and encourage good practices, such as unit/integration testing and continuous integration.
+In this case the Archetype allows creating a generic Maven-based library, which not only included common and useful plugins and utilities, but also comes ready for a full development cycle where each change to the code is checked and releases are published with the help of a CI service.
 
 ## Features
 
-Among all the features offered by the project the most important are:
-
-- [Unit and integration tests][tests] ready to be run, independently from each other, with TestNG.
-- [Maven site for the project][site], using the [Docs Maven Skin][docs-skin], to be used as a documentation site.
-- [Several useful reports][site] added to the Maven site.
+- [Unit and integration test][tests] suites are run separatedly with the use of [TestNG][testng].
+- [Maven site for the project][site], using the [Docs Maven Skin][docs-skin], for creating a small documentation site.
+- [Several useful reports][site-reports] added to the Maven site.
+- [Changes log][changes] added to the Maven site.
 - [Ready to make use of Travis CI][travis] for testing and deployment.
-- [Deployment scripts][deployment] making a distinction between release and development versions.
-- [Deployment covers both artifacts and documentation][deployment] site.
+- [Deployment][deployment] covers both artifacts and documentation site.
+- [Deployment scripts][deployment-scripts] making a distinction between release and development versions.
 - A basic readme template.
 - .gitignore and .gitattributes files prepared for common uses.
 - MIT License.
 
 ## Example project
 
-There is an [example project][example-project] showing what a new project created with the help of this Archetype looks like.
+For a quick taste, there is an [example project][example-project] showing what a new project created with the help of this Archetype looks like.
 
-## Running the new project
+## Commands for the new project
 
-The usual Maven commands will work with any project created with this Archetype, but this is a list of the recommended set of goals for each task.
+There are a few useful Maven commands which can be used from the first moment a project is created. Remember that it won't be prepared to be run in any way, just that the usual Maven commands will work, and these are a few of the most interesting ones.
 
-For running only unit tests:
+|Command|Usage|
+|---|---|
+|$ mvn clean unit|Running only unit tests|
+|$ mvn clean verify|Running unit and integration tests|
+|$ mvn clean verify site|Generating the Maven site and all the report|
 
-```
-$ mvn clean unit
-```
-
-For running unit and integration tests:
-
-```
-$ mvn clean verify
-```
-
-For generating the Maven site and all the reports:
-
-```
-$ mvn clean verify site
-```
 
 [docs-skin]: https://github.com/Bernardo-MG/docs-maven-skin
 [example-project]: https://github.com/Bernardo-MG/library-maven-archetype-example
 
+[testng]: http://testng.org/
+
 [deployment]: ./deployment.html
+[deployment-scripts]: ./deployment.html#scripts
+[changes]: ./changes.html
 [site]: ./site.html
+[site-reports]: ./site.html#reports
 [tests]: ./tests.html
 [travis]: ./travis.html

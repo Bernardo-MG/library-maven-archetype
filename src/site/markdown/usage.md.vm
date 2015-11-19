@@ -1,29 +1,38 @@
 #set( $symbol_pound = '#' )
 ${symbol_pound} Usage
 
-After [acquiring the Archetype][acquire], it can be used to generate new Maven project. This can be done directly with Maven commands, or with the help of an IDE with the correct plugins (check your IDE's documentation for that).
+Once the Archetype has been [acquired][acquire] it can be used as a template to generate new Maven projects.
+
+${symbol_pound}${symbol_pound} Using the Archetype through an IDE
+
+To use the Archetype with an IDE consult your preferred IDE's manual.
 
 ${symbol_pound}${symbol_pound} Using the Archetype through a Maven command
 
-The Archetype can be installed and used by Maven by just using the following command:
+The Archetype can used by Maven with the following command.
+
+As it includes the repository from which it can be acquired, this command will also install the archetype in the local repository if it isn't already there.
 
 ```sh
 $ mvn archetype:generate -DarchetypeGroupId=$project.groupId -DarchetypeArtifactId=$project.artifactId -DarchetypeVersion=$project.version -DarchetypeRepository=$repoDownloadURL
 ```
 
-The last argument indicates the repository from where the Archetype will be downloaded. As this is then installed on the local Maven repository, it is not necessary on successive uses.
+The *-D* parameter serves to define a variable. These variables are as it follows:
 
-${symbol_pound}${symbol_pound} Archetype variables
+|Variable|Usage|
+|---|---|
+|archetypeGroupId|Group Id for the Archetype|
+|archetypeArtifactId|Artifact Id for the Archetype|
+|archetypeVersion|Archetype version|
+|archetypeRepository|Repository containing the Archetype|
 
-Maven Archetypes make use of templating variables to set up the project. Maven will ask for their values, and offer default values for most of them, when creating a new project with the Archetype, which is a very straightforward task.
+${symbol_pound}${symbol_pound} Templating variables in the Archetype
 
-All the variables used by the Archetype are explained below:
+Maven Archetypes make use of templating variables to prepare the project. The values for these will be asked when creating a new project, and most of them will have default values which show the kind of data each of them expects.
 
 ---
 
-${symbol_pound}${symbol_pound}${symbol_pound} POM variables
-
-These are used to create the POM, as the Maven coordinates should be given to any new project created from an Archetype.
+${symbol_pound}${symbol_pound}${symbol_pound} Maven coordinates
 
 |Variable|Usage|
 |---|---|
@@ -31,8 +40,6 @@ These are used to create the POM, as the Maven coordinates should be given to an
 |groupId|The group holding this project, part of the Maven coordinates|
 
 ${symbol_pound}${symbol_pound}${symbol_pound} General information
-
-Some general information about the project, used to identify who created the project.
 
 The Archetype is not prepared to set up an organization, so it will use the developer's information for the organization information on the POM.
 

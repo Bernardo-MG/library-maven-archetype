@@ -28,18 +28,17 @@ The following reports come included in the new project and will be added to the 
 - [JaCoCo](http://www.eclemma.org/jacoco/trunk/doc/maven.html)
 - [JDepend](mojo.codehaus.org/jdepend-maven-plugin)
 
-Reports are shown in the reports page, but this is not generated dynamically. If any new reporting plugin is added then the 'src/site/markdown/reports.md' should be edited.
+Reports are shown in the reports page, but this is not generated dynamically. If any new reporting plugin is added then the *src/site/markdown/reports.md* should be edited.
 
 ### Customized reports
 
 The archetype contains modified configuration files for PMD and Checkstyle, meant to check the project in deep searching for various style errors.
 
-These files can be found in the 'src/config' folder.
+These files can be found in the *src/config* folder.
 
 ### Changes report
 
-The Changs plugin allows creating a changes log for each version of the project. More information about this can be found in the [changes log][changes] section.
+The Changes plugin allows creating a changes log for each version of the project. More information about this can be found in the [changes log][changes] section.
 
 [changes]: ./changes.html
-[docs-skin]: https://github.com/Bernardo-MG/docs-maven-skin
 [maven-site]: http://maven.apache.org/guides/mini/guide-site.html

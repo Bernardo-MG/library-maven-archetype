@@ -1,10 +1,10 @@
 # Deployment
 
-New projects come with a few shell scripts meant to ease the deployment procedure, both for artifacts and for documentation.
+The Archetype includes a few shell scripts meant to ease the deployment procedure.
 
-The idea is running them with the help of a CI service, which will also set up all the variables they require. Files for doing this with [Travis CI][travis] are included in the new project.
+This applies both for artifacts and for documentation and will run along the CI service, which will require a set of environmental variables to be correctly set. Note that the project will be set to work with [Travis CI][travis-section].
 
-Among the required environmental variables are some flags which will be used to know if the deployment scripts should be actually run or not. If any of them is set to false then the script won't run.
+Among these environmental variables are some flags which will be used to decide if the deployment scripts should be actually run or not.
 
 These scripts also make a distinction between releases and development versions, which will each be deployed to their own [repositories][repositories].
 
@@ -79,23 +79,21 @@ These affect the deployment workflow.
 
 ## Deployment workflow
 
-For the deployment to work first a Maven settings file is required, and this is built with the use of the settings script.
+Deployment follows a simple workflow:
 
-Afterward both the artifact and the documents deployment scripts can be run, the order does not matter.
+1. The code source branch is checked to find out if it is a pull
+    * In case of it being a pull the deployment ends
+2. Maven settings file is created.
+3. Checks if the deployment flag is set
+    * Code and site deployments have their own flag. If any of them is set to false then the related deployment is skipped.
+4. Checks if the branch is valid
+    * Only code from the master and develop branches can be used for deployment
 
-But just running them won't make it work, first they will check if the deployment is allowed, which means passing a series of checks:
-
-![Deployment workflow check][deployment-workflow-check]
-
-- The code should not come from a pull request
-- The correct deployment flag should be set
-- The code should come from the master or development branch
-
-If any of these checks fails, the deployment won't even begin.
-
-[deployment-workflow-check]: ./images/deployment_check_workflow.png
-[repositories]: ./repositories.html
-[travis]: ./travis.html
+While this is not the exact way this is handled, as each script will check if it can run independently, it gives a general overview of how it works.
 
 [repositories]: ./repositories.html
-[repository-ids]: ./repositories.html#Repository_IDs
+
+[repositories]: ./repositories.html
+[repository-ids]: ./repositories.html#artifactrepositoriesids
+
+[travis-section]: ./travis.html

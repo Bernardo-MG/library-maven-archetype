@@ -1,12 +1,16 @@
 # Travis Integration
 
-New projects come ready for making use of [Travis CI][travis], which will take care of both the testing and the deployment tasks for the project.
+New projects come ready to make use of [Travis CI][travis], which will handle both the testing and the deployment tasks for the project.
 
-Of course, deployment is taken with care and both release and develop versions are handled independently from each other. This is detailed below, but basically changes to the 'main' branch will trigger the deployment of release artifacts, while changes to the 'develop' branch will trigger the deployment of snapshots. Any other branch won't trigger any kind of deployment.
+Of course, deployment is taken with care and jobs for both release and develop versions are independent from each other. This is detailed below, but basically changes to the *main* branch of the SCM will trigger the deployment of release artifacts, while changes to the *develop* branch will trigger the deployment of snapshots. Any other branch won't trigger any kind of deployment.
 
-## Connecting Travis and Github
+For this to work the [repositories][repositories] used by the project should be correctly prepared and working.
 
-As said on the [repositories section][repositories], the Archetype will set up the project to work with Github. This SCM is very easy to connect to Travis by just following the [beginners guide][travis-guide].
+## Connecting the SCM to Travis
+
+The Archetype will set up the project to work with Github. This SCM is very easy to connect to Travis by just following the [beginners guide][travis-guide].
+
+It may not be possible using Travis with other repositories. Check their manual site to find out more.
 
 ## Configuration file
 
@@ -14,7 +18,7 @@ Travis requires a .travis.yml file, found in the project's root folder, which wi
 
 ### JDK versions
 
-The file will come ready to test the project using JDK 7, JDK 8 and openJDK 7. If any of these are not supported they should be removed, and the file adapted to it.
+This file comes ready to test the project using JDK 7, JDK 8 and openJDK 7. If any of these are not supported they should be removed, and the file adapted to it.
 
 Also JDK 7 will be used to deploy the code artifacts, while JDK 8 will be used for the Maven site. This way the code is compatible with JDK 7 and 8, and the Javadoc generated along the Maven site takes advantage of the latest Javadoc doclet.
 
@@ -24,20 +28,20 @@ The Travis configuration file will call a script for the deployment tasks, and t
 
 ## Environmental variables
 
-### Deployment variables
-
 Various environmental variables, defined in the [deployment section][deployment], should be set up correctly for making the Travis integration tasks work.
 
-Of these the following variables are taken care by the Travis configuration file:
+While most of these should be set as part of the Travis environmental variables, some are already taken care of by the configuration file.
+
+### Deployment flags
+
+The deployment flags are taken care of in the Travis configuration file. These are the following environmental variables:
 
 - DEPLOY
 - DEPLOY\_DOCS
 
-All the others should be correctly defined, or else the deployment won't work
+### Adapted Travis pre-defined environmental variables
 
-### Adapting Travis variables
-
-Travis has some environmental variables containing the data which the scripts require, and these are copied by the Travis configuration file into the required variables.
+Travis has some pre-defined environmental variables containing part of the data which the scripts require, and these are copied by the Travis configuration file into the required variables.
 
 The Travis environmental variables and the variables into which they are copied are detailed below:
 
@@ -46,7 +50,7 @@ The Travis environmental variables and the variables into which they are copied 
 |TRAVIS\_PULL\_REQUEST|PULL\_REQUEST|
 |TRAVIS\_BRANCH|SCM\_BRANCH|
 
-### Deployment flags
+## Deployment configuration
 
 As commented before the Travis configuration file takes care of deciding which JDK version takes care of the artifacts or documentation deployment. This is done through the [deployment flags][deployment-variables]. By default these will be set for deploying the artifact using Java 7 and the Maven site using Java 8.
 

@@ -1,9 +1,6 @@
 # Library Maven Archetype
 
-A basic Maven Archetype for easing the creation of new Maven-based Java libraries.
-
-It offers a quick way to create the bare bones for a project which includes documentation, testing (both unit and integration),
-deployment of development and release version, continuous integration and some other useful features.
+A template for creating new Maven-based libraries, ready to make use of several free services, creating a CI environment which will take care of testing and releases, and already prepared to make use of various useful plugins and tools, such as reports and the Maven site.
 
 [![Maven Central](https://img.shields.io/maven-central/v/com.wandrell.maven.archetypes/library-archetype.svg)][maven-repo]
 [![Bintray](https://api.bintray.com/packages/bernardo-mg/maven/library-maven-archetype/images/download.svg)][bintray-repo]
@@ -13,15 +10,15 @@ deployment of development and release version, continuous integration and some o
 
 ## Features
 
-- Creates a Maven project ready to quickly being developing a new Java library.
+- Creates a new Maven project for quickly begin developing a new Java library.
 - Sets up continuous integration with [Github][github], [Travis][travis] and [Bintray][bintray]. Making a distinction between releases and development versions.
 - Prepared for unit and integration tests suites. Created with [TestNG][testng] and ready to be run with [Surefire][surefire] and [Failsafe][failsafe].
-- A Maven site, using the [Docs Maven Skin][docs-skin], ready to show the project's documentation and several reports.
+- A Maven site, using the [Docs Maven Skin][docs-skin], for sharing the project's documentation along various reports which range from code quality to changes log.
 - Includes basic files such as readme, gitignore and gitattributes files.
 
 ## Sample project
 
-There is a [sample project][sample-project] showing what this Archetype can create.
+A [sample project][sample-project] shows what can be created with the use of this Archetype.
 
 ## Documentation
 
