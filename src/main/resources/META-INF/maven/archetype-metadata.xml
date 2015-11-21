@@ -46,7 +46,7 @@
 				<include>**/*.java</include>
 			</includes>
 		</fileSet>
-		<fileSet filtered="true" packaged="true" encoding="UTF-8">
+		<fileSet filtered="true" encoding="UTF-8">
 			<!-- Resources -->
 			<directory>src/main/resources</directory>
 			<includes>

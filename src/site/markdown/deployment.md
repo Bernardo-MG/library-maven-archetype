@@ -1,56 +1,24 @@
 # Deployment
 
-The Archetype includes some shell scripts to ease the deployment procedure. These are meant to be executed through a CI service after changes to code, and will ask to know the branch from which the code has been pulled. If it is one marked for deployment, then this will begin.
+The Archetype readies to project for deploying both code artifacts and the Maven site.
 
-During deployment the artifacts and documentation site will be created and uploaded on the correct [repositories][repositories], making a distinction between releases and development versions.
-
-But this process won't work out of the box, for them to work correctly these scripts require a series of environmental variables set.
+For this a CI service is required, which by default will be [Travis CI][travis-section]. Such a service will additionally need a set of environmental variables which will define the deployment environments, and which will cover things such as authentication data or deployment flags.
 
 ## Releases and development versions
 
-Maven is capable of knowing if the current version is a release or a development version, and does this with a very simple method: if the version field on the POM ends with "-SNAPSHOT" then it is a snapshot, a development version, otherwise it is a release.
+Maven is capable of knowing if the current version is a release or a development version with a very simple method: if the version field on the POM ends with "-SNAPSHOT" then it is a snapshot, a development version. Otherwise it is a release.
 
-As the scripts make use of this feature, the "-SNAPSHOT" prefix should be always used for the versions kept in all the branches of the code repository, except for the ones keeping the releases.
-
-## Scripts
-
-The deployment is handled by the scripts kept on the .scripts folder:
-
-|File|Usage|
-|---|---|
-|create-maven-settings.sh|Builds the Maven settings file from the environmental variables|
-|deploy.sh|Handles the artifact deployment job|
-|deploy-site.sh|Handles the site deployment job|
-
-Artifact and documentation deployment use two different shell scripts so they can be run independently.
-
-### Maven settings file creation script
-
-Deploying into any repository requires a Maven settings file, which states the credentials for said server.
-
-This script takes care of creating such file, taking the access info from environmental variables. If the [repository IDs](./repos.html#Repository_IDs) have been changed the script should be updated accordingly.
-
-An additional thing this script does is setting, through the settings file, the 'development' profile as active, if the code comes from the 'develop' branch.
-
-### Artifact deployment script
-
-This script will deploy the project using the generated configuration file, and the repository info on the POM file.
-
-As this implies, the script itself won't make a distinction between release and development releases, but Maven will do.
-
-### Site deployment script
-
-As it is not possible to set more than one site deployment target, two profiles are used to distinguish between the releases and deployment sites repositories.
-
-The correct profile will be set into the Maven settings file, and this script, as the artifact deployment one, will just make use of said settings file.
+This feature will be used to publish development and release code artifacts each into their own [repositories][repositories].
 
 ## Environmental variables
 
-To make sure the scripts work correctly, a series of environmental variables are required. These should be set to valid values on the machine running the scripts.
+To make sure the scripts work correctly, a series of environmental variables should be set prior to running them.
 
 ### Repositories access data
 
-These define the access data to be used for the repositories defined on the POM file. Check the [Repositories and services](./repos.html) to find out more.
+These define the access data to be used for the repositories contained in the POM file. Check the [repositories section][repositories] to find out more.
+
+#### Release deployment variables
 
 |Variable|Contents|
 |---|---|
@@ -58,6 +26,8 @@ These define the access data to be used for the repositories defined on the POM 
 |DEPLOY\_PASSWORD|Password for the releases documentation repository|
 |DEPLOY\_DOCS\_USER|User for the releases documentation repository|
 |DEPLOY\_DOCS\_PASSWORD|Password for the releases documentation repository|
+
+#### Development deployment variables
 
 |Variable|Contents|
 |---|---|
@@ -68,28 +38,66 @@ These define the access data to be used for the repositories defined on the POM 
 
 ### Deployment flags
 
-These affect the deployment workflow.
+These affect the deployment workflow. The included Travis configuration file already takes care of them.
 
 |Variable|Contents|
 |---|---|
 |DEPLOY|Indicates if the artifact should be deployed|
 |DEPLOY\_DOCS|Indicates if the documentation should be deployed|
 
-## Deployment workflow
+### CI flags
 
-For the deployment to work first a Maven settings file is required, and this is built with the use of the settings script.
+Indicates the current status of the continuous integration workflow. The included Travis configuration file already takes care of them.
 
-Afterward both the artifact and the documents deployment scripts can be run, the order does not matter.
+|Variable|Contents|
+|---|---|
+|PULL_REQUEST|Meant for CI. Indicates if the code is part of a pull request|
 
-But just running them won't make it work, first they will check if the deployment is allowed, which means passing a series of checks:
+## Deployment validation
 
-![Deployment workflow check][deployment-workflow-check]
+The deployment scripts check make sure a few required conditions are true before running. This way they only run when wanted and required.
 
-- The code should not come from a pull request
-- The correct deployment flag should be set
-- The code should come from the master or development branch
+In general they will stop if any of the following is false:
 
-If any of these checks fails, the deployment won't even begin.
+- The code has been taken from a branch which is not part of a pull request (only makes sense when using CI and pull requests).
+- The code has been taken from the *master* or *development* branches.
+- The correct deployment flag is set to true.
 
-[deployment-workflow-check]: ./images/deployment_check_workflow.png
-[repositories]: ./repos.html
+## Scripts
+
+The *.scripts* folder includes various scripts for easily managing the deployment process:
+
+|File|Usage|
+|---|---|
+|create-maven-settings.sh|Builds the Maven settings file from the environmental variables|
+|deploy.sh|Handles the artifact deployment job|
+|deploy-site.sh|Handles the site deployment job|
+
+As it can be seen, there is a script for code artifacts and another documentation. This way it is possible deploying both independently.
+
+### create-maven-settings.sh
+
+The Maven settings file includes configuration data required for the deployment process. The most important being the credentials for the repositories which will host the artifacts.
+
+In case the file is missing from the deployment environment this script can be used to create it from the environmental variables. Note that it will include references to the default [repository IDs][repository-ids], so if these are changes the script should be edited too.
+
+Additionally the script will set, on the settings file, the deployment profile to be used.
+
+### deploy.sh
+
+This script will deploy the project. A Maven settings file is required for this, and the POM should include information for a repository and a snapshots repository.
+
+The reason for requiring both is that while the script itself won't make a distinction between release and development versions, Maven, as commented before, does, and will deploy them on the correct repository.
+
+### deploy-site.sh
+
+As it is not possible to set more than one site deployment target, two profiles are included in the POM to distinguish between the releases and deployment sites repositories.
+
+The correct profile should be set before calling the script. This is taken care by the Maven settings script, which will set as active the required profile.
+
+[repositories]: ./repositories.html
+
+[repositories]: ./repositories.html
+[repository-ids]: ./repositories.html#artifactrepositoriesids
+
+[travis-section]: ./travis.html

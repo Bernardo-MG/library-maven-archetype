@@ -1,22 +1,77 @@
 # Travis Integration
 
-The archetype comes ready for [Travis CI][travis], which will take care of both the testing and the deployment tasks.
+New projects come ready to make use of [Travis CI][travis], which will handle both the testing and the deployment tasks for the project.
+
+Of course, deployment is taken with care and jobs for both release and develop versions are independent from each other. This is detailed below, but basically changes to the *main* branch of the SCM will trigger the deployment of release artifacts, while changes to the *develop* branch will trigger the deployment of snapshots. Any other branch won't trigger any kind of deployment.
+
+For this to work the [repositories][repositories] used by the project should be correctly prepared and working.
+
+## Connecting the SCM to Travis
+
+The Archetype will set up the project to work with Github. This SCM is very easy to connect to Travis by just following the [beginners guide][travis-guide].
+
+It may not be possible using Travis with other repositories. Check their manual site to find out more.
+
+## Configuration file
+
+Travis requires a .travis.yml file, found in the project's root folder, which will be used to configure the CI process. Again, more information about this can be found in the [beginners guide][travis-guide], but a few things should be commented.
+
+### JDK versions
+
+This file comes ready to test the project using JDK 7, JDK 8 and openJDK 7. If any of these are not supported they should be removed, and the file adapted to it.
+
+Also JDK 7 will be used to deploy the code artifacts, while JDK 8 will be used for the Maven site. This way the code is compatible with JDK 7 and 8, and the Javadoc generated along the Maven site takes advantage of the latest Javadoc doclet.
+
+### Scripts
+
+The Travis configuration file will call a script for the deployment tasks, and these are detailed in the [deployment section][deployment].
 
 ## Environmental variables
 
-The repository access data variables, defined in the [Deployment](./deployment.html) section, should be correctly configured for making the Travis integration work.
+Various environmental variables, defined in the [deployment section][deployment], should be set up correctly for making the Travis integration tasks work.
 
-### Adapting Travis variables
+While most of these should be set as part of the Travis environmental variables, some are already taken care of by the configuration file.
 
-The .travis.yml file will adapt some of Travis environmental variables to those required by the scripts:
+### Deployment flags
 
-|Travis variable|Transformed into|
+The deployment flags are taken care of in the Travis configuration file. These are the following environmental variables:
+
+- DEPLOY
+- DEPLOY\_DOCS
+
+### Adapted Travis pre-defined environmental variables
+
+Travis has some pre-defined environmental variables containing part of the data which the scripts require, and these are copied by the Travis configuration file into the required variables.
+
+The Travis environmental variables and the variables into which they are copied are detailed below:
+
+|Travis variable|Deployment variable|
 |---|---|
 |TRAVIS\_PULL\_REQUEST|PULL\_REQUEST|
 |TRAVIS\_BRANCH|SCM\_BRANCH|
 
-### Deployment flags
+## Deployment configuration
 
-The .travis.yml will set up the deployment flags, which by default will deploy the artifact using Java 7 and the docs using Java 8. To change this just modify the configuration matrix.
+As commented before the Travis configuration file takes care of deciding which JDK version takes care of the artifacts or documentation deployment. This is done through the [deployment flags][deployment-variables]. By default these will be set for deploying the artifact using Java 7 and the Maven site using Java 8.
 
-[travis]: http://docs.travis-ci.com
+If this has to be changed just modify the Travis configuration matrix.
+
+For example, to deploy both using Java 8 use the following matrix:
+
+```
+matrix:
+  exclude:
+    - jdk: oraclejdk8
+  include:
+    - jdk: oraclejdk8
+      env: DEPLOY=true DEPLOY_DOCS=false PULL_REQUEST=$TRAVIS_PULL_REQUEST SCM_BRANCH=$TRAVIS_BRANCH
+    - jdk: oraclejdk8
+      env: DEPLOY=false DEPLOY_DOCS=true PULL_REQUEST=$TRAVIS_PULL_REQUEST SCM_BRANCH=$TRAVIS_BRANCH
+```
+
+[travis]: https://travis-ci.org
+[travis-guide]: http://docs.travis-ci.com/user/for-beginners/
+
+[repositories]: ./repositories.html
+[deployment]: ./deployment.html
+[deployment-variables]: ./deployment.html#deploymentflags

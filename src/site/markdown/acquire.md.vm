@@ -1,15 +1,37 @@
 #set( $symbol_pound = '#' )
 ${symbol_pound} Acquiring the project
 
-The project files are hosted on a [Bintray repository][bintray-repo], and have been replicated on JCenter and OSS Sonatype, which also replicates into the [Maven Central Repository][maven-repo]. While this means that it should be possible to download the Archetype from any of those repositories, the recommended one is Bintray.
+The project files are hosted on a [Bintray repository][bintray-repo], and have been replicated on JCenter and OSS Sonatype, which also replicates into the [Maven Central Repository][maven-repo].
 
-Unlike other types of project a Maven archetype does not require dependency control. Instead the dependency data is required during it's [usage][usage].
+But if one should be chosen, then it is recommended using the Bintray repository.
 
-${symbol_pound}${symbol_pound} Archetype data
+${symbol_pound}${symbol_pound} Adding the Archetype to the local catalog
 
-The following data is always required to identify the Archetype, no matter through which method it is used:
+To be able to use the Archetype it should be installed into the local Maven repository, and registered into the Archetypes catalog.
 
-${symbol_pound}${symbol_pound}${symbol_pound} Version identification
+${symbol_pound}${symbol_pound}${symbol_pound} Using an IDE
+
+To find out how to add the archetype to the local catalog consult your preferred IDE's manual.
+
+${symbol_pound}${symbol_pound}${symbol_pound} Manual installation
+
+It is always possible to manually install the Archetype by just getting the code from the [code repository][code-repo] and using the following command:
+
+```sh
+$ mvn install
+```
+
+The project is prepared to automatically update the local catalog when installed.
+
+${symbol_pound}${symbol_pound}${symbol_pound} Maven command
+
+It is possible to install the Archetype at the same time it is used for the first time, if a repository is given. Check the Maven command used for this in the [usage section][usage].
+
+${symbol_pound}${symbol_pound} Archetype identification
+
+When acquiring the Archetype the following data will be used to identify it:
+
+${symbol_pound}${symbol_pound}${symbol_pound} Version
 
 |Group ID|Artifact ID|Version|
 |---|---|---|---|
@@ -20,14 +42,6 @@ ${symbol_pound}${symbol_pound}${symbol_pound} Downloads link
 |Repository URL|
 |---|
 |$repoDownloadURL |
-
-${symbol_pound}${symbol_pound} Installing the Archetype
-
-Usually the Archetype is downloaded when first used, but as an alternative it is also possible to get the code from the [code repository][code-repo] and then install it by using the following command which, due to the POM file configuration, will also update the local repository:
-
-```sh
-$ mvn install
-```
 
 [code-repo]: $project.scm.url
 [bintray-repo]: ${bintrayURL}
