@@ -63,6 +63,7 @@
 		<menu name="Documentation" inherit="bottom">
 			<item name="Acquire" href="./acquire.html" />
 			<item name="Usage" href="./usage.html" />
+			<item name="Build validation" href="./build_validation.html" />
 			<item name="Repositories" href="./repositories.html" />
 			<item name="Travis integration" href="./travis.html" />
 			<item name="Tests" href="./tests.html" />
