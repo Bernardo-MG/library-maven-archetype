@@ -93,18 +93,17 @@
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" encoding="UTF-8">
-			<!-- Report config files -->
+			<!-- Filtered report config files -->
 			<directory>src</directory>
 			<includes>
 				<include>changes/*.xml</include>
 			</includes>
 		</fileSet>
 		<fileSet encoding="UTF-8">
-			<!-- Report config files -->
+			<!-- Config files -->
 			<directory>src</directory>
 			<includes>
-				<include>checkstyle/*.xml</include>
-				<include>pmd/*.xml</include>
+				<include>config/**/*.xml</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" encoding="UTF-8">

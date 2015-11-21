@@ -188,5 +188,10 @@
 				packaged.
 			</action>
 		</release>
+		<release version="0.4.2" date="2015-11-21" description="Small corrections">
+			<action dev="bmg" type="fix">
+				Plugin config files are copied again.
+			</action>
+		</release>
 	</body>
 </document>
