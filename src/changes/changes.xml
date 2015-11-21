@@ -139,7 +139,7 @@
 				files not being copied.
 			</action>
 		</release>
-		<release version="0.4.1" date="2015-11-15"
+		<release version="0.4.1" date="2015-11-21"
 			description="Various updates and corrections">
 			<action dev="bmg" type="update">
 				Added comments to clearly mark and
