@@ -10,7 +10,7 @@
 
 	<groupId>com.wandrell.maven.archetypes</groupId>
 	<artifactId>library-archetype</artifactId>
-	<version>0.4.1</version>
+	<version>0.4.2</version>
 	<packaging>maven-archetype</packaging>
 
 	<name>Library Maven Archetype</name>
