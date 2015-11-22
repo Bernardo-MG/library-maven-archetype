@@ -431,7 +431,7 @@
 						</property>
 						<property>
 							<name>suitename</name>
-							<value>${project.artifactId}_(${project.groupId})_Integration_Suite</value>
+							<value>${project.groupId}.${project.artifactId}_Integration_Suite</value>
 						</property>
 					</properties>
 					<suiteXmlFiles>
@@ -619,7 +619,7 @@
 						</property>
 						<property>
 							<name>suitename</name>
-							<value>${project.artifactId}_(${project.groupId})_Unit_Suite</value>
+							<value>${project.groupId}.${project.artifactId}_Unit_Suite</value>
 						</property>
 					</properties>
 					<suiteXmlFiles>
