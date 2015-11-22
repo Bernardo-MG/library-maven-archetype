@@ -368,7 +368,7 @@
 								</requireJavaVersion>
 								<!-- No plugin without version. -->
 								<requirePluginVersions>
-									<message>Best Practice is to always define plugin versions!</message>
+									<message>Best Practice is to always define plugin versions.</message>
 									<banLatest>true</banLatest>
 									<banRelease>true</banRelease>
 									<banSnapshots>true</banSnapshots>
