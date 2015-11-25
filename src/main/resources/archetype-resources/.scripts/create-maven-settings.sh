@@ -48,9 +48,13 @@
    echo "</servers>";
    
    # Active profile
-   if [ "$SCM_BRANCH" == "develop" ]; then
+   if [ "$SCM_BRANCH" == "master" ]; then
       echo "<activeProfiles>"
-         echo "<activeProfile>development</activeProfile>"
+         echo "<activeProfile>deploy-site-release</activeProfile>"
+      echo "</activeProfiles>"
+   elif [ "$SCM_BRANCH" == "develop" ]; then
+      echo "<activeProfiles>"
+         echo "<activeProfile>deploy-site-development</activeProfile>"
       echo "</activeProfiles>"
    fi
    

@@ -198,5 +198,10 @@
 				Updated Maven site skin.
 			</action>
 		</release>
+		<release version="0.4.4" date="2015-11-26" description="Updates">
+			<action dev="bmg" type="update">
+				Made the default profiles clearer.
+			</action>
+		</release>
 	</body>
 </document>
