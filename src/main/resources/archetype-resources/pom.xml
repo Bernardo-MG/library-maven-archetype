@@ -69,7 +69,12 @@
 
 	<profiles>
 		<profile>
-			<id>eclipse</id>
+			<!-- Profile for the Eclipse Maven plugin -->
+			<!-- Sets the POM so this plugin does not give the usual unregistered 
+				goals errors -->
+			<!-- It will be activated automatically on Eclipse if this has the m2e 
+				plugin, by detecting the version property -->
+			<id>eclipse-maven</id>
 			<activation>
 				<property>
 					<name>m2e.version</name>
@@ -120,7 +125,9 @@
 			</build>
 		</profile>
 		<profile>
-			<id>default</id>
+			<!-- Release site deployment profile -->
+			<!-- Sets the site repository to point to the releases repo -->
+			<id>deploy-site-release</id>
 			<activation>
 				<activeByDefault>true</activeByDefault>
 			</activation>
@@ -133,7 +140,9 @@
 			</distributionManagement>
 		</profile>
 		<profile>
-			<id>development</id>
+			<!-- Development site deployment profile -->
+			<!-- Sets the site repository to point to the development repo -->
+			<id>deploy-site-development</id>
 			<distributionManagement>
 				<site>
 					<id>site-development</id>
