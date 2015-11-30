@@ -10,7 +10,7 @@
 
 	<groupId>com.wandrell.maven.archetypes</groupId>
 	<artifactId>library-archetype</artifactId>
-	<version>0.4.4-SNAPSHOT</version>
+	<version>0.4.3-SNAPSHOT</version>
 	<packaging>maven-archetype</packaging>
 
 	<name>Library Maven Archetype</name>
@@ -72,6 +72,10 @@
 			<id>docs-release</id>
 			<activation>
 				<activeByDefault>true</activeByDefault>
+				<property>
+					<name>deployment</name>
+					<value>docrelease</value>
+				</property>
 			</activation>
 			<distributionManagement>
 				<site>
@@ -83,6 +87,12 @@
 		</profile>
 		<profile>
 			<id>docs-development</id>
+			<activation>
+				<property>
+					<name>deployment</name>
+					<value>docdevelop</value>
+				</property>
+			</activation>
 			<distributionManagement>
 				<site>
 					<id>site-development</id>
