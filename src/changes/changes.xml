@@ -210,6 +210,9 @@
 			<action dev="bmg" type="update">
 				Deployment now skips tests.
 			</action>
+			<action dev="bmg" type="update">
+				Updated documentation.
+			</action>
 		</release>
 	</body>
 </document>
