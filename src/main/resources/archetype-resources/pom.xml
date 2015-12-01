@@ -151,6 +151,14 @@
 				</site>
 			</distributionManagement>
 		</profile>
+		<profile>
+			<!-- Deployment profile -->
+			<!-- Sets ups the environment for deployment -->
+			<id>deployment</id>
+			<properties>
+				<maven.test.skip>true</maven.test.skip>
+			</properties>
+		</profile>
 	</profiles>
 
 	<!-- ********************************************** -->

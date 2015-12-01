@@ -207,6 +207,9 @@
 				Added properties activation to the
 				default profiles.
 			</action>
+			<action dev="bmg" type="update">
+				Deployment now skips tests.
+			</action>
 		</release>
 	</body>
 </document>

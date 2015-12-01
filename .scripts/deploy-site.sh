@@ -16,7 +16,7 @@ if [ "$PULL_REQUEST" == "false" ] && [ "$DEPLOY_DOCS" == "true" ] && [[ "$SCM_BR
 
    echo "Deploying Maven site"
 
-   mvn site site:deploy --settings ~/settings.xml > site_output.txt
+   mvn site site:deploy --settings ~/settings.xml > site_output.txt -P deployment
 	  
    head -50 site_output.txt
    echo " "
