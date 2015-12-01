@@ -63,6 +63,16 @@ In general they will stop if any of the following is false:
 - The code has been taken from the *master* or *development* branches.
 - The correct deployment flag is set to true.
 
+## Deployment profiles
+
+A few deployment profiles are included in the POM. These are already taken care of by the deployment scripts, and can be extended as needed.
+
+|Profile|Description|Used in|
+|---|---|
+|deployment|General deployment profile. Sets up the deployment environment, mostly disabling testing for faster deployment.|Deployment scripts, which will set this profile for deployment|
+|deploy-site-release|Release Maven Site deployment profile. Sets the site release repository.|Settings script, which will set as active the correct site deployment profile.|
+|deploy-site-development|Development Maven Site deployment profile. Sets the site deployment repository.|Settings script, which will set as active the correct site deployment profile.|
+
 ## Scripts
 
 The *.scripts* folder includes various scripts for easily managing the deployment process:
