@@ -53,6 +53,26 @@ Indicates the current status of the continuous integration workflow. The include
 |---|---|
 |PULL_REQUEST|Meant for CI. Indicates if the code is part of a pull request|
 
+## Environmental variables configuration
+
+If using the other features of the project, mostly the [Continuous Integration][travis-section] configuration, some of the enviromental variables will be taken care of.
+
+The list of each variable and their status is as follows. Remember that if the CI and deployment scripts are modified this can change.
+
+|Variable|Taken care of|Comments|
+|---|---|
+|DEPLOY\_USER|No|Should be set on the deployment environment|
+|DEPLOY\_PASSWORD|No|Should be set on the deployment environment|
+|DEPLOY\_DOCS\_USER|No|Should be set on the deployment environment|
+|DEPLOY\_DOCS\_PASSWORD|No|Should be set on the deployment environment|
+|DEPLOY\_DEVELOP\_USER|No|Should be set on the deployment environment|
+|DEPLOY\_DEVELOP\_PASSWORD|No|Should be set on the deployment environment|
+|DEPLOY\_DOCS\_DEVELOP\_USER|No|Should be set on the deployment environment|
+|DEPLOY\_DOCS\_DEVELOP\_PASSWORD|No|Should be set on the deployment environment|
+|DEPLOY|Yes|Taken care of in the CI configuration file|
+|DEPLOY\_DOCS|Yes|Taken care of in the CI configuration file|
+|PULL_REQUEST|Yes|Taken care of in the CI configuration file|
+
 ## Deployment validation
 
 The deployment scripts check make sure a few required conditions are true before running. This way they only run when wanted and required.

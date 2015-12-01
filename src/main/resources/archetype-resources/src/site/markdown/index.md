@@ -1,20 +1,20 @@
 # Maven-Based Java Library
 
-This is a base project created with the [Library Maven Archetype][library-archetype], prepared to build a Maven-based Java library.
+This is a base project created with the [Library Maven Archetype][library-archetype], prepared to ease the development of new libraries.
 
-Note that while it is meant to be working from the beginning, and with working it means "compiles, runs the tests and creates the docs", it is mostly composed of placeholders which should be swapped with actual content.
+Note that while it is meant to be a working project from the beginning, meaning that it compiles, runs the tests and creates the docs, it is mostly composed of placeholder classes which should be swapped with actual content.
 
 ---
 
 ## Where should I start customizing the project?
 
-First of all, check the [Library Maven Archetype][library-archetype] documentation, and then edit the readme file and the Maven site, so they talk about this project.
+First of all, check the [Library Maven Archetype][library-archetype] documentation, and then edit the readme file and the Maven site descriptions about the project.
 
-After that, of course, the classes and tests included should be replaced with the actual code which the library will offer.
+After that, of course, the classes and tests included should be replaced with actual code, which also means adding dependencies and changing profiles and plugins as needed on the POM.
 
 ## Some external requirements
 
-To correctly use this template, some additional things have to be set up. These are a few services which are expected to be used by the project, which comes prepared for them:
+While the project can be used just by itself, it won't take full advantage of most of the configuration until it is integrated with a few services:
 
 - Version control system, Github by default.
 - Continuous integration, Travis CI by default.

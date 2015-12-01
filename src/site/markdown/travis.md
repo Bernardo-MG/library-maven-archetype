@@ -8,23 +8,23 @@ For this to work the [repositories][repositories] used by the project should be 
 
 ## Connecting the SCM to Travis
 
-The Archetype will set up the project to work with Github. This SCM is very easy to connect to Travis by just following the [beginners guide][travis-guide].
+The Archetype will set up the project to work with [Github][github]. This SCM is very easy to connect to Travis by just following the [beginners guide][travis-guide].
 
 It may not be possible using Travis with other repositories. Check their manual site to find out more.
 
 ## Configuration file
 
-Travis requires a .travis.yml file, found in the project's root folder, which will be used to configure the CI process. Again, more information about this can be found in the [beginners guide][travis-guide], but a few things should be commented.
+Travis requires a .travis.yml file, included in the project's root folder, which will be used to configure the CI process. Again, more information about this can be found in the [beginners guide][travis-guide], but a few things should be commented.
 
 ### JDK versions
 
-This file comes ready to test the project using JDK 7, JDK 8 and openJDK 7. If any of these are not supported they should be removed, and the file adapted to it.
+The file comes ready to test the project using the JDK 7, JDK 8 and openJDK 7. If any of these are not supported they should be removed, and the file adapted to it.
 
-Also JDK 7 will be used to deploy the code artifacts, while JDK 8 will be used for the Maven site. This way the code is compatible with JDK 7 and 8, and the Javadoc generated along the Maven site takes advantage of the latest Javadoc doclet.
+Also the JDK 7 will be used to deploy the code artifacts, while JDK 8 will be used for the Maven site. This way the code is compatible with both the JDK 7 and 8, and the Javadoc generated along the Maven site takes advantage of the latest Javadoc doclet.
 
 ### Scripts
 
-The Travis configuration file will call a script for the deployment tasks, and these are detailed in the [deployment section][deployment].
+The Travis configuration file will call a script for each deployment, and these are detailed in the [deployment section][deployment].
 
 ## Environmental variables
 
@@ -52,7 +52,7 @@ The Travis environmental variables and the variables into which they are copied 
 
 ## Deployment configuration
 
-As commented before the Travis configuration file takes care of deciding which JDK version takes care of the artifacts or documentation deployment. This is done through the [deployment flags][deployment-variables]. By default these will be set for deploying the artifact using Java 7 and the Maven site using Java 8.
+As commented before the Travis configuration file takes care of deciding which JDK version creates the artifacts or documentation. This is done through the [deployment flags][deployment-variables]. As commented before, by default these will be set for deploying the artifact using Java 7 and the Maven site using Java 8.
 
 If this has to be changed just modify the Travis configuration matrix.
 
@@ -68,6 +68,8 @@ matrix:
     - jdk: oraclejdk8
       env: DEPLOY=false DEPLOY_DOCS=true PULL_REQUEST=$TRAVIS_PULL_REQUEST SCM_BRANCH=$TRAVIS_BRANCH
 ```
+
+[github]: https://github.com/
 
 [travis]: https://travis-ci.org
 [travis-guide]: http://docs.travis-ci.com/user/for-beginners/

@@ -1,19 +1,17 @@
 #set( $symbol_pound = '#' )
 ${symbol_pound} ${projectName}
 
-This is a basic Maven-based Java project created with the [Library Maven Archetype](https://github.com/Bernardo-MG/library-maven-archetype).
+This is a basic Maven-based Java project created with the [Library Maven Archetype](https://github.com/Bernardo-MG/library-maven-archetype) which comes prepared to ease the development of new libraries, and to follow several recommended good practices which include CI, unit and integration testing or including documentation with the project.
 
-It comes ready to follow several good practices, such as the use of continuous integration, unit/integration testing or the creation of documentation with the use of Maven Site.
+Before the work on the new project begins there are a few things which should be edited:
 
-While the archetype is meant to help start building the project quickly, there are a few things which may be a good idea to check and, if needed, change:
+- This readme's description has to be adapted to the new project.
+- Project info on the POM should be checked.
+- The various links on the readme, POM and Maven site (for repositories, issues, etc) should be checked.
+- The documentation on the project's Maven site should be written.
+- The license, if not using the MIT one, should be modified. Remember that this is referenced on the POM, readme and LICENSE files.
 
-- This readme's description
-- Project info on the POM
-- The documentation on the project's Maven site
-- License, if not using the MIT one (POM, readme and LICENSE files)
-- Links on the readme, POM and Maven site (repositories, issues, etc)
-
-Note that the Maven site documentation (found at /src/site) will require the most work, as there is where the library's documentation, or at least a basic version of it, meant to go. Check the [Maven Site](https://maven.apache.org/plugins/maven-site-plugin/) home, and the [Docs Maven Skin](https://github.com/Bernardo-MG/docs-maven-skin), which is the Maven skin being used, for information about how to edit it.
+Note that the Maven site documentation (found at /src/site) will require more work than the rest, as there is where the library's documentation, or at least a basic version of it, is meant to go. Check the [Maven Site](https://maven.apache.org/plugins/maven-site-plugin/) home, and the [Docs Maven Skin](https://github.com/Bernardo-MG/docs-maven-skin), which is the Maven Skin being used, to find more information about how and what to edit.
 
 [![Maven Central](https://img.shields.io/maven-central/v/${groupId}/${artifactId}.svg)][maven-repo]
 [![Bintray](https://api.bintray.com/packages/${repoUserId}/maven/${artifactId}/images/download.svg)][bintray-repo]
@@ -28,11 +26,11 @@ ${symbol_pound}${symbol_pound} Features
 
 The project by default comes with a useful series of features:
 
-- Preconfigured to begin developing a new library fast.
-- Prepared for continuous integration, which differentiates between development and release artifacts and documentation.
-- Unit and integration tests suites ready to be run with [TestNG](http://testng.org/).
-- A Maven site, using the [Docs Maven Skin](https://github.com/Bernardo-MG/docs-maven-skin), ready to show documentation and several reports.
-- Various useful files, such as readme, gitignore and gitattributes.
+- Preconfigured POM to begin developing a new library fast.
+- Prepared for [Travis CI](https://travis-ci.org/), including configuration files and deployment scripts. Check the [Archetype documentation](http://docs.wandrell.com/maven/library-maven-archetype) to find out more.
+- Unit and integration tests suites ready to be run with [TestNG](http://testng.org/) just by using the Maven test and verify commands.
+- A Maven site, using the [Docs Maven Skin](https://github.com/Bernardo-MG/docs-maven-skin), to contain the documentation, the Javadocs and several reports.
+- A bunch of useful files, such as readme, gitignore and gitattributes.
 
 ${symbol_pound}${symbol_pound} Documentation
 
