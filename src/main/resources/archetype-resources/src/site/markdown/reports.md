@@ -24,6 +24,7 @@
 |Report|Description|
 |---|---|
 |[Dependencies](./dependencies.html)|Dependencies used by the project.|
+|[Dependencies Analysis](./dependency-analysis.html)|Dependency analysis of the project (used declared, used undeclared, unused declared).|
 |[Plugins](./plugins.html)|Maven plugins used by the project.|
 |[Plugins Management](./plugin-management.html)|Maven plugins that are defined through pluginManagement.|
 

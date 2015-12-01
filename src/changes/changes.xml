@@ -194,6 +194,9 @@
 			</action>
 		</release>
 		<release version="0.4.3" date="2015-11-21" description="Updates">
+			<action dev="bmg" type="add">
+				Added dependencies analysis report.
+			</action>
 			<action dev="bmg" type="update">
 				Updated Maven site skin.
 			</action>
