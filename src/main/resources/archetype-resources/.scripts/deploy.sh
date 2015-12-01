@@ -16,7 +16,7 @@ if [ "$PULL_REQUEST" == "false" ] && [ "$DEPLOY" == "true" ] && [[ "$SCM_BRANCH"
 
    echo "Deploying Java artifact to repository"
 
-   mvn deploy --settings ~/settings.xml -P deployment
+   mvn deploy -P deployment --settings ~/settings.xml
    
 else
 
