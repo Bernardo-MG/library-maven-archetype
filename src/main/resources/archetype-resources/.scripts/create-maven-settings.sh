@@ -69,7 +69,7 @@
       if [ "$DEPLOY_DOCS" == "true" ]; then
          # Deploying docs
          echo "<activeProfiles>"
-            echo "<activeProfile>deploy-docs-development</activeProfile>"
+            echo "<activeProfile>deploy-site-development</activeProfile>"
          echo "</activeProfiles>"
       fi
    elif [ "$SCM_BRANCH" == "master" ]; then
@@ -77,7 +77,7 @@
       if [ "$DEPLOY_DOCS" == "true" ]; then
          # Deploying docs
          echo "<activeProfiles>"
-            echo "<activeProfile>deploy-docs-release</activeProfile>"
+            echo "<activeProfile>deploy-site-release</activeProfile>"
          echo "</activeProfiles>"
       fi
    fi
