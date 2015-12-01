@@ -73,6 +73,7 @@
 			<!-- Sets the site repository to point to the releases repo -->
 			<id>deploy-site-release</id>
 			<activation>
+				<!-- Active by default so the repository appears in the reports -->
 				<activeByDefault>true</activeByDefault>
 			</activation>
 			<distributionManagement>
