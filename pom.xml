@@ -69,13 +69,11 @@
 
 	<profiles>
 		<profile>
-			<id>docs-release</id>
+			<!-- Release site deployment profile -->
+			<!-- Sets the site repository to point to the releases repo -->
+			<id>deploy-site-release</id>
 			<activation>
 				<activeByDefault>true</activeByDefault>
-				<property>
-					<name>deployment</name>
-					<value>docrelease</value>
-				</property>
 			</activation>
 			<distributionManagement>
 				<site>
@@ -86,13 +84,9 @@
 			</distributionManagement>
 		</profile>
 		<profile>
-			<id>docs-development</id>
-			<activation>
-				<property>
-					<name>deployment</name>
-					<value>docdevelop</value>
-				</property>
-			</activation>
+			<!-- Development site deployment profile -->
+			<!-- Sets the site repository to point to the development repo -->
+			<id>deploy-site-development</id>
 			<distributionManagement>
 				<site>
 					<id>site-development</id>
@@ -481,13 +475,13 @@
 					</reportSet>
 				</reportSets>
 			</plugin>
-				<plugin>
-					<!-- Dependency -->
-					<!-- Generates dependencies analysis report. -->
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-dependency-plugin</artifactId>
-					<version>${plugin.dependency.version}</version>
-				</plugin>
+			<plugin>
+				<!-- Dependency -->
+				<!-- Generates dependencies analysis report. -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>${plugin.dependency.version}</version>
+			</plugin>
 			<plugin>
 				<!-- Site -->
 				<!-- Generates the Maven Site -->
