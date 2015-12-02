@@ -38,7 +38,7 @@ It may seem strange that the classpath for the tests on the new project includes
 
 Reports are generated on the Maven Site for both unit and integration tests, and this is done by the Surefire and Failsafe plugins, the same ones which take care of running the tests. 
 
-A coverage report, created with [JaCoCo][jacoco], is also generated.
+A coverage report, created with [JaCoCo][jacoco], is also generated. This will show the coverage data for both unit and integration tests combined.
 
 ## Logging
 

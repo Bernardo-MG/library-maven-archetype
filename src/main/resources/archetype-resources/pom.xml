@@ -372,8 +372,12 @@
 				<artifactId>maven-enforcer-plugin</artifactId>
 				<version>${plugin.enforcer.version}</version>
 				<executions>
+					<!-- The enforcer is bound to the validate phase -->
 					<execution>
 						<id>enforce</id>
+						<goals>
+							<goal>enforce</goal>
+						</goals>
 						<configuration>
 							<rules>
 								<!-- Dependencies convergence. -->
@@ -429,9 +433,6 @@
 								</requireProperty>
 							</rules>
 						</configuration>
-						<goals>
-							<goal>enforce</goal>
-						</goals>
 					</execution>
 				</executions>
 			</plugin>
@@ -444,6 +445,7 @@
 				<configuration>
 					<properties>
 						<property>
+							<!-- Default listeners disabled to avoid conflicts with TestNG -->
 							<name>usedefaultlisteners</name>
 							<key>false</key>
 						</property>
@@ -458,16 +460,15 @@
 					</suiteXmlFiles>
 				</configuration>
 				<executions>
+					<!-- Failsafe is bound to the integration-test and verify phases -->
 					<execution>
 						<id>failsafe-integration-tests</id>
-						<phase>integration-test</phase>
 						<goals>
 							<goal>integration-test</goal>
 						</goals>
 					</execution>
 					<execution>
 						<id>failsafe-verify</id>
-						<phase>verify</phase>
 						<goals>
 							<goal>verify</goal>
 						</goals>
@@ -481,6 +482,7 @@
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>${plugin.jacoco.version}</version>
 				<executions>
+					<!-- Jacoco is bound to the initialize and verify phases -->
 					<execution>
 						<id>jacoco-initialize</id>
 						<goals>
@@ -489,7 +491,6 @@
 					</execution>
 					<execution>
 						<id>jacoco-test-report</id>
-						<phase>verify</phase>
 						<goals>
 							<goal>report</goal>
 						</goals>
@@ -539,7 +540,7 @@
 					</dependency>
 				</dependencies>
 				<configuration>
-					<!-- Relativizing the links has a tendency to end breaking them -->
+					<!-- Relativizing the links has a tendency to break them -->
 					<relativizeDecorationLinks>false</relativizeDecorationLinks>
 				</configuration>
 			</plugin>
@@ -549,6 +550,7 @@
 				<artifactId>maven-source-plugin</artifactId>
 				<version>${plugin.source.version}</version>
 				<executions>
+					<!-- Source plugin is bound to the deploy phase -->
 					<execution>
 						<!-- Generates the jar for the deployment -->
 						<id>attach-sources</id>
@@ -565,7 +567,9 @@
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<version>${plugin.javadoc.version}</version>
 				<executions>
+					<!-- Javadoc plugin is bound to the deploy phase -->
 					<execution>
+						<!-- Generates the Javadocs for the deployment -->
 						<id>attach-javadocs</id>
 						<phase>deploy</phase>
 						<goals>
@@ -581,9 +585,9 @@
 				<artifactId>maven-deploy-plugin</artifactId>
 				<version>${plugin.deploy.version}</version>
 				<executions>
+					<!-- Deploy plugin is bound to the deploy phase -->
 					<execution>
 						<id>deploy</id>
-						<phase>deploy</phase>
 						<goals>
 							<goal>deploy</goal>
 						</goals>
@@ -603,9 +607,10 @@
 				<artifactId>maven-changes-plugin</artifactId>
 				<version>${plugin.changes.version}</version>
 				<executions>
+					<!-- Changes plugin is bound to the pre-site phase -->
 					<execution>
 						<id>check-changes</id>
-						<phase>verify</phase>
+						<phase>pre-site</phase>
 						<goals>
 							<goal>changes-check</goal>
 						</goals>

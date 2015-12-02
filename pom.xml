@@ -386,7 +386,7 @@
 					</dependency>
 				</dependencies>
 				<configuration>
-					<!-- Relativizing the links has a tendency to end breaking them -->
+					<!-- Relativizing the links has a tendency to break them -->
 					<relativizeDecorationLinks>false</relativizeDecorationLinks>
 				</configuration>
 			</plugin>
@@ -436,7 +436,7 @@
 				<executions>
 					<execution>
 						<id>check-changes</id>
-						<phase>verify</phase>
+						<phase>pre-site</phase>
 						<goals>
 							<goal>changes-check</goal>
 						</goals>
