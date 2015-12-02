@@ -679,6 +679,13 @@
 				</reportSets>
 			</plugin>
 			<plugin>
+				<!-- Dependency -->
+				<!-- Generates dependencies analysis report. -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>${plugin.dependency.version}</version>
+			</plugin>
+			<plugin>
 				<!-- JXR -->
 				<!-- Generates references to the source files, used by other reports -->
 				<groupId>org.apache.maven.plugins</groupId>

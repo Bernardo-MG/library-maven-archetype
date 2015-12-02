@@ -486,13 +486,6 @@
 				</reportSets>
 			</plugin>
 			<plugin>
-				<!-- Dependency -->
-				<!-- Generates dependencies analysis report. -->
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<version>${plugin.dependency.version}</version>
-			</plugin>
-			<plugin>
 				<!-- Site -->
 				<!-- Generates the Maven Site -->
 				<groupId>org.apache.maven.plugins</groupId>
