@@ -21,6 +21,9 @@
 # - DEPLOY_DOCS_DEVELOP_PASSWORD: string, password for the development documentation site repo
 # - VERSION_TYPE: string, the type of version of the code. One of 'release', 'develop' or 'other'.
 
+set -o nounset
+set -e
+
 {
    echo "<settings>";
    
