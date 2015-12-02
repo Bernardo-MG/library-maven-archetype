@@ -21,6 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
+
 package $package;
 
 /**
@@ -35,20 +36,20 @@ package $package;
 
 public final class Greeter {
 
-    /**
-     * Constructs a {@code Greeter}.
-     */
-    public Greeter() {
-        super();
-    }
+	/**
+	 * Constructs a {@code Greeter}.
+	 */
+	public Greeter() {
+		super();
+	}
 
-    /**
-     * Returns a greeting.
-     * 
-     * @return a greeting
-     */
-    public String sayHello() {
-        return "Hello World!";
-    }
+	/**
+	 * Returns a greeting.
+	 * 
+	 * @return a greeting
+	 */
+	public String sayHello() {
+		return "Hello World!";
+	}
 
 }
