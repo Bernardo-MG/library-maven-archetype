@@ -671,6 +671,7 @@
 							<report>dependencies</report>
 							<report>dependency-info</report>
 							<report>dependency-management</report>
+							<report>distribution-management</report>
 							<report>plugins</report>
 							<report>plugin-management</report>
 						</reports>

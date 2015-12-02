@@ -197,6 +197,9 @@
 			<action dev="bmg" type="add">
 				Added dependencies analysis report.
 			</action>
+			<action dev="bmg" type="add">
+				Added distribution management report.
+			</action>
 			<action dev="bmg" type="update">
 				Updated Maven site skin.
 			</action>
