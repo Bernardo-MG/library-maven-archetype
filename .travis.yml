@@ -13,12 +13,14 @@ matrix:
   include:
     # Code artifacts deployed with JDK7
     - jdk: oraclejdk7
-      env: DEPLOY=true DEPLOY_DOCS=false PULL_REQUEST=$TRAVIS_PULL_REQUEST
+      env: DEPLOY=true DEPLOY_DOCS=false
     # Documentation deployed with JDK8
     - jdk: oraclejdk8
-      env: DEPLOY=false DEPLOY_DOCS=true PULL_REQUEST=$TRAVIS_PULL_REQUEST
+      env: DEPLOY=false DEPLOY_DOCS=true
     
 before_install:
+  # Sets the deployment flags
+  - PULL_REQUEST=$TRAVIS_PULL_REQUEST
   # Sets the version type
   - VERSION_TYPE=other
   - if [ "$TRAVIS_BRANCH" == "master" ] ; then VERSION_TYPE=release; fi
