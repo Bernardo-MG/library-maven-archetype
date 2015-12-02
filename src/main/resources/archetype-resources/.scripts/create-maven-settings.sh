@@ -86,3 +86,4 @@
 
 echo "Created Maven settings file"
 
+exit 0

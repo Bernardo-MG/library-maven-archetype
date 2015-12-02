@@ -26,9 +26,17 @@ if [ "$DEPLOY_DOCS" == "true" ] && [ "$PULL_REQUEST" == "false" ] && [ "$VERSION
    echo "(...)"
    echo " "
    tail -50 site_output.txt
+   
+   if [ $? -ne 0 ]; then
+      exit 1
+   else
+      exit 0
+   fi
 
 else
 
    echo "Maven site won't be deployed"
+   
+   exit 0
 
 fi

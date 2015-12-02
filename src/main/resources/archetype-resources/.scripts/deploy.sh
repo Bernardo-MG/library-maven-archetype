@@ -21,8 +21,16 @@ if [ "$DEPLOY" == "true" ] && [ "$PULL_REQUEST" == "false" ] && [ "$VERSION_TYPE
 
    mvn deploy -P deployment --settings ~/settings.xml
    
+   if [ $? -ne 0 ]; then
+      exit 1
+   else
+      exit 0
+   fi
+      
 else
 
    echo "Java artifact won't be deployed"
+   
+   exit 0
 
 fi
