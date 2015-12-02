@@ -32,6 +32,7 @@ package $package;
  * 
  * @author ${developerName}
  */
+
 public final class Greeter {
 
     /**
