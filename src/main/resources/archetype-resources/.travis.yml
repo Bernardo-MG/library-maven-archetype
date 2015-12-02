@@ -3,9 +3,6 @@ jdk:
   - oraclejdk8
   - oraclejdk7
   - openjdk7
-env:
-  # Deployments are disabled by default
-  - DEPLOY=false DEPLOY_DOCS=false
 matrix:
   exclude:
     - jdk: oraclejdk7
@@ -13,14 +10,17 @@ matrix:
   include:
     # Code artifacts deployed with JDK7
     - jdk: oraclejdk7
-      env: DEPLOY=true DEPLOY_DOCS=false
+      env: DEPLOY=true
     # Documentation deployed with JDK8
     - jdk: oraclejdk8
-      env: DEPLOY=false DEPLOY_DOCS=true
+      env: DEPLOY_DOCS=true
     
 before_install:
   # Sets the deployment flags
   - export PULL_REQUEST=$TRAVIS_PULL_REQUEST
+  # Default values for deployment flags
+  - if [ -z "$DEPLOY" ]; then DEPLOY=false fi
+  - if [ -z "$DEPLOY_DOCS" ]; then DEPLOY_DOCS=false fi
   # Sets the version type
   - VERSION_TYPE=other
   - if [ "$TRAVIS_BRANCH" == "master" ] ; then VERSION_TYPE=release; echo $VERSION_TYPE; fi
