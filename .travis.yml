@@ -19,8 +19,8 @@ before_install:
   # Sets the deployment flags
   - export PULL_REQUEST=$TRAVIS_PULL_REQUEST
   # Default values for deployment flags
-  - if [ -z "$DEPLOY" ]; then DEPLOY=false fi
-  - if [ -z "$DEPLOY_DOCS" ]; then DEPLOY_DOCS=false fi
+  - if ! [[ -v DEPLOY ]] ; then DEPLOY=false fi
+  - if ! [[ -v DEPLOY_DOCS ]] ; then DEPLOY_DOCS=false fi
   # Sets the version type
   - VERSION_TYPE=other
   - if [ "$TRAVIS_BRANCH" == "master" ] ; then VERSION_TYPE=release; echo $VERSION_TYPE; fi
