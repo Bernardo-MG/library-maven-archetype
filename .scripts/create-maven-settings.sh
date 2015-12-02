@@ -1,14 +1,14 @@
 #!/bin/bash
 #
-# This script creates the Maven settings file for the CI process, which will be stored on the
-# ~/settings.xml path.
+# This script creates the Maven settings file for deployment, and is meant to be used
+# as part of the CI process. Said file will be stored on the ~/settings.xml path, and
+# its contents will be created from a series of environmental variables.
 #
-# The file will include the connection settings, loaded from the servers environmental variables.
+# The most important information it will contain will be the connection settings for all
+# the repositories used during deployment.
 #
-# It will also set the profile to be used, depending on the environmental variables set.
-#
-# For security reasons the data generated during this script should not be shared. Never print it 
-# on the console or let it be accessed in any way.
+# For security reasons the data stored in the generated file should not be shared. Never 
+# print it on the console or let it be accessed in any way.
 #
 # The following environmental variables are required by the script:
 # - DEPLOY_USER: string, user for the releases repo
@@ -19,7 +19,10 @@
 # - DEPLOY_DOCS_PASSWORD: string, password for the releases documentation site repo
 # - DEPLOY_DOCS_DEVELOP_USER: string, user for the development documentation site repo
 # - DEPLOY_DOCS_DEVELOP_PASSWORD: string, password for the development documentation site repo
-# - SCM_BRANCH: string, the CMS branch from which the code has been taken
+# - VERSION_TYPE: string, the type of version of the code. One of 'release', 'develop' or 'other'.
+
+set -o nounset
+set -e
 
 {
    echo "<settings>";
@@ -64,22 +67,17 @@
    # Active profile
    # --------------
    
-   if [ "$SCM_BRANCH" == "develop" ]; then
-      # Development branch
-      if [ "$DEPLOY_DOCS" == "true" ]; then
-         # Deploying docs
-         echo "<activeProfiles>"
-            echo "<activeProfile>docs-development</activeProfile>"
-         echo "</activeProfiles>"
-      fi
-   elif [ "$SCM_BRANCH" == "master" ]; then
-      # Releases branch
-      if [ "$DEPLOY_DOCS" == "true" ]; then
-         # Deploying docs
-         echo "<activeProfiles>"
-            echo "<activeProfile>docs-release</activeProfile>"
-         echo "</activeProfiles>"
-      fi
+   # These profiles are used to set the site repository info
+   if [ "$VERSION_TYPE" == "develop" ]; then
+      # Development version
+      echo "<activeProfiles>"
+         echo "<activeProfile>deploy-site-development</activeProfile>"
+      echo "</activeProfiles>"
+   elif [ "$VERSION_TYPE" == "release" ]; then
+      # Release version
+      echo "<activeProfiles>"
+         echo "<activeProfile>deploy-site-release</activeProfile>"
+      echo "</activeProfiles>"
    fi
    
    # -------------------
@@ -88,3 +86,7 @@
    
    echo "</settings>";
 } >> ~/settings.xml
+
+echo "Created Maven settings file"
+
+exit 0

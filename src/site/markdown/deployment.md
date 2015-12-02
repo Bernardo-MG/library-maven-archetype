@@ -1,67 +1,85 @@
 # Deployment
 
-The Archetype readies to project for deploying both code artifacts and the Maven site.
+The Archetype prepares the project for deploying both the code artifacts and the Maven site with the help of scripts and configuration files meant, both, for a CI service, more exactly for [Travis][travis-section].
 
-For this a CI service is required, which by default will be [Travis CI][travis-section]. Such a service will additionally need a set of environmental variables which will define the deployment environments, and which will cover things such as authentication data or deployment flags.
+This service will require a few environmental variables to be set before the deployment process can work, as these will be needed for things such as authentication or shaping the deployment flow.
 
 ## Releases and development versions
 
-Maven is capable of knowing if the current version is a release or a development version with a very simple method: if the version field on the POM ends with "-SNAPSHOT" then it is a snapshot, a development version. Otherwise it is a release.
+Maven can find out if the current version is a release or a development version with a very simple method: if the version field on the POM ends with "-SNAPSHOT" then it is a snapshot, a development version. Otherwise it is a release.
 
-This feature will be used to publish development and release code artifacts each into their own [repositories][repositories].
+This is used automatically by Maven when deploying, so as long as the [repositories][repositories] are correctly configured all the artifacts will be published on the correct place.
 
 ## Environmental variables
 
-To make sure the scripts work correctly, a series of environmental variables should be set prior to running them.
+To make sure the scripts work as expected, a series of environmental variables should be set prior to running them.
+
+If any of them is left unset the scripts will exit with an error value.
 
 ### Repositories access data
 
-These define the access data to be used for the repositories contained in the POM file. Check the [repositories section][repositories] to find out more.
+These define the access data to be used for the [repositories][repositories].
 
 #### Release deployment variables
 
-|Variable|Contents|
-|---|---|
-|DEPLOY\_USER|User for the releases repository|
-|DEPLOY\_PASSWORD|Password for the releases documentation repository|
-|DEPLOY\_DOCS\_USER|User for the releases documentation repository|
-|DEPLOY\_DOCS\_PASSWORD|Password for the releases documentation repository|
+|Variable|Type|Contents|
+|---|---|---|
+|DEPLOY\_USER|String|User for the releases repository|
+|DEPLOY\_PASSWORD|String|Password for the releases documentation repository|
+|DEPLOY\_DOCS\_USER|String|User for the releases documentation repository|
+|DEPLOY\_DOCS\_PASSWORD|String|Password for the releases documentation repository|
 
 #### Development deployment variables
 
-|Variable|Contents|
-|---|---|
-|DEPLOY\_DEVELOP\_USER|User for the snapshots repository|
-|DEPLOY\_DEVELOP\_PASSWORD|Password for the snapshots repository|
-|DEPLOY\_DOCS\_DEVELOP\_USER|User for the snapshots documentation repository|
-|DEPLOY\_DOCS\_DEVELOP\_PASSWORD|Password for the snapshots documentation repository|
+|Variable|Type|Contents|
+|---|---|---|
+|DEPLOY\_DEVELOP\_USER|String|User for the snapshots repository|
+|DEPLOY\_DEVELOP\_PASSWORD|String|Password for the snapshots repository|
+|DEPLOY\_DOCS\_DEVELOP\_USER|String|User for the snapshots documentation repository|
+|DEPLOY\_DOCS\_DEVELOP\_PASSWORD|String|Password for the snapshots documentation repository|
+
+### Deployment variables
+
+These will modify the deployment workflow. The included CI configuration file already takes care of them.
+
+|Variable|Type|Contents|
+|---|---|---|
+|VERSION\_TYPE|[release|develop|other]|Indicates if the code is for a release, development or other type of version.|
 
 ### Deployment flags
 
-These affect the deployment workflow. The included Travis configuration file already takes care of them.
+These affect the deployment workflow. The included CI configuration file already takes care of them.
 
-|Variable|Contents|
-|---|---|
-|DEPLOY|Indicates if the artifact should be deployed|
-|DEPLOY\_DOCS|Indicates if the documentation should be deployed|
+|Variable|Type|Contents|
+|---|---|---|
+|DEPLOY|Boolean|Indicates if the artifact should be deployed|
+|DEPLOY\_DOCS|Boolean|Indicates if the documentation should be deployed|
 
 ### CI flags
 
-Indicates the current status of the continuous integration workflow. The included Travis configuration file already takes care of them.
+Indicates the current status of the continuous integration workflow. The included CI configuration file already takes care of them.
 
-|Variable|Contents|
-|---|---|
-|PULL_REQUEST|Meant for CI. Indicates if the code is part of a pull request|
+|Variable|Type|Contents|
+|---|---|---|
+|PULL_REQUEST|Boolean|Meant for CI. Indicates if the code is part of a pull request|
 
 ## Deployment validation
 
-The deployment scripts check make sure a few required conditions are true before running. This way they only run when wanted and required.
+Before deploying, each script will check the deployment variables to make sure the environment is valid. If any of the following conditions is met the script won't start:
 
-In general they will stop if any of the following is false:
+- The code has been taken from a branch which is part of a pull request (only makes sense when using CI and pull requests).
+- The code is not marked as a release or development version.
+- The deployment flag is set to false.
 
-- The code has been taken from a branch which is not part of a pull request (only makes sense when using CI and pull requests).
-- The code has been taken from the *master* or *development* branches.
-- The correct deployment flag is set to true.
+## Deployment profiles
+
+A few deployment profiles are included in the POM, and the deployment scripts make use of them.
+
+|Profile|Description|Used in|
+|---|---|---|
+|deployment|General deployment profile to set up the deployment environment. Mostly this is done by disabling testing for faster deployment.|Deployment scripts, which will set this profile as active|
+|deploy-site-release|Release Maven Site deployment profile. Sets the site release repository.|Settings script, which will set as active the correct site deployment profile.|
+|deploy-site-development|Development Maven Site deployment profile. Sets the site deployment repository.|Settings script, which will set as active the correct site deployment profile.|
 
 ## Scripts
 
@@ -73,7 +91,7 @@ The *.scripts* folder includes various scripts for easily managing the deploymen
 |deploy.sh|Handles the artifact deployment job|
 |deploy-site.sh|Handles the site deployment job|
 
-As it can be seen, there is a script for code artifacts and another documentation. This way it is possible deploying both independently.
+As it can be seen, there is a script for code artifacts and another documentation to allow deploying both independently.
 
 ### create-maven-settings.sh
 
