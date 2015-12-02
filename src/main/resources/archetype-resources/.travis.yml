@@ -5,7 +5,7 @@ jdk:
   - openjdk7
 env:
   # Deployments are disabled by default
-  - DEPLOY=false DEPLOY_DOCS=false
+  - DEPLOY=false DEPLOY_DOCS=false SCM_BRANCH=$TRAVIS_BRANCH VERSION_TYPE=other
 matrix:
   exclude:
     - jdk: oraclejdk7
@@ -13,12 +13,15 @@ matrix:
   include:
     # Code artifacts deployed with JDK7
     - jdk: oraclejdk7
-      env: DEPLOY=true DEPLOY_DOCS=false PULL_REQUEST=$TRAVIS_PULL_REQUEST SCM_BRANCH=$TRAVIS_BRANCH
+      env: DEPLOY=true DEPLOY_DOCS=false PULL_REQUEST=$TRAVIS_PULL_REQUEST
     # Documentation deployed with JDK8
     - jdk: oraclejdk8
-      env: DEPLOY=false DEPLOY_DOCS=true PULL_REQUEST=$TRAVIS_PULL_REQUEST SCM_BRANCH=$TRAVIS_BRANCH
+      env: DEPLOY=false DEPLOY_DOCS=true PULL_REQUEST=$TRAVIS_PULL_REQUEST
     
 before_install:
+  # Sets the version type
+  - if [ "$SCM_BRANCH" == "master" ] ; then $VERSION_TYPE=release fi
+  - if [ "$SCM_BRANCH" == "develop" ] ; then $VERSION_TYPE=develop fi
   # Scripts are set as executable
   - chmod +x ./.scripts/create-maven-settings.sh
   - chmod +x ./.scripts/deploy.sh

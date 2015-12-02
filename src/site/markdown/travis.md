@@ -39,7 +39,13 @@ The deployment flags are taken care of in the Travis configuration file. These a
 - DEPLOY
 - DEPLOY\_DOCS
 
-### Adapted Travis pre-defined environmental variables
+### Environmental variables handled by Travis
+
+#### Generated variables
+
+The VERSION\_TYPE variable is generated on the Travis setting file, by just checking the SCM\_BRANCH variable. The *master* branch will indicate a release, the *develop* branch will indicate a develop version, and any other will be other type of version.
+
+#### Mapped to pre-defined variables
 
 Travis has some pre-defined environmental variables containing part of the data which the scripts require, and these are copied by the Travis configuration file into the required variables.
 
@@ -48,7 +54,6 @@ The Travis environmental variables and the variables into which they are copied 
 |Travis variable|Deployment variable|
 |---|---|
 |TRAVIS\_PULL\_REQUEST|PULL\_REQUEST|
-|TRAVIS\_BRANCH|SCM\_BRANCH|
 
 ## Deployment configuration
 
@@ -64,9 +69,9 @@ matrix:
     - jdk: oraclejdk8
   include:
     - jdk: oraclejdk8
-      env: DEPLOY=true DEPLOY_DOCS=false PULL_REQUEST=$TRAVIS_PULL_REQUEST SCM_BRANCH=$TRAVIS_BRANCH
+      env: DEPLOY=true DEPLOY_DOCS=false PULL_REQUEST=$TRAVIS_PULL_REQUEST
     - jdk: oraclejdk8
-      env: DEPLOY=false DEPLOY_DOCS=true PULL_REQUEST=$TRAVIS_PULL_REQUEST SCM_BRANCH=$TRAVIS_BRANCH
+      env: DEPLOY=false DEPLOY_DOCS=true PULL_REQUEST=$TRAVIS_PULL_REQUEST
 ```
 
 [github]: https://github.com/

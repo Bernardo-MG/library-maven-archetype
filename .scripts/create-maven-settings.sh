@@ -19,7 +19,7 @@
 # - DEPLOY_DOCS_PASSWORD: string, password for the releases documentation site repo
 # - DEPLOY_DOCS_DEVELOP_USER: string, user for the development documentation site repo
 # - DEPLOY_DOCS_DEVELOP_PASSWORD: string, password for the development documentation site repo
-# - SCM_BRANCH: string, the CMS branch from which the code has been taken
+# - VERSION_TYPE: string, the type of version of the code. One of 'release', 'develop' or 'other'.
 
 {
    echo "<settings>";
@@ -64,22 +64,17 @@
    # Active profile
    # --------------
    
-   if [ "$SCM_BRANCH" == "develop" ]; then
-      # Development branch
-      if [ "$DEPLOY_DOCS" == "true" ]; then
-         # Deploying docs
-         echo "<activeProfiles>"
-            echo "<activeProfile>deploy-site-development</activeProfile>"
-         echo "</activeProfiles>"
-      fi
-   elif [ "$SCM_BRANCH" == "master" ]; then
-      # Releases branch
-      if [ "$DEPLOY_DOCS" == "true" ]; then
-         # Deploying docs
-         echo "<activeProfiles>"
-            echo "<activeProfile>deploy-site-release</activeProfile>"
-         echo "</activeProfiles>"
-      fi
+   # These profiles are set here to set the site repository info
+   if [ "$VERSION_TYPE" == "develop" ]; then
+      # Development version
+      echo "<activeProfiles>"
+         echo "<activeProfile>deploy-site-development</activeProfile>"
+      echo "</activeProfiles>"
+   elif [ "$VERSION_TYPE" == "release" ]; then
+      # Release version
+      echo "<activeProfiles>"
+         echo "<activeProfile>deploy-site-release</activeProfile>"
+      echo "</activeProfiles>"
    fi
    
    # -------------------

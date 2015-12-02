@@ -20,76 +20,85 @@ These define the access data to be used for the repositories contained in the PO
 
 #### Release deployment variables
 
-|Variable|Contents|
-|---|---|
-|DEPLOY\_USER|User for the releases repository|
-|DEPLOY\_PASSWORD|Password for the releases documentation repository|
-|DEPLOY\_DOCS\_USER|User for the releases documentation repository|
-|DEPLOY\_DOCS\_PASSWORD|Password for the releases documentation repository|
+|Variable|Type|Contents|
+|---|---|---|
+|DEPLOY\_USER|String|User for the releases repository|
+|DEPLOY\_PASSWORD|String|Password for the releases documentation repository|
+|DEPLOY\_DOCS\_USER|String|User for the releases documentation repository|
+|DEPLOY\_DOCS\_PASSWORD|String|Password for the releases documentation repository|
 
 #### Development deployment variables
 
-|Variable|Contents|
-|---|---|
-|DEPLOY\_DEVELOP\_USER|User for the snapshots repository|
-|DEPLOY\_DEVELOP\_PASSWORD|Password for the snapshots repository|
-|DEPLOY\_DOCS\_DEVELOP\_USER|User for the snapshots documentation repository|
-|DEPLOY\_DOCS\_DEVELOP\_PASSWORD|Password for the snapshots documentation repository|
+|Variable|Type|Contents|
+|---|---|---|
+|DEPLOY\_DEVELOP\_USER|String|User for the snapshots repository|
+|DEPLOY\_DEVELOP\_PASSWORD|String|Password for the snapshots repository|
+|DEPLOY\_DOCS\_DEVELOP\_USER|String|User for the snapshots documentation repository|
+|DEPLOY\_DOCS\_DEVELOP\_PASSWORD|String|Password for the snapshots documentation repository|
+
+### Deployment variables
+
+These affect the deployment workflow. The included Travis configuration file already takes care of them.
+
+|Variable|Type|Contents|
+|---|---|---|
+|VERSION\_TYPE|[release|develop|other]|Indicates if the code is for a release, development or other type of version.|
 
 ### Deployment flags
 
 These affect the deployment workflow. The included Travis configuration file already takes care of them.
 
-|Variable|Contents|
-|---|---|
-|DEPLOY|Indicates if the artifact should be deployed|
-|DEPLOY\_DOCS|Indicates if the documentation should be deployed|
+|Variable|Type|Contents|
+|---|---|---|
+|DEPLOY|Boolean|Indicates if the artifact should be deployed|
+|DEPLOY\_DOCS|Boolean|Indicates if the documentation should be deployed|
 
 ### CI flags
 
 Indicates the current status of the continuous integration workflow. The included Travis configuration file already takes care of them.
 
-|Variable|Contents|
-|---|---|
-|PULL_REQUEST|Meant for CI. Indicates if the code is part of a pull request|
+|Variable|Type|Contents|
+|---|---|---|
+|PULL_REQUEST|Boolean|Meant for CI. Indicates if the code is part of a pull request|
 
 ## Environmental variables configuration
 
-If using the other features of the project, mostly the [Continuous Integration][travis-section] configuration, some of the enviromental variables will be taken care of.
+If using the the [Continuous Integration][travis-section] configuration, some of the enviromental variables will be taken care of by the configuration files.
 
-The list of each variable and their status is as follows. Remember that if the CI and deployment scripts are modified this can change.
+The list of each variable and their status is as follows. Any variable which is not taken care of should be set in the deployment environment, which means it should be added as a variable to the CI service.
 
-|Variable|Taken care of|Comments|
+|Variable|Taken care of|
 |---|---|
-|DEPLOY\_USER|No|Should be set on the deployment environment|
-|DEPLOY\_PASSWORD|No|Should be set on the deployment environment|
-|DEPLOY\_DOCS\_USER|No|Should be set on the deployment environment|
-|DEPLOY\_DOCS\_PASSWORD|No|Should be set on the deployment environment|
-|DEPLOY\_DEVELOP\_USER|No|Should be set on the deployment environment|
-|DEPLOY\_DEVELOP\_PASSWORD|No|Should be set on the deployment environment|
-|DEPLOY\_DOCS\_DEVELOP\_USER|No|Should be set on the deployment environment|
-|DEPLOY\_DOCS\_DEVELOP\_PASSWORD|No|Should be set on the deployment environment|
-|DEPLOY|Yes|Taken care of in the CI configuration file|
-|DEPLOY\_DOCS|Yes|Taken care of in the CI configuration file|
-|PULL_REQUEST|Yes|Taken care of in the CI configuration file|
+|DEPLOY|Yes|
+|DEPLOY\_DOCS|Yes|
+|PULL\_REQUEST|Yes|
+|VERSION\_TYPE|Yes|
+|DEPLOY\_USER|No|
+|DEPLOY\_PASSWORD|No|
+|DEPLOY\_DOCS\_USER|No|
+|DEPLOY\_DOCS\_PASSWORD|No|
+|DEPLOY\_DEVELOP\_USER|No|
+|DEPLOY\_DEVELOP\_PASSWORD|No|
+|DEPLOY\_DOCS\_DEVELOP\_USER|No|
+|DEPLOY\_DOCS\_DEVELOP\_PASSWORD|No|
 
 ## Deployment validation
 
-The deployment scripts check make sure a few required conditions are true before running. This way they only run when wanted and required.
+Before deploying each script will make sure a few required conditions are met, and will stop if any of them fails. This way it is possible controlling when the deployment is done.
 
-In general they will stop if any of the following is false:
+In general they will stop if any of the following conditions is met:
 
-- The code has been taken from a branch which is not part of a pull request (only makes sense when using CI and pull requests).
-- The code has been taken from the *master* or *development* branches.
-- The correct deployment flag is set to true.
+- The code has been taken from a branch which is part of a pull request (only makes sense when using CI and pull requests).
+- The code is not marked as a release or development version.
+- The deployment flag is set to false.
 
 ## Deployment profiles
 
-A few deployment profiles are included in the POM. These are already taken care of by the deployment scripts, and can be extended as needed.
+A few deployment profiles are included in the POM, and the deployment scripts make use of them.
 
 |Profile|Description|Used in|
-|---|---|
-|deployment|General deployment profile. Sets up the deployment environment, mostly disabling testing for faster deployment.|Deployment scripts, which will set this profile for deployment|
+|---|---|---|
+|deployment|General deployment profile to set up the deployment environment. Mostly this is done by disabling testing for faster deployment.|Deployment scripts, which will set this profile as active|
 |deploy-site-release|Release Maven Site deployment profile. Sets the site release repository.|Settings script, which will set as active the correct site deployment profile.|
 |deploy-site-development|Development Maven Site deployment profile. Sets the site deployment repository.|Settings script, which will set as active the correct site deployment profile.|
 

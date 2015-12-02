@@ -10,9 +10,9 @@
 # The following environmental variables are used:
 # - PULL_REQUEST: boolean, indicates if this is a pull request, should be false for deployment
 # - DEPLOY_DOCS: boolean, control flag for deployment, should be true to deploy
-# - SCM_BRANCH: string, the CMS branch from which the code has been taken
+# - VERSION_TYPE: string, the type of version of the code. One of 'release', 'develop' or 'other'.
 
-if [ "$PULL_REQUEST" == "false" ] && [ "$DEPLOY_DOCS" == "true" ] && [[ "$SCM_BRANCH" == "master" || "$SCM_BRANCH" == "develop" ]]; then
+if [ "$PULL_REQUEST" == "false" ] && [ "$DEPLOY_DOCS" == "true" ] && [ "$VERSION_TYPE" != "other" ]; then
 
    echo "Deploying Maven site"
 
