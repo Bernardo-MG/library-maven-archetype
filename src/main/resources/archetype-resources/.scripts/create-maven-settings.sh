@@ -1,14 +1,14 @@
 #!/bin/bash
 #
-# This script creates the Maven settings file for the CI process, which will be stored on the
-# ~/settings.xml path.
+# This script creates the Maven settings file for deployment, and is meant to be used
+# as part of the CI process. Said file will be stored on the ~/settings.xml path, and
+# its contents will be created from a series of environmental variables.
 #
-# The file will include the connection settings, loaded from the servers environmental variables.
+# The most important information it will contain will be the connection settings for all
+# the repositories used during deployment.
 #
-# It will also set the profile to be used, depending on the environmental variables set.
-#
-# For security reasons the data generated during this script should not be shared. Never print it 
-# on the console or let it be accessed in any way.
+# For security reasons the data stored in the generated file should not be shared. Never 
+# print it on the console or let it be accessed in any way.
 #
 # The following environmental variables are required by the script:
 # - DEPLOY_USER: string, user for the releases repo
@@ -64,7 +64,7 @@
    # Active profile
    # --------------
    
-   # These profiles are set here to set the site repository info
+   # These profiles are used to set the site repository info
    if [ "$VERSION_TYPE" == "develop" ]; then
       # Development version
       echo "<activeProfiles>"
@@ -83,3 +83,6 @@
    
    echo "</settings>";
 } >> ~/settings.xml
+
+echo "Created Maven settings file"
+
