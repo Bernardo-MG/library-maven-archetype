@@ -47,7 +47,7 @@ public final class ITGreeter {
     /**
      * Constructs the tests.
      */
-    public ITUnit() {
+    public ITGreeter() {
         super();
     }
 
