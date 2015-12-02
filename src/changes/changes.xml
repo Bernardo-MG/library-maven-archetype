@@ -214,6 +214,10 @@
 				Deployment now skips tests.
 			</action>
 			<action dev="bmg" type="update">
+				Updated shell scripts and Travis
+				configuration to better handle errors.
+			</action>
+			<action dev="bmg" type="update">
 				Updated documentation.
 			</action>
 		</release>
