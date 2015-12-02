@@ -193,7 +193,7 @@
 				Plugin config files are copied again.
 			</action>
 		</release>
-		<release version="0.4.3" date="2015-11-21" description="Scripts and plugins updates">
+		<release version="0.4.3" date="2015-12-2" description="Scripts and plugins updates">
 			<action dev="bmg" type="add">
 				Added dependencies analysis report.
 			</action>
