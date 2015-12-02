@@ -42,7 +42,7 @@ import ${package}.Greeter;
  * @author ${developerName}
  *
  */
-public final class ITUnit {
+public final class ITGreeter {
 
     /**
      * Constructs the tests.

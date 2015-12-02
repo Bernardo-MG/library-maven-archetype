@@ -42,7 +42,7 @@ import ${package}.Greeter;
  * @author ${developerName}
  *
  */
-public final class TestUnit {
+public final class TestGreeter {
 
     /**
      * Constructs the tests.
