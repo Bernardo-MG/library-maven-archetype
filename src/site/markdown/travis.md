@@ -43,7 +43,7 @@ The deployment flags are taken care of in the Travis configuration file. These a
 
 #### Generated variables
 
-The VERSION\_TYPE variable is generated on the Travis setting file, by just checking the SCM\_BRANCH variable. The *master* branch will indicate a release, the *develop* branch will indicate a develop version, and any other will be other type of version.
+The VERSION\_TYPE variable is generated on the Travis setting file, by just checking the TRAVIS\_BRANCH variable. The *master* branch will indicate a release, the *develop* branch will indicate a develop version, and any other will be other type of version.
 
 #### Mapped to pre-defined variables
 
