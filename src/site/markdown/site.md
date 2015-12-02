@@ -1,6 +1,6 @@
 # Site
 
-The Archetype comes ready to create a [Maven site][maven-site], similar to this one. This is an easy way to share the project's documentation, along several reports showing its status.
+The Archetype comes ready to create a [Maven site][maven-site], similar to this one. This is an easy way to share the project's documentation, along the Javadocs and several reports showing its status.
 
 ## Creating the site
 
@@ -11,6 +11,10 @@ Instead the following command should be used to get the full reports:
 ```sh
 $ mvn verify site
 ```
+
+## Javadocs
+
+Apart from the reports mentioned below, the site will generate and include the Javadocs for the project, which will be accessible in the same section as the reports.
 
 ## Reports
 

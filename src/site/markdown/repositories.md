@@ -1,20 +1,20 @@
 # Repositories
 
-To take full advantage of the Archetype various repositories should be prepared. Luckily for most of them there are free services, and the new project will come ready for these, but in the case of the site documentation a private repository should be set up, or otherwise it won't be possible sharing it.
+While it can be used be used just by itself, but to take full advantage of the new project some repositories should be prepared. Luckily most of them can be free and commonly used services, for which the project comes ready. The only exception is the documentation site, which will require some sort of static content server which the user should arrange by himself.
 
-There are four required repositories in total, one of a different kind: SCM, releases, snapshots and Maven site (for both the releases and development version).
+There are four repositories in total, and each is of a different kind: a SCM for the code, a releases repository, a snapshots one and a static content server for the Maven development and release sites.
 
-Actually, these repositories are not really required, but without them it won't be possible to take advantage of the [deployment][deployment-section] feature. One of the most important ones which this archetype offers, along the continuous integration process which, taking advantage of [Travis][travis-section], requires them for working correctly.
+Without them all it won't be possible to take advantage of the [deployment][deployment-section] feature, one of the most important capabilities which this archetype offers, or the [continuous integration][travis-section] process, as both require them for working correctly.
 
 If for some reason the actual services used need to be changed, all the information about the repositories is kept in the POM file, where it can be easily changed.
 
 ## SCM
 
-The Source Code Manager is the most important repository, as this is where the code is stored and versioned. By default [GitHub][github] will be used.
+The most important repository is the Source Code Manager, as this is where the code is stored and versioned. By default [GitHub][github] will be used.
 
 ### Automatic creation of the SCM URL
 
-The repository's URL will be created by using the repoUserId and the project id Archetype variables in the following Velocity macro:
+The repository's URL for the POM will be created by using the repoUserId and the project id Archetype variables in the following Velocity macro:
 
 ```
 https://www.github.com/${repoUserId}/${artifactId}
@@ -30,9 +30,9 @@ For this reason the "-SNAPSHOT" prefix should be always used for the versions ke
 
 ## Artifact repositories
 
-Two repositories will be used for the artifacts created from the code. One will be for releases and another for snapshots.
+Two repositories will be used for the code artifacts, one for releases and another for snapshots.
 
-By default [Bintray][bintray] will be used for releases, and [Sonatype OSS][sonatype] for snapshots. Note that Sonatype requires additional configuration which is detailed in the guides below.
+By default [Bintray][bintray] will be the one used for the releases, and [Sonatype OSS][sonatype] will be used for snapshots. Note that Sonatype requires additional configuration which is detailed in the guides below.
 
 ### Artifact repositories ids
 
@@ -49,7 +49,7 @@ For this same reason it is not recommended changing them, as some components may
 
 Using Bintray it is possible to link the releases repository to JCenter, Sonatype OSS and Maven central. This way most dependency managers, including the usual Maven configurations, will be able to acquire the project without adding any new repository info.
 
-The process for achieving this is, mostly, very simple:
+The process for achieving this is detailed in two guides:
 
 The first step is required and consists on connecting the Bintray repository to JCenter. This is easy, just follow [this guide][jcenter-guide].
 
@@ -65,9 +65,11 @@ Remember that it may not be possible to add artifacts to OSS Sonatype until the 
 
 ## Maven site repository
 
-While the new project will come ready to publish the Maven site, both for development and release version, there is no free service available for this. Instead a FTP should be prepared for it.
+As it is not a good idea using such features such as GitPages, because this make the SCM actually host two different projects, and there is no free static code repository around the user will have to provide his own. For example by setting up a FTP server.
 
-Just like with the artifacts repositories, it is not recommended changing the ids, as the scripts may stop working.
+### Site repositories ids
+
+Just like with the artifacts repositories, it is not recommended changing these ids, as this may cause the scripts to stop working.
 
 |ID|Repository|
 |---|---|---|

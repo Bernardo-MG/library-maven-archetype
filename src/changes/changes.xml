@@ -193,5 +193,33 @@
 				Plugin config files are copied again.
 			</action>
 		</release>
+		<release version="0.4.3" date="2015-12-2" description="Scripts and plugins updates">
+			<action dev="bmg" type="add">
+				Added dependencies analysis report.
+			</action>
+			<action dev="bmg" type="add">
+				Added distribution management report.
+			</action>
+			<action dev="bmg" type="update">
+				Updated Maven site skin.
+			</action>
+			<action dev="bmg" type="update">
+				Made the default profiles clearer.
+			</action>
+			<action dev="bmg" type="update">
+				Added properties activation to the
+				default profiles.
+			</action>
+			<action dev="bmg" type="update">
+				Deployment now skips tests.
+			</action>
+			<action dev="bmg" type="update">
+				Updated shell scripts and Travis
+				configuration to better handle errors.
+			</action>
+			<action dev="bmg" type="update">
+				Updated documentation.
+			</action>
+		</release>
 	</body>
 </document>

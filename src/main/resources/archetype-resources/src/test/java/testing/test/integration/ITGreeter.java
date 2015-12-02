@@ -21,7 +21,8 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package ${package}.testing.test.unit;
+
+package ${package}.testing.test.integration;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -29,24 +30,24 @@ import org.testng.annotations.Test;
 import ${package}.Greeter;
 
 /**
- * Unit tests for {@link Greeter}.
+ * Integration tests for {@link Greeter}.
  * <p>
  * Checks the following cases:
  * <ol>
  * <li>The {@code Greeter} returns a greeting.</li>
  * </ol>
  * <p>
- * This is just a placeholder test.
+ * This is actually a placeholder test for the integration tests suite.
  * 
  * @author ${developerName}
  *
  */
-public final class TestUnit {
+public final class ITGreeter {
 
     /**
      * Constructs the tests.
      */
-    public TestUnit() {
+    public ITGreeter() {
         super();
     }
 

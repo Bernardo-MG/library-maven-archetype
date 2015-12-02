@@ -1,6 +1,6 @@
 # Changes log
 
-The new project comes ready to show a changes log detailing the project changes from version to version.
+The new project comes ready to show a changes log detailing the project evolution from version to version.
 
 This is done with the use of the [Changes plugin][changes], and the log file found in the *src/changes/changes.xml* path, which should be updated with each new version to reflect the main changes.
 

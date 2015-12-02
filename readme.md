@@ -10,11 +10,11 @@ A template for creating new Maven-based libraries, ready to make use of several 
 
 ## Features
 
-- Creates a new Maven project for quickly begin developing a new Java library.
+- Creates a new Maven library with a fully configured POM, including features such as build validation, changes report or manifest configuration.
 - Sets up continuous integration with [Github][github], [Travis][travis] and [Bintray][bintray]. Making a distinction between releases and development versions.
 - Prepared for unit and integration tests suites. Created with [TestNG][testng] and ready to be run with [Surefire][surefire] and [Failsafe][failsafe].
-- A Maven site, using the [Docs Maven Skin][docs-skin], for sharing the project's documentation along various reports which range from code quality to changes log.
-- Includes basic files such as readme, gitignore and gitattributes files.
+- A Maven site, using the [Docs Maven Skin][docs-skin], for sharing the project's documentation along the Javadocs and various reports which range from code quality to changes log.
+- Includes basic files such as readme, gitignore and gitattributes.
 
 ## Sample project
 
