@@ -1,12 +1,12 @@
 # Deployment
 
-The Archetype readies to project for deploying both code artifacts and the Maven site.
+The Archetype prepares the project for deploying both the code artifacts and the Maven site with the use of scripts and configuration files.
 
-For this a CI service is required, which by default will be [Travis CI][travis-section]. Such a service will additionally need a set of environmental variables which will define the deployment environments, and which will cover things such as authentication data or deployment flags.
+But this is meant to be done through a CI service, which by default will be [Travis][travis-section]. Such a service will also need a set of environmental variables detailed below to define the deployment environment, covering things such as authentication data or deployment flags.
 
 ## Releases and development versions
 
-Maven is capable of knowing if the current version is a release or a development version with a very simple method: if the version field on the POM ends with "-SNAPSHOT" then it is a snapshot, a development version. Otherwise it is a release.
+Maven can find out if the current version is a release or a development version with a very simple method: if the version field on the POM ends with "-SNAPSHOT" then it is a snapshot, a development version. Otherwise it is a release.
 
 This feature will be used to publish development and release code artifacts each into their own [repositories][repositories].
 

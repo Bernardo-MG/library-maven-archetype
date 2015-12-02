@@ -14,6 +14,7 @@ In this case this Archetype creates a generic Maven-based library which includes
 - [Ready to make use of Travis CI][travis] for testing and deployment.
 - [Deployment][deployment] covers both artifacts and documentation site.
 - [Deployment scripts][deployment-scripts] making a distinction between release and development versions.
+- The artifact manifest is fully configured.
 - A basic readme template.
 - .gitignore and .gitattributes files prepared for common uses.
 - [MIT License][license].

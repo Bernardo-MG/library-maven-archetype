@@ -281,6 +281,9 @@
 				<executions>
 					<execution>
 						<id>enforce</id>
+						<goals>
+							<goal>enforce</goal>
+						</goals>
 						<configuration>
 							<rules>
 								<!-- Dependencies convergence. -->
@@ -336,9 +339,6 @@
 								</requireProperty>
 							</rules>
 						</configuration>
-						<goals>
-							<goal>enforce</goal>
-						</goals>
 					</execution>
 				</executions>
 			</plugin>
@@ -353,7 +353,6 @@
 						<index>true</index>
 						<manifest>
 							<addClasspath>true</addClasspath>
-							<addExtensions>false</addExtensions>
 							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
 							<addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
 							<packageName>${project.groupId}</packageName>
@@ -415,7 +414,6 @@
 				<executions>
 					<execution>
 						<id>deploy</id>
-						<phase>deploy</phase>
 						<goals>
 							<goal>deploy</goal>
 						</goals>
