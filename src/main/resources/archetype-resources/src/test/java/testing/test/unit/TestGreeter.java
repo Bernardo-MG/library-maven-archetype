@@ -47,7 +47,7 @@ public final class TestGreeter {
     /**
      * Constructs the tests.
      */
-    public ITGreeter() {
+    public TestGreeter() {
         super();
     }
 
