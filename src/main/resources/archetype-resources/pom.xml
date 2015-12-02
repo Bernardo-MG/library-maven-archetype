@@ -816,7 +816,7 @@
 			</plugin>
 			<plugin>
 				<!-- JaCoCo -->
-				<!-- Generates the coverage report -->
+				<!-- Generates coverage reports from Surefire and Failsafe -->
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>${plugin.jacoco.version}</version>
