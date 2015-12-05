@@ -157,6 +157,7 @@
 			<!-- Sets ups the environment for deployment -->
 			<id>deployment</id>
 			<properties>
+                <!-- Tests are skipped -->
 				<maven.test.skip>true</maven.test.skip>
 			</properties>
 		</profile>
