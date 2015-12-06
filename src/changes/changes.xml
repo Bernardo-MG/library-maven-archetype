@@ -1,225 +1,233 @@
 <document xmlns="http://maven.apache.org/changes/1.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/changes/1.0.0 http://maven.apache.org/xsd/changes-1.0.0.xsd">
-	<properties>
-		<title>Project Changes</title>
-		<author email="programming@wandrell.com">Bernardo Martínez Garrido</author>
-	</properties>
-	<body>
-		<release version="0.1.0" date="2015-05-17" description="First release">
-			<action dev="bmg" type="update">
-				First release of the archetype.
-			</action>
-		</release>
-		<release version="0.1.1" date="2015-05-29" description="Corrections">
-			<action dev="bmg" type="update">
-				Corrected various errors on the
-				archetype files.
-			</action>
-		</release>
-		<release version="0.2.0" date="2015-06-08" description="More configuration corrections">
-			<action dev="bmg" type="update">
-				The archetype is now correctly set up
-				to work with Bintray and Sonatype.
-			</action>
-			<action dev="bmg" type="fix">
-				Changes to the Maven site.
-			</action>
-			<action dev="bmg" type="fix">
-				Corrected links on the Maven site.
-			</action>
-			<action dev="bmg" type="update">
-				Improved the site documentation.
-			</action>
-			<action dev="bmg" type="update">
-				Improved the developer initial data.
-			</action>
-			<action dev="bmg" type="update">
-				Added initial projects page.
-			</action>
-			<action dev="bmg" type="update">
-				Several changes to the archetype
-				variables.
-			</action>
-		</release>
-		<release version="0.2.1" date="2015-06-17" description="Installation info">
-			<action dev="bmg" type="add">
-				Updated default installation info and
-				usage page.
-			</action>
-			<action dev="bmg" type="add">
-				Added IntelliJ Idea files to the
-				gitignore.
-			</action>
-		</release>
-		<release version="0.3.0" date="2015-08-19"
-			description="Changed the Maven Site skin, added Guava, various other corrections">
-			<action dev="bmg" type="update">
-				Changed the Maven Skin for the Docs
-				Maven Skin.
-			</action>
-			<action dev="bmg" type="add">
-				Added Guava to the initial
-				dependencies.
-			</action>
-			<action dev="bmg" type="add">
-				Added Bintray badge to the readme.
-			</action>
-			<action dev="bmg" type="add">
-				Added information for getting the
-				archetype from Bintray.
-			</action>
-			<action dev="bmg" type="fix">
-				Changed the default site description.
-			</action>
-			<action dev="bmg" type="fix">
-				The readme title is now correctly set.
-			</action>
-			<action dev="bmg" type="fix">
-				Corrections to the documentation and
-				site files.
-			</action>
-		</release>
-		<release version="0.3.1" date="2015-08-19" description="Changed group id">
-			<action dev="bmg" type="update">
-				Changed group id from
-				com.wandrell.archetypes to com.wandrell.maven.archetypes
-			</action>
-		</release>
-		<release version="0.3.2" date="2015-08-19"
-			description="Example project, scripts correction">
-			<action dev="bmg" type="add">
-				Added link to an example of what the
-				Archetype can create.
-			</action>
-			<action dev="bmg" type="fix">
-				Corrected deployment scripts.
-			</action>
-			<action dev="bmg" type="fix">
-				Added Javadoc link to the Maven Site on
-				the created project.
-			</action>
-		</release>
-		<release version="0.3.3" date="2015-10-16"
-			description="Corrections and prepared relocation">
-			<action dev="bmg" type="update">
-				Indicated relocation of artifact id
-				from library to library-archetype
-			</action>
-			<action dev="bmg" type="update">
-				Updated Maven Site Skin.
-			</action>
-			<action dev="bmg" type="fix">
-				Corrected headings on the generated
-				project site index.
-			</action>
-			<action dev="bmg" type="fix">
-				Corrected Travis test script for the
-				generated project.
-			</action>
-		</release>
-		<release version="0.3.4" date="2015-10-16" description="Relocation">
-			<action dev="bmg" type="update">
-				Relocated artifact id from
-				library to
-				library-archetype
-			</action>
-		</release>
-		<release version="0.4.0" date="2015-10-16" description="Fixes">
-			<action dev="bmg" type="update">
-				Changed the documentation URLs
-				variables. They are now divided into release and visit URLs.
-			</action>
-			<action dev="bmg" type="fix">
-				Raised version numbering, as the
-				previous update was bigger than the version change indicated.
-			</action>
-			<action dev="bmg" type="fix">
-				Fixed the .gitignore and .gitattributes
-				files not being copied.
-			</action>
-		</release>
-		<release version="0.4.1" date="2015-11-21"
-			description="Various updates and corrections">
-			<action dev="bmg" type="update">
-				Added comments to clearly mark and
-				divide the POM sections.
-			</action>
-			<action dev="bmg" type="update">
-				Added comments to better document the
-				POM.
-			</action>
-			<action dev="bmg" type="update">
-				Updated the plugins configuration.
-			</action>
-			<action dev="bmg" type="update">
-				Swapped the the java.version.source and
-				java.version.target variables with the actual default variables
-				maven.compiler.source and maven.compiler.target.
-			</action>
-			<action dev="bmg" type="update">
-				Added rules to the checkstyle
-				configuration.
-			</action>
-			<action dev="bmg" type="update">
-				Moved the plugin configuration files to
-				their own folder.
-			</action>
-			<action dev="bmg" type="update">
-				Made the included profiles easier to
-				extend.
-			</action>
-			<action dev="bmg" type="update">
-				Updated the Maven Site Skin.
-			</action>
-			<action dev="bmg" type="update">
-				Improved documentation and adapted it
-				to the changes.
-			</action>
-			<action dev="bmg" type="update">
-				Updated logger to Log4j2.
-			</action>
-			<action dev="bmg" type="update">
-				Changed the rule used for dependency
-				convergence.
-			</action>
-			<action dev="bmg" type="fix">
-				Main resources are no longer being
-				packaged.
-			</action>
-		</release>
-		<release version="0.4.2" date="2015-11-21" description="Small corrections">
-			<action dev="bmg" type="fix">
-				Plugin config files are copied again.
-			</action>
-		</release>
-		<release version="0.4.3" date="2015-12-2" description="Scripts and plugins updates">
-			<action dev="bmg" type="add">
-				Added dependencies analysis report.
-			</action>
-			<action dev="bmg" type="add">
-				Added distribution management report.
-			</action>
-			<action dev="bmg" type="update">
-				Updated Maven site skin.
-			</action>
-			<action dev="bmg" type="update">
-				Made the default profiles clearer.
-			</action>
-			<action dev="bmg" type="update">
-				Added properties activation to the
-				default profiles.
-			</action>
-			<action dev="bmg" type="update">
-				Deployment now skips tests.
-			</action>
-			<action dev="bmg" type="update">
-				Updated shell scripts and Travis
-				configuration to better handle errors.
-			</action>
-			<action dev="bmg" type="update">
-				Updated documentation.
-			</action>
-		</release>
-	</body>
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/changes/1.0.0 http://maven.apache.org/xsd/changes-1.0.0.xsd">
+    <properties>
+        <title>Project Changes</title>
+        <author email="programming@wandrell.com">Bernardo Martínez Garrido</author>
+    </properties>
+    <body>
+        <release version="0.1.0" date="2015-05-17" description="First release">
+            <action dev="bmg" type="update">
+                First release of the archetype.
+            </action>
+        </release>
+        <release version="0.1.1" date="2015-05-29" description="Corrections">
+            <action dev="bmg" type="update">
+                Corrected various errors on the
+                archetype files.
+            </action>
+        </release>
+        <release version="0.2.0" date="2015-06-08"
+            description="More configuration corrections">
+            <action dev="bmg" type="update">
+                The archetype is now correctly set up
+                to work with Bintray and Sonatype.
+            </action>
+            <action dev="bmg" type="fix">
+                Changes to the Maven site.
+            </action>
+            <action dev="bmg" type="fix">
+                Corrected links on the Maven site.
+            </action>
+            <action dev="bmg" type="update">
+                Improved the site documentation.
+            </action>
+            <action dev="bmg" type="update">
+                Improved the developer initial data.
+            </action>
+            <action dev="bmg" type="update">
+                Added initial projects page.
+            </action>
+            <action dev="bmg" type="update">
+                Several changes to the archetype
+                variables.
+            </action>
+        </release>
+        <release version="0.2.1" date="2015-06-17" description="Installation info">
+            <action dev="bmg" type="add">
+                Updated default installation info and
+                usage page.
+            </action>
+            <action dev="bmg" type="add">
+                Added IntelliJ Idea files to the
+                gitignore.
+            </action>
+        </release>
+        <release version="0.3.0" date="2015-08-19"
+            description="Changed the Maven Site skin, added Guava, various other corrections">
+            <action dev="bmg" type="update">
+                Changed the Maven Skin for the Docs
+                Maven Skin.
+            </action>
+            <action dev="bmg" type="add">
+                Added Guava to the initial
+                dependencies.
+            </action>
+            <action dev="bmg" type="add">
+                Added Bintray badge to the readme.
+            </action>
+            <action dev="bmg" type="add">
+                Added information for getting the
+                archetype from Bintray.
+            </action>
+            <action dev="bmg" type="fix">
+                Changed the default site description.
+            </action>
+            <action dev="bmg" type="fix">
+                The readme title is now correctly set.
+            </action>
+            <action dev="bmg" type="fix">
+                Corrections to the documentation and
+                site files.
+            </action>
+        </release>
+        <release version="0.3.1" date="2015-08-19" description="Changed group id">
+            <action dev="bmg" type="update">
+                Changed group id from
+                com.wandrell.archetypes to com.wandrell.maven.archetypes
+            </action>
+        </release>
+        <release version="0.3.2" date="2015-08-19"
+            description="Example project, scripts correction">
+            <action dev="bmg" type="add">
+                Added link to an example of what the
+                Archetype can create.
+            </action>
+            <action dev="bmg" type="fix">
+                Corrected deployment scripts.
+            </action>
+            <action dev="bmg" type="fix">
+                Added Javadoc link to the Maven Site on
+                the created project.
+            </action>
+        </release>
+        <release version="0.3.3" date="2015-10-16"
+            description="Corrections and prepared relocation">
+            <action dev="bmg" type="update">
+                Indicated relocation of artifact id
+                from library to library-archetype
+            </action>
+            <action dev="bmg" type="update">
+                Updated Maven Site Skin.
+            </action>
+            <action dev="bmg" type="fix">
+                Corrected headings on the generated
+                project site index.
+            </action>
+            <action dev="bmg" type="fix">
+                Corrected Travis test script for the
+                generated project.
+            </action>
+        </release>
+        <release version="0.3.4" date="2015-10-16" description="Relocation">
+            <action dev="bmg" type="update">
+                Relocated artifact id from
+                library to
+                library-archetype
+            </action>
+        </release>
+        <release version="0.4.0" date="2015-10-16" description="Fixes">
+            <action dev="bmg" type="update">
+                Changed the documentation URLs
+                variables. They are now divided into release and visit URLs.
+            </action>
+            <action dev="bmg" type="fix">
+                Raised version numbering, as the
+                previous update was bigger than the version change indicated.
+            </action>
+            <action dev="bmg" type="fix">
+                Fixed the .gitignore and .gitattributes
+                files not being copied.
+            </action>
+        </release>
+        <release version="0.4.1" date="2015-11-21"
+            description="Various updates and corrections">
+            <action dev="bmg" type="update">
+                Added comments to clearly mark and
+                divide the POM sections.
+            </action>
+            <action dev="bmg" type="update">
+                Added comments to better document the
+                POM.
+            </action>
+            <action dev="bmg" type="update">
+                Updated the plugins configuration.
+            </action>
+            <action dev="bmg" type="update">
+                Swapped the the java.version.source and
+                java.version.target variables with the actual default variables
+                maven.compiler.source and maven.compiler.target.
+            </action>
+            <action dev="bmg" type="update">
+                Added rules to the checkstyle
+                configuration.
+            </action>
+            <action dev="bmg" type="update">
+                Moved the plugin configuration files to
+                their own folder.
+            </action>
+            <action dev="bmg" type="update">
+                Made the included profiles easier to
+                extend.
+            </action>
+            <action dev="bmg" type="update">
+                Updated the Maven Site Skin.
+            </action>
+            <action dev="bmg" type="update">
+                Improved documentation and adapted it
+                to the changes.
+            </action>
+            <action dev="bmg" type="update">
+                Updated logger to Log4j2.
+            </action>
+            <action dev="bmg" type="update">
+                Changed the rule used for dependency
+                convergence.
+            </action>
+            <action dev="bmg" type="fix">
+                Main resources are no longer being
+                packaged.
+            </action>
+        </release>
+        <release version="0.4.2" date="2015-11-21" description="Small corrections">
+            <action dev="bmg" type="fix">
+                Plugin config files are copied again.
+            </action>
+        </release>
+        <release version="0.4.3" date="2015-12-2"
+            description="Scripts and plugins updates">
+            <action dev="bmg" type="add">
+                Added dependencies analysis report.
+            </action>
+            <action dev="bmg" type="add">
+                Added distribution management report.
+            </action>
+            <action dev="bmg" type="update">
+                Updated Maven site skin.
+            </action>
+            <action dev="bmg" type="update">
+                Made the default profiles clearer.
+            </action>
+            <action dev="bmg" type="update">
+                Added properties activation to the
+                default profiles.
+            </action>
+            <action dev="bmg" type="update">
+                Deployment now skips tests.
+            </action>
+            <action dev="bmg" type="update">
+                Updated shell scripts and Travis
+                configuration to better handle errors.
+            </action>
+            <action dev="bmg" type="update">
+                Updated documentation.
+            </action>
+        </release>
+        <release version="0.5.0" date="2015-12-7" description="Parent POM">
+            <action dev="bmg" type="update">
+                The new project now makes use
+                of the new base POM.
+            </action>
+        </release>
+    </body>
 </document>
