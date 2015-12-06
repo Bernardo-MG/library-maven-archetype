@@ -10,7 +10,7 @@ A template for creating new Maven-based libraries, ready to make use of several 
 
 ## Features
 
-- Creates a new Maven library with a fully configured POM, including features such as build validation, changes report or manifest configuration.
+- Creates a new Maven library with a fully configured POM, extending from [Wandrell's Base POM][base-pom], including features such as build validation, changes report or manifest configuration.
 - Sets up continuous integration with [Github][github], [Travis][travis] and [Bintray][bintray]. Making a distinction between releases and development versions.
 - Prepared for unit and integration tests suites. Created with [TestNG][testng] and ready to be run with [Surefire][surefire] and [Failsafe][failsafe].
 - A Maven site, using the [Docs Maven Skin][docs-skin], for sharing the project's documentation along the Javadocs and various reports which range from code quality to changes log.
@@ -95,7 +95,6 @@ If you wish to fork or modify the code, visit the [GitHub project page][scm], wh
 The project has been released under the [MIT License][license].
 
 [bintray-repo]: https://bintray.com/bernardo-mg/maven/library-maven-archetype/view
-[docs-skin]: https://github.com/Bernardo-MG/docs-maven-skin
 [sample-project]: https://github.com/Bernardo-MG/library-maven-archetype-example
 [maven-repo]: http://mvnrepository.com/artifact/com.wandrell.archetypes/library-archetype
 [testng]: http://testng.org
@@ -104,6 +103,9 @@ The project has been released under the [MIT License][license].
 [scm]: http://github.com/Bernardo-MG/library-maven-archetype
 [site-develop]: http://docs.wandrell.com/development/maven/library-maven-archetype
 [site-release]: http://docs.wandrell.com/maven/library-maven-archetype
+
+[docs-skin]: https://github.com/Bernardo-MG/docs-maven-skin
+[base-pom]: https://github.com/Bernardo-MG/base-pom
 
 [github]: https://github.com/
 [bintray]: https://bintray.com/
