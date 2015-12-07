@@ -95,14 +95,15 @@ If you wish to fork or modify the code, visit the [GitHub project page][scm], wh
 The project has been released under the [MIT License][license].
 
 [bintray-repo]: https://bintray.com/bernardo-mg/maven/library-maven-archetype/view
-[sample-project]: https://github.com/Bernardo-MG/library-maven-archetype-example
-[maven-repo]: http://mvnrepository.com/artifact/com.wandrell.archetypes/library-archetype
+[maven-repo]: http://mvnrepository.com/artifact/com.wandrell.maven.archetypes/library-archetype
 [testng]: http://testng.org
 [issues]: https://github.com/Bernardo-MG/library-maven-archetype/issues
 [license]: http://www.opensource.org/licenses/mit-license.php
 [scm]: http://github.com/Bernardo-MG/library-maven-archetype
 [site-develop]: http://docs.wandrell.com/development/maven/library-maven-archetype
 [site-release]: http://docs.wandrell.com/maven/library-maven-archetype
+
+[sample-project]: https://github.com/Bernardo-MG/library-maven-archetype-example
 
 [docs-skin]: https://github.com/Bernardo-MG/docs-maven-skin
 [base-pom]: https://github.com/Bernardo-MG/base-pom
