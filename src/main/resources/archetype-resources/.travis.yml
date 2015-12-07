@@ -19,7 +19,7 @@ before_install:
   - if [ -z "$DEPLOY" ]; then export DEPLOY=false; fi
   - if [ -z "$DEPLOY_DOCS" ]; then export DEPLOY_DOCS=false; fi
   # Sets the version type
-  - VERSION_TYPE=other
+  - export VERSION_TYPE=other
   - if [ "$TRAVIS_BRANCH" == "master" ]; then export VERSION_TYPE=release; echo $VERSION_TYPE; fi
   - if [ "$TRAVIS_BRANCH" == "develop" ]; then export VERSION_TYPE=develop; echo $VERSION_TYPE; fi
   # Scripts are set as executable
