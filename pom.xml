@@ -186,6 +186,13 @@
                 <artifactId>archetype-packaging</artifactId>
                 <version>${plugin.archetype.version}</version>
             </extension>
+            <extension>
+                <!-- Wagon SSH -->
+                <!-- Enables the use of SFTP. -->
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ssh</artifactId>
+                <version>${extension.wagon.version}</version>
+            </extension>
         </extensions>
         <pluginManagement>
             <plugins>
@@ -388,13 +395,6 @@
                         <groupId>org.apache.velocity</groupId>
                         <artifactId>velocity</artifactId>
                         <version>${plugin.site.velocity.version}</version>
-                    </dependency>
-                    <dependency>
-                        <!-- Wagon -->
-                        <!-- Enables the use of FTP. -->
-                        <groupId>org.apache.maven.wagon</groupId>
-                        <artifactId>wagon-ssh</artifactId>
-                        <version>${extension.wagon.version}</version>
                     </dependency>
                 </dependencies>
                 <configuration>
