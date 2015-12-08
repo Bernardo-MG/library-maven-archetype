@@ -187,10 +187,10 @@
                 <version>${plugin.archetype.version}</version>
             </extension>
             <extension>
-                <!-- Wagon SSH -->
-                <!-- Enables the use of SFTP. -->
+                <!-- Wagon -->
+                <!-- Enables the use of FTP. -->
                 <groupId>org.apache.maven.wagon</groupId>
-                <artifactId>wagon-ssh</artifactId>
+                <artifactId>wagon-ftp</artifactId>
                 <version>${extension.wagon.version}</version>
             </extension>
         </extensions>
