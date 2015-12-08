@@ -80,7 +80,7 @@
                 <site>
                     <id>site</id>
                     <name>Project Documentation Site</name>
-                    <url>ftp://docs.wandrell.com/library-maven-archetype</url>
+                    <url>sftp://docs.wandrell.com/library-maven-archetype</url>
                 </site>
             </distributionManagement>
         </profile>
@@ -92,7 +92,7 @@
                 <site>
                     <id>site-development</id>
                     <name>Project Development Documentation Site</name>
-                    <url>ftp://docs.wandrell.com/library-maven-archetype</url>
+                    <url>sftp://docs.wandrell.com/library-maven-archetype</url>
                 </site>
             </distributionManagement>
         </profile>
@@ -393,7 +393,7 @@
                         <!-- Wagon -->
                         <!-- Enables the use of FTP. -->
                         <groupId>org.apache.maven.wagon</groupId>
-                        <artifactId>wagon-ftp</artifactId>
+                        <artifactId>wagon-ssh</artifactId>
                         <version>${extension.wagon.version}</version>
                     </dependency>
                 </dependencies>
