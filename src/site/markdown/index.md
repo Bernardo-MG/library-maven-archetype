@@ -6,6 +6,7 @@ In this case this Archetype creates a generic Maven-based library which includes
 
 ## Features
 
+- [Wandrell's Base POM][base-pom] used as parent POM.
 - [Unit and integration test][tests] suites are run separatedly with the use of [TestNG][testng].
 - [Maven site for the project][site], using the [Docs Maven Skin][docs-skin], for creating a small documentation site.
 - [Javadocs][site-javadoc] included in the Maven site.
@@ -36,6 +37,7 @@ From the first moment the a new project is created all the usual Maven commands 
 |$ mvn clean verify site|Generating the Maven site and all the report|
 
 
+[base-pom]: https://github.com/Bernardo-MG/base-pom
 [docs-skin]: https://github.com/Bernardo-MG/docs-maven-skin
 [example-project]: https://github.com/Bernardo-MG/library-maven-archetype-example
 
