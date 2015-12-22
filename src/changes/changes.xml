@@ -234,6 +234,10 @@
         <release version="0.5.1" date="2015-12-7"
             description="Some reports now ignore generated code">
             <action dev="bmg" type="update">
+                The Javadoc report now ignores
+                generated code.
+            </action>
+            <action dev="bmg" type="update">
                 The Checkstyle report now ignores
                 generated code.
             </action>
