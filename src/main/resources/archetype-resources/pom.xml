@@ -371,8 +371,10 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <configuration>
-                    <!-- Excludes generated code -->
-                    <excludePackageNames>**/generated/**/*</excludePackageNames>
+                    <sourceFileExcludes>
+                        <!-- Excludes generated code -->
+                        <exclude>**/generated/**/*</exclude>
+                    </sourceFileExcludes>
                 </configuration>
             </plugin>
             <plugin>
