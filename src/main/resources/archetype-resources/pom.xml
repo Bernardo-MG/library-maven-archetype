@@ -376,6 +376,10 @@
                         <!-- The customized rules file -->
                         <ruleset>${project.basedir}/src/config/pmd/pmd-rules.xml</ruleset>
                     </rulesets>
+                    <excludes>
+                        <!-- Excludes generated code -->
+                        <exclude>**/generated/**/*</exclude>
+                    </excludes>
                 </configuration>
             </plugin>
         </plugins>
