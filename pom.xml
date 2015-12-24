@@ -199,27 +199,25 @@
                 <!-- The following plugins require enforcing a defined version. -->
                 <plugin>
                     <!-- Resources -->
-                    <!-- This is set here to force downgrading the plugin
-                        version, to fix the bug where the .gitignore file is not copied -->
+                    <!-- This is set here to force downgrading the plugin version, 
+                        to fix the bug where the .gitignore file is not copied -->
                     <artifactId>maven-resources-plugin</artifactId>
                     <version>${plugin.resources.version}</version>
                 </plugin>
-                <!-- The following plugins always appear on the plugins list,
-                    even when they have not been added to the project. -->
-                <!-- This configuration block allows keeping them always
-                    updated. -->
+                <!-- The following plugins always appear on the plugins list, even 
+                    when they have not been added to the project. -->
+                <!-- This configuration block allows keeping them always updated. -->
                 <plugin>
                     <!-- Dependency -->
-                    <!-- Takes care of dependencies, both copying and showing
-                        their info. -->
+                    <!-- Takes care of dependencies, both copying and showing their 
+                        info. -->
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-dependency-plugin</artifactId>
                     <version>${plugin.dependency.version}</version>
                 </plugin>
                 <plugin>
                     <!-- Assembly -->
-                    <!-- Builds a distributable file from all the project
-                        components. -->
+                    <!-- Builds a distributable file from all the project components. -->
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-assembly-plugin</artifactId>
                     <version>${plugin.assembly.version}</version>
@@ -277,8 +275,8 @@
             </plugin>
             <plugin>
                 <!-- Enforcer -->
-                <!-- Stops the project from being built if it does not comply
-                    with a set of rules. -->
+                <!-- Stops the project from being built if it does not comply with 
+                    a set of rules. -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
                 <version>${plugin.enforcer.version}</version>
@@ -291,8 +289,8 @@
                         <configuration>
                             <rules>
                                 <!-- Dependencies convergence. -->
-                                <!-- This variant of the rule requires less
-                                    configuration, making use of Maven's dependency resolver. -->
+                                <!-- This variant of the rule requires less configuration, 
+                                    making use of Maven's dependency resolver. -->
                                 <requireUpperBoundDeps />
                                 <!-- Not obsolete JDK. -->
                                 <requireJavaVersion>
@@ -301,7 +299,8 @@
                                 <!-- No plugin without version. -->
                                 <requirePluginVersions>
                                     <message>Best Practice is to always
-                                        define plugin versions.</message>
+                                        define
+                                        plugin versions.</message>
                                     <banLatest>true</banLatest>
                                     <banRelease>true</banRelease>
                                     <banSnapshots>true</banSnapshots>
@@ -311,19 +310,23 @@
                                 <requireProperty>
                                     <property>project.build.sourceEncoding</property>
                                     <message>Indicate the source
-                                        encoding for the project.</message>
+                                        encoding for the
+                                        project.</message>
                                     <regex>.*</regex>
                                     <regexMessage>It should be a valid
-                                        text encoding format.</regexMessage>
+                                        text
+                                        encoding format.</regexMessage>
                                 </requireProperty>
                                 <!-- Report output encoding should be set. -->
                                 <requireProperty>
                                     <property>project.reporting.outputEncoding</property>
                                     <message>Indicate the encoding for
-                                        the reporting output.</message>
+                                        the
+                                        reporting output.</message>
                                     <regex>.*</regex>
                                     <regexMessage>It should be a valid
-                                        text encoding format.</regexMessage>
+                                        text
+                                        encoding format.</regexMessage>
                                 </requireProperty>
                                 <!-- Source JDK should be set. -->
                                 <requireProperty>
@@ -331,7 +334,8 @@
                                     <message>Indicate the source JDK.</message>
                                     <regex>\d+\.\d+[\.\d+]?.*</regex>
                                     <regexMessage>It should be a valid
-                                        JDK version.</regexMessage>
+                                        JDK
+                                        version.</regexMessage>
                                 </requireProperty>
                                 <!-- Target JDK should be set. -->
                                 <requireProperty>
@@ -339,7 +343,8 @@
                                     <message>Indicate the target JDK.</message>
                                     <regex>\d+\.\d+[\.\d+]?.*</regex>
                                     <regexMessage>It should be a valid
-                                        JDK version.</regexMessage>
+                                        JDK
+                                        version.</regexMessage>
                                 </requireProperty>
                                 <!-- Manifest name should be given. -->
                                 <requireProperty>
@@ -421,8 +426,7 @@
             <plugin>
                 <!-- Deploy -->
                 <!-- Takes care of the deployment phase -->
-                <!-- It is set to generate and deploy a POM file along the
-                    artifact -->
+                <!-- It is set to generate and deploy a POM file along the artifact -->
                 <artifactId>maven-deploy-plugin</artifactId>
                 <version>${plugin.deploy.version}</version>
                 <executions>
