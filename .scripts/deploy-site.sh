@@ -15,8 +15,6 @@
 # - PULL_REQUEST: boolean, indicates if this is a pull request, should be false for deployment
 # - VERSION_TYPE: string, the type of version of the code. One of 'release', 'develop' or 'other'.
 
-set -o nounset
-set -e
 
 if [ "$DEPLOY_DOCS" == "true" ] && [ "$PULL_REQUEST" == "false" ] && [ "$VERSION_TYPE" != "other" ]; then
 
