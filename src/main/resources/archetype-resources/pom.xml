@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-	<modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
     <!-- ********************************************** -->
     <!-- ****************** BASE POM ****************** -->
@@ -14,254 +14,255 @@
         <version>0.1.0</version>
     </parent>
 
-	<!-- ********************************************** -->
-	<!-- **************** PROJECT INFO **************** -->
-	<!-- ********************************************** -->
+    <!-- ********************************************** -->
+    <!-- **************** PROJECT INFO **************** -->
+    <!-- ********************************************** -->
 
-	<groupId>${groupId}</groupId>
-	<artifactId>${artifactId}</artifactId>
-	<version>0.1.0-SNAPSHOT</version>
-	<packaging>jar</packaging>
+    <groupId>${groupId}</groupId>
+    <artifactId>${artifactId}</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
-	<name>${projectName}</name>
-	<description>${projectDescription}</description>
-	<url>https://github.com/${repoUserId}/${artifactId}</url>
-	<inceptionYear>2015</inceptionYear>
+    <name>${projectName}</name>
+    <description>${projectDescription}</description>
+    <url>https://github.com/${repoUserId}/${artifactId}</url>
+    <inceptionYear>2015</inceptionYear>
 
-	<licenses>
-		<license>
-			<name>MIT License</name>
-			<url>http://www.opensource.org/licenses/mit-license.php</url>
-			<distribution>repo</distribution>
-		</license>
-	</licenses>
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
-	<!-- ********************************************** -->
-	<!-- ********* INFRASTRUCTURE AND SERVICES ******** -->
-	<!-- ********************************************** -->
+    <!-- ********************************************** -->
+    <!-- ********* INFRASTRUCTURE AND SERVICES ******** -->
+    <!-- ********************************************** -->
 
-	<scm>
-		<connection>scm:git:https://github.com/${repoUserId}/${artifactId}.git</connection>
-		<developerConnection>scm:git:https://github.com/${repoUserId}/${artifactId}.git</developerConnection>
-		<tag>head</tag>
-		<url>https://www.github.com/${repoUserId}/${artifactId}</url>
-	</scm>
+    <scm>
+        <connection>scm:git:https://github.com/${repoUserId}/${artifactId}.git</connection>
+        <developerConnection>scm:git:https://github.com/${repoUserId}/${artifactId}.git</developerConnection>
+        <tag>head</tag>
+        <url>https://www.github.com/${repoUserId}/${artifactId}</url>
+    </scm>
 
-	<issueManagement>
-		<system>GitHub</system>
-		<url>https://www.github.com/${repoUserId}/${artifactId}/issues</url>
-	</issueManagement>
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://www.github.com/${repoUserId}/${artifactId}/issues</url>
+    </issueManagement>
 
-	<ciManagement>
-		<system>Travis CI</system>
-		<url>https://travis-ci.org/${repoUserId}/${artifactId}</url>
-		<notifiers />
-	</ciManagement>
+    <ciManagement>
+        <system>Travis CI</system>
+        <url>https://travis-ci.org/${repoUserId}/${artifactId}</url>
+        <notifiers />
+    </ciManagement>
 
-	<distributionManagement>
-		<repository>
-			<uniqueVersion>false</uniqueVersion>
-			<id>releases</id>
-			<name>Releases Repository</name>
-			<url>https://api.bintray.com/maven/${repoUserId}/maven/${artifactId}</url>
-		</repository>
-		<snapshotRepository>
-			<uniqueVersion>false</uniqueVersion>
-			<id>snapshots</id>
-			<name>Snapshots Repository</name>
-			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-		</snapshotRepository>
-	</distributionManagement>
+    <distributionManagement>
+        <repository>
+            <uniqueVersion>false</uniqueVersion>
+            <id>releases</id>
+            <name>Releases Repository</name>
+            <url>https://api.bintray.com/maven/${repoUserId}/maven/${artifactId}</url>
+        </repository>
+        <snapshotRepository>
+            <uniqueVersion>false</uniqueVersion>
+            <id>snapshots</id>
+            <name>Snapshots Repository</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
-	<!-- ********************************************** -->
-	<!-- ****************** PROFILES ****************** -->
-	<!-- ********************************************** -->
+    <!-- ********************************************** -->
+    <!-- ****************** PROFILES ****************** -->
+    <!-- ********************************************** -->
 
-	<profiles>
-		<profile>
-			<!-- Profile for the Eclipse Maven plugin -->
-			<!-- Sets the POM so this plugin does not give the usual unregistered 
-				goals errors -->
-			<!-- It will be activated automatically on Eclipse if this has the m2e 
-				plugin, by detecting the version property -->
-			<id>eclipse-maven</id>
-			<activation>
-				<property>
-					<name>m2e.version</name>
-				</property>
-			</activation>
-			<build>
-				<pluginManagement>
-					<plugins>
-						<plugin>
-							<!-- m2e lifecycle mapping -->
-							<!-- This is used to configure the Maven plugin for Eclipse. -->
-							<!-- Among other things, it allows registering goals, which Eclipse 
-								would otherwise reject. -->
-							<!-- It has no real effect on Maven. -->
-							<groupId>org.eclipse.m2e</groupId>
-							<artifactId>lifecycle-mapping</artifactId>
-							<version>${plugin.lifecycle.version}</version>
-							<configuration>
-								<lifecycleMappingMetadata>
-									<pluginExecutions>
-										<pluginExecution>
-											<!-- jacoco plugin configuration -->
-											<!-- Fixes the errors with Eclipse not recognizing the plugin 
-												configuration -->
-											<pluginExecutionFilter>
-												<groupId>org.jacoco</groupId>
-												<artifactId>jacoco-maven-plugin</artifactId>
-												<versionRange>[0.5,)</versionRange>
-												<goals>
-													<!-- The 'prepare-agent' goal is registered to m2e. -->
-													<goal>prepare-agent</goal>
-												</goals>
-											</pluginExecutionFilter>
-											<action>
-												<!-- As m2e doesn't know what to do with jacoco, it is ignored 
-													to avoid error warnings. -->
-												<ignore />
-											</action>
-										</pluginExecution>
-									</pluginExecutions>
-								</lifecycleMappingMetadata>
-								<downloadSources>true</downloadSources>
-								<downloadJavadocs>true</downloadJavadocs>
-							</configuration>
-						</plugin>
-					</plugins>
-				</pluginManagement>
-			</build>
-		</profile>
-		<profile>
-			<!-- Release site deployment profile -->
-			<!-- Sets the site repository to point to the releases repo -->
-			<id>deploy-site-release</id>
-			<activation>
-				<!-- Active by default so the repository appears in the reports -->
-				<activeByDefault>true</activeByDefault>
-			</activation>
-			<distributionManagement>
-				<site>
-					<id>site</id>
-					<name>Project Documentation Site</name>
-					<url>${urlSiteDeployRelease}/${artifactId}</url>
-				</site>
-			</distributionManagement>
-		</profile>
-		<profile>
-			<!-- Development site deployment profile -->
-			<!-- Sets the site repository to point to the development repo -->
-			<id>deploy-site-development</id>
-			<distributionManagement>
-				<site>
-					<id>site-development</id>
-					<name>Project Development Documentation Site</name>
-					<url>${urlSiteDeployDevelop}/${artifactId}</url>
-				</site>
-			</distributionManagement>
-		</profile>
-		<profile>
-			<!-- Deployment profile -->
-			<!-- Sets ups the environment for deployment -->
-			<id>deployment</id>
-			<properties>
+    <profiles>
+        <profile>
+            <!-- Profile for the Eclipse Maven plugin -->
+            <!-- Sets the POM so this plugin does not give the usual unregistered 
+                goals errors -->
+            <!-- It will be activated automatically on Eclipse if this has the m2e 
+                plugin, by detecting the version property -->
+            <id>eclipse-maven</id>
+            <activation>
+                <property>
+                    <name>m2e.version</name>
+                </property>
+            </activation>
+            <build>
+                <pluginManagement>
+                    <plugins>
+                        <plugin>
+                            <!-- m2e lifecycle mapping -->
+                            <!-- This is used to configure the Maven plugin for Eclipse. -->
+                            <!-- Among other things, it allows registering goals, 
+                                which Eclipse would otherwise reject. -->
+                            <!-- It has no real effect on Maven. -->
+                            <groupId>org.eclipse.m2e</groupId>
+                            <artifactId>lifecycle-mapping</artifactId>
+                            <version>${plugin.lifecycle.version}</version>
+                            <configuration>
+                                <lifecycleMappingMetadata>
+                                    <pluginExecutions>
+                                        <pluginExecution>
+                                            <!-- jacoco plugin configuration -->
+                                            <!-- Fixes the errors with Eclipse not 
+                                                recognizing the plugin configuration -->
+                                            <pluginExecutionFilter>
+                                                <groupId>org.jacoco</groupId>
+                                                <artifactId>jacoco-maven-plugin</artifactId>
+                                                <versionRange>[0.5,)</versionRange>
+                                                <goals>
+                                                    <!-- The 'prepare-agent' goal 
+                                                        is registered to m2e. -->
+                                                    <goal>prepare-agent</goal>
+                                                </goals>
+                                            </pluginExecutionFilter>
+                                            <action>
+                                                <!-- As m2e doesn't know what to 
+                                                    do with jacoco, it is ignored to avoid error warnings. -->
+                                                <ignore />
+                                            </action>
+                                        </pluginExecution>
+                                    </pluginExecutions>
+                                </lifecycleMappingMetadata>
+                                <downloadSources>true</downloadSources>
+                                <downloadJavadocs>true</downloadJavadocs>
+                            </configuration>
+                        </plugin>
+                    </plugins>
+                </pluginManagement>
+            </build>
+        </profile>
+        <profile>
+            <!-- Release site deployment profile -->
+            <!-- Sets the site repository to point to the releases repo -->
+            <id>deploy-site-release</id>
+            <activation>
+                <!-- Active by default so the repository appears in the reports -->
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <distributionManagement>
+                <site>
+                    <id>site</id>
+                    <name>Project Documentation Site</name>
+                    <url>${urlSiteDeployRelease}/${artifactId}</url>
+                </site>
+            </distributionManagement>
+        </profile>
+        <profile>
+            <!-- Development site deployment profile -->
+            <!-- Sets the site repository to point to the development repo -->
+            <id>deploy-site-development</id>
+            <distributionManagement>
+                <site>
+                    <id>site-development</id>
+                    <name>Project Development Documentation Site</name>
+                    <url>${urlSiteDeployDevelop}/${artifactId}</url>
+                </site>
+            </distributionManagement>
+        </profile>
+        <profile>
+            <!-- Deployment profile -->
+            <!-- Sets ups the environment for deployment -->
+            <id>deployment</id>
+            <properties>
                 <!-- Tests are skipped -->
-				<maven.test.skip>true</maven.test.skip>
-			</properties>
-		</profile>
-	</profiles>
+                <maven.test.skip>true</maven.test.skip>
+            </properties>
+        </profile>
+    </profiles>
 
-	<!-- ********************************************** -->
-	<!-- *********** ORGANIZATION AND MEMBERS ********* -->
-	<!-- ********************************************** -->
+    <!-- ********************************************** -->
+    <!-- *********** ORGANIZATION AND MEMBERS ********* -->
+    <!-- ********************************************** -->
 
-	<organization>
-		<name>${developerName}</name>
-		<url>${developerUrl}</url>
-	</organization>
+    <organization>
+        <name>${developerName}</name>
+        <url>${developerUrl}</url>
+    </organization>
 
-	<developers>
-		<developer>
-			<id>${developerId}</id>
-			<name>${developerName}</name>
-			<email>${developerMail}</email>
-			<url>${developerUrl}</url>
-			<organization>${developerName}</organization>
-			<organizationUrl>${developerUrl}</organizationUrl>
-			<roles>
-				<role>Developer</role>
-			</roles>
-			<timezone>+1</timezone>
-			<properties />
-		</developer>
-	</developers>
+    <developers>
+        <developer>
+            <id>${developerId}</id>
+            <name>${developerName}</name>
+            <email>${developerMail}</email>
+            <url>${developerUrl}</url>
+            <organization>${developerName}</organization>
+            <organizationUrl>${developerUrl}</organizationUrl>
+            <roles>
+                <role>Developer</role>
+            </roles>
+            <timezone>+1</timezone>
+            <properties />
+        </developer>
+    </developers>
 
-	<!-- ********************************************** -->
-	<!-- **************** PROPERTIES ****************** -->
-	<!-- ********************************************** -->
+    <!-- ********************************************** -->
+    <!-- **************** PROPERTIES ****************** -->
+    <!-- ********************************************** -->
 
-	<properties>
-		<!-- Manifest data -->
-		<manifest.name>${packageInPathFormat}</manifest.name>
-		<!-- Dependencies versions -->
-		<guava.version>18.0</guava.version>
-		<log4j.version>2.4.1</log4j.version>
-		<mockito.version>1.10.19</mockito.version>
-		<testng.version>6.9.9</testng.version>
-		<!-- Plugins versions -->
+    <properties>
+        <!-- Manifest data -->
+        <manifest.name>${packageInPathFormat}</manifest.name>
+        <!-- Dependencies versions -->
+        <guava.version>18.0</guava.version>
+        <log4j.version>2.4.1</log4j.version>
+        <mockito.version>1.10.19</mockito.version>
+        <testng.version>6.9.9</testng.version>
+        <!-- Plugins versions -->
         <plugin.changes.version>2.11</plugin.changes.version>
         <plugin.site.velocity.version>1.7</plugin.site.velocity.version>
-		<!-- Maven Site -->
-		<site.skin.version>0.2.1</site.skin.version>
-		<bintrayURL>https://bintray.com/${repoUserId}/maven/${artifactId}/view</bintrayURL>
-		<mavenURL>http://mvnrepository.com/artifact/${groupId}/${artifactId}</mavenURL>
-	</properties>
+        <!-- Maven Site -->
+        <site.skin.version>0.2.1</site.skin.version>
+        <bintrayURL>https://bintray.com/${repoUserId}/maven/${artifactId}/view</bintrayURL>
+        <mavenURL>http://mvnrepository.com/artifact/${groupId}/${artifactId}</mavenURL>
+    </properties>
 
-	<!-- ********************************************** -->
-	<!-- *************** DEPENDENCIES ***************** -->
-	<!-- ********************************************** -->
+    <!-- ********************************************** -->
+    <!-- *************** DEPENDENCIES ***************** -->
+    <!-- ********************************************** -->
 
-	<dependencies>
-		<dependency>
-			<!-- Guava -->
-			<groupId>com.google.guava</groupId>
-			<artifactId>guava</artifactId>
-			<version>${guava.version}</version>
-		</dependency>
-		<!-- ============================================== -->
-		<!-- ======= TEST ENVIRONMENT DEPENDENCIES ======== -->
-		<!-- ============================================== -->
-		<dependency>
-			<!-- Log4j core -->
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-core</artifactId>
-			<version>${log4j.version}</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<!-- Log4j SLF4J Bridge -->
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-slf4j-impl</artifactId>
-			<version>${log4j.version}</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<!-- Mockito -->
-			<groupId>org.mockito</groupId>
-			<artifactId>mockito-all</artifactId>
-			<version>${mockito.version}</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<!-- TestNG -->
-			<groupId>org.testng</groupId>
-			<artifactId>testng</artifactId>
-			<version>${testng.version}</version>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
+    <dependencies>
+        <dependency>
+            <!-- Guava -->
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+        </dependency>
+        <!-- ============================================== -->
+        <!-- ======= TEST ENVIRONMENT DEPENDENCIES ======== -->
+        <!-- ============================================== -->
+        <dependency>
+            <!-- Log4j core -->
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4j.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <!-- Log4j SLF4J Bridge -->
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>${log4j.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <!-- Mockito -->
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>${mockito.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <!-- TestNG -->
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${testng.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
     <!-- ********************************************** -->
     <!-- ******************* BUILD ******************** -->
@@ -360,18 +361,37 @@
                 <configuration>
                     <!-- The customized rules file -->
                     <configLocation>${project.basedir}/src/config/checkstyle/checkstyle-rules.xml</configLocation>
+                    <!-- Excludes generated code -->
+                    <excludes>**/generated/**/*</excludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <!-- Javadoc -->
+                <!-- Generates the javadocs -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <configuration>
+                    <sourceFileExcludes>
+                        <!-- Excludes generated code -->
+                        <exclude>**/generated/**/*</exclude>
+                    </sourceFileExcludes>
                 </configuration>
             </plugin>
             <plugin>
                 <!-- PMD -->
-                <!-- Checks that the code complies with a series of code 
-                    quality rules -->
+                <!-- Checks that the code complies with a series of code quality 
+                    rules -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
                 <configuration>
                     <rulesets>
+                        <!-- The customized rules file -->
                         <ruleset>${project.basedir}/src/config/pmd/pmd-rules.xml</ruleset>
                     </rulesets>
+                    <excludes>
+                        <!-- Excludes generated code -->
+                        <exclude>**/generated/**/*</exclude>
+                    </excludes>
                 </configuration>
             </plugin>
         </plugins>

@@ -1,5 +1,4 @@
-<document xmlns="http://maven.apache.org/changes/1.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<document xmlns="http://maven.apache.org/changes/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/changes/1.0.0 http://maven.apache.org/xsd/changes-1.0.0.xsd">
     <properties>
         <title>Project Changes</title>
@@ -17,8 +16,7 @@
                 archetype files.
             </action>
         </release>
-        <release version="0.2.0" date="2015-06-08"
-            description="More configuration corrections">
+        <release version="0.2.0" date="2015-06-08" description="More configuration corrections">
             <action dev="bmg" type="update">
                 The archetype is now correctly set up
                 to work with Bintray and Sonatype.
@@ -97,7 +95,8 @@
                 Corrected deployment scripts.
             </action>
             <action dev="bmg" type="fix">
-                Added Javadoc link to the Maven Site on
+                Added Javadoc link to the Maven Site
+                on
                 the created project.
             </action>
         </release>
@@ -136,12 +135,12 @@
                 previous update was bigger than the version change indicated.
             </action>
             <action dev="bmg" type="fix">
-                Fixed the .gitignore and .gitattributes
+                Fixed the .gitignore and
+                .gitattributes
                 files not being copied.
             </action>
         </release>
-        <release version="0.4.1" date="2015-11-21"
-            description="Various updates and corrections">
+        <release version="0.4.1" date="2015-11-21" description="Various updates and corrections">
             <action dev="bmg" type="update">
                 Added comments to clearly mark and
                 divide the POM sections.
@@ -154,8 +153,10 @@
                 Updated the plugins configuration.
             </action>
             <action dev="bmg" type="update">
-                Swapped the the java.version.source and
-                java.version.target variables with the actual default variables
+                Swapped the the java.version.source
+                and
+                java.version.target variables with the actual default
+                variables
                 maven.compiler.source and maven.compiler.target.
             </action>
             <action dev="bmg" type="update">
@@ -163,7 +164,8 @@
                 configuration.
             </action>
             <action dev="bmg" type="update">
-                Moved the plugin configuration files to
+                Moved the plugin configuration files
+                to
                 their own folder.
             </action>
             <action dev="bmg" type="update">
@@ -194,8 +196,7 @@
                 Plugin config files are copied again.
             </action>
         </release>
-        <release version="0.4.3" date="2015-12-2"
-            description="Scripts and plugins updates">
+        <release version="0.4.3" date="2015-12-2" description="Scripts and plugins updates">
             <action dev="bmg" type="add">
                 Added dependencies analysis report.
             </action>
@@ -226,7 +227,24 @@
         <release version="0.5.0" date="2015-12-7" description="Parent POM">
             <action dev="bmg" type="update">
                 The new project now makes use
-                of the new base POM.
+                of the
+                new base POM.
+            </action>
+        </release>
+        <release version="0.5.1" date="2015-12-24"
+            description="Some reports now ignore generated code by default">
+            <action dev="bmg" type="update">
+                The Javadoc report now ignores
+                generated code.
+            </action>
+            <action dev="bmg" type="update">
+                The Checkstyle report now ignores
+                generated code.
+            </action>
+            <action dev="bmg" type="update">
+                The PMD report now ignores
+                generated
+                code.
             </action>
         </release>
     </body>
