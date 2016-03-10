@@ -213,7 +213,7 @@
         <plugin.changes.version>2.11</plugin.changes.version>
         <plugin.site.velocity.version>1.7</plugin.site.velocity.version>
         <!-- Maven Site -->
-        <site.skin.version>0.2.1</site.skin.version>
+        <site.skin.version>0.2.4</site.skin.version>
         <bintrayURL>https://bintray.com/${repoUserId}/maven/${artifactId}/view</bintrayURL>
         <mavenURL>http://mvnrepository.com/artifact/${groupId}/${artifactId}</mavenURL>
     </properties>
