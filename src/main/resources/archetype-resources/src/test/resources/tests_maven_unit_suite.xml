@@ -2,10 +2,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="${artifactId}Unit" parallel="instances" thread-count="4">
 
-	<test name="${artifactId}_unit">
-		<packages>
-			<package name="${package}.testing.test.unit.*" />
-		</packages>
-	</test>
+    <test name="${artifactId}_unit">
+        <packages>
+            <package name="${package}.testing.test.unit.*" />
+        </packages>
+    </test>
 
 </suite>

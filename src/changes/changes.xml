@@ -247,5 +247,10 @@
                 code.
             </action>
         </release>
+        <release version="0.5.2" date="2016-3-10" description="Cleanup">
+            <action dev="bmg" type="update">
+                Changed tabs for spaces.
+            </action>
+        </release>
     </body>
 </document>

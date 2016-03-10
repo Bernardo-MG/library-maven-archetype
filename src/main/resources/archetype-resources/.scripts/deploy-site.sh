@@ -21,9 +21,9 @@ set -e
 if [ "$DEPLOY_DOCS" == "true" ] && [ "$PULL_REQUEST" == "false" ] && [ "$VERSION_TYPE" != "other" ]; then
 
    echo "Deploying Maven site"
-
+   
    mvn site site:deploy -P deployment --settings ~/settings.xml > site_output.txt
-	  
+   
    head -50 site_output.txt
    echo " "
    echo "(...)"
