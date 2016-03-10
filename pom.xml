@@ -199,17 +199,17 @@
                 <!-- The following plugins require enforcing a defined version. -->
                 <plugin>
                     <!-- Resources -->
-                    <!-- This is set here to force downgrading the plugin version, 
+                    <!-- This is set here to force downgrading the plugin version,
                         to fix the bug where the .gitignore file is not copied -->
                     <artifactId>maven-resources-plugin</artifactId>
                     <version>${plugin.resources.version}</version>
                 </plugin>
-                <!-- The following plugins always appear on the plugins list, even 
+                <!-- The following plugins always appear on the plugins list, even
                     when they have not been added to the project. -->
                 <!-- This configuration block allows keeping them always updated. -->
                 <plugin>
                     <!-- Dependency -->
-                    <!-- Takes care of dependencies, both copying and showing their 
+                    <!-- Takes care of dependencies, both copying and showing their
                         info. -->
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-dependency-plugin</artifactId>
@@ -275,7 +275,7 @@
             </plugin>
             <plugin>
                 <!-- Enforcer -->
-                <!-- Stops the project from being built if it does not comply with 
+                <!-- Stops the project from being built if it does not comply with
                     a set of rules. -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
@@ -289,7 +289,7 @@
                         <configuration>
                             <rules>
                                 <!-- Dependencies convergence. -->
-                                <!-- This variant of the rule requires less configuration, 
+                                <!-- This variant of the rule requires less configuration,
                                     making use of Maven's dependency resolver. -->
                                 <requireUpperBoundDeps />
                                 <!-- Not obsolete JDK. -->
