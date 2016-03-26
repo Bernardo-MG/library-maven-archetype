@@ -247,10 +247,13 @@
                 code.
             </action>
         </release>
-        <release version="0.5.2" date="2015-01-07" description="Fixed minor problems">
+        <release version="0.5.2" date="In development" description="Fixed minor problems">
             <action dev="bmg" type="fix">
                 The Log4J file for the tests no longer
                 gives a missing grammar constraints file warning.
+            </action>
+            <action dev="bmg" type="update">
+                Shortened the tests class path.
             </action>
             <action dev="bmg" type="update">
                 Changed tabs for spaces.

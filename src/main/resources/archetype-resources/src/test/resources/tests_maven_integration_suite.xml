@@ -4,7 +4,7 @@
 
     <test name="${artifactId}_integration">
         <packages>
-            <package name="${package}.testing.test.integration.*" />
+            <package name="${package}.test.integration.*" />
         </packages>
     </test>
 

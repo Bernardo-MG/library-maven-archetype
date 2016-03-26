@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 /**
- * Provides placeholder integration tests.
+ * Provides placeholder unit tests.
  */
-package ${package}.testing.test.integration;
+package ${package}.test.unit;
 
