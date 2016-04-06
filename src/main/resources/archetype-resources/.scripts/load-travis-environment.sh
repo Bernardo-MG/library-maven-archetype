@@ -21,9 +21,6 @@
 # The following environmental variables will be set by the script:
 # - VERSION_TYPE: string, indicates if this is a release or development version
 
-set +o nounset
-set -a
-
 # Flag to know if this is a pull request
 export PULL_REQUEST=$TRAVIS_PULL_REQUEST
 
@@ -49,5 +46,3 @@ echo "PULL_REQUEST: $PULL_REQUEST";
 echo "VERSION_TYPE: $VERSION_TYPE";
 echo "DEPLOY: $DEPLOY";
 echo "DEPLOY_DOCS: $DEPLOY_DOCS";
-
-exit 0
