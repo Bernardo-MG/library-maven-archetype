@@ -5,6 +5,10 @@
 # It is prepared for the Travis CI service, and will set up the environmental
 # variables for all the CI procedure, but mainly for deployment.
 #
+# As this script will set environmetal variables it should be run as part of the
+# parent shell commands by using the 'source' command. For this reason no value is
+# returned, and the 'set' command is not used.
+#
 # These variables will be used by the other scripts for flow control. Meaning
 # that they will be used to know if the other scripts will be executed, and
 # how.
