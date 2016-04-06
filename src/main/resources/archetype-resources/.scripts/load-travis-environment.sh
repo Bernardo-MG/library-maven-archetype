@@ -45,9 +45,9 @@ elif [ "$TRAVIS_BRANCH" == "develop" ]; then
 fi
 
 echo "CI environmental variables set:";
-echo "PULL_REQUEST: ${env.PULL_REQUEST}";
-echo "VERSION_TYPE: ${env.VERSION_TYPE}";
-echo "DEPLOY: ${env.DEPLOY}";
-echo "DEPLOY_DOCS: ${env.DEPLOY_DOCS}";
+echo "PULL_REQUEST: $PULL_REQUEST";
+echo "VERSION_TYPE: $VERSION_TYPE";
+echo "DEPLOY: $DEPLOY";
+echo "DEPLOY_DOCS: $DEPLOY_DOCS";
 
 exit 0
