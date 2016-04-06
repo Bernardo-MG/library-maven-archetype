@@ -247,7 +247,12 @@
                 code.
             </action>
         </release>
-        <release version="0.5.2" date="In development" description="Fixed minor problems">
+        <release version="0.6.0" date="In development"
+            description="CI environment setup and minor fixes">
+            <action dev="bmg" type="add">
+                Travis CI environment variables are
+                now set with the help of a script.
+            </action>
             <action dev="bmg" type="fix">
                 The Log4J file for the tests no longer
                 gives a missing grammar constraints file warning.

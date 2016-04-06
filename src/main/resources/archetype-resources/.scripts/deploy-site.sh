@@ -1,5 +1,6 @@
 #!/bin/bash
-# This script deploys the Maven site.
+#
+# Deploys the Maven site.
 #
 # Make sure you have the deployment configuration ready before using it, including
 # the environment variables which will indicate if the script is to be run or not.
@@ -21,21 +22,21 @@ set -e
 if [ "$DEPLOY_DOCS" == "true" ] && [ "$PULL_REQUEST" == "false" ] && [ "$VERSION_TYPE" != "other" ]; then
 
    echo "Deploying Maven site"
-   
+
    mvn site site:deploy -P deployment --settings ~/settings.xml > site_output.txt
-   
+
    head -50 site_output.txt
    echo " "
    echo "(...)"
    echo " "
    tail -50 site_output.txt
-   
+
    exit 0
 
 else
 
    echo "Maven site won't be deployed"
-   
+
    exit 0
 
 fi
