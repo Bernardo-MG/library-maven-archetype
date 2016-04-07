@@ -15,9 +15,8 @@
                 Archetype</descriptionUrl>
             <twitterSite>@Wandrell_BMG</twitterSite>
             <interpreters>
-                <interpreter>JDK 7</interpreter>
                 <interpreter>JDK 8</interpreter>
-                <interpreter>OpenJDK 7</interpreter>
+                <interpreter>JDK 7</interpreter>
             </interpreters>
             <releaseRepositories>
                 <releaseRepository>
