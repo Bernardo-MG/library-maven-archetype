@@ -247,7 +247,7 @@
                 code.
             </action>
         </release>
-        <release version="0.6.0" date="2016-04-06"
+        <release version="0.6.0" date="2016-04-11"
             description="CI environment setup and minor fixes">
             <action dev="bmg" type="add">
                 Travis CI environment variables are
@@ -256,6 +256,9 @@
             <action dev="bmg" type="fix">
                 The Log4J file for the tests no longer
                 gives a missing grammar constraints file warning.
+            </action>
+            <action dev="bmg" type="update">
+                Updated parent POM version.
             </action>
             <action dev="bmg" type="update">
                 Shortened the tests class path.
