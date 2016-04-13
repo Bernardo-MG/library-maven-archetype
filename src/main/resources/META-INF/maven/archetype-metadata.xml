@@ -10,6 +10,9 @@
         <requiredProperty key="projectDescription">
             <defaultValue>A Maven project created from the library archetype.</defaultValue>
         </requiredProperty>
+        <requiredProperty key="currentYear">
+            <defaultValue>2016</defaultValue>
+        </requiredProperty>
         <requiredProperty key="developerId">
             <defaultValue>bmg</defaultValue>
         </requiredProperty>

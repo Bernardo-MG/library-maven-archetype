@@ -5,7 +5,7 @@
         <author email="${developerMail}">${developerName}</author>
     </properties>
     <body>
-        <release version="0.1.0" date="2016-01-01" description="First release">
+        <release version="${version}" date="${currentYear}-01-01" description="First release">
             <action dev="${developerId}" type="update">
                 First release of the library.
             </action>

@@ -247,7 +247,7 @@
                 code.
             </action>
         </release>
-        <release version="0.6.0" date="2016-04-11"
+        <release version="0.6.0" date="2016-04-13"
             description="CI environment setup, Findbugs exclusions and minor fixes">
             <action dev="bmg" type="add">
                 Travis CI environment variables are
@@ -256,9 +256,15 @@
             <action dev="bmg" type="add">
                 Included exclusion patterns for Findbugs.
             </action>
+            <action dev="bmg" type="add">
+                The current year is now set through a parameter.
+            </action>
             <action dev="bmg" type="fix">
                 The Log4J file for the tests no longer
                 gives a missing grammar constraints file warning.
+            </action>
+            <action dev="bmg" type="fix">
+                The initial version is set correctly.
             </action>
             <action dev="bmg" type="update">
                 Updated parent POM version.
