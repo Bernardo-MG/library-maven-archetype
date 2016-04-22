@@ -254,10 +254,16 @@
                 now set with the help of a script.
             </action>
             <action dev="bmg" type="add">
-                Included exclusion patterns for Findbugs.
+                Included exclusion patterns for
+                Findbugs.
             </action>
             <action dev="bmg" type="add">
-                The current year is now set through a parameter.
+                The current year is now set through a
+                parameter.
+            </action>
+            <action dev="bmg" type="fix">
+                The javadoc development and release
+                URLs in the readme were swapped.
             </action>
             <action dev="bmg" type="fix">
                 The Log4J file for the tests no longer
