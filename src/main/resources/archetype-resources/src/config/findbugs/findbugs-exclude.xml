@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
 <FindBugsFilter>
    <Match>
-      <!-- Ignores generated packages -->
       <Or>
-         <Package name="~.*\.generated\..*" />
+         <!-- Ignores generated packages -->
+         <Package name="~.*\.generated\.*" />
       </Or>
    </Match>
 </FindBugsFilter>
