@@ -37,7 +37,7 @@ package $package;
 public final class Greeter {
 
     /**
-     * Constructs a {@code Greeter}.
+     * Default constructor.
      */
     public Greeter() {
         super();

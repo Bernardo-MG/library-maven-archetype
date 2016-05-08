@@ -45,7 +45,7 @@ import ${package}.Greeter;
 public final class TestGreeter {
 
     /**
-     * Constructs the tests.
+     * Default constructor.
      */
     public TestGreeter() {
         super();
