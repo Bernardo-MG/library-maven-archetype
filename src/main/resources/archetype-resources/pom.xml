@@ -37,7 +37,7 @@
    </licenses>
 
    <!-- ********************************************** -->
-   <!-- ********* INFRASTRUCTURE AND SERVICES ******** -->
+   <!-- ************ RESOURCES AND SERVICES ********** -->
    <!-- ********************************************** -->
 
    <scm>
@@ -103,8 +103,8 @@
                      <artifactId>lifecycle-mapping</artifactId>
                      <version>${plugin.lifecycle.version}</version>
                      <configuration>
-                        <!-- Sample fix for plugin executions -->
-                        <!-- This is to be used in case a Maven plugins gives problems
+                        <!-- Sample fix for plugin executions. -->
+                        <!-- This is to be used in case a Maven plugin gives problems
                            in Eclipse -->
                         <!-- <lifecycleMappingMetadata> <pluginExecutions> <pluginExecution>
                            <pluginExecutionFilter> <groupId>org.jacoco</groupId> <artifactId>jacoco-maven-plugin</artifactId>
@@ -119,11 +119,11 @@
          </build>
       </profile>
       <profile>
-         <!-- Release site deployment profile -->
-         <!-- Sets the site repository to point to the releases repo -->
+         <!-- Release site deployment profile. -->
+         <!-- Sets the site repository to point to the releases repo. -->
          <id>deploy-site-release</id>
          <activation>
-            <!-- Active by default so the repository appears in the reports -->
+            <!-- Active by default so the repository appears in the reports. -->
             <activeByDefault>true</activeByDefault>
          </activation>
          <distributionManagement>
@@ -135,8 +135,8 @@
          </distributionManagement>
       </profile>
       <profile>
-         <!-- Development site deployment profile -->
-         <!-- Sets the site repository to point to the development repo -->
+         <!-- Development site deployment profile. -->
+         <!-- Sets the site repository to point to the development repo. -->
          <id>deploy-site-development</id>
          <distributionManagement>
             <site>
@@ -147,11 +147,11 @@
          </distributionManagement>
       </profile>
       <profile>
-         <!-- Deployment profile -->
-         <!-- Sets ups the environment for deployment -->
+         <!-- Deployment profile. -->
+         <!-- Sets ups the environment for deployment. -->
          <id>deployment</id>
          <properties>
-            <!-- Tests are skipped -->
+            <!-- Tests are skipped. -->
             <maven.test.skip>true</maven.test.skip>
          </properties>
       </profile>
