@@ -27,7 +27,7 @@ if [ "$DEPLOY" == "true" ] && [ "$PULL_REQUEST" == "false" ] && [ "$VERSION_TYPE
 
    exit 0
 
-else
+els
 
    echo "Java artifact won't be deployed"
 
