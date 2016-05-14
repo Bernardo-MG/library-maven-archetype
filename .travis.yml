@@ -31,6 +31,11 @@ before_install:
 script:
   # Unit, integration and archetype tests are run
   - mvn clean verify archetype:integration-test
+  # Validates the included scripts
+  - bash -n ./target/classes/archetype-resources/.scripts/create-maven-settings.sh
+  - bash -n ./target/classes/archetype-resources/.scripts/deploy-site.sh
+  - bash -n ./target/classes/archetype-resources/.scripts/deploy.sh
+  - bash -n ./target/classes/archetype-resources/.scripts/load-travis-environment.sh
 after_success:
   # Documentation deployment script
   - ./.scripts/deploy-site.sh
