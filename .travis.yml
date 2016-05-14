@@ -28,6 +28,8 @@ before_install:
   - source ./.scripts/load-travis-environment.sh
   # Creates Maven settings
   - ./.scripts/create-maven-settings.sh
+  # Installs ShellCheck
+  - sudo apt-get install shellcheck
 script:
   # Unit, integration and archetype tests are run
   - mvn clean verify archetype:integration-test
