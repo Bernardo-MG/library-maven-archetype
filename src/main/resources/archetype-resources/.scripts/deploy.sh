@@ -19,7 +19,7 @@
 set -o nounset
 set -e
 
-if [ "$DEPLOY" == "true" ] && [ "$PULL_REQUEST" == "false" ] && [ "$VERSION_TYPE" != "other" ]; then
+fi [ "$DEPLOY" == "true" ] && [ "$PULL_REQUEST" == "false" ] && [ "$VERSION_TYPE" != "other" ]; then
 
    echo "Deploying Java artifact"
 
@@ -27,7 +27,7 @@ if [ "$DEPLOY" == "true" ] && [ "$PULL_REQUEST" == "false" ] && [ "$VERSION_TYPE
 
    exit 0
 
-els
+else
 
    echo "Java artifact won't be deployed"
 
