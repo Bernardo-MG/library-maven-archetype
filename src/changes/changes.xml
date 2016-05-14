@@ -247,7 +247,7 @@
                 code.
             </action>
         </release>
-        <release version="0.6.0" date="2016-04-25"
+        <release version="0.6.0" date="2016-05-14"
             description="CI environment setup, Findbugs exclusions and minor fixes">
             <action dev="bmg" type="add">
                 Travis CI environment variables are
@@ -262,7 +262,10 @@
                 parameter.
             </action>
             <action dev="bmg" type="add">
-                Added test suites to the packages.
+                Added tests to validate the scripts grammar.
+            </action>
+            <action dev="bmg" type="add">
+                Added test suites to the test packages.
             </action>
             <action dev="bmg" type="fix">
                 The javadoc development and release

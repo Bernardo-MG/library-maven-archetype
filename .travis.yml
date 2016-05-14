@@ -18,6 +18,14 @@ matrix:
     - jdk: oraclejdk8
       env: DEPLOY_DOCS=true
 
+# ShellCheck is installed
+addons:
+  apt:
+    sources:
+    - debian-sid
+    packages:
+    - shellcheck
+
 before_install:
   # Scripts are set as executable
   - chmod +x ./.scripts/load-travis-environment.sh
@@ -31,6 +39,11 @@ before_install:
 script:
   # Unit, integration and archetype tests are run
   - mvn clean verify archetype:integration-test
+  # Validates the included scripts
+  - shellcheck ./target/classes/archetype-resources/.scripts/create-maven-settings.sh
+  - shellcheck ./target/classes/archetype-resources/.scripts/deploy-site.sh
+  - shellcheck ./target/classes/archetype-resources/.scripts/deploy.sh
+  - shellcheck ./target/classes/archetype-resources/.scripts/load-travis-environment.sh
 after_success:
   # Documentation deployment script
   - ./.scripts/deploy-site.sh
