@@ -28,7 +28,7 @@ Documentation is always generated for the latest release, kept in the 'master' b
 
 Documentation is also generated from the latest snapshot, taken from the 'develop' branch:
 
-- The [the latest snapshot documentation page][site-develop].
+- The [latest snapshot documentation page][site-develop].
 
 The documentation site sources come along the source code (as it is a Maven site), so it is always possible to generate them using the following Maven command:
 
