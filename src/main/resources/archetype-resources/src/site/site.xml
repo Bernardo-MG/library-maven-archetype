@@ -14,8 +14,8 @@
             <descriptionUrl>Check the documentation for ${projectName}</descriptionUrl>
             <twitterSite>@${developerId}</twitterSite>
             <interpreters>
-                <interpreter>JDK 7</interpreter>
                 <interpreter>JDK 8</interpreter>
+                <interpreter>JDK 7</interpreter>
                 <interpreter>OpenJDK 7</interpreter>
             </interpreters>
             <releaseRepositories>

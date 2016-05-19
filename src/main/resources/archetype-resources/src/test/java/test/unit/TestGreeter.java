@@ -1,7 +1,7 @@
 /**
  * The MIT License (MIT)
  * <p>
- * Copyright (c) 2015 the original author or authors.
+ * Copyright (c) ${currentYear} the original author or authors.
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package ${package}.testing.test.integration;
+package ${package}.test.unit;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -30,24 +30,24 @@ import org.testng.annotations.Test;
 import ${package}.Greeter;
 
 /**
- * Integration tests for {@link Greeter}.
+ * Unit tests for {@link Greeter}.
  * <p>
  * Checks the following cases:
  * <ol>
  * <li>The {@code Greeter} returns a greeting.</li>
  * </ol>
  * <p>
- * This is actually a placeholder test for the integration tests suite.
- * 
+ * This is just a placeholder test for the unit tests suite.
+ *
  * @author ${developerName}
  *
  */
-public final class ITGreeter {
+public final class TestGreeter {
 
     /**
-     * Constructs the tests.
+     * Default constructor.
      */
-    public ITGreeter() {
+    public TestGreeter() {
         super();
     }
 
