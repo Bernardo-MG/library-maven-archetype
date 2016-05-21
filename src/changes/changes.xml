@@ -247,7 +247,7 @@
             code.
          </action>
       </release>
-      <release version="0.6.0" date="2016-05-14"
+      <release version="0.6.0" date="2016-05-19"
          description="CI environment setup, Findbugs exclusions and minor fixes">
          <action dev="bmg" type="add">
             Travis CI environment variables are
