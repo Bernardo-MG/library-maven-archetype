@@ -293,5 +293,10 @@
             Updated dependencies.
          </action>
       </release>
+      <release version="0.6.2" date="2016-05-31" description="Updated Maven Skin">
+         <action dev="bmg" type="update">
+            Updated Maven Skin.
+         </action>
+      </release>
    </body>
 </document>
