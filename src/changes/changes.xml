@@ -297,6 +297,15 @@
          <action dev="bmg" type="update">
             Updated Maven Skin.
          </action>
+         <action dev="bmg" type="update">
+            Updated base POM.
+         </action>
+         <action dev="bmg" type="update">
+            Updated dependencies.
+         </action>
+         <action dev="bmg" type="fix">
+            Various fixes.
+         </action>
       </release>
    </body>
 </document>
