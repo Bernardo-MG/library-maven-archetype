@@ -1,4 +1,4 @@
-# Maven-Based Java Library
+# ${projectName}
 
 This is a base project created with the [Library Maven Archetype][library-archetype], prepared to ease the development of new libraries.
 
