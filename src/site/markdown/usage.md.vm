@@ -30,8 +30,6 @@ ${symbol_pound}${symbol_pound} Templating variables in the Archetype
 
 Maven Archetypes make use of templating variables to prepare the project. The values for these will be asked when creating a new project, and most of them will have default values which show the kind of data each of them expects.
 
----
-
 ${symbol_pound}${symbol_pound}${symbol_pound} Maven coordinates
 
 |Variable|Usage|

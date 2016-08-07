@@ -35,20 +35,6 @@
             <bottomNav>
                 <menu>General Info</menu>
             </bottomNav>
-            <pages>
-                <usage>
-                    <sections>
-                        <body />
-                        <columns>2</columns>
-                    </sections>
-                </usage>
-                <repos>
-                    <sections>
-                        <body />
-                        <columns>2</columns>
-                    </sections>
-                </repos>
-            </pages>
         </skinConfig>
     </custom>
 

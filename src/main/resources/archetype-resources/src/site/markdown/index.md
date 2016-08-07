@@ -4,8 +4,6 @@ This is a base project created with the [Library Maven Archetype][library-archet
 
 Note that while it is meant to be a working project from the beginning, meaning that it compiles, runs the tests and creates the docs, it is mostly composed of placeholder classes which should be swapped with actual content.
 
----
-
 ## Where should I start customizing the project?
 
 First of all, check the [Library Maven Archetype][library-archetype] documentation, and then edit the readme file and the Maven site descriptions about the project.
