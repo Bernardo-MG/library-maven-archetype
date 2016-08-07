@@ -307,5 +307,10 @@
             Various fixes.
          </action>
       </release>
+      <release version="0.6.3" date="2016-06-10" description="Updated Maven Skin">
+         <action dev="bmg" type="update">
+            Updated Maven Skin in generated POM.
+         </action>
+      </release>
    </body>
 </document>
