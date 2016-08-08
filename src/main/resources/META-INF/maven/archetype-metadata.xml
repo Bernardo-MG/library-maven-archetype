@@ -85,7 +85,6 @@
                 <include>.gitattributes</include>
                 <include>.gitignore</include>
                 <include>.travis.yml</include>
-                <include>.scripts/*.sh</include>
             </includes>
         </fileSet>
         <fileSet filtered="true" encoding="UTF-8">
