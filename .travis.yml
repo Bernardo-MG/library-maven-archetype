@@ -20,7 +20,8 @@ matrix:
 
 before_install:
   # Gets scripts
-  - git clone -b v0.1.0 --single-branch https://github.com/Bernardo-MG/ci-shell-scripts.git ./.scripts
+  - deb https://dl.bintray.com/bernardo-mg/Debian ci-shell-scripts ci-shell-scripts
+  - apt-get install ci-shell-scripts
   # Sets scripts as executable
   - chmod -R +x ./.scripts/*
   # Prepares CI environment
