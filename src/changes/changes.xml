@@ -312,5 +312,10 @@
             Updated Maven Skin in generated POM.
          </action>
       </release>
+      <release version="0.7.0" date="2016-08-08" description="Changed scripts">
+         <action dev="bmg" type="update">
+            CI scripts are now taken from a repository.
+         </action>
+      </release>
    </body>
 </document>
