@@ -32,11 +32,6 @@ import ${package}.Greeter;
 /**
  * Integration tests for {@link Greeter}.
  * <p>
- * Checks the following cases:
- * <ol>
- * <li>The {@code Greeter} returns a greeting.</li>
- * </ol>
- * <p>
  * This is actually a placeholder test for the integration tests suite.
  *
  * @author ${developerName}
