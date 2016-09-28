@@ -10,7 +10,7 @@
 
    <groupId>com.wandrell.maven.archetypes</groupId>
    <artifactId>library-archetype</artifactId>
-   <version>0.6.2</version>
+   <version>0.7.0</version>
    <packaging>maven-archetype</packaging>
 
    <name>Library Maven Archetype</name>
@@ -80,7 +80,7 @@
             <site>
                <id>site</id>
                <name>Project Documentation Site</name>
-               <url>ftp://docs.wandrell.com/library-maven-archetype</url>
+               <url>scp://docs.wandrell.com:2222/home1/duenco/www/maven/library-maven-archetype</url>
             </site>
          </distributionManagement>
       </profile>
@@ -92,7 +92,7 @@
             <site>
                <id>site-development</id>
                <name>Project Development Documentation Site</name>
-               <url>ftp://docs.wandrell.com/library-maven-archetype</url>
+               <url>scp://docs.wandrell.com:2222/home1/duenco/www/development/maven/library-maven-archetype</url>
             </site>
          </distributionManagement>
       </profile>
@@ -156,17 +156,17 @@
       <plugin.deploy.version>2.8.2</plugin.deploy.version>
       <plugin.enforcer.version>1.4.1</plugin.enforcer.version>
       <plugin.install.version>2.5.2</plugin.install.version>
-      <plugin.jar.version>3.0.0</plugin.jar.version>
+      <plugin.jar.version>3.0.2</plugin.jar.version>
       <plugin.release.version>2.5.3</plugin.release.version>
       <plugin.reports.version>2.9</plugin.reports.version>
-      <plugin.resources.version>3.0.0</plugin.resources.version>
+      <plugin.resources.version>3.0.1</plugin.resources.version>
       <plugin.site.version>3.4</plugin.site.version>
       <plugin.site.velocity.version>1.7</plugin.site.velocity.version>
-      <plugin.source.version>3.0.0</plugin.source.version>
+      <plugin.source.version>3.0.1</plugin.source.version>
       <!-- Extensions versions -->
       <extension.wagon.version>2.10</extension.wagon.version>
       <!-- Maven Site -->
-      <site.skin.version>0.3.0</site.skin.version>
+      <site.skin.version>0.4.0</site.skin.version>
       <repoDownloadURL>https://dl.bintray.com/bernardo-mg/maven/</repoDownloadURL>
       <bintrayURL>https://bintray.com/bernardo-mg/maven/library-maven-archetype/view</bintrayURL>
       <mavenURL>http://mvnrepository.com/artifact/com.wandrell.maven.archetypes/library-archetype</mavenURL>
@@ -187,10 +187,10 @@
             <version>${plugin.archetype.version}</version>
          </extension>
          <extension>
-            <!-- Wagon -->
-            <!-- Enables the use of FTP. -->
+            <!-- Wagon SSH -->
+            <!-- Enables the use of SSH. -->
             <groupId>org.apache.maven.wagon</groupId>
-            <artifactId>wagon-ftp</artifactId>
+            <artifactId>wagon-ssh</artifactId>
             <version>${extension.wagon.version}</version>
          </extension>
       </extensions>
@@ -199,12 +199,12 @@
             <!-- The following plugins require enforcing a defined version. -->
             <plugin>
                <!-- Resources -->
-               <!-- This is set here to force downgrading the plugin version, to
+               <!-- This is set here to force downgrading the plugin version, to 
                   fix the bug where the .gitignore file is not copied -->
                <artifactId>maven-resources-plugin</artifactId>
                <version>${plugin.resources.version}</version>
             </plugin>
-            <!-- The following plugins always appear on the plugins list, even when
+            <!-- The following plugins always appear on the plugins list, even when 
                they have not been added to the project. -->
             <!-- This configuration block allows keeping them always updated. -->
             <plugin>
@@ -274,85 +274,70 @@
          </plugin>
          <plugin>
             <!-- Enforcer -->
-            <!-- Stops the project from being built if it does not comply with a
+            <!-- Stops the project from being built if it does not comply with a 
                set of rules. -->
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-enforcer-plugin</artifactId>
             <version>${plugin.enforcer.version}</version>
             <executions>
                <execution>
-                  <id>enforce</id>
+                  <id>enforce-javaVersion</id>
+                  <goals>
+                     <goal>enforce</goal>
+                  </goals>
+                  <configuration>
+                     <rules>
+                        <!-- Not obsolete JDK. -->
+                        <requireJavaVersion>
+                           <version>[${maven.compiler.source},)</version>
+                        </requireJavaVersion>
+                     </rules>
+                  </configuration>
+               </execution>
+               <execution>
+                  <id>enforce-convergence</id>
                   <goals>
                      <goal>enforce</goal>
                   </goals>
                   <configuration>
                      <rules>
                         <!-- Dependencies convergence. -->
-                        <!-- This variant of the rule requires less configuration,
+                        <!-- This variant of the rule requires less configuration, 
                            making use of Maven's dependency resolver. -->
                         <requireUpperBoundDeps />
-                        <!-- Not obsolete JDK. -->
-                        <requireJavaVersion>
-                           <version>[1.7,)</version>
-                        </requireJavaVersion>
+                     </rules>
+                  </configuration>
+               </execution>
+               <execution>
+                  <id>enforce-pluginVersion</id>
+                  <goals>
+                     <goal>enforce</goal>
+                  </goals>
+                  <configuration>
+                     <rules>
                         <!-- No plugin without version. -->
                         <requirePluginVersions>
-                           <message>Best Practice is to always
-                              define
-                              plugin versions.</message>
                            <banLatest>true</banLatest>
                            <banRelease>true</banRelease>
                            <banSnapshots>true</banSnapshots>
                            <phases>clean,deploy,site,test,verify</phases>
                         </requirePluginVersions>
-                        <!-- Source encoding should be set. -->
-                        <requireProperty>
-                           <property>project.build.sourceEncoding</property>
-                           <message>Indicate the source
-                              encoding for the
-                              project.</message>
-                           <regex>.*</regex>
-                           <regexMessage>It should be a valid
-                              text
-                              encoding format.</regexMessage>
-                        </requireProperty>
-                        <!-- Report output encoding should be set. -->
-                        <requireProperty>
-                           <property>project.reporting.outputEncoding</property>
-                           <message>Indicate the encoding for
-                              the
-                              reporting output.</message>
-                           <regex>.*</regex>
-                           <regexMessage>It should be a valid
-                              text
-                              encoding format.</regexMessage>
-                        </requireProperty>
-                        <!-- Source JDK should be set. -->
-                        <requireProperty>
-                           <property>maven.compiler.source</property>
-                           <message>Indicate the source JDK.</message>
-                           <regex>\d+\.\d+[\.\d+]?.*</regex>
-                           <regexMessage>It should be a valid
-                              JDK
-                              version.</regexMessage>
-                        </requireProperty>
-                        <!-- Target JDK should be set. -->
-                        <requireProperty>
-                           <property>maven.compiler.target</property>
-                           <message>Indicate the target JDK.</message>
-                           <regex>\d+\.\d+[\.\d+]?.*</regex>
-                           <regexMessage>It should be a valid
-                              JDK
-                              version.</regexMessage>
-                        </requireProperty>
+                     </rules>
+                  </configuration>
+               </execution>
+               <execution>
+                  <id>enforce-manifest</id>
+                  <goals>
+                     <goal>enforce</goal>
+                  </goals>
+                  <configuration>
+                     <rules>
                         <!-- Manifest name should be given. -->
                         <requireProperty>
                            <property>manifest.name</property>
-                           <message>Give a name for the
-                              manifest.</message>
+                           <message><![CDATA[Give a name for the manifest.]]></message>
                            <regex>.*</regex>
-                           <regexMessage>It should be a valid
-                              name.</regexMessage>
+                           <regexMessage><![CDATA[It should be a valid name.]]></regexMessage>
                         </requireProperty>
                      </rules>
                   </configuration>

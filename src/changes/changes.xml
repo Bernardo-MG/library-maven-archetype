@@ -307,5 +307,24 @@
             Various fixes.
          </action>
       </release>
+      <release version="0.6.3" date="2016-06-10" description="Updated Maven Skin">
+         <action dev="bmg" type="update">
+            Updated Maven Skin in generated POM.
+         </action>
+      </release>
+      <release version="0.7.0" date="2016-08-22" description="Configuration changes">
+         <action dev="bmg" type="update">
+            CI scripts are now taken from a repository.
+         </action>
+         <action dev="bmg" type="update">
+            Divided Enforcer rules into smaller ones.
+         </action>
+         <action dev="bmg" type="update">
+            Updated Maven skin and corrected default Maven site.
+         </action>
+         <action dev="bmg" type="update">
+            Maven site is now deployed through SSH.
+         </action>
+      </release>
    </body>
 </document>

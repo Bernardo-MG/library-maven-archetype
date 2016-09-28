@@ -18,34 +18,21 @@ matrix:
     - jdk: oraclejdk8
       env: DEPLOY_DOCS=true
 
-# ShellCheck is installed
-addons:
-  apt:
-    sources:
-    - debian-sid
-    packages:
-    - shellcheck
-
 before_install:
-  # Scripts are set as executable
-  - chmod +x ./.scripts/load-travis-environment.sh
-  - chmod +x ./.scripts/create-maven-settings.sh
-  - chmod +x ./.scripts/deploy.sh
-  - chmod +x ./.scripts/deploy-site.sh
+  # Gets scripts
+  - git clone -b v0.2.4 --single-branch https://github.com/Bernardo-MG/ci-shell-scripts.git ~/.scripts
+  # Sets scripts as executable
+  - chmod -R +x ~/.scripts/*
   # Prepares CI environment
-  - source ./.scripts/load-travis-environment.sh
+  - source ~/.scripts/travis/load-travis-environment.sh
+before_script:
   # Creates Maven settings
-  - ./.scripts/create-maven-settings.sh
+  - ~/.scripts/java/maven/create-maven-settings.sh $VERSION_TYPE
 script:
   # Unit, integration and archetype tests are run
   - mvn clean verify archetype:integration-test
-  # Validates the included scripts
-  - shellcheck ./target/classes/archetype-resources/.scripts/create-maven-settings.sh
-  - shellcheck ./target/classes/archetype-resources/.scripts/deploy-site.sh
-  - shellcheck ./target/classes/archetype-resources/.scripts/deploy.sh
-  - shellcheck ./target/classes/archetype-resources/.scripts/load-travis-environment.sh
 after_success:
   # Documentation deployment script
-  - ./.scripts/deploy-site.sh
+  - ~/.scripts/java/maven/deploy-site.sh $DO_DEPLOY_DOCS deployment
   # Code artifacts deployment script
-  - ./.scripts/deploy.sh
+  - ~/.scripts/java/maven/deploy.sh $DO_DEPLOY deployment

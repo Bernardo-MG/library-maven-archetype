@@ -14,10 +14,6 @@
             <descriptionUrl>Check the documentation for the Library Maven
                 Archetype</descriptionUrl>
             <twitterSite>@Wandrell_BMG</twitterSite>
-            <interpreters>
-                <interpreter>JDK 8</interpreter>
-                <interpreter>JDK 7</interpreter>
-            </interpreters>
             <releaseRepositories>
                 <releaseRepository>
                     <name>Bintray</name>
@@ -35,20 +31,6 @@
             <bottomNav>
                 <menu>General Info</menu>
             </bottomNav>
-            <pages>
-                <usage>
-                    <sections>
-                        <body />
-                        <columns>2</columns>
-                    </sections>
-                </usage>
-                <repos>
-                    <sections>
-                        <body />
-                        <columns>2</columns>
-                    </sections>
-                </repos>
-            </pages>
         </skinConfig>
     </custom>
 
