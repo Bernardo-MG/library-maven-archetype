@@ -323,5 +323,10 @@
             Updated Maven skin and corrected default Maven site.
          </action>
       </release>
+      <release version="0.7.1" date="2016-09-28" description="SSH site deployment">
+         <action dev="bmg" type="update">
+            Maven site is now deployed through SSH.
+         </action>
+      </release>
    </body>
 </document>
