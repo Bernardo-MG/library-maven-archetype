@@ -29,10 +29,10 @@
             <defaultValue>bernardo-mg</defaultValue>
         </requiredProperty>
         <requiredProperty key="urlSiteDeployRelease">
-            <defaultValue>ftp://docs.wandrell.com</defaultValue>
+            <defaultValue>scp://docs.wandrell.com</defaultValue>
         </requiredProperty>
         <requiredProperty key="urlSiteDeployDevelop">
-            <defaultValue>ftp://docs.wandrell.com</defaultValue>
+            <defaultValue>scp://docs.wandrell.com</defaultValue>
         </requiredProperty>
         <requiredProperty key="urlSiteRelease">
             <defaultValue>http://docs.wandrell.com/maven</defaultValue>
