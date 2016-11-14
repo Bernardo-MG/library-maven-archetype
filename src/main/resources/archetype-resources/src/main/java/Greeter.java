@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package $package;
+package ${package};
 
 /**
  * Greeter class.

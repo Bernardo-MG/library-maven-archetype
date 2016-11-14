@@ -24,5 +24,5 @@
 /**
  * Provides placeholder classes.
  */
-package $package;
+package ${package};
 
