@@ -10,7 +10,7 @@
 
    <groupId>com.wandrell.maven.archetypes</groupId>
    <artifactId>library-archetype</artifactId>
-   <version>0.7.0-SNAPSHOT</version>
+   <version>0.7.1-SNAPSHOT</version>
    <packaging>maven-archetype</packaging>
 
    <name>Library Maven Archetype</name>
@@ -160,13 +160,12 @@
       <plugin.release.version>2.5.3</plugin.release.version>
       <plugin.reports.version>2.9</plugin.reports.version>
       <plugin.resources.version>3.0.1</plugin.resources.version>
-      <plugin.site.version>3.4</plugin.site.version>
-      <plugin.site.velocity.version>1.7</plugin.site.velocity.version>
+      <plugin.site.version>3.6</plugin.site.version>
       <plugin.source.version>3.0.1</plugin.source.version>
       <!-- Extensions versions -->
       <extension.wagon.version>2.10</extension.wagon.version>
       <!-- Maven Site -->
-      <site.skin.version>0.4.0</site.skin.version>
+      <site.skin.version>0.5.0</site.skin.version>
       <repoDownloadURL>https://dl.bintray.com/bernardo-mg/maven/</repoDownloadURL>
       <bintrayURL>https://bintray.com/bernardo-mg/maven/library-maven-archetype/view</bintrayURL>
       <mavenURL>http://mvnrepository.com/artifact/com.wandrell.maven.archetypes/library-archetype</mavenURL>
@@ -378,12 +377,6 @@
                   <groupId>com.wandrell.maven.skins</groupId>
                   <artifactId>docs-maven-skin</artifactId>
                   <version>${site.skin.version}</version>
-               </dependency>
-               <dependency>
-                  <!-- Velocity -->
-                  <groupId>org.apache.velocity</groupId>
-                  <artifactId>velocity</artifactId>
-                  <version>${plugin.site.velocity.version}</version>
                </dependency>
             </dependencies>
             <configuration>
