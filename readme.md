@@ -86,6 +86,16 @@ As an alternative, it is always possible to download the project from Github, an
 $ mvn install
 ```
 
+### Running tests
+
+The archetype plugin comes ready to run integration tests for the archetype by using the usual Maven command:
+
+```
+$ mvn verify
+```
+
+Check the [archetype testing goal][archetype-testing] for more info.
+
 ## Collaborate
 
 Any kind of help with the project will be well received, and there are two main ways to give such help:
@@ -114,6 +124,7 @@ The project has been released under the [MIT License][license].
 [site-release]: http://docs.wandrell.com/maven/library-maven-archetype
 
 [maven-archetype]: https://maven.apache.org/guides/introduction/introduction-to-archetypes.html
+[archetype-testing]: http://maven.apache.org/archetype/maven-archetype-plugin/integration-test-mojo.html
 
 [sample-project]: https://github.com/Bernardo-MG/library-maven-archetype-example
 

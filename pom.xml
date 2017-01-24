@@ -149,6 +149,7 @@
       <plugin.ant.version>1.8</plugin.ant.version>
       <plugin.assembly.version>3.0.0</plugin.assembly.version>
       <plugin.archetype.version>2.4</plugin.archetype.version>
+      <plugin.archetype.invoker.version>2.2</plugin.archetype.invoker.version>
       <plugin.changes.version>2.12.1</plugin.changes.version>
       <plugin.clean.version>3.0.0</plugin.clean.version>
       <plugin.compiler.version>3.6.0</plugin.compiler.version>
@@ -198,17 +199,18 @@
             <!-- The following plugins require enforcing a defined version. -->
             <plugin>
                <!-- Resources -->
-               <!-- This is set here to force downgrading the plugin version, to 
-                  fix the bug where the .gitignore file is not copied -->
+               <!-- This is set here to force downgrading the plugin version, 
+                  to fix the bug where the .gitignore file is not copied -->
                <artifactId>maven-resources-plugin</artifactId>
                <version>${plugin.resources.version}</version>
             </plugin>
-            <!-- The following plugins always appear on the plugins list, even when 
-               they have not been added to the project. -->
+            <!-- The following plugins always appear on the plugins list, 
+               even when they have not been added to the project. -->
             <!-- This configuration block allows keeping them always updated. -->
             <plugin>
                <!-- Dependency -->
-               <!-- Takes care of dependencies, both copying and showing their info. -->
+               <!-- Takes care of dependencies, both copying and showing 
+                  their info. -->
                <groupId>org.apache.maven.plugins</groupId>
                <artifactId>maven-dependency-plugin</artifactId>
                <version>${plugin.dependency.version}</version>
@@ -240,6 +242,13 @@
                <groupId>org.apache.maven.plugins</groupId>
                <artifactId>maven-archetype-plugin</artifactId>
                <version>${plugin.archetype.version}</version>
+               <dependencies>
+                  <dependency>
+                     <groupId>org.apache.maven.shared</groupId>
+                     <artifactId>maven-invoker</artifactId>
+                     <version>${plugin.archetype.invoker.version}</version>
+                  </dependency>
+               </dependencies>
             </plugin>
          </plugins>
       </pluginManagement>
@@ -273,8 +282,8 @@
          </plugin>
          <plugin>
             <!-- Enforcer -->
-            <!-- Stops the project from being built if it does not comply with a 
-               set of rules. -->
+            <!-- Stops the project from being built if it does not comply 
+               with a set of rules. -->
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-enforcer-plugin</artifactId>
             <version>${plugin.enforcer.version}</version>
