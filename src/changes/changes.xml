@@ -326,5 +326,16 @@
             Maven site is now deployed through SSH.
          </action>
       </release>
+      <release version="0.7.1" date="2017-01-23" description="Corrected tests">
+         <action dev="bmg" type="add">
+            The tests now run the generated project tests.
+         </action>
+         <action dev="bmg" type="update">
+            Updated Maven Skin.
+         </action>
+         <action dev="bmg" type="fix">
+            Added missing property for tests.
+         </action>
+      </release>
    </body>
 </document>
