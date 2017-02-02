@@ -448,8 +448,8 @@
             <executions>
                <execution>
                   <!-- Generates the jar for the deployment -->
+                  <!-- Source is bound to the package phase -->
                   <id>attach-sources</id>
-                  <phase>deploy</phase>
                   <goals>
                      <goal>jar-no-fork</goal>
                   </goals>
