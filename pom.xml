@@ -415,18 +415,6 @@
             <!-- It is set to generate and deploy a POM file along the artifact -->
             <artifactId>maven-deploy-plugin</artifactId>
             <version>${plugin.deploy.version}</version>
-            <executions>
-               <execution>
-                  <id>deploy</id>
-                  <goals>
-                     <goal>deploy</goal>
-                  </goals>
-                  <configuration>
-                     <generatePom>true</generatePom>
-                     <file>${project.build.directory}/${project.build.finalName}.jar</file>
-                  </configuration>
-               </execution>
-            </executions>
          </plugin>
          <plugin>
             <!-- Changes -->
