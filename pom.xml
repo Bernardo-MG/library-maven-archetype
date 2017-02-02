@@ -287,6 +287,13 @@
                <version>${plugin.jar.version}</version>
             </plugin>
             <plugin>
+               <!-- Project Info Reports -->
+               <!-- Generates general information reports -->
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-project-info-reports-plugin</artifactId>
+               <version>${plugin.reports.version}</version>
+            </plugin>
+            <plugin>
                <!-- Release -->
                <!-- Generates releases and updates the project. -->
                <groupId>org.apache.maven.plugins</groupId>
@@ -485,11 +492,10 @@
    <reporting>
       <plugins>
          <plugin>
-            <!-- Project Info -->
+            <!-- Project Info Reports -->
             <!-- Generates general information reports -->
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-project-info-reports-plugin</artifactId>
-            <version>${plugin.reports.version}</version>
             <reportSets>
                <reportSet>
                   <reports>
@@ -512,14 +518,12 @@
             <!-- Generates the Maven Site -->
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-site-plugin</artifactId>
-            <version>${plugin.site.version}</version>
          </plugin>
          <plugin>
             <!-- Changes -->
             <!-- Generates the changes report from the changes log -->
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-changes-plugin</artifactId>
-            <version>${plugin.changes.version}</version>
             <reportSets>
                <reportSet>
                   <reports>
