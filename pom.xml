@@ -4,6 +4,10 @@
 
    <modelVersion>4.0.0</modelVersion>
 
+   <prerequisites>
+      <maven>${maven.version}</maven>
+   </prerequisites>
+
    <!-- ********************************************** -->
    <!-- **************** PROJECT INFO **************** -->
    <!-- ********************************************** -->
@@ -137,15 +141,27 @@
    <!-- ********************************************** -->
 
    <properties>
-      <!-- Encoding -->
+      <!-- ============================================== -->
+      <!-- ================== ENCODING ================== -->
+      <!-- ============================================== -->
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
       <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
-      <!-- Java version -->
+      <!-- ============================================== -->
+      <!-- ================ JAVA VERSION ================ -->
+      <!-- ============================================== -->
       <maven.compiler.source>1.7</maven.compiler.source>
       <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
-      <!-- Manifest data -->
+      <!-- ============================================== -->
+      <!-- =============== MAVEN VERSION ================ -->
+      <!-- ============================================== -->
+      <maven.version>3.0.1</maven.version>
+      <!-- ============================================== -->
+      <!-- =============== MANIFEST DATA ================ -->
+      <!-- ============================================== -->
       <manifest.name>com/wandrell/archetype/library</manifest.name>
-      <!-- Plugins versions -->
+      <!-- ============================================== -->
+      <!-- ============== PLUGINS VERSIONS ============== -->
+      <!-- ============================================== -->
       <plugin.ant.version>1.8</plugin.ant.version>
       <plugin.assembly.version>3.0.0</plugin.assembly.version>
       <plugin.archetype.version>2.4</plugin.archetype.version>
@@ -163,12 +179,18 @@
       <plugin.resources.version>3.0.1</plugin.resources.version>
       <plugin.site.version>3.6</plugin.site.version>
       <plugin.source.version>3.0.1</plugin.source.version>
-      <!-- Plugins configuration -->
+      <!-- ============================================== -->
+      <!-- =========== PLUGINS CONFIGURATION ============ -->
+      <!-- ============================================== -->
       <!-- Relativizing the Maven Site links has a tendency to break them -->
       <relativizeDecorationLinks>false</relativizeDecorationLinks>
-      <!-- Extensions versions -->
+      <!-- ============================================== -->
+      <!-- ============= EXTENSIONS VERSIONS ============ -->
+      <!-- ============================================== -->
       <extension.wagon.version>2.10</extension.wagon.version>
-      <!-- Maven Site -->
+      <!-- ============================================== -->
+      <!-- ================= MAVEN SITE ================= -->
+      <!-- ============================================== -->
       <site.skin.version>0.5.0</site.skin.version>
       <repoDownloadURL>https://dl.bintray.com/bernardo-mg/maven/</repoDownloadURL>
       <bintrayURL>https://bintray.com/bernardo-mg/maven/library-maven-archetype/view</bintrayURL>
@@ -427,6 +449,21 @@
                            <regex>.*</regex>
                            <regexMessage><![CDATA[It should be a valid name.]]></regexMessage>
                         </requireProperty>
+                     </rules>
+                  </configuration>
+               </execution>
+               <execution>
+                  <id>enforce-maven</id>
+                  <goals>
+                     <goal>enforce</goal>
+                  </goals>
+                  <configuration>
+                     <rules>
+                        <!-- Only Maven 3.0 or higher is supported -->
+                        <requireMavenVersion>
+                           <version>[${maven.version},)</version>
+                           <message><![CDATA[Only Maven 3.0 or higher is supported.]]></message>
+                        </requireMavenVersion>
                      </rules>
                   </configuration>
                </execution>
