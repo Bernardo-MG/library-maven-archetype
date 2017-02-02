@@ -342,6 +342,9 @@
             Corrected duplicated deployment.
          </action>
          <action dev="bmg" type="update">
+            Removed XML test suites.
+         </action>
+         <action dev="bmg" type="update">
             Corrected and simplified plugins configuration.
          </action>
       </release>
