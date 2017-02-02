@@ -197,7 +197,8 @@
       <pluginManagement>
          <plugins>
             <!-- Plugin versions and configurations are enforced here. -->
-            <!-- Some of these plugins are added by default by Maven. -->
+            <!-- Some of these plugins are added by default by Maven in some 
+               situations. -->
             <plugin>
                <!-- Ant Run -->
                <!-- Capable of handling Ant scripts. -->
@@ -332,6 +333,32 @@
             <artifactId>maven-archetype-plugin</artifactId>
          </plugin>
          <plugin>
+            <!-- Changes -->
+            <!-- Takes care of the changes log -->
+            <!-- It is set to also validate the changes log file -->
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-changes-plugin</artifactId>
+            <executions>
+               <execution>
+                  <id>check-changes</id>
+                  <phase>pre-site</phase>
+                  <goals>
+                     <goal>changes-check</goal>
+                  </goals>
+               </execution>
+               <execution>
+                  <id>validate-changes</id>
+                  <phase>pre-site</phase>
+                  <goals>
+                     <goal>changes-validate</goal>
+                  </goals>
+                  <configuration>
+                     <failOnError>true</failOnError>
+                  </configuration>
+               </execution>
+            </executions>
+         </plugin>
+         <plugin>
             <!-- Enforcer -->
             <!-- Stops the project from being built if it does not comply 
                with a set of rules. -->
@@ -456,32 +483,6 @@
                </execution>
             </executions>
          </plugin>
-         <plugin>
-            <!-- Changes -->
-            <!-- Takes care of the changes log -->
-            <!-- It is set to also validate the changes log file -->
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-changes-plugin</artifactId>
-            <executions>
-               <execution>
-                  <id>check-changes</id>
-                  <phase>pre-site</phase>
-                  <goals>
-                     <goal>changes-check</goal>
-                  </goals>
-               </execution>
-               <execution>
-                  <id>validate-changes</id>
-                  <phase>pre-site</phase>
-                  <goals>
-                     <goal>changes-validate</goal>
-                  </goals>
-                  <configuration>
-                     <failOnError>true</failOnError>
-                  </configuration>
-               </execution>
-            </executions>
-         </plugin>
       </plugins>
    </build>
 
@@ -491,6 +492,19 @@
 
    <reporting>
       <plugins>
+         <plugin>
+            <!-- Changes -->
+            <!-- Generates the changes report from the changes log -->
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-changes-plugin</artifactId>
+            <reportSets>
+               <reportSet>
+                  <reports>
+                     <report>changes-report</report>
+                  </reports>
+               </reportSet>
+            </reportSets>
+         </plugin>
          <plugin>
             <!-- Project Info Reports -->
             <!-- Generates general information reports -->
@@ -518,19 +532,6 @@
             <!-- Generates the Maven Site -->
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-site-plugin</artifactId>
-         </plugin>
-         <plugin>
-            <!-- Changes -->
-            <!-- Generates the changes report from the changes log -->
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-changes-plugin</artifactId>
-            <reportSets>
-               <reportSet>
-                  <reports>
-                     <report>changes-report</report>
-                  </reports>
-               </reportSet>
-            </reportSets>
          </plugin>
       </plugins>
    </reporting>
