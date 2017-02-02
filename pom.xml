@@ -163,6 +163,9 @@
       <plugin.resources.version>3.0.1</plugin.resources.version>
       <plugin.site.version>3.6</plugin.site.version>
       <plugin.source.version>3.0.1</plugin.source.version>
+      <!-- Plugins configuration -->
+      <!-- Relativizing the Maven Site links has a tendency to break them -->
+      <relativizeDecorationLinks>false</relativizeDecorationLinks>
       <!-- Extensions versions -->
       <extension.wagon.version>2.10</extension.wagon.version>
       <!-- Maven Site -->
@@ -463,10 +466,6 @@
                   <version>${site.skin.version}</version>
                </dependency>
             </dependencies>
-            <configuration>
-               <!-- Relativizing the links has a tendency to break them -->
-               <relativizeDecorationLinks>false</relativizeDecorationLinks>
-            </configuration>
          </plugin>
          <plugin>
             <!-- Source -->
