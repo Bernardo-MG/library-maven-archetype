@@ -337,5 +337,13 @@
             Added missing property for tests.
          </action>
       </release>
+      <release version="0.7.2" date="2017-02-02" description="Configuration changes">
+         <action dev="bmg" type="fix">
+            Corrected duplicated deployment.
+         </action>
+         <action dev="bmg" type="update">
+            Corrected and simplified plugins configuration.
+         </action>
+      </release>
    </body>
 </document>
