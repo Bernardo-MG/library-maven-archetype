@@ -179,6 +179,7 @@
       <plugin.resources.version>3.0.1</plugin.resources.version>
       <plugin.site.version>3.6</plugin.site.version>
       <plugin.source.version>3.0.1</plugin.source.version>
+      <plugin.versions.version>2.3</plugin.versions.version>
       <!-- ============================================== -->
       <!-- =========== PLUGINS CONFIGURATION ============ -->
       <!-- ============================================== -->
@@ -345,6 +346,13 @@
                <!-- Bundles the source into a jar -->
                <artifactId>maven-source-plugin</artifactId>
                <version>${plugin.source.version}</version>
+            </plugin>
+            <plugin>
+               <!-- Versions -->
+               <!-- Generates a report with the versions of all plugins and dependencies. -->
+               <groupId>org.codehaus.mojo</groupId>
+               <artifactId>versions-maven-plugin</artifactId>
+               <version>${plugin.versions.version}</version>
             </plugin>
          </plugins>
       </pluginManagement>
