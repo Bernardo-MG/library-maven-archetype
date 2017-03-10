@@ -1,59 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/DECORATION/1.6.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/DECORATION/1.6.0 http://maven.apache.org/xsd/decoration-1.6.0.xsd">
+<project xmlns="http://maven.apache.org/DECORATION/1.6.0"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://maven.apache.org/DECORATION/1.6.0 http://maven.apache.org/xsd/decoration-1.6.0.xsd">
 
-    <skin>
-        <groupId>com.wandrell.maven.skins</groupId>
-        <artifactId>docs-maven-skin</artifactId>
-        <version>${site.skin.version}</version>
-    </skin>
+   <skin>
+      <groupId>com.wandrell.maven.skins</groupId>
+      <artifactId>docs-maven-skin</artifactId>
+      <version>${site.skin.version}</version>
+   </skin>
 
-    <custom>
-        <skinConfig>
-            <keywords>Maven, archetype, library</keywords>
-            <descriptionUrl>Check the documentation for the Library Maven
-                Archetype</descriptionUrl>
-            <twitterSite>@Wandrell_BMG</twitterSite>
-            <releaseRepositories>
-                <releaseRepository>
-                    <name>Bintray</name>
-                    <url>${bintrayURL}</url>
-                </releaseRepository>
-                <releaseRepository>
-                    <name>Maven Central</name>
-                    <url>${mavenURL}</url>
-                </releaseRepository>
-            </releaseRepositories>
-            <topNav>
-                <menu>Documentation</menu>
-                <menu>Info and reports</menu>
-            </topNav>
-            <bottomNav>
-                <menu>General Info</menu>
-            </bottomNav>
-        </skinConfig>
-    </custom>
+   <custom>
+      <skinConfig>
+         <keywords>Maven, archetype, library</keywords>
+         <descriptionUrl>Check the documentation for the Library Maven
+            Archetype</descriptionUrl>
+         <twitterSite>@Wandrell_BMG</twitterSite>
+         <topNav>
+            <menu>Documentation</menu>
+            <menu>Info and reports</menu>
+         </topNav>
+         <bottomNav>
+            <menu>General Info</menu>
+         </bottomNav>
+         <bottomNav>
+            <menu>General Info</menu>
+            <menu>Code</menu>
+            <menu>Releases</menu>
+         </bottomNav>
+         <iconNav>
+            <menu>Icons</menu>
+         </iconNav>
+      </skinConfig>
+   </custom>
 
-    <body>
-        <menu name="General Info" inherit="top">
-            <item name="Acquire" href="./acquire.html" />
-            <item name="Usage" href="./usage.html" />
-            <item name="Changes Log" href="./changes-report.html" />
-        </menu>
-        <menu name="Documentation" inherit="bottom">
-            <item name="Acquire" href="./acquire.html" />
-            <item name="Usage" href="./usage.html" />
-            <item name="Repositories" href="./repositories.html" />
-            <item name="Travis integration" href="./travis.html" />
-            <item name="Tests" href="./tests.html" />
-            <item name="Deployment" href="./deployment.html" />
-            <item name="Maven site and reports" href="./site.html" />
-            <item name="The changes log" href="./changes.html" />
-        </menu>
-        <menu name="Info and reports" inherit="bottom">
-            <item name="Info" href="./info.html" />
-            <item name="Reports" href="./reports.html" />
-        </menu>
-    </body>
+   <body>
+      <menu name="General Info" inherit="top">
+         <item name="Acquire" href="./acquire.html" />
+         <item name="Usage" href="./usage.html" />
+         <item name="Changes Log" href="./changes-report.html" />
+      </menu>
+      <menu name="Documentation" inherit="bottom">
+         <item name="Acquire" href="./acquire.html" />
+         <item name="Usage" href="./usage.html" />
+         <item name="Repositories" href="./repositories.html" />
+         <item name="Travis integration" href="./travis.html" />
+         <item name="Tests" href="./tests.html" />
+         <item name="Deployment" href="./deployment.html" />
+         <item name="Maven site and reports" href="./site.html" />
+         <item name="The changes log" href="./changes.html" />
+      </menu>
+      <menu name="Info and reports" inherit="bottom">
+         <item name="Info" href="./info.html" />
+         <item name="Reports" href="./reports.html" />
+      </menu>
+      <menu name="Code" inherit="bottom">
+         <item name="SCM" href="${project.scm.url}">
+            <description>GitHub</description>
+         </item>
+         <item name="CI" href="${project.ciManagement.url}">
+            <description>${project.ciManagement.system}</description>
+         </item>
+         <item name="Issues" href="${project.issueManagement.url}">
+            <description>${project.issueManagement.system}</description>
+         </item>
+      </menu>
+      <menu name="Releases" inherit="bottom">
+         <item name="Bintray" href="${bintrayURL}" />
+         <item name="Maven Central" href="${mavenURL}" />
+      </menu>
+      <menu name="Icons" inherit="bottom">
+         <item name="Github" img="github" href="${project.scm.url}" />
+      </menu>
+   </body>
 
 </project>
