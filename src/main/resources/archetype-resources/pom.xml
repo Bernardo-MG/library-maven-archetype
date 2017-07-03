@@ -11,7 +11,7 @@
    <parent>
       <groupId>com.wandrell.maven</groupId>
       <artifactId>base-pom</artifactId>
-      <version>1.1.0</version>
+      <version>1.1.4</version>
    </parent>
 
    <!-- ********************************************** -->
@@ -119,9 +119,9 @@
          </build>
       </profile>
       <profile>
-         <!-- Release site deployment profile. -->
+         <!-- Release deployment profile. -->
          <!-- Sets the site repository to point to the releases repo. -->
-         <id>deploy-site-release</id>
+         <id>deployment-release</id>
          <activation>
             <!-- Active by default so the repository appears in the reports. -->
             <activeByDefault>true</activeByDefault>
@@ -135,9 +135,9 @@
          </distributionManagement>
       </profile>
       <profile>
-         <!-- Development site deployment profile. -->
+         <!-- Development deployment profile. -->
          <!-- Sets the site repository to point to the development repo. -->
-         <id>deploy-site-development</id>
+         <id>deployment-development</id>
          <distributionManagement>
             <site>
                <id>site-development</id>
@@ -187,17 +187,21 @@
    <!-- ********************************************** -->
 
    <properties>
-      <!-- Manifest data -->
+      <!-- ============================================== -->
+      <!-- =============== MANIFEST DATA ================ -->
+      <!-- ============================================== -->
       <manifest.name>${packageInPathFormat}</manifest.name>
-      <!-- Dependencies versions -->
+      <!-- ============================================== -->
+      <!-- =========== DEPENDENCIES VERSIONS ============ -->
+      <!-- ============================================== -->
       <guava.version>19.0</guava.version>
       <log4j.version>2.6.2</log4j.version>
       <mockito.version>1.10.19</mockito.version>
       <testng.version>6.9.10</testng.version>
-      <!-- Plugins versions -->
-      <plugin.changes.version>2.12</plugin.changes.version>
-      <!-- Maven Site -->
-      <site.skin.version>0.5.0</site.skin.version>
+      <!-- ============================================== -->
+      <!-- ================= MAVEN SITE ================= -->
+      <!-- ============================================== -->
+      <site.skin.version>0.6.0</site.skin.version>
       <bintrayURL>https://bintray.com/${repoUserId}/maven/${artifactId}/view</bintrayURL>
       <mavenURL>http://mvnrepository.com/artifact/${groupId}/${artifactId}</mavenURL>
    </properties>
@@ -259,7 +263,6 @@
             <!-- It is set to also validate the changes log file -->
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-changes-plugin</artifactId>
-            <version>${plugin.changes.version}</version>
             <executions>
                <!-- Changes plugin is bound to the pre-site phase -->
                <execution>
@@ -282,18 +285,6 @@
             </executions>
          </plugin>
          <plugin>
-            <!-- Failsafe -->
-            <!-- Runs integration tests -->
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-failsafe-plugin</artifactId>
-            <configuration>
-               <suiteXmlFiles>
-                  <!-- Path to the integration tests suite file -->
-                  <suiteXmlFile>${project.build.testOutputDirectory}/tests_maven_integration_suite.xml</suiteXmlFile>
-               </suiteXmlFiles>
-            </configuration>
-         </plugin>
-         <plugin>
             <!-- Site -->
             <!-- Generates the Maven Site -->
             <groupId>org.apache.maven.plugins</groupId>
@@ -307,18 +298,6 @@
                </dependency>
             </dependencies>
          </plugin>
-         <plugin>
-            <!-- Surefire -->
-            <!-- Runs unit tests -->
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <configuration>
-               <suiteXmlFiles>
-                  <!-- Path to the unit tests suite file -->
-                  <suiteXmlFile>${project.build.testOutputDirectory}/tests_maven_unit_suite.xml</suiteXmlFile>
-               </suiteXmlFiles>
-            </configuration>
-         </plugin>
       </plugins>
    </build>
 
@@ -328,16 +307,6 @@
 
    <reporting>
       <plugins>
-         <plugin>
-             <!-- FindBugs -->
-             <!-- Checks for patterns which are prone to errors -->
-             <groupId>org.codehaus.mojo</groupId>
-             <artifactId>findbugs-maven-plugin</artifactId>
-             <configuration>
-                 <!-- Exclusion patterns -->
-                 <excludeFilterFile>${project.basedir}/src/config/findbugs/findbugs-exclude.xml</excludeFilterFile>
-             </configuration>
-         </plugin>
          <plugin>
             <!-- Checkstyle -->
             <!-- Checks that the source files comply with style standards -->
@@ -350,6 +319,16 @@
                <!-- Excludes generated code -->
                <excludes>**/generated/**/*</excludes>
             </configuration>
+         </plugin>
+         <plugin>
+             <!-- FindBugs -->
+             <!-- Checks for patterns which are prone to errors -->
+             <groupId>org.codehaus.mojo</groupId>
+             <artifactId>findbugs-maven-plugin</artifactId>
+             <configuration>
+                 <!-- Exclusion patterns -->
+                 <excludeFilterFile>${project.basedir}/src/config/findbugs/findbugs-exclude.xml</excludeFilterFile>
+             </configuration>
          </plugin>
          <plugin>
             <!-- Javadoc -->
