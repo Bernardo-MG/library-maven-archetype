@@ -2,13 +2,14 @@
 * text=auto
 
 # Known text files
-*.java text
+*.css text diff=css
+*.java text diff=java
+*.html text diff=html
+*.sh text
+*.md text
+*.txt text
 *.xml text
 *.yml text
-*.md text
-*.sh text
-*.css text
-*.txt text
 
 # Known binary files
 *.jar binary
