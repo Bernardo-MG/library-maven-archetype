@@ -354,5 +354,10 @@
             Extended git attributes configuration.
          </action>
       </release>
+      <release version="0.7.3" date="2017-07-03" description="Configuration changes">
+         <action dev="bmg" type="fix">
+            Corrected JDK settings in Travis file.
+         </action>
+      </release>
    </body>
 </document>
