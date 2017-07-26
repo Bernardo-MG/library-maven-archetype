@@ -195,7 +195,7 @@
       <!-- =========== DEPENDENCIES VERSIONS ============ -->
       <!-- ============================================== -->
       <guava.version>20.0</guava.version>
-      <log4j.version>2.6.2</log4j.version>
+      <log4j.version>2.7</log4j.version>
       <mockito.version>1.10.19</mockito.version>
       <testng.version>6.9.10</testng.version>
       <!-- ============================================== -->
