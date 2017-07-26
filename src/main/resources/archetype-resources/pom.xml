@@ -11,7 +11,7 @@
    <parent>
       <groupId>com.wandrell.maven</groupId>
       <artifactId>base-pom</artifactId>
-      <version>1.1.4</version>
+      <version>1.1.5</version>
    </parent>
 
    <!-- ********************************************** -->
@@ -194,14 +194,14 @@
       <!-- ============================================== -->
       <!-- =========== DEPENDENCIES VERSIONS ============ -->
       <!-- ============================================== -->
-      <guava.version>19.0</guava.version>
-      <log4j.version>2.6.2</log4j.version>
+      <guava.version>20.0</guava.version>
+      <log4j.version>2.7</log4j.version>
       <mockito.version>1.10.19</mockito.version>
       <testng.version>6.9.10</testng.version>
       <!-- ============================================== -->
       <!-- ================= MAVEN SITE ================= -->
       <!-- ============================================== -->
-      <site.skin.version>0.6.0</site.skin.version>
+      <site.skin.version>1.0.0</site.skin.version>
       <bintrayURL>https://bintray.com/${repoUserId}/maven/${artifactId}/view</bintrayURL>
       <mavenURL>http://mvnrepository.com/artifact/${groupId}/${artifactId}</mavenURL>
    </properties>

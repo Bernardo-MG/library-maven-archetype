@@ -14,7 +14,7 @@
 
    <groupId>com.wandrell.maven.archetypes</groupId>
    <artifactId>library-archetype</artifactId>
-   <version>0.7.2</version>
+   <version>1.0.0</version>
    <packaging>maven-archetype</packaging>
 
    <name>Library Maven Archetype</name>
@@ -188,11 +188,11 @@
       <!-- ============================================== -->
       <!-- ============= EXTENSIONS VERSIONS ============ -->
       <!-- ============================================== -->
-      <extension.wagon.version>2.10</extension.wagon.version>
+      <extension.wagon.version>2.12</extension.wagon.version>
       <!-- ============================================== -->
       <!-- ================= MAVEN SITE ================= -->
       <!-- ============================================== -->
-      <site.skin.version>0.6.0</site.skin.version>
+      <site.skin.version>1.0.0</site.skin.version>
       <repoDownloadURL>https://dl.bintray.com/bernardo-mg/maven/</repoDownloadURL>
       <bintrayURL>https://bintray.com/bernardo-mg/maven/library-maven-archetype/view</bintrayURL>
       <mavenURL>http://mvnrepository.com/artifact/com.wandrell.maven.archetypes/library-archetype</mavenURL>
