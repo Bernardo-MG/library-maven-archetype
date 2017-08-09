@@ -14,7 +14,9 @@ $ mvn verify site
 
 ## Javadocs
 
-Apart from the reports mentioned below, the site will generate and include the Javadocs for the project, which will be accessible in the same section as the reports.
+Building the site will generate and include the Javadocs for the project, which will be accessible from the *info and reports* menu.
+
+This menu includes a link to the folder where Maven stores the generated javadocs, the *apidocs* folder.
 
 ## Reports
 

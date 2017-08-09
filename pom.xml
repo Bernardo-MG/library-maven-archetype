@@ -9,12 +9,22 @@
    </prerequisites>
 
    <!-- ********************************************** -->
+   <!-- ***************** PARENT POM ***************** -->
+   <!-- ********************************************** -->
+
+   <parent>
+      <groupId>com.wandrell.maven</groupId>
+      <artifactId>archetype-pom</artifactId>
+      <version>1.0.0</version>
+   </parent>
+
+   <!-- ********************************************** -->
    <!-- **************** PROJECT INFO **************** -->
    <!-- ********************************************** -->
 
    <groupId>com.wandrell.maven.archetypes</groupId>
    <artifactId>library-archetype</artifactId>
-   <version>1.0.0</version>
+   <version>1.0.1</version>
    <packaging>maven-archetype</packaging>
 
    <name>Library Maven Archetype</name>
@@ -142,53 +152,9 @@
 
    <properties>
       <!-- ============================================== -->
-      <!-- ================== ENCODING ================== -->
-      <!-- ============================================== -->
-      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-      <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
-      <!-- ============================================== -->
-      <!-- ================ JAVA VERSION ================ -->
-      <!-- ============================================== -->
-      <maven.compiler.source>1.7</maven.compiler.source>
-      <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
-      <!-- ============================================== -->
-      <!-- =============== MAVEN VERSION ================ -->
-      <!-- ============================================== -->
-      <maven.version>3.0</maven.version>
-      <!-- ============================================== -->
       <!-- =============== MANIFEST DATA ================ -->
       <!-- ============================================== -->
       <manifest.name>com/wandrell/archetype/library</manifest.name>
-      <!-- ============================================== -->
-      <!-- ============== PLUGINS VERSIONS ============== -->
-      <!-- ============================================== -->
-      <plugin.ant.version>1.8</plugin.ant.version>
-      <plugin.assembly.version>3.0.0</plugin.assembly.version>
-      <plugin.archetype.version>2.4</plugin.archetype.version>
-      <plugin.archetype.invoker.version>2.2</plugin.archetype.invoker.version>
-      <plugin.changes.version>2.12.1</plugin.changes.version>
-      <plugin.clean.version>3.0.0</plugin.clean.version>
-      <plugin.compiler.version>3.6.1</plugin.compiler.version>
-      <plugin.dependency.version>3.0.0</plugin.dependency.version>
-      <plugin.deploy.version>2.8.2</plugin.deploy.version>
-      <plugin.enforcer.version>1.4.1</plugin.enforcer.version>
-      <plugin.install.version>2.5.2</plugin.install.version>
-      <plugin.jar.version>3.0.2</plugin.jar.version>
-      <plugin.release.version>2.5.3</plugin.release.version>
-      <plugin.reports.version>2.9</plugin.reports.version>
-      <plugin.resources.version>3.0.2</plugin.resources.version>
-      <plugin.site.version>3.6</plugin.site.version>
-      <plugin.source.version>3.0.1</plugin.source.version>
-      <plugin.versions.version>2.3</plugin.versions.version>
-      <!-- ============================================== -->
-      <!-- =========== PLUGINS CONFIGURATION ============ -->
-      <!-- ============================================== -->
-      <!-- Relativizing the Maven Site links has a tendency to break them -->
-      <relativizeDecorationLinks>false</relativizeDecorationLinks>
-      <!-- ============================================== -->
-      <!-- ============= EXTENSIONS VERSIONS ============ -->
-      <!-- ============================================== -->
-      <extension.wagon.version>2.12</extension.wagon.version>
       <!-- ============================================== -->
       <!-- ================= MAVEN SITE ================= -->
       <!-- ============================================== -->
@@ -204,167 +170,7 @@
 
    <build>
       <defaultGoal>clean package install</defaultGoal>
-      <extensions>
-         <extension>
-            <!-- Archetype Packaging -->
-            <!-- Allows creating the archetype from the project. -->
-            <groupId>org.apache.maven.archetype</groupId>
-            <artifactId>archetype-packaging</artifactId>
-            <version>${plugin.archetype.version}</version>
-         </extension>
-         <extension>
-            <!-- Wagon SSH -->
-            <!-- Enables the use of SSH. -->
-            <groupId>org.apache.maven.wagon</groupId>
-            <artifactId>wagon-ssh</artifactId>
-            <version>${extension.wagon.version}</version>
-         </extension>
-      </extensions>
-      <pluginManagement>
-         <plugins>
-            <!-- Plugin versions and configurations are enforced here. -->
-            <!-- Some of these plugins are added by default by Maven in some 
-               situations. -->
-            <plugin>
-               <!-- Ant Run -->
-               <!-- Capable of handling Ant scripts. -->
-               <groupId>org.apache.maven.plugins</groupId>
-               <artifactId>maven-antrun-plugin</artifactId>
-               <version>${plugin.ant.version}</version>
-            </plugin>
-            <plugin>
-               <!-- Archetype -->
-               <!-- Used for building the archetype -->
-               <groupId>org.apache.maven.plugins</groupId>
-               <artifactId>maven-archetype-plugin</artifactId>
-               <version>${plugin.archetype.version}</version>
-               <dependencies>
-                  <dependency>
-                     <groupId>org.apache.maven.shared</groupId>
-                     <artifactId>maven-invoker</artifactId>
-                     <version>${plugin.archetype.invoker.version}</version>
-                  </dependency>
-               </dependencies>
-            </plugin>
-            <plugin>
-               <!-- Assembly -->
-               <!-- Builds a distributable file from all the project components. -->
-               <groupId>org.apache.maven.plugins</groupId>
-               <artifactId>maven-assembly-plugin</artifactId>
-               <version>${plugin.assembly.version}</version>
-            </plugin>
-            <plugin>
-               <!-- Changes -->
-               <!-- Takes care of the changes log -->
-               <!-- It is set to also validate the changes log file -->
-               <groupId>org.apache.maven.plugins</groupId>
-               <artifactId>maven-changes-plugin</artifactId>
-               <version>${plugin.changes.version}</version>
-            </plugin>
-            <plugin>
-               <!-- Clean -->
-               <!-- Cleans the output folder. -->
-               <groupId>org.apache.maven.plugins</groupId>
-               <artifactId>maven-clean-plugin</artifactId>
-               <version>${plugin.clean.version}</version>
-            </plugin>
-            <plugin>
-               <!-- Compiler -->
-               <!-- Handles the source code. -->
-               <groupId>org.apache.maven.plugins</groupId>
-               <artifactId>maven-compiler-plugin</artifactId>
-               <version>${plugin.compiler.version}</version>
-            </plugin>
-            <plugin>
-               <!-- Dependency -->
-               <!-- Takes care of dependencies, both copying and showing 
-                  their info. -->
-               <groupId>org.apache.maven.plugins</groupId>
-               <artifactId>maven-dependency-plugin</artifactId>
-               <version>${plugin.dependency.version}</version>
-            </plugin>
-            <plugin>
-               <!-- Deploy -->
-               <!-- Takes care of the deployment phase -->
-               <!-- It is set to generate and deploy a POM file along the 
-                  artifact -->
-               <artifactId>maven-deploy-plugin</artifactId>
-               <version>${plugin.deploy.version}</version>
-            </plugin>
-            <plugin>
-               <!-- Enforcer -->
-               <!-- Stops the project from being built if it does not comply 
-                  with a set of rules. -->
-               <groupId>org.apache.maven.plugins</groupId>
-               <artifactId>maven-enforcer-plugin</artifactId>
-               <version>${plugin.enforcer.version}</version>
-            </plugin>
-            <plugin>
-               <!-- Install -->
-               <!-- Installs the project into the local Maven repository. -->
-               <groupId>org.apache.maven.plugins</groupId>
-               <artifactId>maven-install-plugin</artifactId>
-               <version>${plugin.install.version}</version>
-            </plugin>
-            <plugin>
-               <!-- Jar -->
-               <!-- Generates the jar file -->
-               <groupId>org.apache.maven.plugins</groupId>
-               <artifactId>maven-jar-plugin</artifactId>
-               <version>${plugin.jar.version}</version>
-            </plugin>
-            <plugin>
-               <!-- Project Info Reports -->
-               <!-- Generates general information reports -->
-               <groupId>org.apache.maven.plugins</groupId>
-               <artifactId>maven-project-info-reports-plugin</artifactId>
-               <version>${plugin.reports.version}</version>
-            </plugin>
-            <plugin>
-               <!-- Release -->
-               <!-- Generates releases and updates the project. -->
-               <groupId>org.apache.maven.plugins</groupId>
-               <artifactId>maven-release-plugin</artifactId>
-               <version>${plugin.release.version}</version>
-            </plugin>
-            <plugin>
-               <!-- Resources -->
-               <!-- This is set here to force downgrading the plugin version, 
-                  to fix the bug where the .gitignore file is not copied -->
-               <artifactId>maven-resources-plugin</artifactId>
-               <version>${plugin.resources.version}</version>
-            </plugin>
-            <plugin>
-               <!-- Site -->
-               <!-- Generates the Maven Site -->
-               <groupId>org.apache.maven.plugins</groupId>
-               <artifactId>maven-site-plugin</artifactId>
-               <version>${plugin.site.version}</version>
-            </plugin>
-            <plugin>
-               <!-- Source -->
-               <!-- Bundles the source into a jar -->
-               <artifactId>maven-source-plugin</artifactId>
-               <version>${plugin.source.version}</version>
-            </plugin>
-            <plugin>
-               <!-- Versions -->
-               <!-- Generates a report with the versions of all plugins and dependencies. -->
-               <groupId>org.codehaus.mojo</groupId>
-               <artifactId>versions-maven-plugin</artifactId>
-               <version>${plugin.versions.version}</version>
-            </plugin>
-         </plugins>
-      </pluginManagement>
       <plugins>
-         <!-- Specific plugins not added by default are included here. -->
-         <!-- Also, project specific configuration is added here. -->
-         <plugin>
-            <!-- Archetype -->
-            <!-- Generates the archetype -->
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-archetype-plugin</artifactId>
-         </plugin>
          <plugin>
             <!-- Changes -->
             <!-- Takes care of the changes log -->
@@ -392,113 +198,6 @@
             </executions>
          </plugin>
          <plugin>
-            <!-- Enforcer -->
-            <!-- Stops the project from being built if it does not comply 
-               with a set of rules. -->
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-enforcer-plugin</artifactId>
-            <executions>
-               <execution>
-                  <id>enforce-javaVersion</id>
-                  <goals>
-                     <goal>enforce</goal>
-                  </goals>
-                  <configuration>
-                     <rules>
-                        <!-- Not obsolete JDK. -->
-                        <requireJavaVersion>
-                           <version>[${maven.compiler.source},)</version>
-                        </requireJavaVersion>
-                     </rules>
-                  </configuration>
-               </execution>
-               <execution>
-                  <id>enforce-convergence</id>
-                  <goals>
-                     <goal>enforce</goal>
-                  </goals>
-                  <configuration>
-                     <rules>
-                        <!-- Dependencies convergence. -->
-                        <!-- This variant of the rule requires less configuration, 
-                           making use of Maven's dependency resolver. -->
-                        <requireUpperBoundDeps />
-                     </rules>
-                  </configuration>
-               </execution>
-               <execution>
-                  <id>enforce-pluginVersion</id>
-                  <goals>
-                     <goal>enforce</goal>
-                  </goals>
-                  <configuration>
-                     <rules>
-                        <!-- No plugin without version. -->
-                        <requirePluginVersions>
-                           <banLatest>true</banLatest>
-                           <banRelease>true</banRelease>
-                           <banSnapshots>true</banSnapshots>
-                           <phases>clean,deploy,site,test,verify</phases>
-                        </requirePluginVersions>
-                     </rules>
-                  </configuration>
-               </execution>
-               <execution>
-                  <id>enforce-manifest</id>
-                  <goals>
-                     <goal>enforce</goal>
-                  </goals>
-                  <configuration>
-                     <rules>
-                        <!-- Manifest name should be given. -->
-                        <requireProperty>
-                           <property>manifest.name</property>
-                           <message><![CDATA[Give a name for the manifest.]]></message>
-                           <regex>.*</regex>
-                           <regexMessage><![CDATA[It should be a valid name.]]></regexMessage>
-                        </requireProperty>
-                     </rules>
-                  </configuration>
-               </execution>
-               <execution>
-                  <id>enforce-maven</id>
-                  <goals>
-                     <goal>enforce</goal>
-                  </goals>
-                  <configuration>
-                     <rules>
-                        <!-- Only Maven 3.0 or higher is supported -->
-                        <requireMavenVersion>
-                           <version>[${maven.version},)</version>
-                           <message><![CDATA[Only Maven 3.0 or higher is supported.]]></message>
-                        </requireMavenVersion>
-                     </rules>
-                  </configuration>
-               </execution>
-            </executions>
-         </plugin>
-         <plugin>
-            <!-- Jar -->
-            <!-- Generates the jar file -->
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-jar-plugin</artifactId>
-            <configuration>
-               <archive>
-                  <index>true</index>
-                  <manifest>
-                     <addClasspath>true</addClasspath>
-                     <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-                     <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
-                     <packageName>${project.groupId}</packageName>
-                  </manifest>
-                  <manifestEntries>
-                     <name>${manifest.name}</name>
-                     <url>${project.url}</url>
-                  </manifestEntries>
-               </archive>
-            </configuration>
-         </plugin>
-         <plugin>
             <!-- Site -->
             <!-- Generates the Maven Site -->
             <groupId>org.apache.maven.plugins</groupId>
@@ -512,72 +211,7 @@
                </dependency>
             </dependencies>
          </plugin>
-         <plugin>
-            <!-- Source -->
-            <!-- Bundles the source into a jar -->
-            <artifactId>maven-source-plugin</artifactId>
-            <executions>
-               <execution>
-                  <!-- Generates the jar for the deployment -->
-                  <!-- Source is bound to the package phase -->
-                  <id>attach-sources</id>
-                  <goals>
-                     <goal>jar-no-fork</goal>
-                  </goals>
-               </execution>
-            </executions>
-         </plugin>
       </plugins>
    </build>
-
-   <!-- ********************************************** -->
-   <!-- ****************** REPORTS ******************* -->
-   <!-- ********************************************** -->
-
-   <reporting>
-      <plugins>
-         <plugin>
-            <!-- Changes -->
-            <!-- Generates the changes report from the changes log -->
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-changes-plugin</artifactId>
-            <reportSets>
-               <reportSet>
-                  <reports>
-                     <report>changes-report</report>
-                  </reports>
-               </reportSet>
-            </reportSets>
-         </plugin>
-         <plugin>
-            <!-- Project Info Reports -->
-            <!-- Generates general information reports -->
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-project-info-reports-plugin</artifactId>
-            <reportSets>
-               <reportSet>
-                  <reports>
-                     <report>summary</report>
-                     <report>license</report>
-                     <report>modules</report>
-                     <report>project-team</report>
-                     <report>dependencies</report>
-                     <report>dependency-info</report>
-                     <report>dependency-management</report>
-                     <report>distribution-management</report>
-                     <report>plugins</report>
-                     <report>plugin-management</report>
-                  </reports>
-               </reportSet>
-            </reportSets>
-         </plugin>
-         <plugin>
-            <!-- Site -->
-            <!-- Generates the Maven Site -->
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-site-plugin</artifactId>
-         </plugin>
-      </plugins>
-   </reporting>
 
 </project>
