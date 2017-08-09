@@ -43,7 +43,7 @@ The deployment flags are taken care of in the Travis configuration file. These a
 
 #### Generated variables
 
-The VERSION\_TYPE variable is generated on the Travis setting file, by just checking the TRAVIS\_BRANCH variable. The *master* branch will indicate a release, the *develop* branch will indicate a develop version, and any other will be other type of version.
+The VERSION\_TYPE variable is generated on the scripts included by the Travis setting file, by just checking the TRAVIS\_BRANCH variable. The *master* branch will indicate a release, the *develop* branch will indicate a develop version, and any other will be other type of version.
 
 #### Mapped to pre-defined variables
 
@@ -65,13 +65,11 @@ For example, to deploy both using Java 8 use the following matrix:
 
 ```
 matrix:
-  exclude:
-    - jdk: oraclejdk8
   include:
     - jdk: oraclejdk8
-      env: DEPLOY=true DEPLOY_DOCS=false PULL_REQUEST=$TRAVIS_PULL_REQUEST
+      env: DEPLOY=true
     - jdk: oraclejdk8
-      env: DEPLOY=false DEPLOY_DOCS=true PULL_REQUEST=$TRAVIS_PULL_REQUEST
+      env: DEPLOY_DOCS=true
 ```
 
 [github]: https://github.com/
