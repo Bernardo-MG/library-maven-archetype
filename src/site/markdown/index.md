@@ -2,7 +2,7 @@
 
 Archetypes act as templates for new Maven projects, taking care of the most tedious and repetitive tasks for the user, who can just begin coding a pre-configured project.
 
-In this case this Archetype creates a generic Maven-based library which includes various common and useful plugins and utilities, and also comes ready for a full development cycle including CI, where each change to the code is checked before performing automatic releases.
+In this case this Archetype creates a generic Maven-based library which includes various common and useful plugins and utilities, and also comes ready for a full development cycle and comes ready to use Travis for CI.
 
 ## Features
 
