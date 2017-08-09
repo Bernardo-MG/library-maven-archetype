@@ -14,7 +14,7 @@ The most important repository is the Source Code Manager, as this is where the c
 
 ### Automatic creation of the SCM URL
 
-The repository's URL for the POM will be created by using the repoUserId and the project id Archetype variables in the following Velocity macro:
+The repository's URL for the POM will be created by using the repoUserId and the project id Archetype variables:
 
 ```
 https://www.github.com/${repoUserId}/${artifactId}
@@ -24,7 +24,7 @@ If the repository does not follow this naming pattern then the resulting URL sho
 
 ### Source repository and snapshots versions
 
-The [deployment scripts][deployment-scripts-section] included make use of a Maven feature which finds out if the project is a release or a development version based on a suffix. If the version field on the POM ends with "-SNAPSHOT" then it is a snapshot, a development version. Otherwise it is a release.
+The [deployment scripts][deployment-scripts-section] included take advantage of the fact that Maven can now if the project is a release or a development version based on a suffix. If the version field on the POM ends with "-SNAPSHOT" then it is a snapshot, a development version. Otherwise it is a release.
 
 For this reason the "-SNAPSHOT" prefix should be always used for the versions kept in all the development branches of the code repository.
 

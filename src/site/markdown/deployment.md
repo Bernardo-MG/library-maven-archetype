@@ -28,7 +28,7 @@ Just like that Maven will know which [repository][repositories] should be used w
 
 The included configuration file makes use of a few scripts which require some environmental variables set for flow control.
 
-Make sure they are correctly set on the machine running the CI.
+Make sure they are correctly set on the machine running the CI. For Travis check the [environment variables][travis-env] docs.
 
 ### Repositories access data
 
@@ -79,13 +79,13 @@ If any of the following conditions is met the deployment step will be skipped:
 
 To help with the deployment a few profiles are included in the generated project's POM.
 
-The scripts used for CI already take care of them.
+The scripts used for CI, and the included Travis file, already take care of them.
 
 |Profile|Description|
 |---|---|
-|deployment|General deployment profile to set up the deployment environment. Mostly this is used to disable testing for faster deployment.|
-|deploy-site-release|Release Maven Site deployment profile. Sets the site release repository.|
-|deploy-site-development|Development Maven Site deployment profile. Sets the site deployment repository.|
+|deployment|General deployment profile to set up the deployment environment. Used to disable testing for faster deployment.|
+|deployment-release|Release deployment profile. Sets the site release repository.|
+|deployment-development|Development deployment profile. Sets the site deployment repository.|
 
 Having a Maven site profile for releases and another for development allows having two Maven sites, one for each kind of version.
 
@@ -112,5 +112,7 @@ Additionally, it will also set the Maven Site profile to be used.
 [repositories]: ./repositories.html
 
 [travis-section]: ./travis.html
+
+[travis-env]: https://docs.travis-ci.com/user/environment-variables/
 
 [ci-shell-scripts]: https://github.com/Bernardo-MG/ci-shell-scripts
