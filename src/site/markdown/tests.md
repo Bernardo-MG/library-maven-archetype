@@ -22,17 +22,17 @@ While there have been several reasons for picking this against [JUnit][junit] (m
 
 Unit and integration tests should be stored in different class paths, so they are easier to differentiate. This is reflected by the placeholder tests created with the project.
 
-The *test/resources* folder includes two TestNG suites as XML files, one for each type of test. The *tests\_maven\_unit\_suite.xml* will be run with the *test* goal and is for the unit tests, and the *tests\_maven\_integration\_suite.xml* will be run with the *verify* one and is for the integration tests.
+The test plugins won't be searching those tests based on their class paths, instead they depend on following a specific naming scheme, which will mark apart unit and integration tests.
 
 ### Naming the tests
 
-While not required, it is recommended to start the name of each unit test class with the *Test* keyword, and the integration test classes with the *IT* keyword.
+The tests should follow a clear naming scheme, which is the default way to differentiate unit and integration tests in Maven. Each unit test class will start with the *Test* keyword, and the integration test classes with the *IT* keyword.
 
-This is mostly for making the tests type easier to recognize, but there are some useful side-effects to this. For example if the testing framework is changed to JUnit, this will stop integration tests from being accidentally run as unit tests.
+To find more about how the tests can be bound to different phases take a look at Surefire and Failsafe manuals.
 
 ### Tests classpath
 
-It may seem strange that the classpath for the tests on the new project includes *testing.test* as part of it. The reason is that if additional classes are required for the tests they should be added into a *testing.util*, or similar, package. Keeping the actual tests separated from any helper class.
+It may seem strange that the classpath for the tests on the new project includes *testing.test* as part of it. The reason is that if additional classes are required for the tests they should be added into a *testing.util* or similar package. Keeping the actual tests separated from any helper class.
 
 ## Reports
 
