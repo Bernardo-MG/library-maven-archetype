@@ -10,5 +10,10 @@
             First release of the archetype.
          </action>
       </release>
+      <release version="1.0.1" date="2017-08-09" description="Updated docs">
+         <action dev="bmg" type="update">
+            Updated docs.
+         </action>
+      </release>
    </body>
 </document>
