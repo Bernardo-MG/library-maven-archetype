@@ -5,9 +5,12 @@
       <author email="programming@wandrell.com">Bernardo Martínez Garrido</author>
    </properties>
    <body>
-      <release version="1.0.0" date="2017-07-26" description="First release">
-         <action dev="bmg" type="update">
-            First release of the archetype.
+      <release version="1.0.2" date="2017-09-03" description="Changes log fix">
+         <action dev="bmg" type="fix">
+            Fixed initial version in changes log.
+         </action>
+         <action dev="bmg" type="remove">
+            Removed OWASP report.
          </action>
       </release>
       <release version="1.0.1" date="2017-08-09" description="Updated docs">
@@ -19,6 +22,11 @@
          </action>
          <action dev="bmg" type="update">
             Corrected test configuration.
+         </action>
+      </release>
+      <release version="1.0.0" date="2017-07-26" description="First release">
+         <action dev="bmg" type="update">
+            First release of the archetype.
          </action>
       </release>
    </body>
