@@ -118,6 +118,9 @@
             </pluginManagement>
          </build>
       </profile>
+      <!-- ============================================== -->
+      <!-- ============ DEPLOYMENT PROFILES ============= -->
+      <!-- ============================================== -->
       <profile>
          <!-- Release deployment profile. -->
          <!-- Sets the site repository to point to the releases repo. -->
