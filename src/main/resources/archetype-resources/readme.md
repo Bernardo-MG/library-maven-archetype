@@ -63,7 +63,6 @@ It is a Java library, meant to be included as a dependency on any project which 
 ${symbol_pound}${symbol_pound}${symbol_pound} Prerequisites
 
 The project has been tested on the following Java versions:
-* JDK 7
 * JDK 8
 * OpenJDK 7
 

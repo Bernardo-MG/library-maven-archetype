@@ -12,6 +12,9 @@
          <action dev="bmg" type="remove">
             Removed OWASP report.
          </action>
+         <action dev="bmg" type="remove">
+            Removed JDK7 from the test environments.
+         </action>
       </release>
       <release version="1.0.1" date="2017-08-09" description="Updated docs">
          <action dev="bmg" type="update">
