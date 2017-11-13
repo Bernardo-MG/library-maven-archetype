@@ -2,7 +2,7 @@
 
 This is a base project created with the [Library Maven Archetype][library-archetype], prepared to ease the development of new libraries.
 
-Note that while it is meant to be a working project from the beginning, meaning that it compiles, runs the tests and creates the docs, it is mostly composed of placeholder classes which should be swapped with actual content.
+Note that while it is meant to be a working project from the beginning, meaning that it compiles, runs the tests and creates the docs. It is mostly composed of placeholder classes which should be swapped with actual content.
 
 ## Where should I start customizing the project?
 
