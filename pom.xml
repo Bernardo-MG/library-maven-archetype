@@ -24,7 +24,7 @@
 
    <groupId>com.wandrell.maven.archetypes</groupId>
    <artifactId>library-archetype</artifactId>
-   <version>1.0.2</version>
+   <version>1.0.3</version>
    <packaging>maven-archetype</packaging>
 
    <name>Library Maven Archetype</name>
@@ -63,6 +63,9 @@
    </ciManagement>
 
    <distributionManagement>
+      <relocation>
+         <groupId>com.bernardomg.maven.archetypes</groupId>
+      </relocation>
       <repository>
          <uniqueVersion>false</uniqueVersion>
          <id>releases</id>
@@ -94,7 +97,8 @@
             <site>
                <id>site</id>
                <name>Project Documentation Site</name>
-               <url>scp://docs.wandrell.com:2222/home1/duenco/www/maven/library-maven-archetype</url>
+               <!-- The URL should be set externally -->
+               <url>${site.release.url}</url>
             </site>
          </distributionManagement>
       </profile>
@@ -106,7 +110,8 @@
             <site>
                <id>site-development</id>
                <name>Project Development Documentation Site</name>
-               <url>scp://docs.wandrell.com:2222/home1/duenco/www/development/maven/library-maven-archetype</url>
+               <!-- The URL should be set externally -->
+               <url>${site.develop.url}</url>
             </site>
          </distributionManagement>
       </profile>
@@ -158,7 +163,7 @@
       <!-- ============================================== -->
       <!-- ================= MAVEN SITE ================= -->
       <!-- ============================================== -->
-      <site.skin.version>1.0.0</site.skin.version>
+      <site.skin.version>1.2.0</site.skin.version>
       <repoDownloadURL>https://dl.bintray.com/bernardo-mg/maven/</repoDownloadURL>
       <bintrayURL>https://bintray.com/bernardo-mg/maven/library-maven-archetype/view</bintrayURL>
       <mavenURL>http://mvnrepository.com/artifact/com.wandrell.maven.archetypes/library-archetype</mavenURL>
@@ -205,7 +210,7 @@
             <dependencies>
                <dependency>
                   <!-- Docs Maven Skin -->
-                  <groupId>com.wandrell.maven.skins</groupId>
+                  <groupId>com.bernardomg.maven.skins</groupId>
                   <artifactId>docs-maven-skin</artifactId>
                   <version>${site.skin.version}</version>
                </dependency>

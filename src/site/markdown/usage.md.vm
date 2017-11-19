@@ -64,8 +64,6 @@ URLs for the Maven site. The deployment URLs are used by the plugins to push the
 
 |Variable|Usage|
 |---|---|
-|urlSiteDeployRelease|URL for deploying the release version documents|
-|urlSiteDeployDevelop|URL for deploying the development documents|
 |urlSiteRelease|URL where the release version documents can be found|
 |urlSiteDevelop|URL where the development documents can be found|
 

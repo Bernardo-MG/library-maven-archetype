@@ -133,7 +133,8 @@
             <site>
                <id>site</id>
                <name>Project Documentation Site</name>
-               <url>${urlSiteDeployRelease}/${artifactId}</url>
+               <!-- The URL should be set externally -->
+               <url>${site.release.url}</url>
             </site>
          </distributionManagement>
       </profile>
@@ -145,7 +146,8 @@
             <site>
                <id>site-development</id>
                <name>Project Development Documentation Site</name>
-               <url>${urlSiteDeployDevelop}/${artifactId}</url>
+               <!-- The URL should be set externally -->
+               <url>${site.develop.url}</url>
             </site>
          </distributionManagement>
       </profile>
@@ -204,7 +206,7 @@
       <!-- ============================================== -->
       <!-- ================= MAVEN SITE ================= -->
       <!-- ============================================== -->
-      <site.skin.version>1.0.0</site.skin.version>
+      <site.skin.version>1.2.0</site.skin.version>
       <bintrayURL>https://bintray.com/${repoUserId}/maven/${artifactId}/view</bintrayURL>
       <mavenURL>http://mvnrepository.com/artifact/${project.groupId}/${project.artifactId}</mavenURL>
    </properties>
@@ -295,7 +297,7 @@
             <dependencies>
                <dependency>
                   <!-- Docs Maven Skin -->
-                  <groupId>com.wandrell.maven.skins</groupId>
+                  <groupId>com.bernardomg.maven.skins</groupId>
                   <artifactId>docs-maven-skin</artifactId>
                   <version>${site.skin.version}</version>
                </dependency>

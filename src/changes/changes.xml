@@ -5,6 +5,11 @@
       <author email="programming@wandrell.com">Bernardo Martínez Garrido</author>
    </properties>
    <body>
+      <release version="1.0.3" date="2017-11-19" description="Relocation">
+         <action dev="bmg" type="update">
+            Prepared for relocation.
+         </action>
+      </release>
       <release version="1.0.2" date="2017-11-13" description="Changes log fix">
          <action dev="bmg" type="fix">
             Fixed initial version in changes log.
