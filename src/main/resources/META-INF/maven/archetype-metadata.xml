@@ -31,9 +31,6 @@
         <requiredProperty key="urlSiteDeployRelease">
             <defaultValue>scp://docs.wandrell.com</defaultValue>
         </requiredProperty>
-        <requiredProperty key="urlSiteDeployDevelop">
-            <defaultValue>scp://docs.wandrell.com</defaultValue>
-        </requiredProperty>
         <requiredProperty key="urlSiteRelease">
             <defaultValue>http://docs.wandrell.com/maven</defaultValue>
         </requiredProperty>
