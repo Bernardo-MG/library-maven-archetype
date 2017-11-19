@@ -5,7 +5,7 @@
       <author email="programming@wandrell.com">Bernardo Martínez Garrido</author>
    </properties>
    <body>
-      <release version="1.0.3" date="2017-11-13" description="Relocation">
+      <release version="1.0.3" date="2017-11-19" description="Relocation">
          <action dev="bmg" type="update">
             Prepared for relocation.
          </action>
