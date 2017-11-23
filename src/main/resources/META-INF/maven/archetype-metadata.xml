@@ -20,7 +20,7 @@
             <defaultValue>Bernardo Martínez Garrido</defaultValue>
         </requiredProperty>
         <requiredProperty key="developerMail">
-            <defaultValue>programming@wandrell.com</defaultValue>
+            <defaultValue>programming@bernardomg.com</defaultValue>
         </requiredProperty>
         <requiredProperty key="developerUrl">
             <defaultValue>https://github.com/Bernardo-MG</defaultValue>
@@ -29,10 +29,10 @@
             <defaultValue>bernardo-mg</defaultValue>
         </requiredProperty>
         <requiredProperty key="urlSiteRelease">
-            <defaultValue>http://docs.wandrell.com/maven</defaultValue>
+            <defaultValue>http://docs.bernardomg.com/maven</defaultValue>
         </requiredProperty>
         <requiredProperty key="urlSiteDevelop">
-            <defaultValue>http://docs.wandrell.com/development/maven</defaultValue>
+            <defaultValue>http://docs.bernardomg.com/development/maven</defaultValue>
         </requiredProperty>
     </requiredProperties>
     <fileSets>
