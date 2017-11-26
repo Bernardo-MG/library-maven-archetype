@@ -20,7 +20,7 @@ This menu includes a link to the folder where Maven stores the generated javadoc
 
 ## Reports
 
-The [Wandrell's Base POM][base-pom], being used as the parent POM, already configures several reports. To these the following are added:
+The [bernardomg's Base POM][base-pom], being used as the parent POM, already configures several reports. To these the following are added:
 
 - [Changes](https://maven.apache.org/plugins/maven-changes-plugin/)
 
