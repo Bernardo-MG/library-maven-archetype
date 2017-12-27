@@ -5,7 +5,7 @@
       <author email="programming@bernardomg.com">Bernardo Martínez Garrido</author>
    </properties>
    <body>
-      <release version="1.1.1" date="2017-12-26" description="JUnit">
+      <release version="1.1.1" date="2017-12-27" description="JUnit">
          <action dev="bmg" type="update">
             Dropped TestNG for JUnit.
          </action>
