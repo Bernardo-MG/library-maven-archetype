@@ -28,12 +28,6 @@
         <requiredProperty key="repoUserId">
             <defaultValue>bernardo-mg</defaultValue>
         </requiredProperty>
-        <requiredProperty key="urlSiteRelease">
-            <defaultValue>http://docs.bernardomg.com/maven</defaultValue>
-        </requiredProperty>
-        <requiredProperty key="urlSiteDevelop">
-            <defaultValue>http://docs.bernardomg.com/development/maven</defaultValue>
-        </requiredProperty>
     </requiredProperties>
     <fileSets>
         <fileSet filtered="true" packaged="true" encoding="UTF-8">

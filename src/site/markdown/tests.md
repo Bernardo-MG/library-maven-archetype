@@ -14,9 +14,7 @@ This allows using the unit tests to be run always, while the integration test wi
 
 ## Testing framework
 
-[TestNG][testng] comes included as the testing framework, as a dependency with the *test* scope.
-
-While there have been several reasons for picking this against [JUnit][junit] (mainly, having some capabilities which were needed in some other projects), the only feature the new project makes use of are the XML test suites, which will be used to locate the unit and integration tests.
+[JUnit][junit] comes included as the testing framework, as a dependency with the *test* scope.
 
 ## Tests structure
 
@@ -69,4 +67,3 @@ $ mvn verify
 [jacoco]: http://eclemma.org/jacoco/trunk/doc/maven.html
 
 [junit]: http://junit.org/
-[testng]: http://testng.org
