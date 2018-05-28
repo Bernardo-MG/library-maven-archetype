@@ -2,7 +2,7 @@
 
 The Archetype can be deployed with ease as part of a Continuous Integration process. While by default it comes ready for [Travis][travis-section] it is easy to adapt to any other service, as long as one understand how it is configured.
 
-## Is this a release, or a development version?
+## Is This a Release, or a Development Version?
 
 First of all the project version should be set to indicate if this is a development version or a release. As the new project will be a Maven project this can be done just by appending the "-SNAPSHOT" suffix to the version field in the POM.
 
@@ -24,19 +24,19 @@ While a development version would be like this:
 
 Just like that Maven will know which [repository][repositories] should be used when deploying. Which is actually the only real impact this will have on the deployment.
 
-## Environmental variables
+## Environmental Variables
 
 The included configuration file makes use of a few scripts which require some environmental variables set for flow control.
 
 Make sure they are correctly set on the machine running the CI. For Travis check the [environment variables][travis-env] docs.
 
-### Repositories access data
+### Repositories Access Data
 
 These define the credentials for the [repositories][repositories].
 
 Remember this is sensitive information which should not be publicly accessible. Always protect these variables.
 
-#### Release deployment variables
+#### Release Deployment Variables
 
 |Variable|Type|Contents|
 |---|---|---|
@@ -46,7 +46,7 @@ Remember this is sensitive information which should not be publicly accessible. 
 |DEPLOY\_DOCS\_USER|String|User for the releases documentation repository|
 |DEPLOY\_DOCS\_PASSWORD|String|Password for the releases documentation repository|
 
-#### Development deployment variables
+#### Development Deployment Variables
 
 |Variable|Type|Contents|
 |---|---|---|
@@ -56,7 +56,7 @@ Remember this is sensitive information which should not be publicly accessible. 
 |DEPLOY\_DOCS\_DEVELOP\_USER|String|User for the snapshots documentation repository|
 |DEPLOY\_DOCS\_DEVELOP\_PASSWORD|String|Password for the snapshots documentation repository|
 
-### Deployment flags
+### Deployment Flags
 
 Control flags used to know which artifacts, if any, will be deployed. The included CI configuration file already takes care of them.
 
@@ -67,7 +67,7 @@ Control flags used to know which artifacts, if any, will be deployed. The includ
 
 These are just control flags. Even if set the actual deployment may be skipped, depending on various conditions.
 
-## Deployment validation
+## Deployment Validation
 
 One of the scripts used for CI will check the current environment, trying to find out if deploying the artifacts is desirable, or even possible.
 
@@ -77,7 +77,7 @@ If any of the following conditions is met the deployment step will be skipped:
 - The code is not marked as a release or development version.
 - The deployment flag is set to false.
 
-## Deployment profiles
+## Deployment Profiles
 
 To help with the deployment a few profiles are included in the generated project's POM.
 

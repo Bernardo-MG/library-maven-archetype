@@ -12,11 +12,11 @@ The Archetype will set up the project to work with [Github][github]. This SCM is
 
 It may not be possible using Travis with other repositories. Check their manual site to find out more.
 
-## Configuration file
+## Configuration File
 
 Travis requires a .travis.yml file, included in the project's root folder, which will be used to configure the CI process. Again, more information about this can be found in the [beginners guide][travis-guide], but a few things should be commented.
 
-### JDK versions
+### JDK Versions
 
 The file comes ready to test the project using the JDK 7, JDK 8 and openJDK 7. If any of these are not supported they should be removed, and the file adapted to it.
 
@@ -26,20 +26,20 @@ Also the JDK 7 will be used to deploy the code artifacts, while JDK 8 will be us
 
 The Travis configuration file will call a script for each deployment, and these are detailed in the [deployment section][deployment].
 
-## Environmental variables
+## Environmental Variables
 
 Various environmental variables, defined in the [deployment section][deployment], should be set up correctly for making the Travis integration tasks work.
 
 While most of these should be set as part of the Travis environmental variables, some are already taken care of by the configuration file.
 
-### Deployment flags
+### Deployment Flags
 
 The deployment flags are taken care of in the Travis configuration file. These are the following environmental variables:
 
 - DEPLOY
 - DEPLOY\_DOCS
 
-## Deployment configuration
+## Deployment Configuration
 
 As commented before the Travis configuration file takes care of deciding which JDK version creates the artifacts or documentation. This is done through the [deployment flags][deployment-variables]. As commented before, by default these will be set for deploying the artifact using Java 7 and the Maven site using Java 8.
 
