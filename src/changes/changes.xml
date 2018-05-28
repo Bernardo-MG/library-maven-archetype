@@ -5,7 +5,7 @@
       <author email="programming@bernardomg.com">Bernardo Martínez Garrido</author>
    </properties>
    <body>
-      <release version="1.1.2" date="2017-12-27" description="Small corrections">
+      <release version="1.1.2" date="2018-05-28" description="Small corrections">
          <action dev="bmg" type="fix">
             Added missing URL properties.
          </action>
