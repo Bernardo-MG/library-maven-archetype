@@ -20,11 +20,11 @@ In this case this Archetype creates a generic Maven-based library which includes
 - .gitignore and .gitattributes files prepared for common uses.
 - [MIT License][license].
 
-## Example project
+## Example Project
 
 For a quick taste, there is an [example project][example-project] showing what can be created with the use of this Archetype.
 
-## Commands for the new project
+## Commands for the New Project
 
 From the first moment the a new project is created all the usual Maven commands can be used, some of these are:
 

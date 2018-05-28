@@ -3,11 +3,11 @@ ${symbol_pound} Usage
 
 Once the Archetype has been [acquired][acquire] it can be used as a template to generate new Maven projects.
 
-${symbol_pound}${symbol_pound} Using the Archetype through an IDE
+${symbol_pound}${symbol_pound} Using the Archetype Through an IDE
 
 To use the Archetype with an IDE consult your preferred IDE's manual.
 
-${symbol_pound}${symbol_pound} Using the Archetype through a Maven command
+${symbol_pound}${symbol_pound} Using the Archetype Through a Maven Command
 
 The Archetype can used by Maven with the following command.
 
@@ -26,18 +26,18 @@ The *-D* parameter serves to define a variable. These variables are as it follow
 |archetypeVersion|Archetype version|
 |archetypeRepository|Repository containing the Archetype|
 
-${symbol_pound}${symbol_pound} Templating variables in the Archetype
+${symbol_pound}${symbol_pound} Templating Variables in the Archetype
 
 Maven Archetypes make use of templating variables to prepare the project. The values for these will be asked when creating a new project, and most of them will have default values which show the kind of data each of them expects.
 
-${symbol_pound}${symbol_pound}${symbol_pound} Maven coordinates
+${symbol_pound}${symbol_pound}${symbol_pound} Maven Coordinates
 
 |Variable|Usage|
 |---|---|
 |artifactId|Will be used as Maven's ID for the project, part of the Maven coordinates|
 |groupId|The group holding this project, part of the Maven coordinates|
 
-${symbol_pound}${symbol_pound}${symbol_pound} General information
+${symbol_pound}${symbol_pound}${symbol_pound} General Information
 
 The Archetype is not prepared to set up an organization, so it will use the developer's information for the organization information on the POM.
 
@@ -58,7 +58,7 @@ The repoUserId is used, along the artifactId, to build the Github link for the p
 |---|---|
 |repoUserId|ID of the user on Github|
 
-${symbol_pound}${symbol_pound}${symbol_pound} Sites repositories
+${symbol_pound}${symbol_pound}${symbol_pound} Sites Repositories
 
 URLs for the Maven site. The deployment URLs are used by the plugins to push the documents, while the other URLs are the ones used to read those documents.
 

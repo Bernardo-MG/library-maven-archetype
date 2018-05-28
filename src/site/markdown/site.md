@@ -2,7 +2,7 @@
 
 The Archetype comes ready to create a [Maven site][maven-site], similar to this one. This is an easy way to share the project's documentation, along the Javadocs and several reports showing its status.
 
-## Creating the site
+## Creating the Site
 
 Using the default command for generating the Maven site is not recommended. This is because it won't run the integration tests, meaning that the tests reports won't show any information about them.
 
@@ -26,21 +26,21 @@ The [bernardomg's Base POM][base-pom], being used as the parent POM, already con
 
 Reports are shown in the reports page, but this is not generated dynamically. If any new reporting plugin is added then the *src/site/markdown/reports.md* should be edited.
 
-### Customized reports
+### Customized Reports
 
 The archetype contains modified configuration files for PMD and Checkstyle, meant to check the project in deep searching for various style errors.
 
 These files can be found in the *src/config* folder.
 
-### Changes report
+### Changes Report
 
 The Changes plugin allows creating a changes log for each version of the project. More information about this can be found in the [changes log][changes] section.
 
-## The skin
+## The Skin
 
 The site is prepared to use the [Docs Maven Skin][docs-maven-skin]. The most important information about its usage can be found on the skin project's site, but a few things should be commented.
 
-### Repositories info
+### Repositories Info
 
 The footer of the Maven Site will contain a link for Maven Central and another for Bintray. These are the URLs for the project in each of these releases repositories.
 

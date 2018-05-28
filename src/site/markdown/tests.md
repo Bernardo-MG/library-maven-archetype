@@ -4,7 +4,7 @@ The Archetype will prepare the project for running both unit and integration tes
 
 These plugins used will be [Surefire][surefire], to run unit tests, and [Failsafe][failsafe] for the integration ones.
 
-## Unit test, integration tests and Maven goals
+## Unit Test, Integration Tests and Maven Goals
 
 While there are several guides and discussions about what are unit tests and what integration tests, what is of importance here is knowing that for Maven the distinction is very clear. The unit tests are run on the *test* goal, while the integration ones are run in the *verify* goal.
 
@@ -12,23 +12,23 @@ Most of the time only the *test* goal is run, for example when creating the site
 
 This allows using the unit tests to be run always, while the integration test will be run only when required. Now what kind of test actually goes into each section will depend on the user.
 
-## Testing framework
+## Testing Framework
 
 [JUnit][junit] comes included as the testing framework, as a dependency with the *test* scope.
 
-## Tests structure
+## Tests Structure
 
 Unit and integration tests should be stored in different class paths, so they are easier to differentiate. This is reflected by the placeholder tests created with the project.
 
 The test plugins won't be searching those tests based on their class paths, instead they depend on following a specific naming scheme, which will mark apart unit and integration tests.
 
-### Naming the tests
+### Naming the Tests
 
 The tests should follow a clear naming scheme, which is the default way to differentiate unit and integration tests in Maven. Each unit test class will start with the *Test* keyword, and the integration test classes with the *IT* keyword.
 
 To find more about how the tests can be bound to different phases take a look at Surefire and Failsafe manuals.
 
-### Tests classpath
+### Tests Classpath
 
 It may seem strange that the classpath for the tests on the new project includes *testing.test* as part of it. The reason is that if additional classes are required for the tests they should be added into a *testing.util* or similar package. Keeping the actual tests separated from any helper class.
 
@@ -44,7 +44,7 @@ Testing requires Log4J for logging, and this is included as a dependency with th
 
 The configuration file, named *log4j2-test.xml*, can be found on the tests resources folder, and is prepared to generate a log file when running the tests.
 
-## Running the tests
+## Running the Tests
 
 The common way to run tests through Maven is:
 

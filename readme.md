@@ -58,6 +58,16 @@ The project has been tested on the following Java versions:
 
 All other dependencies are handled through Maven, and noted in the included POM file.
 
+### Changing JDK Version
+
+By default the project will be set for JDK 7. If this needs to be changed, for example to make use of JDK 8, the java.version property has to be overriden:
+
+```xml
+<properties>
+   <java.version>1.8</java.version>
+<\properties>
+```
+
 ### Installing
 
 The best way to install the Archetype is by downloading it from the [Bintray repository][bintray-repo]. It can be acquired from the [Maven Central Repository][maven-repo] too, but it is not recommended.

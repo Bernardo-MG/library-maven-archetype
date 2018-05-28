@@ -22,19 +22,19 @@ https://www.github.com/${repoUserId}/${artifactId}
 
 If the repository does not follow this naming pattern then the resulting URL should be corrected manually.
 
-### Source repository and snapshots versions
+### Source Repository and Snapshots Versions
 
 The [deployment scripts][deployment-scripts-section] included take advantage of the fact that Maven can now if the project is a release or a development version based on a suffix. If the version field on the POM ends with "-SNAPSHOT" then it is a snapshot, a development version. Otherwise it is a release.
 
 For this reason the "-SNAPSHOT" prefix should be always used for the versions kept in all the development branches of the code repository.
 
-## Artifact repositories
+## Artifact Repositories
 
 Two repositories will be used for the code artifacts, one for releases and another for snapshots.
 
 By default [Bintray][bintray] will be the one used for the releases, and [Sonatype OSS][sonatype] will be used for snapshots. Note that Sonatype requires additional configuration which is detailed in the guides below.
 
-### Artifact repositories ids
+### Artifact Repositories Ids
 
 Both repositories have a unique Id which are used mostly to find out the credentials to use for them during the deployment process.
 
@@ -57,17 +57,17 @@ Then connect Bintray to OSS Sonatype by following [this other guide][sonatype-gu
 
 With all these repositories linked Bintray will automatically replicate them to JCenter, and while updating the project on Maven Central still requires a manual step it is much easier than the alternative.
 
-### OSS Sonatype snapshots
+### OSS Sonatype Snapshots
 
 After setting up the Sonatype account for Bintray you will also be able to release snapshots to the OSS Sonatype snapshots repository. The new project comes prepared to take care of this.
 
 Remember that it may not be possible to add artifacts to OSS Sonatype until the project has at least one release on Maven Central.
 
-## Maven site repository
+## Maven Site Repository
 
 As it is not a good idea using such features such as GitPages, because this make the SCM actually host two different projects, and there is no free static code repository around the user will have to provide his own. For example by setting up a FTP server.
 
-### Site repositories ids
+### Site Repositories Ids
 
 Just like with the artifacts repositories, it is not recommended changing these ids, as this may cause the scripts to stop working.
 
