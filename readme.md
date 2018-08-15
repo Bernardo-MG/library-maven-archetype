@@ -16,8 +16,8 @@ The Archetype will do little more than take care of configuration, setting up th
 
 ## Features
 
-- Creates a new Maven library with a fully configured POM, extending from [bernardomg's Base POM][base-pom], including features such as build validation, changes report or manifest configuration.
-- Sets up continuous integration with [Github][github], [Travis][travis] and [Bintray][bintray]. Making a distinction between releases and development versions.
+- Fully configured POM, extending from [bernardomg's Base POM][base-pom], including features such as build validation, changes report or manifest configuration.
+- Prepared for continuous integration with [Github][github], [Travis][travis] and [Bintray][bintray]. Making a distinction between releases and development versions.
 - Prepared for unit and integration tests suites. Created with [JUnit][junit] and ready to be run with [Surefire][surefire] and [Failsafe][failsafe].
 - A Maven site, using the [Docs Maven Skin][docs-skin], for sharing the project's documentation along the Javadocs and various reports which range from code quality to changes log.
 - Includes basic files such as readme, gitignore and license.
