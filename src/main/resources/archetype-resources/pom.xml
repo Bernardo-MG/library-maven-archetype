@@ -193,20 +193,25 @@
 
    <properties>
       <!-- ============================================== -->
+      <!-- ================ JAVA VERSION ================ -->
+      <!-- ============================================== -->
+      <java.version>1.8</java.version>
+      <!-- ============================================== -->
       <!-- =============== MANIFEST DATA ================ -->
       <!-- ============================================== -->
       <manifest.name>${packageInPathFormat}</manifest.name>
       <!-- ============================================== -->
       <!-- =========== DEPENDENCIES VERSIONS ============ -->
       <!-- ============================================== -->
-      <guava.version>20.0</guava.version>
-      <junit.version>4.12</junit.version>
-      <log4j.version>2.7</log4j.version>
-      <mockito.version>2.18.3</mockito.version>
+      <guava.version>27.0.1-jre</guava.version>
+      <junit.jupiter.version>5.4.0</junit.jupiter.version>
+      <junit.platform.version>1.4.0</junit.platform.version>
+      <log4j.version>2.11.2</log4j.version>
+      <mockito.version>2.24.5</mockito.version>
       <!-- ============================================== -->
       <!-- ================= MAVEN SITE ================= -->
       <!-- ============================================== -->
-      <site.skin.version>1.2.0</site.skin.version>
+      <site.skin.version>1.4.0</site.skin.version>
       <bintrayURL>https://bintray.com/${repoUserId}/maven/${artifactId}/view</bintrayURL>
       <mavenURL>http://mvnrepository.com/artifact/${project.groupId}/${project.artifactId}</mavenURL>
    </properties>
@@ -226,10 +231,17 @@
       <!-- ======= TEST ENVIRONMENT DEPENDENCIES ======== -->
       <!-- ============================================== -->
       <dependency>
-         <!-- JUnit -->
-         <groupId>junit</groupId>
-         <artifactId>junit</artifactId>
-         <version>${junit.version}</version>
+         <!-- JUnit Jupiter Engine -->
+         <groupId>org.junit.jupiter</groupId>
+         <artifactId>junit-jupiter-engine</artifactId>
+         <version>${junit.jupiter.version}</version>
+         <scope>test</scope>
+      </dependency>
+      <dependency>
+         <!-- JUnit Jupiter Platform -->
+         <groupId>org.junit.platform</groupId>
+         <artifactId>junit-platform-runner</artifactId>
+         <version>${junit.platform.version}</version>
          <scope>test</scope>
       </dependency>
       <dependency>

@@ -42,7 +42,7 @@ Remember this is sensitive information which should not be publicly accessible. 
 |---|---|---|
 |DEPLOY\_USER|String|User for the releases repository|
 |DEPLOY\_PASSWORD|String|Password for the releases documentation repository|
-|DEPLOY\_DOCS\_SITE|String|Path to the releases documentation repository|
+|DEPLOY\_DOCS\_SITE|String|URL for the releases documentation repository|
 |DEPLOY\_DOCS\_USER|String|User for the releases documentation repository|
 |DEPLOY\_DOCS\_PASSWORD|String|Password for the releases documentation repository|
 
@@ -52,7 +52,7 @@ Remember this is sensitive information which should not be publicly accessible. 
 |---|---|---|
 |DEPLOY\_DEVELOP\_USER|String|User for the snapshots repository|
 |DEPLOY\_DEVELOP\_PASSWORD|String|Password for the snapshots repository|
-|DEPLOY\_DOCS\_DEVELOP\_SITE|String|Path to the releases documentation repository|
+|DEPLOY\_DOCS\_DEVELOP\_SITE|String|URL for the releases documentation repository|
 |DEPLOY\_DOCS\_DEVELOP\_USER|String|User for the snapshots documentation repository|
 |DEPLOY\_DOCS\_DEVELOP\_PASSWORD|String|Password for the snapshots documentation repository|
 

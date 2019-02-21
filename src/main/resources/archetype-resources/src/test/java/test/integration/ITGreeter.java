@@ -24,8 +24,10 @@
 
 package ${package}.test.integration;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.junit.platform.runner.JUnitPlatform;
+import org.junit.runner.RunWith;
 
 import ${package}.Greeter;
 
@@ -37,6 +39,7 @@ import ${package}.Greeter;
  * @author ${developerName}
  *
  */
+@RunWith(JUnitPlatform.class)
 public final class ITGreeter {
 
     /**
@@ -51,7 +54,7 @@ public final class ITGreeter {
      */
     @Test
     public final void sayHello() {
-        Assert.assertEquals("Hello World!", new Greeter().sayHello());
+        Assertions.assertEquals("Hello World!", new Greeter().sayHello());
     }
 
 }
