@@ -193,6 +193,10 @@
 
    <properties>
       <!-- ============================================== -->
+      <!-- ================ JAVA VERSION ================ -->
+      <!-- ============================================== -->
+      <java.version>1.8</java.version>
+      <!-- ============================================== -->
       <!-- =============== MANIFEST DATA ================ -->
       <!-- ============================================== -->
       <manifest.name>${packageInPathFormat}</manifest.name>
@@ -206,7 +210,7 @@
       <!-- ============================================== -->
       <!-- ================= MAVEN SITE ================= -->
       <!-- ============================================== -->
-      <site.skin.version>1.3.1</site.skin.version>
+      <site.skin.version>1.4.0</site.skin.version>
       <bintrayURL>https://bintray.com/${repoUserId}/maven/${artifactId}/view</bintrayURL>
       <mavenURL>http://mvnrepository.com/artifact/${project.groupId}/${project.artifactId}</mavenURL>
    </properties>
