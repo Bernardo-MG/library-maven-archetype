@@ -5,6 +5,14 @@
       <author email="programming@bernardomg.com">Bernardo Martínez Garrido</author>
    </properties>
    <body>
+      <release version="1.2.0" date="2019-02-21" description="Dropped JDK 7">
+         <action dev="bmg" type="remove">
+            Dropped JDK 7 support.
+         </action>
+         <action dev="bmg" type="update">
+            Updated dependencies.
+         </action>
+      </release>
       <release version="1.1.2" date="2018-05-28" description="Small corrections">
          <action dev="bmg" type="fix">
             Added missing URL properties.
