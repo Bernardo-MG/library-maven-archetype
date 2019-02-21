@@ -11,7 +11,7 @@
          <defaultValue>A Maven project created from the library archetype.</defaultValue>
       </requiredProperty>
       <requiredProperty key="currentYear">
-         <defaultValue>2017</defaultValue>
+         <defaultValue>2019</defaultValue>
       </requiredProperty>
       <requiredProperty key="developerId">
          <defaultValue>bmg</defaultValue>
