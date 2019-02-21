@@ -10,6 +10,9 @@
             Dropped JDK 7 support.
          </action>
          <action dev="bmg" type="update">
+            Using JUnit 5.
+         </action>
+         <action dev="bmg" type="update">
             Updated dependencies.
          </action>
       </release>
