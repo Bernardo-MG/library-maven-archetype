@@ -199,10 +199,10 @@
       <!-- ============================================== -->
       <!-- =========== DEPENDENCIES VERSIONS ============ -->
       <!-- ============================================== -->
-      <guava.version>25.1-jre</guava.version>
+      <guava.version>27.0.1-jre</guava.version>
       <junit.version>4.12</junit.version>
-      <log4j.version>2.11.0</log4j.version>
-      <mockito.version>2.18.3</mockito.version>
+      <log4j.version>2.11.2</log4j.version>
+      <mockito.version>2.24.5</mockito.version>
       <!-- ============================================== -->
       <!-- ================= MAVEN SITE ================= -->
       <!-- ============================================== -->
