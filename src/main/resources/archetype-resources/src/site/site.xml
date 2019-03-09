@@ -1,4 +1,3 @@
-#set( $symbol_dollar = '$' )
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/DECORATION/1.8.0"
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -13,7 +12,7 @@
    <custom>
       <skinConfig>
          <keywords>Maven, Java, library</keywords>
-         <descriptionUrl>Check the documentation for ${symbol_dollar}{projectName}</descriptionUrl>
+         <descriptionUrl>Check the documentation for ${projectName}</descriptionUrl>
          <twitterSite>@${developerId}</twitterSite>
          <topNav>
             <menu>Documentation</menu>
