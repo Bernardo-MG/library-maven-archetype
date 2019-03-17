@@ -207,7 +207,7 @@
       <junit.jupiter.version>5.4.0</junit.jupiter.version>
       <junit.platform.version>1.4.0</junit.platform.version>
       <log4j.version>2.11.2</log4j.version>
-      <mockito.version>2.25.0</mockito.version>
+      <mockito.version>2.25.1</mockito.version>
       <!-- ============================================== -->
       <!-- ================= MAVEN SITE ================= -->
       <!-- ============================================== -->
