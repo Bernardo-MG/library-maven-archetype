@@ -5,6 +5,14 @@
       <author email="programming@bernardomg.com">Bernardo Martínez Garrido</author>
    </properties>
    <body>
+      <release version="1.2.2" date="2019-03-17" description="Site corrections">
+         <action dev="bmg" type="update">
+            Updated dependencies.
+         </action>
+         <action dev="bmg" type="update">
+            Updated checkstyle and npm rules.
+         </action>
+      </release>
       <release version="1.2.1" date="2019-03-09" description="Site corrections">
          <action dev="bmg" type="fix">
             Corrected value replacements for Maven site.
