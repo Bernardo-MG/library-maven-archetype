@@ -109,7 +109,7 @@
             <include>site.xml</include>
          </includes>
       </fileSet>
-      <fileSet filtered="true" encoding="UTF-8">
+      <fileSet encoding="UTF-8">
          <!-- Site files -->
          <directory>src/site</directory>
          <includes>
