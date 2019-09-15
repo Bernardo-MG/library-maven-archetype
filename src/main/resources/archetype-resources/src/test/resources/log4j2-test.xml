@@ -8,11 +8,11 @@
 
    <Appenders>
       <Console name="console" target="SYSTEM_OUT">
-         <PatternLayout pattern="[%p] %d %c %M - %m%n" />
+         <PatternLayout pattern="%-5p | %d{ISO8601} | %c{1.} %M %L | %m%n" />
       </Console>
 
       <File name="file" fileName="${filename}">
-         <PatternLayout pattern="[%p] %d %c %M - %m%n" />
+         <PatternLayout pattern="%-5p | %d{ISO8601} | %c{1.} %M %L | %m%n" />
       </File>
    </Appenders>
 
