@@ -83,7 +83,7 @@ URL: https://dl.bintray.com/bernardo-mg/maven/
 For example, to use it through command line type the following:
 
 ```
-$ mvn archetype:generate -DarchetypeGroupId=com.bernardomg.maven.archetypes -DarchetypeArtifactId=library-archetype -DarchetypeVersion=1.0.0 -DarchetypeRepository=https://dl.bintray.com/bernardo-mg/maven/
+$ mvn archetype:generate -DarchetypeGroupId=com.bernardomg.maven.archetypes -DarchetypeArtifactId=library-archetype -DarchetypeVersion=[version] -DarchetypeRepository=https://dl.bintray.com/bernardo-mg/maven/
 ```
 
 If using an IDE check its documentation to find out how to use Maven Archetypes, and how to add these to the local repository.
