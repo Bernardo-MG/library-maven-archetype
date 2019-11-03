@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE xml>
-<Configuration status="WARN">
+<Configuration status="WARN" shutdownHook="disable">
 
    <Properties>
       <Property name="filename">testing.log</Property>
