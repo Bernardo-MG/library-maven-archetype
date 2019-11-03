@@ -5,6 +5,11 @@
       <author email="programming@bernardomg.com">Bernardo Martínez Garrido</author>
    </properties>
    <body>
+      <release version="1.2.4" date="2019-11-03" description="Updates">
+         <action dev="bmg" type="update">
+            Updated dependencies.
+         </action>
+      </release>
       <release version="1.2.3" date="2019-03-21" description="Fixes">
          <action dev="bmg" type="fix">
             Fixed Maven site.
