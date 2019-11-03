@@ -203,11 +203,11 @@
       <!-- ============================================== -->
       <!-- =========== DEPENDENCIES VERSIONS ============ -->
       <!-- ============================================== -->
-      <guava.version>27.1-jre</guava.version>
+      <guava.version>28.1-jre</guava.version>
       <junit.jupiter.version>5.4.0</junit.jupiter.version>
-      <junit.platform.version>1.4.0</junit.platform.version>
-      <log4j.version>2.11.2</log4j.version>
-      <mockito.version>2.25.1</mockito.version>
+      <mockito.version>3.1.0</mockito.version>
+      <log4j.version>2.12.1</log4j.version>
+      <slf4j.version>1.7.28</slf4j.version>
       <!-- ============================================== -->
       <!-- ================= MAVEN SITE ================= -->
       <!-- ============================================== -->
@@ -220,6 +220,19 @@
    <!-- *************** DEPENDENCIES ***************** -->
    <!-- ********************************************** -->
 
+   <dependencyManagement>
+      <dependencies>
+         <dependency>
+            <!-- JUnit BOM -->
+            <groupId>org.junit</groupId>
+            <artifactId>junit-bom</artifactId>
+            <version>${junit.jupiter.version}</version>
+            <type>pom</type>
+            <scope>import</scope>
+         </dependency>
+      </dependencies>
+   </dependencyManagement>
+
    <dependencies>
       <dependency>
          <!-- Guava -->
@@ -231,15 +244,22 @@
       <!-- ================== LOGGERS =================== -->
       <!-- ============================================== -->
       <dependency>
-         <!-- Log4j core -->
-         <groupId>org.apache.logging.log4j</groupId>
-         <artifactId>log4j-core</artifactId>
-         <version>${log4j.version}</version>
+         <!-- SLF4J API -->
+         <groupId>org.slf4j</groupId>
+         <artifactId>slf4j-api</artifactId>
+         <version>${slf4j.version}</version>
       </dependency>
       <dependency>
          <!-- Log4j SLF4J Bridge -->
          <groupId>org.apache.logging.log4j</groupId>
          <artifactId>log4j-slf4j-impl</artifactId>
+         <version>${log4j.version}</version>
+         <scope>provided</scope>
+      </dependency>
+      <dependency>
+         <!-- Log4j core -->
+         <groupId>org.apache.logging.log4j</groupId>
+         <artifactId>log4j-core</artifactId>
          <version>${log4j.version}</version>
          <scope>provided</scope>
       </dependency>
@@ -250,14 +270,12 @@
          <!-- JUnit Jupiter Engine -->
          <groupId>org.junit.jupiter</groupId>
          <artifactId>junit-jupiter-engine</artifactId>
-         <version>${junit.jupiter.version}</version>
          <scope>test</scope>
       </dependency>
       <dependency>
          <!-- JUnit Jupiter Platform -->
          <groupId>org.junit.platform</groupId>
          <artifactId>junit-platform-runner</artifactId>
-         <version>${junit.platform.version}</version>
          <scope>test</scope>
       </dependency>
       <dependency>
