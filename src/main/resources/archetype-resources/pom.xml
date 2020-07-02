@@ -203,11 +203,11 @@
       <!-- ============================================== -->
       <!-- =========== DEPENDENCIES VERSIONS ============ -->
       <!-- ============================================== -->
-      <guava.version>28.1-jre</guava.version>
-      <junit.jupiter.version>5.4.0</junit.jupiter.version>
-      <mockito.version>3.1.0</mockito.version>
-      <log4j.version>2.12.1</log4j.version>
-      <slf4j.version>1.7.28</slf4j.version>
+      <guava.version>29.0-jre</guava.version>
+      <junit.jupiter.version>5.6.2</junit.jupiter.version>
+      <mockito.version>3.3.3</mockito.version>
+      <log4j.version>2.13.3</log4j.version>
+      <slf4j.version>1.7.30</slf4j.version>
       <!-- ============================================== -->
       <!-- ================= MAVEN SITE ================= -->
       <!-- ============================================== -->
