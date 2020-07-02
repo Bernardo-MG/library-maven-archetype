@@ -17,6 +17,7 @@
    </Appenders>
 
    <Loggers>
+      <!-- Application log -->
       <Logger name="${groupId}" level="debug" additivity="false">
          <AppenderRef ref="file" />
       </Logger>

@@ -15,7 +15,7 @@
    <parent>
       <groupId>com.bernardomg.maven</groupId>
       <artifactId>archetype-pom</artifactId>
-      <version>1.1.4</version>
+      <version>1.2.1</version>
    </parent>
 
    <!-- ********************************************** -->
@@ -24,7 +24,7 @@
 
    <groupId>com.bernardomg.maven.archetypes</groupId>
    <artifactId>library-archetype</artifactId>
-   <version>1.2.4</version>
+   <version>1.2.5</version>
    <packaging>maven-archetype</packaging>
 
    <name>Library Maven Archetype</name>
@@ -160,7 +160,7 @@
       <!-- ============================================== -->
       <!-- ================= MAVEN SITE ================= -->
       <!-- ============================================== -->
-      <site.skin.version>1.4.3</site.skin.version>
+      <site.skin.version>2.0.7</site.skin.version>
       <repoDownloadURL>https://dl.bintray.com/bernardo-mg/maven/</repoDownloadURL>
       <bintrayURL>https://bintray.com/bernardo-mg/maven/library-maven-archetype/view</bintrayURL>
       <mavenURL>http://mvnrepository.com/artifact/com.bernardomg.maven.archetypes/library-archetype</mavenURL>

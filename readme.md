@@ -125,13 +125,13 @@ If you wish to fork or modify the code, visit the [GitHub project page][scm], wh
 The project has been released under the [MIT License][license].
 
 [bintray-repo]: https://bintray.com/bernardo-mg/maven/library-maven-archetype/view
-[maven-repo]: http://mvnrepository.com/artifact/com.bernardomg.maven.archetypes/library-archetype
-[junit]: http://junit.org
+[maven-repo]: https://mvnrepository.com/artifact/com.bernardomg.maven.archetypes/library-archetype
+[junit]: https://junit.org
 [issues]: https://github.com/Bernardo-MG/library-maven-archetype/issues
-[license]: http://www.opensource.org/licenses/mit-license.php
-[scm]: http://github.com/Bernardo-MG/library-maven-archetype
-[site-develop]: http://docs.bernardomg.com/development/maven/library-maven-archetype
-[site-release]: http://docs.bernardomg.com/maven/library-maven-archetype
+[license]: https://www.opensource.org/licenses/mit-license.php
+[scm]: https://github.com/Bernardo-MG/library-maven-archetype
+[site-develop]: https://docs.bernardomg.com/development/maven/library-maven-archetype
+[site-release]: https://docs.bernardomg.com/maven/library-maven-archetype
 
 [maven-archetype]: https://maven.apache.org/guides/introduction/introduction-to-archetypes.html
 [archetype-testing]: http://maven.apache.org/archetype/maven-archetype-plugin/integration-test-mojo.html

@@ -5,7 +5,12 @@
       <author email="programming@bernardomg.com">Bernardo Martínez Garrido</author>
    </properties>
    <body>
-      <release version="1.2.4" date="2019-11-03" description="Updates">
+      <release version="1.2.5" date="2020-07-02" description="Updated dependencies">
+         <action dev="bmg" type="update">
+            Updated dependencies.
+         </action>
+      </release>
+      <release version="1.2.4" date="2019-11-03" description="Updated dependencies">
          <action dev="bmg" type="update">
             Updated dependencies.
          </action>

@@ -101,7 +101,7 @@ The project has been released under the [MIT License][license].
 [issues]: https://github.com/${repoUserId}/${artifactId}/issues
 [javadoc-develop]: ${urlSiteDevelop}/${artifactId}/apidocs
 [javadoc-release]: ${urlSiteRelease}/${artifactId}/apidocs
-[license]: http://www.opensource.org/licenses/mit-license.php
+[license]: https://www.opensource.org/licenses/mit-license.php
 [scm]: https://github.com/${repoUserId}/${artifactId}
 [site-develop]: ${urlSiteDevelop}/${artifactId}
 [site-release]: ${urlSiteRelease}/${artifactId}
