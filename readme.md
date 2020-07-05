@@ -54,6 +54,8 @@ It is a Maven Archetype, and can be used through command line or an IDE as long 
 
 The project has been tested on the following Java versions:
 * JDK 8
+* JDK 10
+* JDK 11
 
 All other dependencies are handled through Maven, and noted in the included POM file.
 
