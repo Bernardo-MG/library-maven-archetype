@@ -62,12 +62,7 @@ It is a Java library, meant to be included as a dependency on any project which 
 
 ${symbol_pound}${symbol_pound}${symbol_pound} Prerequisites
 
-The project has been tested on the following Java versions:
-* JDK 8
-* JDK 10
-* JDK 11
-
-All other dependencies are handled through Maven, and noted in the included POM file.
+JDK 8 or higher is required. All other dependencies are handled through Maven, and noted in the included POM file.
 
 ${symbol_pound}${symbol_pound}${symbol_pound} Installing
 

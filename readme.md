@@ -52,12 +52,7 @@ It is a Maven Archetype, and can be used through command line or an IDE as long 
 
 ### Prerequisites
 
-The project has been tested on the following Java versions:
-* JDK 8
-* JDK 10
-* JDK 11
-
-All other dependencies are handled through Maven, and noted in the included POM file.
+JDK 8 or higher is required. All other dependencies are handled through Maven, and noted in the included POM file.
 
 ### Changing JDK Version
 
