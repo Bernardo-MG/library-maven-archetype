@@ -5,6 +5,11 @@
       <author email="programming@bernardomg.com">Bernardo Martínez Garrido</author>
    </properties>
    <body>
+      <release version="1.2.7" date="2020-07-16" description="Github workflow files fix">
+         <action dev="bmg" type="fix">
+            Corrected Github files copy.
+         </action>
+      </release>
       <release version="1.2.6" date="2020-07-16" description="Github workflow">
          <action dev="bmg" type="update">
             Replaced Travis file with Github workflows.
