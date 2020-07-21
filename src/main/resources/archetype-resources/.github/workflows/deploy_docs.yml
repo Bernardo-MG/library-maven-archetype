@@ -22,7 +22,7 @@ jobs:
       run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
       id: extract_branch
     - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
+    - name: Set up JDK
       uses: actions/setup-java@v1
       with:
         java-version: 1.8

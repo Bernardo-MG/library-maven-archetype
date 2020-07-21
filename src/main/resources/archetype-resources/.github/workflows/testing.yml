@@ -12,9 +12,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
+    - name: Set up JDK ${{ matrix.jdk }}
       uses: actions/setup-java@v1
       with:
         java-version: ${{ matrix.jdk }}
-    - name: Runs tests
+    - name: Run all tests
       run: mvn clean verify
