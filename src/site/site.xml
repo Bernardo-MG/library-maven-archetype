@@ -39,7 +39,7 @@
          <item name="Acquire" href="./acquire.html" />
          <item name="Usage" href="./usage.html" />
          <item name="Repositories" href="./repositories.html" />
-         <item name="Travis Integration" href="./travis.html" />
+         <item name="Github Workflow" href="./ghworkflow.html" />
          <item name="Tests" href="./tests.html" />
          <item name="Deployment" href="./deployment.html" />
          <item name="Maven Site and Reports" href="./site.html" />

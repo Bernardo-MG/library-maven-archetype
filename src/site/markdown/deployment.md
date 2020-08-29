@@ -1,6 +1,6 @@
 # Deployment
 
-The Archetype can be deployed with ease as part of a Continuous Integration process. While by default it comes ready for [Travis][travis-section] it is easy to adapt to any other service, as long as one understand how it is configured.
+The Archetype can be deployed with ease as part of a Continuous Integration process. While by default it comes ready for [Github Workflow][github-workflow] it is easy to adapt to any other service, as long as one understand how it is configured.
 
 ## Is This a Release, or a Development Version?
 
@@ -28,7 +28,7 @@ Just like that Maven will know which [repository][repositories] should be used w
 
 The included configuration file makes use of a few scripts which require some environmental variables set for flow control.
 
-Make sure they are correctly set on the machine running the CI. For Travis check the [environment variables][travis-env] docs.
+Make sure they are correctly set on the machine running the CI. For Github check the [environment variables][github-env] docs.
 
 ### Repositories Access Data
 
@@ -56,32 +56,11 @@ Remember this is sensitive information which should not be publicly accessible. 
 |DEPLOY\_DOCS\_DEVELOP\_USER|String|User for the snapshots documentation repository|
 |DEPLOY\_DOCS\_DEVELOP\_PASSWORD|String|Password for the snapshots documentation repository|
 
-### Deployment Flags
-
-Control flags used to know which artifacts, if any, will be deployed. The included CI configuration file already takes care of them.
-
-|Variable|Type|Contents|
-|---|---|---|
-|DEPLOY|Boolean|Indicates if the artifact should be deployed|
-|DEPLOY\_DOCS|Boolean|Indicates if the documentation should be deployed|
-
-These are just control flags. Even if set the actual deployment may be skipped, depending on various conditions.
-
-## Deployment Validation
-
-One of the scripts used for CI will check the current environment, trying to find out if deploying the artifacts is desirable, or even possible.
-
-If any of the following conditions is met the deployment step will be skipped:
-
-- The code has been taken from a branch which is part of a pull request.
-- The code is not marked as a release or development version.
-- The deployment flag is set to false.
-
 ## Deployment Profiles
 
 To help with the deployment a few profiles are included in the generated project's POM.
 
-The scripts used for CI, and the included Travis file, already take care of them.
+The scripts used for CI, and the included Github Workflow file, already take care of them.
 
 |Profile|Description|
 |---|---|
@@ -91,30 +70,10 @@ The scripts used for CI, and the included Travis file, already take care of them
 
 Having a Maven site profile for releases and another for development allows having two Maven sites, one for each kind of version.
 
-## Scripts
-
-While the project does not include any script, a few of them are acquired by the included configuration file. These come from the [ci-shell-scripts][ci-shell-scripts] project, and simplify much of the deployment work.
-
-|Script|Usage|
-|---|---|
-|create-maven-settings.sh|Builds the Maven settings file from the environmental variables|
-|deploy.sh|Handles the artifact deployment job|
-|deploy-site.sh|Handles the site deployment job|
-
-Having a script for artifact deployment, and another for the Maven Site allows handling both deployments independently.
-
-### create-maven-settings.sh
-
-As some of the information required for deployment is too sensitive for being stored in the code repository, this script will prepare a Maven settings file which will read credentials from the machine's environmental variables.
-
-Additionally, it will also set the Maven Site profile to be used.
-
 [repositories]: ./repositories.html
 
 [repositories]: ./repositories.html
 
-[travis-section]: ./travis.html
+[github-workflow]: ./ghworkflow.html
 
-[travis-env]: https://docs.travis-ci.com/user/environment-variables/
-
-[ci-shell-scripts]: https://github.com/Bernardo-MG/ci-shell-scripts
+[github-env]: https://docs.github.com/en/actions/configuring-and-managing-workflows

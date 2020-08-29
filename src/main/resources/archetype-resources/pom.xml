@@ -53,7 +53,7 @@
    </issueManagement>
 
    <ciManagement>
-      <system>Github Workflow</system>
+      <system>Github</system>
       <url>https://www.github.com/${repoUserId}/${artifactId}/actions</url>
       <notifiers />
    </ciManagement>
