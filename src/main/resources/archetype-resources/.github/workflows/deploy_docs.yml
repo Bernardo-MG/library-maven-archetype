@@ -38,5 +38,9 @@ jobs:
         DEPLOY_DOCS_DEVELOP_PASSWORD: ${{ secrets.DEPLOY_DOCS_DEVELOP_PASSWORD }}
         DEPLOY_DOCS_SITE: ${{ secrets.DEPLOY_DOCS_SITE }}
         DEPLOY_DOCS_DEVELOP_SITE: ${{ secrets.DEPLOY_DOCS_DEVELOP_SITE }}
-    - name: Deploy docs
-      run: mvn site site:deploy -B -P deployment --settings settings.xml
+    - name: Deploy development docs
+      if: steps.extract_branch.outputs.branch == 'develop'
+      run: mvn site site:deploy -B -P deployment,deployment-development --settings settings.xml
+    - name: Deploy release docs
+      if: steps.extract_branch.outputs.branch == 'master'
+      run: mvn site site:deploy -B -P deployment,deployment-release --settings settings.xml

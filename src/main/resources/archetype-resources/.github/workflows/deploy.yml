@@ -29,4 +29,4 @@ jobs:
         DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
         DEPLOY_PASSWORD: ${{ secrets.DEPLOY_PASSWORD }}
     - name: Deploy
-      run: mvn deploy -B -P deployment --settings settings.xml
+      run: mvn deploy -B -P deployment,deployment-release --settings settings.xml
