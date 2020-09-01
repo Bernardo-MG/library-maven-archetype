@@ -52,7 +52,7 @@ The Archetype is not prepared to set up an organization, so it will use the deve
 
 ${symbol_pound}${symbol_pound}${symbol_pound} Repositories
 
-The repoUserId is used, along the artifactId, to build the Github link for the project, and will also be reused for building the Travis and Bintray ones.
+The repoUserId is used, along the artifactId, to build several links. Mostly to Github and Bintray.
 
 |Variable|Usage|
 |---|---|

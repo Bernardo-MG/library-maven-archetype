@@ -4,7 +4,7 @@ While it can be used be used just by itself, but to take full advantage of the n
 
 There are four repositories in total, and each is of a different kind: a SCM for the code, a releases repository, a snapshots one and a static content server for the Maven development and release sites.
 
-Without them all it won't be possible to take advantage of the [deployment][deployment-section] feature, one of the most important capabilities which this archetype offers, or the [continuous integration][travis-section] process, as both require them for working correctly.
+Without them all it won't be possible to take advantage of the [deployment][deployment-section] feature, one of the most important capabilities which this archetype offers, or the [continuous integration][github-workflow-section] process, as both require them for working correctly.
 
 If for some reason the actual services used need to be changed, all the information about the repositories is kept in the POM file, where it can be easily changed.
 
@@ -80,7 +80,7 @@ Just like with the artifacts repositories, it is not recommended changing these 
 [bintray]: https://bintray.com/
 [sonatype]: https://oss.sonatype.org/
 
-[travis-section]: ./travis.html
+[github-workflow-section]: ./ghworkflow.html
 [deployment-section]: ./deployment.html
 [deployment-scripts-section]: ./deployment.html#Scripts
 

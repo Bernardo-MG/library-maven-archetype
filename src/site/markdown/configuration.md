@@ -14,6 +14,6 @@ By default the project will support JDK 7. To change this, for example for a JDK
 
 This will be used to override both the project.build.sourceEncoding and the project.reporting.outputEncoding properties.
 
-Remember to update the Travis file to remove the JDK 7 builds.
+Remember to update the Github Workflow files to change the JDK being used.
 
 [base_pom]: https://github.com/Bernardo-MG/base-pom

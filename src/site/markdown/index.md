@@ -2,7 +2,7 @@
 
 Archetypes act as templates for new Maven projects, taking care of the most tedious and repetitive tasks for the user, who can just begin coding a pre-configured project.
 
-In this case this Archetype creates a generic Maven-based library which includes various common and useful plugins and utilities, and also comes ready for a full development cycle ausing [Travis](https://travis-ci.org) for CI, [Github](https://github.com/) for SCM, and [Bintray](https://bintray.com/) as the code repository.
+In this case this Archetype creates a generic Maven-based library which includes various common and useful plugins and utilities, and also comes ready for a full development cycle using [Github Workflow](https://docs.github.com/en/actions/configuring-and-managing-workflows) for CI, [Github](https://github.com/) for SCM, and [Bintray](https://bintray.com/) as the code repository.
 
 ## Features
 
@@ -12,7 +12,7 @@ In this case this Archetype creates a generic Maven-based library which includes
 - [Javadocs][site-javadoc] included in the Maven site.
 - [Several useful reports][site-reports] added to the Maven site.
 - [Changes log][changes] added to the Maven site.
-- [Ready to make use of Travis CI][travis] for testing and deployment.
+- [Ready to make use of Github Workflow][github-workflow] for testing and deployment.
 - [Deployment][deployment] covers both artifacts and documentation site.
 - [Deployment scripts][deployment-scripts] making a distinction between release and development versions.
 - The artifact manifest is fully configured.
@@ -52,4 +52,4 @@ From the first moment the a new project is created all the usual Maven commands 
 [site-javadoc]: ./site.html#javadocs
 [site-reports]: ./site.html#reports
 [tests]: ./tests.html
-[travis]: ./travis.html
+[github-workflow]: ./ghworkflow.html

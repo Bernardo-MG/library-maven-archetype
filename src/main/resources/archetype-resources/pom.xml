@@ -53,8 +53,8 @@
    </issueManagement>
 
    <ciManagement>
-      <system>Travis CI</system>
-      <url>https://travis-ci.org/${repoUserId}/${artifactId}</url>
+      <system>Github</system>
+      <url>https://www.github.com/${repoUserId}/${artifactId}/actions</url>
       <notifiers />
    </ciManagement>
 

@@ -24,7 +24,7 @@
 
    <groupId>com.bernardomg.maven.archetypes</groupId>
    <artifactId>library-archetype</artifactId>
-   <version>1.2.7</version>
+   <version>1.2.8</version>
    <packaging>maven-archetype</packaging>
 
    <name>Library Maven Archetype</name>
@@ -57,8 +57,8 @@
    </issueManagement>
 
    <ciManagement>
-      <system>Travis CI</system>
-      <url>https://travis-ci.org/Bernardo-MG/library-maven-archetype</url>
+      <system>Github workflow</system>
+      <url>https://github.com/bernardo-mg/library-maven-archetype/actions</url>
       <notifiers />
    </ciManagement>
 
