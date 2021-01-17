@@ -50,10 +50,6 @@ The application is coded in Java, using Maven to manage the project.
 
 It is a Maven Archetype, and can be used through command line or an IDE as long as it is included in the local repository.
 
-### Prerequisites
-
-JDK 8 or higher is required. All other dependencies are handled through Maven, and noted in the included POM file.
-
 ### Changing JDK Version
 
 By default the project will be set for JDK 7. If this needs to be changed, for example to make use of JDK 8, the java.version property has to be overriden:
