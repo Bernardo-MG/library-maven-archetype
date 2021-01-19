@@ -60,10 +60,6 @@ The application is coded in Java, using Maven to manage the project.
 
 It is a Java library, meant to be included as a dependency on any project which may want to make use of it.
 
-${symbol_pound}${symbol_pound}${symbol_pound} Prerequisites
-
-JDK 8 or higher is required. All other dependencies are handled through Maven, and noted in the included POM file.
-
 ${symbol_pound}${symbol_pound}${symbol_pound} Installing
 
 The recommended way to install the project is by setting it up as a dependency. To get the configuration information for this check the [Bintray repository][bintray-repo], or the [Maven Central Repository][maven-repo].
