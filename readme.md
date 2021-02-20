@@ -4,7 +4,7 @@ A [Maven Archetype][maven-archetype] for generating new Maven-based libraries, f
 
 While it can be prepared for any CI service, it is prepared for [Github Workflow][github-workflow]. Acquiring the code from a [Github][github] repository and publishing into a [Bintray][bintray] one.
 
-After running all the tests artifacts will be published into this repository, but the new project will be able to generate and publish also a Maven site, which, thanks to the [Docs Maven Skin][docs-skin], will show documentation and useful reports from Checkstyle, Findbugs and similar tools.
+After running all the tests artifacts will be published into this repository, but the new project will be able to generate and publish also a Maven site, which, thanks to the [Docs Maven Skin][docs-skin], will show documentation and useful reports from Checkstyle, SpotBugs and similar tools.
 
 The Archetype will do little more than take care of configuration, setting up the POM and the Maven project is most of its job, and so it will include few files not related to this. Some useful things such as a readme, a gitignore and a license files are included, but the initial code will consists just of a few placeholder classes.
 
