@@ -206,7 +206,7 @@
       <junit.jupiter.version>5.6.2</junit.jupiter.version>
       <mockito.version>3.3.3</mockito.version>
       <log4j.version>2.13.3</log4j.version>
-      <slf4j.version>1.7.30</slf4j.version>
+      <slf4j.version>2.0.0-alpha1</slf4j.version>
       <!-- ============================================== -->
       <!-- ================= MAVEN SITE ================= -->
       <!-- ============================================== -->
@@ -251,7 +251,7 @@
       <dependency>
          <!-- Log4j SLF4J Bridge -->
          <groupId>org.apache.logging.log4j</groupId>
-         <artifactId>log4j-slf4j-impl</artifactId>
+         <artifactId>log4j-slf4j18-impl</artifactId>
          <version>${log4j.version}</version>
          <scope>provided</scope>
       </dependency>
