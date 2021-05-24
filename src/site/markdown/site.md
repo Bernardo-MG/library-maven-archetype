@@ -42,7 +42,7 @@ The site is prepared to use the [Docs Maven Skin][docs-maven-skin]. The most imp
 
 ### Repositories Info
 
-The footer of the Maven Site will contain a link for Maven Central and another for Bintray. These are the URLs for the project in each of these releases repositories.
+The footer of the Maven Site will contain a link for Maven Central and another for Github Packages. These are the URLs for the project in each of these releases repositories.
 
 These links are set in the *site.xml* file, in the *releaseRepositories* node, but they read the actual links from the properties in the POM, to keep all the configuration together. If new repositories are added, or any of these not used, this information should be edited.
 

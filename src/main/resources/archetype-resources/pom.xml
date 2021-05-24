@@ -252,6 +252,7 @@
       <!-- ============================================== -->
       <site.skin.version>2.0.11</site.skin.version>
       <mavenURL>http://mvnrepository.com/artifact/${project.groupId}/${project.artifactId}</mavenURL>
+      <githubArtifactURL><![CDATA[https://github.com/${repoUserId}?tab=packages&amp;repo_name={project.artifactId}]]></githubArtifactURL>
    </properties>
 
    <!-- ********************************************** -->
