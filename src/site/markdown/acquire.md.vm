@@ -1,9 +1,7 @@
 #set( $symbol_pound = '#' )
 ${symbol_pound} Acquiring the Project
 
-The project files are hosted on a [Bintray repository][bintray-repo], and have been replicated on JCenter and OSS Sonatype, which also replicates into the [Maven Central Repository][maven-repo].
-
-But if one should be chosen, then it is recommended using the Bintray repository.
+The project files are hosted in the the [Maven Central Repository][maven-repo], and the [Github Pacakges Repository][github-repo]. This means that most Maven setups will be able to acquire the dependency without any additional configuration.
 
 ${symbol_pound}${symbol_pound} Adding the Archetype to the Local Catalog
 
@@ -41,10 +39,11 @@ ${symbol_pound}${symbol_pound}${symbol_pound} Downloads Link
 
 |Repository URL|
 |---|
-|$repoDownloadURL |
+|$mavenURL |
+|$githubArtifactURL |
 
 [code-repo]: $project.scm.url
-[bintray-repo]: ${bintrayURL}
 [maven-repo]: ${mavenURL}
+[github-repo]: ${githubArtifactURL}
 
 [usage]: ./usage.html

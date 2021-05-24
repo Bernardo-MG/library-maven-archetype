@@ -30,38 +30,7 @@ For this reason the "-SNAPSHOT" prefix should be always used for the versions ke
 
 ## Artifact Repositories
 
-Two repositories will be used for the code artifacts, one for releases and another for snapshots.
-
-By default [Bintray][bintray] will be the one used for the releases, and [Sonatype OSS][sonatype] will be used for snapshots. Note that Sonatype requires additional configuration which is detailed in the guides below.
-
-### Artifact Repositories Ids
-
-Both repositories have a unique Id which are used mostly to find out the credentials to use for them during the deployment process.
-
-For this same reason it is not recommended changing them, as some components may stop working.
-
-|ID|Repository|
-|---|---|
-|releases|Release artifacts repository|
-|snapshots|Snapshot artifacts repository|
-
-### Mirroring to JCenter, OSS Sonatype and Maven Central
-
-Using Bintray it is possible to link the releases repository to JCenter, Sonatype OSS and Maven central. This way most dependency managers, including the usual Maven configurations, will be able to acquire the project without adding any new repository info.
-
-The process for achieving this is detailed in two guides:
-
-The first step is required and consists on connecting the Bintray repository to JCenter. This is easy, just follow [this guide][jcenter-guide].
-
-Then connect Bintray to OSS Sonatype by following [this other guide][sonatype-guide]. Once this is done you will end with a Sonatype account, and your own group Id under which your projects can be released.
-
-With all these repositories linked Bintray will automatically replicate them to JCenter, and while updating the project on Maven Central still requires a manual step it is much easier than the alternative.
-
-### OSS Sonatype Snapshots
-
-After setting up the Sonatype account for Bintray you will also be able to release snapshots to the OSS Sonatype snapshots repository. The new project comes prepared to take care of this.
-
-Remember that it may not be possible to add artifacts to OSS Sonatype until the project has at least one release on Maven Central.
+Two profiles will be used for deployment. Each with its own repository. One is ready for [Sonatype OSS][sonatype] and another for [Github packages][github-packages].
 
 ## Maven Site Repository
 
@@ -77,12 +46,9 @@ Just like with the artifacts repositories, it is not recommended changing these 
 |site-development|Development documentation site repository|
 
 [github]: https://github.com/
-[bintray]: https://bintray.com/
 [sonatype]: https://oss.sonatype.org/
+[github-packages]: https://github.com/features/packages
 
 [github-workflow-section]: ./ghworkflow.html
 [deployment-section]: ./deployment.html
 [deployment-scripts-section]: ./deployment.html#Scripts
-
-[jcenter-guide]: https://bintray.com/docs/usermanual/uploads/uploads_includingyourpackagesinjcenter.html
-[sonatype-guide]: http://blog.bintray.com/2014/02/11/bintray-as-pain-free-gateway-to-maven-central/

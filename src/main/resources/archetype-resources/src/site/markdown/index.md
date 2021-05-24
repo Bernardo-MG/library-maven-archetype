@@ -16,7 +16,7 @@ While the project can be used just by itself, it won't take full advantage of mo
 
 - Version control system, Github by default.
 - Continuous integration, Github Workflow by default.
-- Releases repository, Bintray by default.
+- Releases repository. OSSRH Sonatype and Github packages.
 - Test artifacts repository, Sonatype OSS by default.
 - Documentation repository, through FTP or SSH.
 

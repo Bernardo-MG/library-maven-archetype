@@ -15,7 +15,7 @@
    <parent>
       <groupId>com.bernardomg.maven</groupId>
       <artifactId>archetype-pom</artifactId>
-      <version>1.2.2</version>
+      <version>1.2.3</version>
    </parent>
 
    <!-- ********************************************** -->
@@ -24,7 +24,7 @@
 
    <groupId>com.bernardomg.maven.archetypes</groupId>
    <artifactId>library-archetype</artifactId>
-   <version>1.2.10</version>
+   <version>1.2.11</version>
    <packaging>maven-archetype</packaging>
 
    <name>Library Maven Archetype</name>
@@ -61,21 +61,6 @@
       <url>https://github.com/bernardo-mg/library-maven-archetype/actions</url>
       <notifiers />
    </ciManagement>
-
-   <distributionManagement>
-      <repository>
-         <uniqueVersion>false</uniqueVersion>
-         <id>releases</id>
-         <name>Releases Repository</name>
-         <url>https://api.bintray.com/maven/bernardo-mg/maven/library-maven-archetype</url>
-      </repository>
-      <snapshotRepository>
-         <uniqueVersion>false</uniqueVersion>
-         <id>snapshots</id>
-         <name>Snapshots Repository</name>
-         <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-      </snapshotRepository>
-   </distributionManagement>
 
    <!-- ********************************************** -->
    <!-- ****************** PROFILES ****************** -->
@@ -121,6 +106,61 @@
             <maven.test.skip>true</maven.test.skip>
          </properties>
       </profile>
+      <profile>
+         <!-- Github deployment profile. -->
+         <id>deployment-github</id>
+         <distributionManagement>
+            <repository>
+               <!-- Github repository -->
+               <id>github</id>
+               <name>GitHub Packages</name>
+               <url>https://maven.pkg.github.com/Bernardo-MG/library-maven-archetype</url>
+            </repository>
+         </distributionManagement>
+      </profile>
+      <profile>
+         <!-- OSSRH deployment profile. -->
+         <id>deployment-ossrh</id>
+         <distributionManagement>
+            <repository>
+               <!-- OSSRH repository -->
+               <id>ossrh</id>
+               <name>Central Repository OSSRH</name>
+               <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            </repository>
+            <snapshotRepository>
+               <!-- OSSRH snapshots repository -->
+               <id>ossrh</id>
+               <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            </snapshotRepository>
+         </distributionManagement>
+         <build>
+            <plugins>
+               <plugin>
+                  <!-- GPG -->
+                  <!-- Signs the artifacts -->
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-gpg-plugin</artifactId>
+                  <executions>
+                     <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                           <goal>sign</goal>
+                        </goals>
+                     </execution>
+                  </executions>
+                  <configuration>
+                     <!-- Prevent gpg from using pinentry programs -->
+                     <gpgArguments>
+                        <arg>--pinentry-mode</arg>
+                        <arg>loopback</arg>
+                     </gpgArguments>
+                  </configuration>
+               </plugin>
+            </plugins>
+         </build>
+      </profile>
    </profiles>
 
    <!-- ********************************************** -->
@@ -160,10 +200,9 @@
       <!-- ============================================== -->
       <!-- ================= MAVEN SITE ================= -->
       <!-- ============================================== -->
-      <site.skin.version>2.0.11</site.skin.version>
-      <repoDownloadURL>https://dl.bintray.com/bernardo-mg/maven/</repoDownloadURL>
-      <bintrayURL>https://bintray.com/bernardo-mg/maven/library-maven-archetype/view</bintrayURL>
-      <mavenURL>http://mvnrepository.com/artifact/com.bernardomg.maven.archetypes/library-archetype</mavenURL>
+      <site.skin.version>2.2.0</site.skin.version>
+      <mavenURL>https://mvnrepository.com/artifact/com.bernardomg.maven.archetypes/library-archetype</mavenURL>
+      <githubArtifactURL><![CDATA[https://github.com/Bernardo-MG?tab=packages&amp;repo_name=library-archetype]]></githubArtifactURL>
    </properties>
 
    <!-- ********************************************** -->
