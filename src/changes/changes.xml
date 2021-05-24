@@ -5,7 +5,13 @@
       <author email="programming@bernardomg.com">Bernardo Martínez Garrido</author>
    </properties>
    <body>
-      <release version="1.3.0" date="2021-02-20" description="">
+      <release version="1.2.11" date="2021-05-25" description="Updated deployment">
+         <action dev="bmg" type="add">
+            Added deployment script for Sonatype.
+         </action>
+         <action dev="bmg" type="add">
+            Added deployment script for Github packages.
+         </action>
       </release>
       <release version="1.2.10" date="2021-02-20" description="Corrected Maven Skin">
          <action dev="bmg" type="fix">
