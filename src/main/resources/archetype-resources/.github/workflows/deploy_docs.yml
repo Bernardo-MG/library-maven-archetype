@@ -39,7 +39,7 @@ jobs:
         DEPLOY_DOCS_DEVELOP_SITE: ${{ secrets.DEPLOY_DOCS_DEVELOP_SITE }}
     - name: Deploy development docs
       if: steps.extract_branch.outputs.branch == 'develop'
-      run: mvn site site:deploy -B -P deployment,deployment-development --settings settings.xml
+      run: mvn verify site site:deploy -B -P deployment,deployment-development --settings settings.xml
     - name: Deploy release docs
       if: steps.extract_branch.outputs.branch == 'master'
-      run: mvn site site:deploy -B -P deployment,deployment-release --settings settings.xml
+      run: mvn verify site site:deploy -B -P deployment,deployment-release --settings settings.xml
