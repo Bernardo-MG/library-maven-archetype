@@ -5,6 +5,14 @@
       <author email="programming@bernardomg.com">Bernardo Martínez Garrido</author>
    </properties>
    <body>
+      <release version="1.2.12" date="2021-05-25" description="Updates">
+         <action dev="bmg" type="update">
+            Updated skins.
+         </action>
+         <action dev="bmg" type="update">
+            Updated CI scripts.
+         </action>
+      </release>
       <release version="1.2.11" date="2021-05-25" description="Updated deployment">
          <action dev="bmg" type="add">
             Added deployment script for Sonatype.
