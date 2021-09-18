@@ -5,7 +5,12 @@
       <author email="programming@bernardomg.com">Bernardo Martínez Garrido</author>
    </properties>
    <body>
-      <release version="1.2.12" date="2021-05-25" description="Updates">
+      <release version="1.2.13" date="2021-09-18" description="Updated parent POM">
+         <action dev="bmg" type="update">
+            Updated parent POM.
+         </action>
+      </release>
+      <release version="1.2.12" date="2021-08-07" description="Updates">
          <action dev="bmg" type="update">
             Updated skins.
          </action>
