@@ -41,6 +41,31 @@
    </licenses>
 
    <!-- ********************************************** -->
+   <!-- *********** ORGANIZATION AND MEMBERS ********* -->
+   <!-- ********************************************** -->
+
+   <organization>
+      <name>Bernardo Martínez Garrido</name>
+      <url>https://github.com/Bernardo-MG</url>
+   </organization>
+
+   <developers>
+      <developer>
+         <id>bmg</id>
+         <name>Bernardo Martínez Garrido</name>
+         <email>programming@bernardomg.com</email>
+         <url>https://github.com/Bernardo-MG</url>
+         <organization>Bernardo Martínez Garrido</organization>
+         <organizationUrl>https://github.com/Bernardo-MG</organizationUrl>
+         <roles>
+            <role>Developer</role>
+         </roles>
+         <timezone>+1</timezone>
+         <properties />
+      </developer>
+   </developers>
+
+   <!-- ********************************************** -->
    <!-- ************ RESOURCES AND SERVICES ********** -->
    <!-- ********************************************** -->
 
@@ -162,31 +187,6 @@
          </build>
       </profile>
    </profiles>
-
-   <!-- ********************************************** -->
-   <!-- *********** ORGANIZATION AND MEMBERS ********* -->
-   <!-- ********************************************** -->
-
-   <organization>
-      <name>Bernardo Martínez Garrido</name>
-      <url>https://github.com/Bernardo-MG</url>
-   </organization>
-
-   <developers>
-      <developer>
-         <id>bmg</id>
-         <name>Bernardo Martínez Garrido</name>
-         <email>programming@bernardomg.com</email>
-         <url>https://github.com/Bernardo-MG</url>
-         <organization>Bernardo Martínez Garrido</organization>
-         <organizationUrl>https://github.com/Bernardo-MG</organizationUrl>
-         <roles>
-            <role>Developer</role>
-         </roles>
-         <timezone>+1</timezone>
-         <properties />
-      </developer>
-   </developers>
 
    <!-- ********************************************** -->
    <!-- **************** PROPERTIES ****************** -->

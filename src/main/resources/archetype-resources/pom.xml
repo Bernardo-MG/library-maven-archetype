@@ -37,6 +37,31 @@
    </licenses>
 
    <!-- ********************************************** -->
+   <!-- *********** ORGANIZATION AND MEMBERS ********* -->
+   <!-- ********************************************** -->
+
+   <organization>
+      <name>${developerName}</name>
+      <url>${developerUrl}</url>
+   </organization>
+
+   <developers>
+      <developer>
+         <id>${developerId}</id>
+         <name>${developerName}</name>
+         <email>${developerMail}</email>
+         <url>${developerUrl}</url>
+         <organization>${developerName}</organization>
+         <organizationUrl>${developerUrl}</organizationUrl>
+         <roles>
+            <role>Developer</role>
+         </roles>
+         <timezone>+1</timezone>
+         <properties />
+      </developer>
+   </developers>
+
+   <!-- ********************************************** -->
    <!-- ************ RESOURCES AND SERVICES ********** -->
    <!-- ********************************************** -->
 
@@ -200,31 +225,6 @@
          </build>
       </profile>
    </profiles>
-
-   <!-- ********************************************** -->
-   <!-- *********** ORGANIZATION AND MEMBERS ********* -->
-   <!-- ********************************************** -->
-
-   <organization>
-      <name>${developerName}</name>
-      <url>${developerUrl}</url>
-   </organization>
-
-   <developers>
-      <developer>
-         <id>${developerId}</id>
-         <name>${developerName}</name>
-         <email>${developerMail}</email>
-         <url>${developerUrl}</url>
-         <organization>${developerName}</organization>
-         <organizationUrl>${developerUrl}</organizationUrl>
-         <roles>
-            <role>Developer</role>
-         </roles>
-         <timezone>+1</timezone>
-         <properties />
-      </developer>
-   </developers>
 
    <!-- ********************************************** -->
    <!-- **************** PROPERTIES ****************** -->
