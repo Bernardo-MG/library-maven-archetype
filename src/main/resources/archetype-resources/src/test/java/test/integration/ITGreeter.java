@@ -27,7 +27,6 @@ package ${package}.test.integration;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.platform.runner.JUnitPlatform;
-import org.junit.runner.RunWith;
 
 import ${package}.Greeter;
 
@@ -39,7 +38,6 @@ import ${package}.Greeter;
  * @author ${developerName}
  *
  */
-@RunWith(JUnitPlatform.class)
 public final class ITGreeter {
 
     /**
