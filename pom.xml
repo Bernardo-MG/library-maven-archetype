@@ -24,7 +24,7 @@
 
    <groupId>com.bernardomg.maven.archetypes</groupId>
    <artifactId>library-archetype</artifactId>
-   <version>1.2.13</version>
+   <version>1.2.14</version>
    <packaging>maven-archetype</packaging>
 
    <name>Library Maven Archetype</name>
@@ -39,6 +39,31 @@
          <distribution>repo</distribution>
       </license>
    </licenses>
+
+   <!-- ********************************************** -->
+   <!-- *********** ORGANIZATION AND MEMBERS ********* -->
+   <!-- ********************************************** -->
+
+   <organization>
+      <name>Bernardo Martínez Garrido</name>
+      <url>https://github.com/Bernardo-MG</url>
+   </organization>
+
+   <developers>
+      <developer>
+         <id>bmg</id>
+         <name>Bernardo Martínez Garrido</name>
+         <email>programming@bernardomg.com</email>
+         <url>https://github.com/Bernardo-MG</url>
+         <organization>Bernardo Martínez Garrido</organization>
+         <organizationUrl>https://github.com/Bernardo-MG</organizationUrl>
+         <roles>
+            <role>Developer</role>
+         </roles>
+         <timezone>+1</timezone>
+         <properties />
+      </developer>
+   </developers>
 
    <!-- ********************************************** -->
    <!-- ************ RESOURCES AND SERVICES ********** -->
@@ -68,9 +93,9 @@
 
    <profiles>
       <profile>
-         <!-- Release deployment profile -->
+         <!-- Site deployment profile -->
          <!-- Sets the site repository to point to the releases repo -->
-         <id>deployment-release</id>
+         <id>deployment-site</id>
          <activation>
             <!-- Active by default so the repository appears in the reports -->
             <activeByDefault>true</activeByDefault>
@@ -80,31 +105,9 @@
                <id>site</id>
                <name>Project Documentation Site</name>
                <!-- The URL should be set externally -->
-               <url>${site.release.url}</url>
+               <url>${site.url}</url>
             </site>
          </distributionManagement>
-      </profile>
-      <profile>
-         <!-- Development deployment profile -->
-         <!-- Sets the site repository to point to the development repo -->
-         <id>deployment-development</id>
-         <distributionManagement>
-            <site>
-               <id>site-development</id>
-               <name>Project Development Documentation Site</name>
-               <!-- The URL should be set externally -->
-               <url>${site.develop.url}</url>
-            </site>
-         </distributionManagement>
-      </profile>
-      <profile>
-         <!-- Deployment profile -->
-         <!-- Sets ups the environment for deployment -->
-         <id>deployment</id>
-         <properties>
-            <!-- Tests are skipped -->
-            <maven.test.skip>true</maven.test.skip>
-         </properties>
       </profile>
       <profile>
          <!-- Github deployment profile. -->
@@ -114,7 +117,7 @@
                <!-- Github repository -->
                <id>github</id>
                <name>GitHub Packages</name>
-               <url>https://maven.pkg.github.com/Bernardo-MG/library-maven-archetype</url>
+               <url>https://maven.pkg.github.com/Bernardo-MG/dice-notation-java</url>
             </repository>
          </distributionManagement>
       </profile>
@@ -162,31 +165,6 @@
          </build>
       </profile>
    </profiles>
-
-   <!-- ********************************************** -->
-   <!-- *********** ORGANIZATION AND MEMBERS ********* -->
-   <!-- ********************************************** -->
-
-   <organization>
-      <name>Bernardo Martínez Garrido</name>
-      <url>https://github.com/Bernardo-MG</url>
-   </organization>
-
-   <developers>
-      <developer>
-         <id>bmg</id>
-         <name>Bernardo Martínez Garrido</name>
-         <email>programming@bernardomg.com</email>
-         <url>https://github.com/Bernardo-MG</url>
-         <organization>Bernardo Martínez Garrido</organization>
-         <organizationUrl>https://github.com/Bernardo-MG</organizationUrl>
-         <roles>
-            <role>Developer</role>
-         </roles>
-         <timezone>+1</timezone>
-         <properties />
-      </developer>
-   </developers>
 
    <!-- ********************************************** -->
    <!-- **************** PROPERTIES ****************** -->
