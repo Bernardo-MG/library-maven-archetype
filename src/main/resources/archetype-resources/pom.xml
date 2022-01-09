@@ -220,7 +220,6 @@
       <!-- ============================================== -->
       <!-- =========== DEPENDENCIES VERSIONS ============ -->
       <!-- ============================================== -->
-      <guava.version>29.0-jre</guava.version>
       <junit.jupiter.version>5.8.0</junit.jupiter.version>
       <mockito.version>3.3.3</mockito.version>
       <log4j.version>2.14.1</log4j.version>
@@ -251,12 +250,6 @@
    </dependencyManagement>
 
    <dependencies>
-      <dependency>
-         <!-- Guava -->
-         <groupId>com.google.guava</groupId>
-         <artifactId>guava</artifactId>
-         <version>${guava.version}</version>
-      </dependency>
       <!-- ============================================== -->
       <!-- ================== LOGGERS =================== -->
       <!-- ============================================== -->
