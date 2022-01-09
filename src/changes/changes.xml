@@ -9,6 +9,9 @@
          <action dev="bmg" type="update">
             Updated CI config to import a common Github Workflow.
          </action>
+         <action dev="bmg" type="update">
+            Updated dependencies.
+         </action>
       </release>
       <release version="1.2.13" date="2021-09-18" description="Updated parent POM">
          <action dev="bmg" type="update">

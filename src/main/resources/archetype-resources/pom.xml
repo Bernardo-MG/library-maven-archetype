@@ -5,7 +5,7 @@
    <modelVersion>4.0.0</modelVersion>
 
    <!-- ********************************************** -->
-   <!-- ***************** PARENT POM ***************** -->
+   <!-- ****************** BASE POM ****************** -->
    <!-- ********************************************** -->
 
    <parent>
@@ -220,14 +220,14 @@
       <!-- ============================================== -->
       <!-- =========== DEPENDENCIES VERSIONS ============ -->
       <!-- ============================================== -->
-      <junit.jupiter.version>5.8.0</junit.jupiter.version>
-      <mockito.version>3.3.3</mockito.version>
-      <log4j.version>2.14.1</log4j.version>
-      <slf4j.version>2.0.0-alpha5</slf4j.version>
+      <junit.jupiter.version>5.8.2</junit.jupiter.version>
+      <mockito.version>4.2.0</mockito.version>
+      <log4j.version>2.17.1</log4j.version>
+      <slf4j.version>1.7.30</slf4j.version>
       <!-- ============================================== -->
       <!-- ================= MAVEN SITE ================= -->
       <!-- ============================================== -->
-      <site.skin.version>2.2.4</site.skin.version>
+      <site.skin.version>2.2.5</site.skin.version>
       <mavenURL>http://mvnrepository.com/artifact/${project.groupId}/${project.artifactId}</mavenURL>
       <githubArtifactURL><![CDATA[https://github.com/${repoUserId}?tab=packages&amp;repo_name={project.artifactId}]]></githubArtifactURL>
    </properties>
