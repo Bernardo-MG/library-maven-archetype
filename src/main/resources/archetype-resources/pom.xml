@@ -5,13 +5,13 @@
    <modelVersion>4.0.0</modelVersion>
 
    <!-- ********************************************** -->
-   <!-- ***************** PARENT POM ***************** -->
+   <!-- ****************** BASE POM ****************** -->
    <!-- ********************************************** -->
 
    <parent>
       <groupId>com.bernardomg.maven</groupId>
       <artifactId>base-pom</artifactId>
-      <version>1.4.4</version>
+      <version>1.5.0</version>
    </parent>
 
    <!-- ********************************************** -->
@@ -210,25 +210,20 @@
 
    <properties>
       <!-- ============================================== -->
-      <!-- ================ JAVA VERSION ================ -->
-      <!-- ============================================== -->
-      <java.version>1.8</java.version>
-      <!-- ============================================== -->
       <!-- =============== MANIFEST DATA ================ -->
       <!-- ============================================== -->
       <manifest.name>${packageInPathFormat}</manifest.name>
       <!-- ============================================== -->
       <!-- =========== DEPENDENCIES VERSIONS ============ -->
       <!-- ============================================== -->
-      <guava.version>29.0-jre</guava.version>
-      <junit.jupiter.version>5.8.0</junit.jupiter.version>
-      <mockito.version>3.3.3</mockito.version>
-      <log4j.version>2.14.1</log4j.version>
-      <slf4j.version>2.0.0-alpha5</slf4j.version>
+      <junit.jupiter.version>5.8.2</junit.jupiter.version>
+      <mockito.version>4.2.0</mockito.version>
+      <log4j.version>2.17.1</log4j.version>
+      <slf4j.version>1.7.30</slf4j.version>
       <!-- ============================================== -->
       <!-- ================= MAVEN SITE ================= -->
       <!-- ============================================== -->
-      <site.skin.version>2.2.4</site.skin.version>
+      <site.skin.version>2.2.5</site.skin.version>
       <mavenURL>http://mvnrepository.com/artifact/${project.groupId}/${project.artifactId}</mavenURL>
       <githubArtifactURL><![CDATA[https://github.com/${repoUserId}?tab=packages&amp;repo_name={project.artifactId}]]></githubArtifactURL>
    </properties>
@@ -251,12 +246,6 @@
    </dependencyManagement>
 
    <dependencies>
-      <dependency>
-         <!-- Guava -->
-         <groupId>com.google.guava</groupId>
-         <artifactId>guava</artifactId>
-         <version>${guava.version}</version>
-      </dependency>
       <!-- ============================================== -->
       <!-- ================== LOGGERS =================== -->
       <!-- ============================================== -->
@@ -269,7 +258,7 @@
       <dependency>
          <!-- Log4j SLF4J Bridge -->
          <groupId>org.apache.logging.log4j</groupId>
-         <artifactId>log4j-slf4j18-impl</artifactId>
+         <artifactId>log4j-slf4j-impl</artifactId>
          <version>${log4j.version}</version>
          <scope>provided</scope>
       </dependency>

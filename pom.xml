@@ -15,7 +15,7 @@
    <parent>
       <groupId>com.bernardomg.maven</groupId>
       <artifactId>archetype-pom</artifactId>
-      <version>1.2.4</version>
+      <version>1.3.0</version>
    </parent>
 
    <!-- ********************************************** -->
@@ -117,7 +117,7 @@
                <!-- Github repository -->
                <id>github</id>
                <name>GitHub Packages</name>
-               <url>https://maven.pkg.github.com/Bernardo-MG/dice-notation-java</url>
+               <url>https://maven.pkg.github.com/Bernardo-MG/library-maven-archetype</url>
             </repository>
          </distributionManagement>
       </profile>
@@ -178,7 +178,7 @@
       <!-- ============================================== -->
       <!-- ================= MAVEN SITE ================= -->
       <!-- ============================================== -->
-      <site.skin.version>2.2.4</site.skin.version>
+      <site.skin.version>2.2.5</site.skin.version>
       <mavenURL>https://mvnrepository.com/artifact/com.bernardomg.maven.archetypes/library-archetype</mavenURL>
       <githubArtifactURL><![CDATA[https://github.com/Bernardo-MG?tab=packages&amp;repo_name=library-archetype]]></githubArtifactURL>
    </properties>
