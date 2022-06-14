@@ -1,7 +1,7 @@
 #set( $symbol_pound = '#' )
 ${symbol_pound} Acquiring the Project
 
-The project files are hosted in the the [Maven Central Repository][maven-repo], and the [Github Pacakges Repository][github-repo]. This means that most Maven setups will be able to acquire the dependency without any additional configuration.
+Project files are hosted in the the [Maven Central Repository][maven-repo], and the [Github Pacakges Repository][github-repo]. This means that most Maven setups will be able to acquire the dependency without any additional configuration.
 
 ${symbol_pound}${symbol_pound} Adding the Archetype to the Local Catalog
 
