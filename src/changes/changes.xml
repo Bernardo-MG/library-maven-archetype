@@ -5,6 +5,11 @@
       <author email="programming@bernardomg.com">Bernardo Martínez Garrido</author>
    </properties>
    <body>
+      <release version="1.2.15" date="2022-08-07" description="Updated dependencies">
+         <action dev="bmg" type="update">
+            Updated dependencies.
+         </action>
+      </release>
       <release version="1.2.14" date="2022-01-09" description="Updated CI config">
          <action dev="bmg" type="update">
             Updated CI config to import a common Github Workflow.

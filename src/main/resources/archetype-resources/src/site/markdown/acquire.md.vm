@@ -1,10 +1,7 @@
 #set( $symbol_pound = '#' )
 ${symbol_pound} Setting up the dependencies
 
-The project files are hosted in the the [Maven Central Repository][maven-repo], and the [Github Packages Repository][github-repo]. This means that most Maven setups will be able to acquire the dependency without any additional configuration.
-
-For any additional information about how to set up the dependency check the [dependency information section](./dependency-info.html).
-
+Project files are hosted in the [Maven Central Repository][maven-repo], and the [Github Packages Repository][github-repo].
 
 [maven-repo]: ${mavenURL}
 [github-repo]: ${githubArtifactURL}

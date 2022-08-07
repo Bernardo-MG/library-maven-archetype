@@ -51,11 +51,11 @@ It is a Maven Archetype, and can be used through command line or an IDE as long 
 
 ### Changing JDK Version
 
-By default the project will be set for JDK 7. If this needs to be changed, for example to make use of JDK 8, the java.version property has to be overriden:
+By default the project will be set for JDK 11. If this needs to be changed, for example to make use of JDK 17, the java.version property has to be overriden:
 
 ```xml
 <properties>
-   <java.version>1.8</java.version>
+   <java.version>17</java.version>
 <\properties>
 ```
 

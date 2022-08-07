@@ -4,11 +4,11 @@
 
 Maven configuration is inherited from the [Base POM][base_pom], which includes the JDK definition.
 
-By default the project will support JDK 7. To change this, for example for a JDK 8 project, just change the java.version property:
+By default the project will be set for JDK 11. If this needs to be changed, for example to make use of JDK 17, the java.version property has to be overriden:
 
 ```xml
 <properties>
-   <java.version>1.8</java.version>
+   <java.version>17</java.version>
 <\properties>
 ```
 
