@@ -14,7 +14,7 @@ The Archetype can used by Maven with the following command.
 As it includes the repository from which it can be acquired, this command will also install the archetype in the local repository if it isn't already there.
 
 ```sh
-$ mvn archetype:generate -DarchetypeGroupId=$project.groupId -DarchetypeArtifactId=$project.artifactId -DarchetypeVersion=$project.version -DarchetypeRepository=$repoDownloadURL
+mvn archetype:generate -DarchetypeGroupId=$project.groupId -DarchetypeArtifactId=$project.artifactId -DarchetypeVersion=$project.version -DarchetypeRepository=$repoDownloadURL
 ```
 
 The *-D* parameter serves to define a variable. These variables are as it follows:

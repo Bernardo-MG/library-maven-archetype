@@ -30,11 +30,11 @@ From the first moment the a new project is created all the usual Maven commands 
 
 |Command|Usage|
 |---|---|
-|$ mvn clean package|Creating the jar file|
-|$ mvn clean install|Installing the project to the local repository|
-|$ mvn clean unit|Running only unit tests|
-|$ mvn clean verify|Running unit and integration tests|
-|$ mvn clean verify site|Generating the Maven site and all the report|
+|mvn clean package|Creating the jar file|
+|mvn clean install|Installing the project to the local repository|
+|mvn clean unit|Running only unit tests|
+|mvn clean verify|Running unit and integration tests|
+|mvn clean verify site|Generating the Maven site and all the report|
 
 
 [parent-pom]: https://github.com/Bernardo-MG/archetype-pom

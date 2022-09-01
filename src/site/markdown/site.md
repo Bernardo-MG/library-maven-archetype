@@ -9,7 +9,7 @@ Using the default command for generating the Maven site is not recommended. This
 Instead the following command should be used to get the full reports:
 
 ```sh
-$ mvn verify site
+mvn verify site
 ```
 
 ## Javadocs

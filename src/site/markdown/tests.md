@@ -49,7 +49,7 @@ The configuration file, named *log4j2-test.xml*, can be found on the tests resou
 The common way to run tests through Maven is:
 
 ```sh
-$ mvn test
+mvn test
 ```
 
 But that will only run the unit tests.
@@ -59,7 +59,7 @@ If the integration need to be run then the *verify* goal is required. This will 
 For this reason, to run the full test suites the following command should be used:
 
 ```sh
-$ mvn verify
+mvn verify
 ```
 
 [surefire]: https://maven.apache.org/surefire/maven-surefire-plugin/

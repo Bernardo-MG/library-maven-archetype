@@ -16,7 +16,7 @@ ${symbol_pound}${symbol_pound}${symbol_pound} Manual Installation
 It is always possible to manually install the Archetype by just getting the code from the [code repository][code-repo] and using the following command:
 
 ```sh
-$ mvn install
+mvn install
 ```
 
 The project is prepared to automatically update the local catalog when installed.
