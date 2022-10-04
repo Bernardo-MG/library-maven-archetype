@@ -243,15 +243,9 @@
       <!-- ======= TEST ENVIRONMENT DEPENDENCIES ======== -->
       <!-- ============================================== -->
       <dependency>
-         <!-- JUnit Jupiter Engine -->
+         <!-- JUnit Jupiter -->
          <groupId>org.junit.jupiter</groupId>
-         <artifactId>junit-jupiter-engine</artifactId>
-         <scope>test</scope>
-      </dependency>
-      <dependency>
-         <!-- JUnit Jupiter Params -->
-         <groupId>org.junit.jupiter</groupId>
-         <artifactId>junit-jupiter-params</artifactId>
+         <artifactId>junit-jupiter</artifactId>
          <scope>test</scope>
       </dependency>
       <dependency>
