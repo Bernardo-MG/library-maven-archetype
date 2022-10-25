@@ -122,7 +122,7 @@ The project has been released under the [MIT License][license].
 [site-release]: https://docs.bernardomg.com/maven/library-maven-archetype
 
 [maven-archetype]: https://maven.apache.org/guides/introduction/introduction-to-archetypes.html
-[archetype-testing]: http://maven.apache.org/archetype/maven-archetype-plugin/integration-test-mojo.html
+[archetype-testing]: https://maven.apache.org/archetype/maven-archetype-plugin/integration-test-mojo.html
 
 [sample-project]: https://github.com/Bernardo-MG/library-maven-archetype-example
 

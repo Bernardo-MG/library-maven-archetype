@@ -64,6 +64,6 @@ mvn verify
 
 [surefire]: https://maven.apache.org/surefire/maven-surefire-plugin/
 [failsafe]: https://maven.apache.org/surefire/maven-failsafe-plugin/
-[jacoco]: http://eclemma.org/jacoco/trunk/doc/maven.html
+[jacoco]: https://eclemma.org/jacoco/trunk/doc/maven.html
 
-[junit]: http://junit.org/
+[junit]: https://junit.org/

@@ -41,7 +41,7 @@ From the first moment the a new project is created all the usual Maven commands 
 [docs-skin]: https://github.com/Bernardo-MG/docs-maven-skin
 [example-project]: https://github.com/Bernardo-MG/library-maven-archetype-example
 
-[junit]: http://junit.org
+[junit]: https://junit.org
 
 [license]: ./license.html
 

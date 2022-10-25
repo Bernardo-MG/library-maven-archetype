@@ -27,7 +27,7 @@ The project by default comes with a useful series of features:
 
 - Preconfigured POM to begin developing a new library fast.
 - Prepared for [Github Workflow](https://docs.github.com/en/actions/configuring-and-managing-workflows), including configuration files and deployment scripts. Check the [Archetype documentation](https://docs.bernardomg.com/maven/library-maven-archetype) to find out more.
-- Unit and integration tests suites ready to be run with [JUnit](http://junit.org) just by using the Maven test and verify commands.
+- Unit and integration tests suites ready to be run with [JUnit](https://junit.org) just by using the Maven test and verify commands.
 - A Maven site, using the [Docs Maven Skin](https://github.com/Bernardo-MG/docs-maven-skin), to contain the documentation, the Javadocs and several reports.
 - A bunch of useful files, such as readme, gitignore and gitattributes.
 
@@ -88,7 +88,7 @@ ${symbol_pound}${symbol_pound} License
 
 The project has been released under the [MIT License][license].
 
-[maven-repo]: http://mvnrepository.com/artifact/${groupId}/${artifactId}
+[maven-repo]: https://mvnrepository.com/artifact/${groupId}/${artifactId}
 [issues]: https://github.com/${repoUserId}/${artifactId}/issues
 [javadoc-develop]: ${urlSiteDevelop}/${artifactId}/apidocs
 [javadoc-release]: ${urlSiteRelease}/${artifactId}/apidocs
