@@ -11,7 +11,7 @@
    <parent>
       <groupId>com.bernardomg.maven</groupId>
       <artifactId>base-pom</artifactId>
-      <version>1.5.2</version>
+      <version>1.5.3</version>
    </parent>
 
    <!-- ********************************************** -->
@@ -31,7 +31,7 @@
    <licenses>
       <license>
          <name>MIT License</name>
-         <url>http://www.opensource.org/licenses/mit-license.php</url>
+         <url>https://www.opensource.org/licenses/mit-license.php</url>
          <distribution>repo</distribution>
       </license>
    </licenses>
@@ -116,7 +116,7 @@
                <!-- Github repository -->
                <id>github</id>
                <name>GitHub Packages</name>
-               <url>https://maven.pkg.github.com/Bernardo-MG/dice-notation-java</url>
+               <url>https://maven.pkg.github.com/${repoUserId}/${artifactId}</url>
             </repository>
          </distributionManagement>
       </profile>
@@ -177,10 +177,10 @@
       <!-- ============================================== -->
       <!-- =========== DEPENDENCIES VERSIONS ============ -->
       <!-- ============================================== -->
-      <junit.jupiter.version>5.8.2</junit.jupiter.version>
-      <mockito.version>4.6.1</mockito.version>
-      <log4j.version>2.17.2</log4j.version>
-      <slf4j.version>1.7.36</slf4j.version>
+      <junit.jupiter.version>5.9.1</junit.jupiter.version>
+      <mockito.version>4.9.0</mockito.version>
+      <log4j.version>2.19.0</log4j.version>
+      <slf4j.version>2.0.3</slf4j.version>
       <!-- ============================================== -->
       <!-- ============ PLUGIN CONFIGURATION ============ -->
       <!-- ============================================== -->
@@ -193,8 +193,8 @@
       <!-- ============================================== -->
       <!-- ================= MAVEN SITE ================= -->
       <!-- ============================================== -->
-      <site.skin.version>2.2.6</site.skin.version>
-      <mavenURL>http://mvnrepository.com/artifact/${project.groupId}/${project.artifactId}</mavenURL>
+      <site.skin.version>2.2.7</site.skin.version>
+      <mavenURL>https://mvnrepository.com/artifact/${project.groupId}/${project.artifactId}</mavenURL>
       <githubArtifactURL><![CDATA[https://github.com/${repoUserId}?tab=packages&amp;repo_name={project.artifactId}]]></githubArtifactURL>
    </properties>
 
@@ -243,15 +243,9 @@
       <!-- ======= TEST ENVIRONMENT DEPENDENCIES ======== -->
       <!-- ============================================== -->
       <dependency>
-         <!-- JUnit Jupiter Engine -->
+         <!-- JUnit Jupiter -->
          <groupId>org.junit.jupiter</groupId>
-         <artifactId>junit-jupiter-engine</artifactId>
-         <scope>test</scope>
-      </dependency>
-      <dependency>
-         <!-- JUnit Jupiter Params -->
-         <groupId>org.junit.jupiter</groupId>
-         <artifactId>junit-jupiter-params</artifactId>
+         <artifactId>junit-jupiter</artifactId>
          <scope>test</scope>
       </dependency>
       <dependency>

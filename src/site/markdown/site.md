@@ -9,7 +9,7 @@ Using the default command for generating the Maven site is not recommended. This
 Instead the following command should be used to get the full reports:
 
 ```sh
-$ mvn verify site
+mvn verify site
 ```
 
 ## Javadocs
@@ -47,7 +47,7 @@ The footer of the Maven Site will contain a link for Maven Central and another f
 These links are set in the *site.xml* file, in the *releaseRepositories* node, but they read the actual links from the properties in the POM, to keep all the configuration together. If new repositories are added, or any of these not used, this information should be edited.
 
 [changes]: ./changes.html
-[maven-site]: http://maven.apache.org/guides/mini/guide-site.html
+[maven-site]: https://maven.apache.org/guides/mini/guide-site.html
 
 [base-pom]: https://github.com/Bernardo-MG/base-pom
 
