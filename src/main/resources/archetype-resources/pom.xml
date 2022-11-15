@@ -116,7 +116,7 @@
                <!-- Github repository -->
                <id>github</id>
                <name>GitHub Packages</name>
-               <url>https://maven.pkg.github.com/Bernardo-MG/dice-notation-java</url>
+               <url>https://maven.pkg.github.com/${repoUserId}/${artifactId}</url>
             </repository>
          </distributionManagement>
       </profile>
