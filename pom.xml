@@ -92,6 +92,9 @@
    <!-- ********************************************** -->
 
    <profiles>
+      <!-- ============================================== -->
+      <!-- ============= DEPLOYMENT PROFILES ============ -->
+      <!-- ============================================== -->
       <profile>
          <!-- Site deployment profile -->
          <!-- Sets the site repository to point to the releases repo -->
