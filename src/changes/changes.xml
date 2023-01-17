@@ -5,6 +5,11 @@
       <author email="programming@bernardomg.com">Bernardo Martínez Garrido</author>
    </properties>
    <body>
+      <release version="1.2.17" date="2023-01-17" description="Updated CI files">
+         <action dev="bmg" type="update">
+            Updated CI files.
+         </action>
+      </release>
       <release version="1.2.16" date="2022-11-15" description="Updated dependencies">
          <action dev="bmg" type="update">
             Updated dependencies.

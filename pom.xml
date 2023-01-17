@@ -24,7 +24,7 @@
 
    <groupId>com.bernardomg.maven.archetypes</groupId>
    <artifactId>library-archetype</artifactId>
-   <version>1.2.16</version>
+   <version>1.2.17</version>
    <packaging>maven-archetype</packaging>
 
    <name>Library Maven Archetype</name>
@@ -92,14 +92,13 @@
    <!-- ********************************************** -->
 
    <profiles>
+      <!-- ============================================== -->
+      <!-- ============= DEPLOYMENT PROFILES ============ -->
+      <!-- ============================================== -->
       <profile>
          <!-- Site deployment profile -->
          <!-- Sets the site repository to point to the releases repo -->
          <id>deployment-site</id>
-         <activation>
-            <!-- Active by default so the repository appears in the reports -->
-            <activeByDefault>true</activeByDefault>
-         </activation>
          <distributionManagement>
             <site>
                <id>site</id>
@@ -178,7 +177,7 @@
       <!-- ============================================== -->
       <!-- ================= MAVEN SITE ================= -->
       <!-- ============================================== -->
-      <site.skin.version>2.2.7</site.skin.version>
+      <site.skin.version>2.3.0</site.skin.version>
       <mavenURL>https://mvnrepository.com/artifact/com.bernardomg.maven.archetypes/library-archetype</mavenURL>
       <githubArtifactURL><![CDATA[https://github.com/Bernardo-MG?tab=packages&amp;repo_name=library-archetype]]></githubArtifactURL>
    </properties>
