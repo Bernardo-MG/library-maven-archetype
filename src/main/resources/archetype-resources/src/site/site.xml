@@ -61,7 +61,7 @@
          <item name="Github" href="${githubArtifactURL}" />
       </menu>
       <menu name="Icons" inherit="bottom">
-         <item name="Github" img="fab fa-github" href="${project.scm.url}" />
+         <item name="Github" img="fa-brands fa-github" href="${project.scm.url}" />
       </menu>
    </body>
 
