@@ -17,7 +17,7 @@ The most important repository is the Source Code Manager, as this is where the c
 The repository's URL for the POM will be created by using the repoUserId and the project id Archetype variables:
 
 ```
-https://www.github.com/${repoUserId}/${artifactId}
+https://github.com/${repoUserId}/${artifactId}
 ```
 
 If the repository does not follow this naming pattern then the resulting URL should be corrected manually.
