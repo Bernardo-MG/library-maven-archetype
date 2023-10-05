@@ -37,32 +37,7 @@
    </licenses>
 
    <!-- ********************************************** -->
-   <!-- *********** ORGANIZATION AND MEMBERS ********* -->
-   <!-- ********************************************** -->
-
-   <organization>
-      <name>${developerName}</name>
-      <url>${developerUrl}</url>
-   </organization>
-
-   <developers>
-      <developer>
-         <id>${developerId}</id>
-         <name>${developerName}</name>
-         <email>${developerMail}</email>
-         <url>${developerUrl}</url>
-         <organization>${developerName}</organization>
-         <organizationUrl>${developerUrl}</organizationUrl>
-         <roles>
-            <role>Developer</role>
-         </roles>
-         <timezone>+1</timezone>
-         <properties />
-      </developer>
-   </developers>
-
-   <!-- ********************************************** -->
-   <!-- ************ RESOURCES AND SERVICES ********** -->
+   <!-- ********* INFRASTRUCTURE AND SERVICES ******** -->
    <!-- ********************************************** -->
 
    <scm>
@@ -95,6 +70,10 @@
          <!-- Site deployment profile -->
          <!-- Sets the site repository to point to the releases repo -->
          <id>deployment-site</id>
+         <activation>
+            <!-- Active by default so the repository appears in the reports -->
+            <activeByDefault>true</activeByDefault>
+         </activation>
          <distributionManagement>
             <site>
                <id>site</id>
@@ -162,6 +141,31 @@
    </profiles>
 
    <!-- ********************************************** -->
+   <!-- *********** ORGANIZATION AND MEMBERS ********* -->
+   <!-- ********************************************** -->
+
+   <organization>
+      <name>${developerName}</name>
+      <url>${developerUrl}</url>
+   </organization>
+
+   <developers>
+      <developer>
+         <id>${developerId}</id>
+         <name>${developerName}</name>
+         <email>${developerMail}</email>
+         <url>${developerUrl}</url>
+         <organization>${developerName}</organization>
+         <organizationUrl>${developerUrl}</organizationUrl>
+         <roles>
+            <role>Developer</role>
+         </roles>
+         <timezone>+1</timezone>
+         <properties />
+      </developer>
+   </developers>
+
+   <!-- ********************************************** -->
    <!-- **************** PROPERTIES ****************** -->
    <!-- ********************************************** -->
 
@@ -193,7 +197,7 @@
       <!-- ============================================== -->
       <!-- ================= MAVEN SITE ================= -->
       <!-- ============================================== -->
-      <site.skin.version>2.3.0</site.skin.version>
+      <site.skin.version>2.3.2</site.skin.version>
       <mavenURL>https://mvnrepository.com/artifact/${project.groupId}/${project.artifactId}</mavenURL>
       <githubArtifactURL><![CDATA[https://github.com/${repoUserId}?tab=packages&amp;repo_name={project.artifactId}]]></githubArtifactURL>
    </properties>
