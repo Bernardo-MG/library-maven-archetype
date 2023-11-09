@@ -8,6 +8,9 @@ jobs:
   github:
     name: Github
     uses: Bernardo-MG/github-workflow-maven/.github/workflows/deploy_github.yml@v1
+    permissions: 
+      contents: read
+      packages: write
     with:
       jdk: 17
     secrets:
