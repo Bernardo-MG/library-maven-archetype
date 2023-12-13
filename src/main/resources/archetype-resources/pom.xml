@@ -11,7 +11,7 @@
    <parent>
       <groupId>com.bernardomg.maven</groupId>
       <artifactId>base-pom</artifactId>
-      <version>1.5.3</version>
+      <version>1.5.6</version>
    </parent>
 
    <!-- ********************************************** -->
@@ -37,32 +37,7 @@
    </licenses>
 
    <!-- ********************************************** -->
-   <!-- *********** ORGANIZATION AND MEMBERS ********* -->
-   <!-- ********************************************** -->
-
-   <organization>
-      <name>${developerName}</name>
-      <url>${developerUrl}</url>
-   </organization>
-
-   <developers>
-      <developer>
-         <id>${developerId}</id>
-         <name>${developerName}</name>
-         <email>${developerMail}</email>
-         <url>${developerUrl}</url>
-         <organization>${developerName}</organization>
-         <organizationUrl>${developerUrl}</organizationUrl>
-         <roles>
-            <role>Developer</role>
-         </roles>
-         <timezone>+1</timezone>
-         <properties />
-      </developer>
-   </developers>
-
-   <!-- ********************************************** -->
-   <!-- ************ RESOURCES AND SERVICES ********** -->
+   <!-- ********* INFRASTRUCTURE AND SERVICES ******** -->
    <!-- ********************************************** -->
 
    <scm>
@@ -95,6 +70,10 @@
          <!-- Site deployment profile -->
          <!-- Sets the site repository to point to the releases repo -->
          <id>deployment-site</id>
+         <activation>
+            <!-- Active by default so the repository appears in the reports -->
+            <activeByDefault>true</activeByDefault>
+         </activation>
          <distributionManagement>
             <site>
                <id>site</id>
@@ -162,10 +141,39 @@
    </profiles>
 
    <!-- ********************************************** -->
+   <!-- *********** ORGANIZATION AND MEMBERS ********* -->
+   <!-- ********************************************** -->
+
+   <organization>
+      <name>${developerName}</name>
+      <url>${developerUrl}</url>
+   </organization>
+
+   <developers>
+      <developer>
+         <id>${developerId}</id>
+         <name>${developerName}</name>
+         <email>${developerMail}</email>
+         <url>${developerUrl}</url>
+         <organization>${developerName}</organization>
+         <organizationUrl>${developerUrl}</organizationUrl>
+         <roles>
+            <role>Developer</role>
+         </roles>
+         <timezone>+1</timezone>
+         <properties />
+      </developer>
+   </developers>
+
+   <!-- ********************************************** -->
    <!-- **************** PROPERTIES ****************** -->
    <!-- ********************************************** -->
 
    <properties>
+      <!-- ============================================== -->
+      <!-- ================ JAVA VERSION ================ -->
+      <!-- ============================================== -->
+      <java.version>11</java.version>
       <!-- ============================================== -->
       <!-- =============== MANIFEST DATA ================ -->
       <!-- ============================================== -->
@@ -173,10 +181,10 @@
       <!-- ============================================== -->
       <!-- =========== DEPENDENCIES VERSIONS ============ -->
       <!-- ============================================== -->
-      <junit.jupiter.version>5.9.1</junit.jupiter.version>
-      <mockito.version>4.9.0</mockito.version>
-      <log4j.version>2.19.0</log4j.version>
-      <slf4j.version>2.0.3</slf4j.version>
+      <junit.jupiter.version>5.10.1</junit.jupiter.version>
+      <mockito.version>5.8.0</mockito.version>
+      <log4j.version>2.20.0</log4j.version>
+      <slf4j.version>2.0.9</slf4j.version>
       <!-- ============================================== -->
       <!-- ============ PLUGIN CONFIGURATION ============ -->
       <!-- ============================================== -->
@@ -189,7 +197,7 @@
       <!-- ============================================== -->
       <!-- ================= MAVEN SITE ================= -->
       <!-- ============================================== -->
-      <site.skin.version>2.3.0</site.skin.version>
+      <site.skin.version>2.3.2</site.skin.version>
       <mavenURL>https://mvnrepository.com/artifact/${project.groupId}/${project.artifactId}</mavenURL>
       <githubArtifactURL><![CDATA[https://github.com/${repoUserId}?tab=packages&amp;repo_name={project.artifactId}]]></githubArtifactURL>
    </properties>
@@ -239,23 +247,10 @@
       <!-- ======= TEST ENVIRONMENT DEPENDENCIES ======== -->
       <!-- ============================================== -->
       <dependency>
-         <!-- JUnit Jupiter -->
+         <!-- JUnit Jupiter Engine -->
          <groupId>org.junit.jupiter</groupId>
-         <artifactId>junit-jupiter</artifactId>
+         <artifactId>junit-jupiter-engine</artifactId>
          <scope>test</scope>
-      </dependency>
-      <dependency>
-         <!-- JUnit Jupiter Platform -->
-         <groupId>org.junit.platform</groupId>
-         <artifactId>junit-platform-runner</artifactId>
-         <scope>test</scope>
-         <exclusions>
-            <exclusion>
-               <!-- JUnit 3 -->
-               <groupId>junit</groupId>
-               <artifactId>junit</artifactId>
-            </exclusion>
-         </exclusions>
       </dependency>
       <dependency>
          <!-- Mockito -->

@@ -25,6 +25,40 @@ The Archetype will do little more than take care of configuration, setting up th
 
 A [sample project][sample-project] shows what this Archetype is capable of creating.
 
+## Usage
+
+It is a Maven Archetype, so it has to be included in the local repository, and then can be used to create a new project through command line or an IDE.
+
+All the published versions are in the Maven repository, but installing the archetype into the local repository is always an option.
+
+### Installing
+
+The archetype will be installed with the following Maven coordinates:
+
+```
+Group ID: com.bernardomg.maven.archetypes
+Artifact ID: library-archetype
+Version: (Check POM or badges)
+```
+
+To use it through command line type the following:
+
+```
+mvn archetype:generate -DarchetypeGroupId=com.bernardomg.maven.archetypes -DarchetypeArtifactId=library-archetype -DarchetypeVersion=[version]
+```
+
+If using an IDE check its documentation to find out how to use Maven Archetypes, and how to add these to the local repository.
+
+### Changing JDK Version
+
+By default the project will be set for JDK 11. If this needs to be changed, for example to make use of JDK 17, the java.version property has to be overriden:
+
+```xml
+<properties>
+   <java.version>17</java.version>
+<\properties>
+```
+
 ## Documentation
 
 Documentation is always generated for the latest release, kept in the 'master' branch:
@@ -42,46 +76,6 @@ mvn verify site
 ```
 
 The verify phase is required, otherwise some of the reports won't be generated.
-
-## Usage
-
-The application is coded in Java, using Maven to manage the project.
-
-It is a Maven Archetype, and can be used through command line or an IDE as long as it is included in the local repository.
-
-### Changing JDK Version
-
-By default the project will be set for JDK 11. If this needs to be changed, for example to make use of JDK 17, the java.version property has to be overriden:
-
-```xml
-<properties>
-   <java.version>17</java.version>
-<\properties>
-```
-
-### Installing
-
-The archetype can be installed with the following Maven coordinates:
-
-```
-Group ID: com.bernardomg.maven.archetypes
-Artifact ID: library-archetype
-Version: (Check POM or badges)
-```
-
-For example, to use it through command line type the following:
-
-```
-mvn archetype:generate -DarchetypeGroupId=com.bernardomg.maven.archetypes -DarchetypeArtifactId=library-archetype -DarchetypeVersion=[version]
-```
-
-If using an IDE check its documentation to find out how to use Maven Archetypes, and how to add these to the local repository.
-
-As an alternative, it is always possible to download the project from Github, and then install it using the usual Maven command:
-
-```
-mvn install
-```
 
 ### Running tests
 
