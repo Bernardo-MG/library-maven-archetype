@@ -1,1 +1,1 @@
-clean package verify
+clean verify
