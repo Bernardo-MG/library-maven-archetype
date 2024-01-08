@@ -26,7 +26,6 @@ package ${package}.test.unit;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.platform.runner.JUnitPlatform;
 
 import ${package}.Greeter;
 
