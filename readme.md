@@ -66,18 +66,6 @@ mvn verify site
 
 The verify phase is required, otherwise some of the reports won't be built.
 
-### Running tests
-
-The archetype plugin comes ready to run integration tests by using the usual Maven command:
-
-```
-mvn verify
-```
-
-Check the [archetype testing goal][archetype-testing] for more info.
-
-If using Eclipse the tests may not run, due to an incompatibility with the Maven Invoker library. It is recommender running the tests through command line.
-
 ## Collaborate
 
 Any kind of help with the project will be well received, and there are two main ways to give such help:
