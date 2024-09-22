@@ -179,9 +179,13 @@
       <!-- ============================================== -->
       <manifest.name>com/bernardomg/archetype/library</manifest.name>
       <!-- ============================================== -->
+      <!-- ============== PLUGINS VERSIONS ============== -->
+      <!-- ============================================== -->
+      <plugin.site.version>3.12.1</plugin.site.version>
+      <!-- ============================================== -->
       <!-- ================= MAVEN SITE ================= -->
       <!-- ============================================== -->
-      <site.skin.version>2.3.2</site.skin.version>
+      <site.skin.version>2.3.3</site.skin.version>
       <mavenURL>https://mvnrepository.com/artifact/com.bernardomg.maven.archetypes/library-archetype</mavenURL>
       <githubArtifactURL><![CDATA[https://github.com/Bernardo-MG?tab=packages&amp;repo_name=library-archetype]]></githubArtifactURL>
    </properties>
