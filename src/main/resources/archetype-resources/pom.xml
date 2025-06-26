@@ -11,7 +11,7 @@
    <parent>
       <groupId>com.bernardomg.maven</groupId>
       <artifactId>base-pom</artifactId>
-      <version>1.5.7</version>
+      <version>1.5.11</version>
    </parent>
 
    <!-- ********************************************** -->
@@ -96,26 +96,12 @@
          </distributionManagement>
       </profile>
       <profile>
-         <!-- OSSRH deployment profile. -->
-         <id>deployment-ossrh</id>
-         <distributionManagement>
-            <repository>
-               <!-- OSSRH repository -->
-               <id>ossrh</id>
-               <name>Central Repository OSSRH</name>
-               <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-            </repository>
-            <snapshotRepository>
-               <!-- OSSRH snapshots repository -->
-               <id>ossrh</id>
-               <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-            </snapshotRepository>
-         </distributionManagement>
+         <!-- Central deployment profile. -->
+         <id>deployment-central</id>
          <build>
             <plugins>
                <plugin>
                   <!-- GPG -->
-                  <!-- Signs the artifacts -->
                   <groupId>org.apache.maven.plugins</groupId>
                   <artifactId>maven-gpg-plugin</artifactId>
                   <executions>
@@ -133,6 +119,17 @@
                         <arg>--pinentry-mode</arg>
                         <arg>loopback</arg>
                      </gpgArguments>
+                  </configuration>
+               </plugin>
+               <plugin>
+                  <!-- Maven Central publishing -->
+                  <groupId>org.sonatype.central</groupId>
+                  <artifactId>central-publishing-maven-plugin</artifactId>
+                  <extensions>true</extensions>
+                  <configuration>
+                     <publishingServerId>central</publishingServerId>
+                     <autoPublish>true</autoPublish>
+                     <waitUntil>published</waitUntil>
                   </configuration>
                </plugin>
             </plugins>
@@ -181,10 +178,10 @@
       <!-- ============================================== -->
       <!-- =========== DEPENDENCIES VERSIONS ============ -->
       <!-- ============================================== -->
-      <junit.jupiter.version>5.10.1</junit.jupiter.version>
-      <mockito.version>5.13.0</mockito.version>
-      <log4j.version>2.24.0</log4j.version>
-      <slf4j.version>2.0.16</slf4j.version>
+      <junit.jupiter.version>5.13.1</junit.jupiter.version>
+      <mockito.version>5.18.0</mockito.version>
+      <log4j.version>2.24.3</log4j.version>
+      <slf4j.version>2.0.17</slf4j.version>
       <!-- ============================================== -->
       <!-- ============ PLUGIN CONFIGURATION ============ -->
       <!-- ============================================== -->
@@ -194,12 +191,10 @@
       <checkstyle.excludes>**/generated/**/*</checkstyle.excludes>
       <!-- Exclusion patterns for SpotBugs -->
       <spotbugs.excludeFilterFile>${project.basedir}/src/config/spotbugs/spotbugs-exclude.xml</spotbugs.excludeFilterFile>
-      <!-- Lowered site plugin due to Velocity problems -->
-      <plugin.site.version>3.12.1</plugin.site.version>
       <!-- ============================================== -->
       <!-- ================= MAVEN SITE ================= -->
       <!-- ============================================== -->
-      <site.skin.version>2.3.3</site.skin.version>
+      <site.skin.version>2.4.1</site.skin.version>
       <mavenURL>https://mvnrepository.com/artifact/${project.groupId}/${project.artifactId}</mavenURL>
       <githubArtifactURL><![CDATA[https://github.com/${repoUserId}?tab=packages&amp;repo_name={project.artifactId}]]></githubArtifactURL>
    </properties>

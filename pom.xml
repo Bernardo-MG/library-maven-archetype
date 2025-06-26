@@ -15,7 +15,7 @@
    <parent>
       <groupId>com.bernardomg.maven</groupId>
       <artifactId>archetype-pom</artifactId>
-      <version>1.3.6</version>
+      <version>1.3.7</version>
    </parent>
 
    <!-- ********************************************** -->
@@ -24,7 +24,7 @@
 
    <groupId>com.bernardomg.maven.archetypes</groupId>
    <artifactId>library-archetype</artifactId>
-   <version>1.2.21</version>
+   <version>1.2.22</version>
    <packaging>maven-archetype</packaging>
 
    <name>Library Maven Archetype</name>
@@ -121,26 +121,12 @@
          </distributionManagement>
       </profile>
       <profile>
-         <!-- OSSRH deployment profile. -->
-         <id>deployment-ossrh</id>
-         <distributionManagement>
-            <repository>
-               <!-- OSSRH repository -->
-               <id>ossrh</id>
-               <name>Central Repository OSSRH</name>
-               <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-            </repository>
-            <snapshotRepository>
-               <!-- OSSRH snapshots repository -->
-               <id>ossrh</id>
-               <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-            </snapshotRepository>
-         </distributionManagement>
+         <!-- Central deployment profile. -->
+         <id>deployment-central</id>
          <build>
             <plugins>
                <plugin>
                   <!-- GPG -->
-                  <!-- Signs the artifacts -->
                   <groupId>org.apache.maven.plugins</groupId>
                   <artifactId>maven-gpg-plugin</artifactId>
                   <executions>
@@ -158,6 +144,17 @@
                         <arg>--pinentry-mode</arg>
                         <arg>loopback</arg>
                      </gpgArguments>
+                  </configuration>
+               </plugin>
+               <plugin>
+                  <!-- Maven Central publishing -->
+                  <groupId>org.sonatype.central</groupId>
+                  <artifactId>central-publishing-maven-plugin</artifactId>
+                  <extensions>true</extensions>
+                  <configuration>
+                     <publishingServerId>central</publishingServerId>
+                     <autoPublish>true</autoPublish>
+                     <waitUntil>published</waitUntil>
                   </configuration>
                </plugin>
             </plugins>
@@ -179,13 +176,9 @@
       <!-- ============================================== -->
       <manifest.name>com/bernardomg/archetype/library</manifest.name>
       <!-- ============================================== -->
-      <!-- ============== PLUGINS VERSIONS ============== -->
-      <!-- ============================================== -->
-      <plugin.site.version>3.12.1</plugin.site.version>
-      <!-- ============================================== -->
       <!-- ================= MAVEN SITE ================= -->
       <!-- ============================================== -->
-      <site.skin.version>2.3.3</site.skin.version>
+      <site.skin.version>2.4.1</site.skin.version>
       <mavenURL>https://mvnrepository.com/artifact/com.bernardomg.maven.archetypes/library-archetype</mavenURL>
       <githubArtifactURL><![CDATA[https://github.com/Bernardo-MG?tab=packages&amp;repo_name=library-archetype]]></githubArtifactURL>
    </properties>
