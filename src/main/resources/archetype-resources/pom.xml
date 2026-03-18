@@ -11,7 +11,7 @@
    <parent>
       <groupId>com.bernardomg.maven</groupId>
       <artifactId>base-pom</artifactId>
-      <version>1.5.11</version>
+      <version>1.5.13</version>
    </parent>
 
    <!-- ********************************************** -->
@@ -129,7 +129,6 @@
                   <configuration>
                      <publishingServerId>central</publishingServerId>
                      <autoPublish>true</autoPublish>
-                     <waitUntil>published</waitUntil>
                   </configuration>
                </plugin>
             </plugins>
@@ -178,9 +177,10 @@
       <!-- ============================================== -->
       <!-- =========== DEPENDENCIES VERSIONS ============ -->
       <!-- ============================================== -->
-      <junit.jupiter.version>5.13.1</junit.jupiter.version>
-      <mockito.version>5.18.0</mockito.version>
-      <log4j.version>2.24.3</log4j.version>
+      <assertj.version>3.27.7</assertj.version>
+      <junit.jupiter.version>6.0.3</junit.jupiter.version>
+      <mockito.version>5.23.0</mockito.version>
+      <log4j.version>2.25.3</log4j.version>
       <slf4j.version>2.0.17</slf4j.version>
       <!-- ============================================== -->
       <!-- ============ PLUGIN CONFIGURATION ============ -->
@@ -254,6 +254,13 @@
          <groupId>org.mockito</groupId>
          <artifactId>mockito-core</artifactId>
          <version>${mockito.version}</version>
+         <scope>test</scope>
+      </dependency>
+      <dependency>
+         <!-- AssertJ -->
+         <groupId>org.assertj</groupId>
+         <artifactId>assertj-core</artifactId>
+         <version>${assertj.version}</version>
          <scope>test</scope>
       </dependency>
    </dependencies>
