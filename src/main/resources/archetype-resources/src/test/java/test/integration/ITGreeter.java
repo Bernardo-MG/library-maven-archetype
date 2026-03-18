@@ -24,7 +24,7 @@
 
 package ${package}.test.integration;
 
-import org.junit.jupiter.api.Assertions;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import ${package}.Greeter;
@@ -51,7 +51,7 @@ public final class ITGreeter {
      */
     @Test
     public final void sayHello() {
-        Assertions.assertEquals("Hello World!", new Greeter().sayHello());
+        Assertions.assertThat(new Greeter().sayHello()).isEqualTo("Hello World!");
     }
 
 }
