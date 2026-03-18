@@ -38,11 +38,11 @@
 [cpd]: ./cpd.html
 [dependencies]: ./dependencies.html
 [dependency-analysis]: ./dependency-analysis.html
-[failsafe]: ./failsafe-report.html
+[failsafe]: ./failsafe.html
 [jacoco]: ./jacoco/index.html
 [pmd]: ./pmd.html
 [plugins]: ./plugins.html
 [plugins-manage]: ./plugin-management.html
 [spotbugs]: ./spotbugs.html
-[surefire]: ./surefire-report.html
+[surefire]: ./surefire.html
 [taglist]: ./taglist.html
