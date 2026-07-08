@@ -74,14 +74,12 @@ If you wish to fork or modify the code, visit the [GitHub project page][scm], wh
 ## License
 The project has been released under the [MIT License][license].
 
-[maven-repo]: https://mvnrepository.com/artifact/com.bernardomg.maven.archetypes/library-archetype
 [junit]: https://junit.org
 [issues]: https://github.com/Bernardo-MG/library-maven-archetype/issues
 [license]: https://www.opensource.org/licenses/mit-license.php
 [scm]: https://github.com/Bernardo-MG/library-maven-archetype
 
 [maven-archetype]: https://maven.apache.org/guides/introduction/introduction-to-archetypes.html
-[archetype-testing]: https://maven.apache.org/archetype/maven-archetype-plugin/integration-test-mojo.html
 
 [sample-project]: https://github.com/Bernardo-MG/library-maven-archetype-example
 
